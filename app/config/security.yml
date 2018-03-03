@@ -42,7 +42,7 @@ security:
                 secret:   '%kernel.secret%'
                 lifetime: 604800 # 1 week in seconds
                 path:     /
-            user_checker: AppBundle\Security\User\Authentication\Login\LoginChecker
+            user_checker: AppBundle\Service\Security\User\Authentication\Login\LoginChecker
 
     access_control:
       - { path: ^/user/authentication/, roles: IS_AUTHENTICATED_ANONYMOUSLY }

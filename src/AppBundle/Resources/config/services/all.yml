@@ -1,3 +1,5 @@
 imports:
     - { resource: 'business.yml' }
+    - { resource: 'mailer.yml' }
+    - { resource: 'security.yml' }
     - { resource: 'util.yml' }

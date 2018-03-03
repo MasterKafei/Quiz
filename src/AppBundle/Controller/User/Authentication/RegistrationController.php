@@ -32,7 +32,7 @@ class RegistrationController extends Controller
             $em->persist($user);
             $em->flush();
 
-            $this->get('app.business.user')->authenticateUser($user);
+            $this->get('app.mailer.user.registration')->sendRegisterMail($user);
 
             return $this->redirectToRoute('app_home_home_index');
         }

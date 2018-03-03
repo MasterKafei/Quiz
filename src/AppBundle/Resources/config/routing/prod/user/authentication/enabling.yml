@@ -1,3 +1,3 @@
-app_user_authentication_enabling:
-    path: /enabling/{token}
+app_user_authentication_enabling_enable:
+    path: /{token}
     defaults: { _controller: 'AppBundle:User/Authentication/Enabling:enable' }

@@ -9,3 +9,7 @@ app_user_authentication_login:
 app_user_authentication_logout:
     resource: "@AppBundle/Resources/config/routing/prod/user/authentication/logout.yml"
     prefix:   /logout/
+
+app_user_authentication_enabling:
+    resource: "@AppBundle/Resources/config/routing/prod/user/authentication/enabling.yml"
+    prefix:   /enabling/
