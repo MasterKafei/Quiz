@@ -1,0 +1,44 @@
+AppBundle\Entity\User:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\UserRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        username:
+            type: string
+            length: 255
+            unique: true
+        email:
+            type: string
+            length: 255
+            unique: true
+        firstName:
+            type: string
+            length: 255
+        lastName:
+            type: string
+            length: 255
+        roles:
+            type: array
+        password:
+            type: string
+            length: 4096
+        salt:
+            type: string
+            length: 255
+        enabled:
+            type: boolean
+        token:
+            type: string
+            length: 255
+
+    manyToMany:
+        groups:
+            targetEntity: UserGroup
+            inversedBy: users
+    lifecycleCallbacks: {  }

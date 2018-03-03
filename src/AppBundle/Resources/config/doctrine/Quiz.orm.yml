@@ -1,0 +1,43 @@
+AppBundle\Entity\Quiz:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\QuizRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        title:
+            type: string
+            length: 255
+            nullable: true
+        description:
+            type: text
+            nullable: true
+        marks:
+            type: array
+        resettable:
+            type: boolean
+        startingDate:
+            type: datetime
+            nullable: true
+        endingDate:
+            type: datetime
+            nullable: true
+    oneToMany:
+        questions:
+            targetEntity: AppBundle\Entity\Question
+            mappedBy: quiz
+            cascade: [ persist, remove ]
+    manyToOne:
+        category:
+            targetEntity: AppBundle\Entity\Category
+            inversedBy: quizzes
+            cascade: [ persist ]
+            joinColumn:
+                name: category_id
+                referencedColumnName: id
+                nullable: true
+    lifecycleCallbacks: {  }

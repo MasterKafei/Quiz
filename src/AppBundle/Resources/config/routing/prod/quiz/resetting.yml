@@ -1,0 +1,5 @@
+app_quiz_reset_resetting:
+    path: /{id}
+    defaults: { _controller: 'AppBundle:Quiz/Reset:reset' }
+    requirements:
+        id:  \d+

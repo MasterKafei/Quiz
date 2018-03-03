@@ -1,0 +1,9 @@
+app_admin_question_creation_create:
+    path: /
+    defaults: { _controller: 'AppBundle:Admin/Question/Creation:create' }
+
+app_admin_question_creation_add:
+    path: /{id}
+    defaults: { _controller: 'AppBundle:Admin/Question/Creation:add' }
+    requirements:
+        id: \d+

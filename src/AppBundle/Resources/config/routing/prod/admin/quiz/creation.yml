@@ -1,0 +1,3 @@
+app_admin_quiz_creation_create:
+    path: /
+    defaults: { _controller: 'AppBundle:Admin/Quiz/Creation:create' }

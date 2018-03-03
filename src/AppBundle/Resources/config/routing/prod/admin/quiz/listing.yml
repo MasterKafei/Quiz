@@ -1,0 +1,3 @@
+app_admin_quiz_listing_list:
+    path: /
+    defaults: { _controller: 'AppBundle:Admin/Quiz/Listing:list' }

@@ -1,0 +1,54 @@
+{% extends '@Layout/Full/base.html.twig' %}
+
+{% block body %}
+
+    <div class="box box-info">
+        <div class="box-header">
+
+        </div>
+        <div class="box-body">
+            <table id="category-table-listing" class="table table-bordered table-striped dataTable" role="grid"
+                   aria-describedby="category-table-listing_info">
+                <thead>
+                <tr role="row">
+                    <th class="sorting_asc" tabindex="0" aria-controls="category-table-listing" rowspan="1" colspan="1"
+                        aria-sort="ascending" aria-label="Title(s): activate to sort column descending"
+                        style="width: 217px;">
+                        Name
+                    </th>
+                    <th class="sorting" tabindex="0" aria-controls="category-table-listing" rowspan="1" colspan="1"
+                        aria-label="Description(s): activate to sort column ascending" style="width: 266.6px;">
+                        Description
+                    </th>
+                    <th class="sorting" tabindex="0" aria-controls="category-table-listing" rowspan="1" colspan="1"
+                        aria-label="Quiz(zes) number: activate to sort column ascending" style="width: 237.8px;">
+                        User number
+                    </th>
+                    <th>
+                        Action
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for group in groups %}
+                    <tr role="row" class="odd">
+                        <td class="sorting_1">{{ group.name }}</td>
+                        <td>{{ group.description }}</td>
+                        <td>{{ group.users|length }}</td>
+                        <td>
+                            <div class="btn-group">
+                                <a href="{{ path('app_admin_user_group_showing_show', {'id': group.id}) }}" class="btn btn-info">Show <i class="fa fa-eye"></i></a>
+                                <a href="{{ path('app_admin_user_group_edition_edit', {'id': group.id}) }}" class="btn btn-info">Edit <i class="fa fa-edit"></i></a>
+                                <a href="{{ path('app_admin_user_group_removing_remove', {'id': group.id}) }}" class="btn btn-info">Remove <i class="fa fa-trash"></i></a>
+                            </div>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div class="box-footer">
+
+        </div>
+    </div>
+{% endblock %}

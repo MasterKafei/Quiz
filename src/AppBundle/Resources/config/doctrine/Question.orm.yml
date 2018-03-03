@@ -1,0 +1,37 @@
+AppBundle\Entity\Question:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\QuestionRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        title:
+            type: string
+            length: 255
+            nullable: true
+        text:
+            type: text
+            nullable: true
+        responses:
+            type: array
+        solution:
+            type: array
+    manyToOne:
+        quiz:
+            targetEntity: AppBundle\Entity\Quiz
+            inversedBy: questions
+            cascade: [ persist ]
+            joinColumn:
+                name: quiz_id
+                referencedColumnName: id
+                nullable: true
+    OneToMany:
+        answers:
+           targetEntity: AppBundle\Entity\Answer
+           inversedBy: question
+           cascade: [ persist, remove ]
+    lifecycleCallbacks: {  }

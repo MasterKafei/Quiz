@@ -1,0 +1,29 @@
+{% extends '@Layout/Default/base.html.twig' %}
+{% block head_html %}
+<head>
+    {% block head %}
+        <title>{% block title %}Quizz{% endblock %}</title>
+        {% include '@Layout/Default/stylesheets.html.twig' %}
+    {% endblock %}
+    {% block stylesheets %}{% endblock %}
+</head>
+{% endblock %}
+{% block body_html %}
+    <body class="hold-transition skin-blue sidebar-mini">
+        <div class="wrapper">
+            {% include '@Layout/Full/topbar.html.twig' %}
+            {% include '@Layout/Full/sidebar.html.twig' %}
+            <div class="content-wrapper">
+                <section class="content-header">
+                    {% block header %}{% endblock %}
+                </section>
+                <section class="content">
+                    {% block body %}{% endblock %}
+                </section>
+            </div>
+            {% include '@Layout/Full/footer.html.twig' %}
+            {% include '@Layout/Default/javascripts.html.twig' %}
+            {% block javascripts %}{% endblock javascripts %}
+        </div>
+    </body>
+{% endblock body_html %}

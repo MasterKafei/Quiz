@@ -1,0 +1,5 @@
+app_admin_user_group_showing_show:
+    path: /{id}
+    defaults: { _controller: 'AppBundle:Admin/UserGroup/Showing:show' }
+    requirements:
+        id: \d+

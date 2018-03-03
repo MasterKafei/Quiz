@@ -1,0 +1,19 @@
+app_admin_category_listing:
+    resource: "@AppBundle/Resources/config/routing/prod/admin/category/listing.yml"
+    prefix:   /listing/
+
+app_admin_category_creation:
+    resource: "@AppBundle/Resources/config/routing/prod/admin/category/creation.yml"
+    prefix:   /creation/
+
+app_admin_category_edition:
+    resource: "@AppBundle/Resources/config/routing/prod/admin/category/edition.yml"
+    prefix:   /edition/
+
+app_admin_category_removing:
+    resource: "@AppBundle/Resources/config/routing/prod/admin/category/removing.yml"
+    prefix:   /removing/
+
+app_admin_category_showing:
+    resource: "@AppBundle/Resources/config/routing/prod/admin/category/showing.yml"
+    prefix:   /showing/

@@ -1,0 +1,3 @@
+app_user_authentication:
+    resource: "@AppBundle/Resources/config/routing/prod/user/authentication/all.yml"
+    prefix:   /authentication/

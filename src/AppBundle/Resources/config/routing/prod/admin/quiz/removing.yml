@@ -1,0 +1,5 @@
+app_admin_quiz_removing_remove:
+    path: /{id}
+    defaults: { _controller: 'AppBundle:Admin/Quiz/Removing:remove' }
+    requirements:
+        id: \d+

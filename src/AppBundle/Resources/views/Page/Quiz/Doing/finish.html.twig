@@ -1,0 +1,49 @@
+{% extends '@Layout/Full/base.html.twig' %}
+
+{% block body %}
+    <div class="box box-info">
+        <div class="box-header with-border">
+            <h3>{{ quiz.title }}</h3>
+            <p>{{ quiz.description }}</p>
+        </div>
+        <div class="box-body">
+            {% for answer in answers %}
+                <div class="box box-info">
+                    <div class="box-header with-border">
+                        <h3>{{ answer.question.title }}</h3>
+                        <p>{{ answer.question.text }}</p>
+                    </div>
+                    <div class="box-body">
+                        {% for key,response in answer.question.responses %}
+                                <label class="col-sm-2 control-label">
+                                    <div class="pull-right">
+                                        {% if answer.value[key] is defined and answer.question.solution[key] is defined %}
+                                            <i class="fa fa-check"></i>
+                                        {% elseif answer.value[key] is defined %}
+                                            <i class="fa fa-times"></i>
+                                        {% endif %}
+                                    </div>
+                                </label>
+                                <label class="col-sm-10 control-label">
+                                    {% if answer.question.solution[key] is defined %}
+                                        <div class="bg-success">
+                                            {{ response }}
+                                        </div>
+                                    {% else %}
+                                        {{ response }}
+                                    {% endif %}
+                                </label>
+                            <!--</div>-->
+                        {% endfor %}
+                    </div>
+                    <div class="box-footer">
+
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="box-footer">
+
+        </div>
+    </div>
+{% endblock %}

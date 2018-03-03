@@ -1,0 +1,3 @@
+app_admin_category_creation_create:
+    path: /
+    defaults: { _controller: 'AppBundle:Admin/Category/Creation:create' }

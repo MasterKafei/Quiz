@@ -1,0 +1,11 @@
+app_quiz_list_completed:
+    path: /completed
+    defaults: { _controller: 'AppBundle:Quiz/Listing:completed' }
+
+app_quiz_list_in_progress:
+    path: /in_progress
+    defaults: { _controller: 'AppBundle:Quiz/Listing:inProgress' }
+
+app_quiz_list_new:
+    path: /new
+    defaults: { _controller: 'AppBundle:Quiz/Listing:new' }

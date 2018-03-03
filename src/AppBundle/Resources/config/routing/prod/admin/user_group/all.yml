@@ -1,0 +1,19 @@
+app_admin_user_group_listing:
+    resource: "@AppBundle/Resources/config/routing/prod/admin/user_group/listing.yml"
+    prefix:   /listing/
+
+app_admin_user_group_creation:
+    resource: "@AppBundle/Resources/config/routing/prod/admin/user_group/creation.yml"
+    prefix:   /creation/
+
+app_admin_user_group_edition:
+    resource: "@AppBundle/Resources/config/routing/prod/admin/user_group/edition.yml"
+    prefix:   /edition/
+
+app_admin_user_group_removable:
+    resource: "@AppBundle/Resources/config/routing/prod/admin/user_group/removing.yml"
+    prefix:   /removing/
+
+app_admin_user_group_showable:
+    resource: "@AppBundle/Resources/config/routing/prod/admin/user_group/showing.yml"
+    prefix:   /showable/

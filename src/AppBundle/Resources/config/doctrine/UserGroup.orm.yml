@@ -1,0 +1,26 @@
+AppBundle\Entity\UserGroup:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\UserGroupRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 255
+        description:
+            type: text
+            nullable: true
+    manyToMany:
+        users:
+            targetEntity: User
+            mappedBy: groups
+            cascade: ["persist", "merge"]
+        categories:
+            targetEntity: Category
+            cascade: ["persist", "merge"]
+    lifecycleCallbacks: {  }

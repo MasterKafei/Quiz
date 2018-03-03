@@ -1,0 +1,15 @@
+app_admin_user_edition:
+    resource: "@AppBundle/Resources/config/routing/prod/admin/user/edition.yml"
+    prefix:   /edition/
+
+app_admin_user_listing:
+    resource: "@AppBundle/Resources/config/routing/prod/admin/user/listing.yml"
+    prefix:   /listing/
+
+app_admin_user_removing:
+    resource: "@AppBundle/Resources/config/routing/prod/admin/user/removing.yml"
+    prefix:   /removing/
+
+app_admin_user_showing:
+    resource: "@AppBundle/Resources/config/routing/prod/admin/user/showing.yml"
+    prefix:   /showing/

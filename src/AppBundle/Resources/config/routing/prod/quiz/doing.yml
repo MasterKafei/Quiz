@@ -1,0 +1,17 @@
+app_quiz_do_doing:
+    path: /{id}
+    defaults: { _controller: 'AppBundle:Quiz/Do:do' }
+    requirements:
+        id:  \d+
+
+app_quiz_do_begin:
+    path: /begin/{id}
+    defaults: { _controller: 'AppBundle:Quiz/Do:begin' }
+    requirements:
+        id:  \d+
+
+app_quiz_do_finish:
+    path: /finish/{id}
+    defaults: { _controller: 'AppBundle:Quiz/Do:finish' }
+    requirements:
+        id:  \d+

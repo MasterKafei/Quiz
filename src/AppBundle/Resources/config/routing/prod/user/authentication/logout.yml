@@ -1,0 +1,3 @@
+app_user_authentication_logout_logout:
+    path: /
+    defaults: { _controller: 'AppBundle:User/Authentication/Login:logout' }

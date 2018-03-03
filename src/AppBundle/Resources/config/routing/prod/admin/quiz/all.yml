@@ -1,0 +1,19 @@
+app_admin_quiz_creation:
+    resource: "@AppBundle/Resources/config/routing/prod/admin/quiz/creation.yml"
+    prefix:   /creation/
+
+app_admin_quiz_listing:
+    resource: "@AppBundle/Resources/config/routing/prod/admin/quiz/listing.yml"
+    prefix:   /listing/
+
+app_admin_quiz_showing:
+    resource: "@AppBundle/Resources/config/routing/prod/admin/quiz/showing.yml"
+    prefix:   /showing/
+
+app_admin_quiz_edition:
+    resource: "@AppBundle/Resources/config/routing/prod/admin/quiz/edition.yml"
+    prefix:   /edition/
+
+app_admin_quiz_removing:
+    resource: "@AppBundle/Resources/config/routing/prod/admin/quiz/removing.yml"
+    prefix:   /removing/

@@ -1,0 +1,19 @@
+app_admin_user:
+    resource: "@AppBundle/Resources/config/routing/prod/admin/user/all.yml"
+    prefix:   /user/
+
+app_admin_quiz:
+    resource: "@AppBundle/Resources/config/routing/prod/admin/quiz/all.yml"
+    prefix:   /quiz/
+
+app_admin_question:
+    resource: "@AppBundle/Resources/config/routing/prod/admin/question/all.yml"
+    prefix:   /question/
+
+app_admin_category:
+    resource: "@AppBundle/Resources/config/routing/prod/admin/category/all.yml"
+    prefix:   /category/
+
+app_admin_user_group:
+    resource: "@AppBundle/Resources/config/routing/prod/admin/user_group/all.yml"
+    prefix:   /user_group/

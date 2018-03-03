@@ -1,0 +1,30 @@
+AppBundle\Entity\Answer:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\AnswerRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        value:
+            type: array
+    manyToOne:
+        user:
+            targetEntity: AppBundle\Entity\User
+            cascade: [ persist ]
+            joinColumn:
+                name: user_id
+                referencedColumnName: id
+                nullable: false
+        question:
+            targetEntity: AppBundle\Entity\Question
+            mappedBy: answers
+            cascade: [ persist ]
+            joinColumn:
+                name: question_id
+                referencedColumnName: id
+                nullable: true
+    lifecycleCallbacks: {  }

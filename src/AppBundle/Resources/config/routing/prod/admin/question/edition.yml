@@ -1,0 +1,5 @@
+app_admin_question_edition_edit:
+    path: /{id}
+    defaults: { _controller: 'AppBundle:Admin/Question/Edition:edit' }
+    requirements:
+        id: \d+

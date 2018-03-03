@@ -1,0 +1,11 @@
+app_quiz_listing:
+    resource: "@AppBundle/Resources/config/routing/prod/quiz/listing.yml"
+    prefix:   /listing/
+
+app_quiz_doing:
+    resource: "@AppBundle/Resources/config/routing/prod/quiz/doing.yml"
+    prefix:   /doing/
+
+app_quiz_reset:
+    resource: "@AppBundle/Resources/config/routing/prod/quiz/resetting.yml"
+    prefix:   /resetting/
