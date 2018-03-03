@@ -1,0 +1,4 @@
+parameters:
+    mailer_params:
+        sender_address: master@masterkoop.fr
+        sender_name: 'MasterKoop WebMaster'

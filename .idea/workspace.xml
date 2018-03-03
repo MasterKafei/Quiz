@@ -1,7 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fb00df18-b1bd-4684-9f6d-f804e385988b" name="Default" comment="" />
+    <list default="true" id="fb00df18-b1bd-4684-9f6d-f804e385988b" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/config/settings.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/User/Authentication/EnablingController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/config/services/mailer.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/config/services/security.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Mail/User/Registration/register.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Page/User/Authentication/Enabling/enable.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Service/Mailer/AbstractMailer.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Service/Mailer/User/RegistrationMailer.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/User/Authentication/EnableController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/Mail/User/Authentication/Registration/register.html.twig" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Security/User/Authentication/Login/LoginChecker.php" afterPath="$PROJECT_DIR$/src/AppBundle/Service/Security/User/Authentication/Login/LoginChecker.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Quizz.iml" afterPath="$PROJECT_DIR$/.idea/Quizz.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/parameters.yml.dist" afterPath="$PROJECT_DIR$/app/config/parameters.yml.dist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/security.yml" afterPath="$PROJECT_DIR$/app/config/security.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/User/Authentication/RegistrationController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/User/Authentication/RegistrationController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/config/routing/prod/user/authentication/all.yml" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/config/routing/prod/user/authentication/all.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/config/routing/prod/user/authentication/enabling.yml" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/config/routing/prod/user/authentication/enabling.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/config/services/all.yml" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/config/services/all.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/Page/User/Authentication/Login/login.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Page/User/Authentication/Login/login.html.twig" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,86 +35,91 @@
   <component name="ComposerSettings" synchronizationState="DONT_SYNCHRONIZE" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="show.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Page/Admin/UserGroup/Showing/show.html.twig">
+      <file leaf-file-name="RegistrationMailer.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Service/Mailer/User/RegistrationMailer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="15" column="20" lean-forward="false" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+              <folding>
+                <element signature="e#49#75#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AbstractMailer.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Service/Mailer/AbstractMailer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="295">
+              <caret line="93" column="66" lean-forward="false" selection-start-line="93" selection-start-column="66" selection-end-line="93" selection-end-column="66" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="enabling.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/routing/prod/user/authentication/enabling.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="11" column="23" lean-forward="false" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+              <caret line="0" column="39" lean-forward="false" selection-start-line="0" selection-start-column="39" selection-end-line="0" selection-end-column="39" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CreationController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/Admin/User/CreationController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-              <folding>
-                <element signature="e#51#77#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EditionController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/Admin/User/EditionController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="18" column="9" lean-forward="true" selection-start-line="18" selection-start-column="9" selection-end-line="21" selection-end-column="0" />
-              <folding>
-                <element signature="e#51#77#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RegistrationController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/User/Authentication/RegistrationController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="30" column="12" lean-forward="false" selection-start-line="30" selection-start-column="12" selection-end-line="32" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RemovingController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/Admin/User/RemovingController.php">
+      <file leaf-file-name="all.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/routing/prod/user/authentication/all.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="273">
-              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <caret line="13" column="84" lean-forward="false" selection-start-line="13" selection-start-column="84" selection-end-line="13" selection-end-column="84" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ShowController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/Admin/User/ShowController.php">
+      <file leaf-file-name="register.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Mail/User/Registration/register.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserBusiness.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Service/Business/UserBusiness.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1134">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="260">
+              <caret line="179" column="154" lean-forward="false" selection-start-line="179" selection-start-column="154" selection-end-line="179" selection-end-column="154" />
+              <folding>
+                <element signature="e#7701#7723#0#HTML" expanded="true" />
+                <element signature="e#7738#7759#0#HTML" expanded="true" />
+                <marker date="1520081654296" expanded="true" signature="1624:1782" ph="..." />
+                <marker date="1520081654296" expanded="true" signature="1625:1782" ph="..." />
+                <marker date="1520081654296" expanded="true" signature="1659:1771" ph="..." />
+                <marker date="1520081654296" expanded="true" signature="1847:1935" ph="..." />
+                <marker date="1520081654296" expanded="true" signature="1876:1923" ph="{...}" />
+                <marker date="1520081654296" expanded="true" signature="2246:2393" ph="..." />
+                <marker date="1520081654296" expanded="true" signature="2289:2386" ph="{...}" />
+                <marker date="1520081654296" expanded="true" signature="2322:2376" ph="{...}" />
+                <marker date="1520081654296" expanded="true" signature="2463:2481" ph="..." />
+                <marker date="1520081654296" expanded="true" signature="2482:2819" ph="..." />
+                <marker date="1520081654296" expanded="true" signature="2539:2563" ph="..." />
+                <marker date="1520081654296" expanded="true" signature="2564:2819" ph="..." />
+                <marker date="1520081654296" expanded="true" signature="2684:2819" ph="..." />
+                <marker date="1520081654296" expanded="false" signature="2703:2715" ph="..." />
+                <marker date="1520081654296" expanded="true" signature="2716:2819" ph="..." />
+                <marker date="1520081654296" expanded="true" signature="2729:2819" ph="..." />
+                <marker date="1520081654296" expanded="false" signature="2754:2813" ph="..." />
+                <marker date="1520081654296" expanded="true" signature="2814:2819" ph="..." />
+                <marker date="1520081654296" expanded="true" signature="3293:3416" ph="..." />
+                <marker date="1520081654296" expanded="true" signature="3293:3417" ph="..." />
+                <marker date="1520081654296" expanded="true" signature="3322:3416" ph="..." />
+                <marker date="1520081654296" expanded="false" signature="3363:3394" ph="..." />
+                <marker date="1520081654296" expanded="true" signature="3395:3416" ph="..." />
+                <marker date="1520081654296" expanded="true" signature="5557:5692" ph="..." />
+                <marker date="1520081654296" expanded="false" signature="5576:5588" ph="..." />
+                <marker date="1520081654296" expanded="true" signature="5589:5692" ph="..." />
+                <marker date="1520081654296" expanded="true" signature="5602:5692" ph="..." />
+                <marker date="1520081654296" expanded="false" signature="5627:5686" ph="..." />
+                <marker date="1520081654296" expanded="true" signature="5687:5692" ph="..." />
+                <marker date="1520081654296" expanded="true" signature="6201:6327" ph="..." />
+                <marker date="1520081654296" expanded="true" signature="6201:6328" ph="..." />
+                <marker date="1520081654296" expanded="true" signature="6230:6327" ph="..." />
+                <marker date="1520081654296" expanded="false" signature="6271:6305" ph="..." />
+                <marker date="1520081654296" expanded="true" signature="6306:6327" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -126,6 +154,8 @@
       <find>app_admin_category</find>
       <find>quiz_create</find>
       <find>salt</find>
+      <find>user.first</find>
+      <find>enabling</find>
     </findStrings>
     <replaceStrings>
       <replace>plainPassword</replace>
@@ -137,30 +167,11 @@
   </component>
   <component name="Git.Settings">
     <option name="ROOT_SYNC" value="DONT_SYNC" />
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/website-skeleton" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/AppBundle/Resources/config/routing/prod/admin/category/list.yml" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Resources/config/routing/prod/admin/quiz/list.yml" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Resources/config/routing/prod/admin/quiz/remove.yml" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Resources/config/routing/prod/admin/quiz/show.yml" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Resources/config/routing/prod/admin/user/all.yml" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Resources/config/routing/prod/admin/category/all.yml" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Resources/config/routing/prod/admin/question/all.yml" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Resources/config/routing/prod/admin/quiz/all.yml" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Resources/config/routing/prod/admin/quiz/creation.yml" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Resources/config/routing/prod/admin/user/edition.yml" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Resources/config/routing/prod/admin/user_group/all.yml" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Resources/config/routing/prod/admin/user_group/listing.yml" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Resources/config/routing/prod/admin/user_group/removing.yml" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Controller/Admin/Category/RemovingController.php" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Controller/Admin/Quiz/ListingController.php" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Controller/Quiz/ListinController.php" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Controller/Home/HomeController.php" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Resources/config/routing/prod/quiz/all.yml" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Resources/config/routing/prod/user/authentication/enable.yml" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/config/routing/prod/quiz/listing.yml" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/Quiz/ListingController.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/Admin/Category/CreationController.php" />
@@ -186,13 +197,32 @@
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/Admin/User/ShowController.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/Admin/User/RemovingController.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/Admin/User/ListingController.php" />
-        <option value="$PROJECT_DIR$/app/config/security.yml" />
         <option value="$PROJECT_DIR$/src/AppBundle/Security/User/Authentication/Login/LoginChecker.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Form/Type/User/UserCreationType.php" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Controller/User/Authentication/RegistrationController.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/Admin/User/EditionController.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/Admin/User/CreationController.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/app/config/parameters.yml.dist" />
+        <option value="$PROJECT_DIR$/app/config/parameters.yml" />
+        <option value="$PROJECT_DIR$/app/config/security.yml" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Resources/config/services/security.yml" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Controller/User/Authentication/LoginController.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Service/Security/User/Authentication/Login/LoginChecker.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/Page/User/Authentication/Login/login.html.twig" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Controller/User/Authentication/EnableController.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Resources/config/routing/prod/user/authentication/all.yml" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Controller/User/Authentication/EnablingController.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/Page/User/Authentication/Enabling/enable.html.twig" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/Mail/User/Authentication/Registration/register.html.twig" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Resources/config/services/mailer.yml" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Controller/User/Authentication/RegistrationController.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Resources/config/services/all.yml" />
+        <option value="$PROJECT_DIR$/app/config/config.yml" />
+        <option value="$PROJECT_DIR$/app/config/settings.yml" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Service/Mailer/User/RegistrationMailer.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Service/Mailer/AbstractMailer.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Resources/config/routing/prod/user/authentication/enabling.yml" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/Mail/User/Registration/register.html.twig" />
       </list>
     </option>
   </component>
@@ -212,10 +242,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP 7.1" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-835" />
-    <option name="y" value="-17" />
-    <option name="width" value="1928" />
-    <option name="height" value="1014" />
+    <option name="x" value="-1929" />
+    <option name="y" value="426" />
+    <option name="width" value="1938" />
+    <option name="height" value="1048" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -239,7 +269,9 @@
       </profile-state>
     </entry>
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -255,6 +287,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -262,30 +295,97 @@
               <item name="Quizz" type="b2602c69:ProjectViewProjectNode" />
               <item name="Quizz" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
+            <path>
+              <item name="Quizz" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Quizz" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Quizz" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Quizz" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="AppBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Quizz" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Quizz" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="AppBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Quizz" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Quizz" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="AppBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Quizz" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Quizz" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="AppBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="routing" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Quizz" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Quizz" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="AppBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="routing" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="prod" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Quizz" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Quizz" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="AppBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="routing" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="prod" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="user" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Quizz" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Quizz" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="AppBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="routing" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="prod" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="user" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="authentication" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Digital Respawn" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path" value="D:/Program Files/nodejs/node" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\TheMa\Documents\Developpement\Didasko Sante\Quizz\src\AppBundle\Resources\views\Page\Quiz\Doing" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\TheMa\Documents\Developpement\Didasko Sante\Quizz\src\AppBundle\Resources\views\Mail\User" />
+      <recent name="C:\Users\TheMa\Documents\Developpement\Didasko Sante\Quizz\src\AppBundle\Service" />
       <recent name="C:\Users\TheMa\Documents\Developpement\Didasko Sante\Quizz\src\AppBundle\Form\Type\Answer" />
       <recent name="C:\Users\TheMa\Documents\Developpement\Didasko Sante\Quizz\src\AppBundle\Controller\Quiz" />
       <recent name="C:\Users\TheMa\Documents\Developpement\Didasko Sante\Quizz\src\AppBundle\Resources\views\Page\Admin" />
-      <recent name="C:\Users\TheMa\Documents\Developpement\Didasko Sante\Quizz\src\AppBundle\Form\Type\Quiz" />
-      <recent name="C:\Users\TheMa\Documents\Developpement\Didasko Sante\Quizz\src\AppBundle\Resources\views\Layout\Default" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\TheMa\Documents\Developpement\Didasko Sante\Quizz\src\AppBundle\Resources\views\Page\Quiz\Doing" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -327,31 +427,33 @@
       <workItem from="1519912868773" duration="11969000" />
       <workItem from="1519981982660" duration="19129000" />
       <workItem from="1520065915878" duration="2575000" />
+      <workItem from="1520069583990" duration="8821000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="197671000" />
+    <option name="totallyTimeSpent" value="206492000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1058" extended-state="6" />
+    <frame x="-1929" y="426" width="1938" height="1048" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22341569" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22663802" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="1.0" sideWeight="0.5021482" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32882884" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29954955" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="1.0" sideWeight="0.49785176" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -360,6 +462,11 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/website-skeleton" />
+    </ignored-roots>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -375,147 +482,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/routing/prod/quiz/all.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="25" lean-forward="true" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/routing/prod/all.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="21" lean-forward="true" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/routing/prod/user/all.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/routing/prod/user/authentication/all.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/routing/prod/user/authentication/enabling.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="33" lean-forward="true" selection-start-line="0" selection-start-column="33" selection-end-line="0" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/routing/prod/admin/quiz/creation.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" column="11" lean-forward="false" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/routing/prod/quiz/listing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="52" lean-forward="false" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/Quiz/ListingController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="17" column="11" lean-forward="false" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/Admin/Category/CreationController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="30" column="74" lean-forward="false" selection-start-line="30" selection-start-column="74" selection-end-line="30" selection-end-column="74" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/routing/prod/admin/user_group/all.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="18" column="24" lean-forward="true" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/routing/prod/admin/user_group/showing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="17" lean-forward="true" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/Admin/UserGroup/ListingController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" column="32" lean-forward="false" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/routing/prod/admin/user_group/removing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="64" lean-forward="false" selection-start-line="2" selection-start-column="64" selection-end-line="2" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/routing/prod/admin/user_group/listing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="60" lean-forward="true" selection-start-line="2" selection-start-column="60" selection-end-line="2" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/routing/prod/admin/user_group/edition.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="15" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/routing/prod/admin/user_group/creation.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="74" lean-forward="false" selection-start-line="2" selection-start-column="74" selection-end-line="2" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Layout/Full/sidebar.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="120" column="30" lean-forward="false" selection-start-line="120" selection-start-column="30" selection-end-line="120" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/Type/User/Authentication/Register/RegisterType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="40" column="8" lean-forward="false" selection-start-line="40" selection-start-column="8" selection-end-line="42" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/UserGroup.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-126">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/Type/Quiz/QuizCreationType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-486">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/Type/Answer/AnswerCreationType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
@@ -633,7 +599,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Page/Admin/UserGroup/Showing/show.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="231">
           <caret line="11" column="23" lean-forward="false" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
           <folding />
         </state>
@@ -644,27 +610,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
           <caret line="14" column="30" lean-forward="false" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
-          <folding>
-            <element signature="e#51#77#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/security.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="44" column="83" lean-forward="false" selection-start-line="44" selection-start-column="83" selection-end-line="44" selection-end-column="83" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Security/User/Authentication/Login/LoginChecker.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="13" column="8" lean-forward="false" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
-          <folding>
-            <element signature="e#64#90#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -680,7 +625,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="41" column="36" lean-forward="true" selection-start-line="41" selection-start-column="36" selection-end-line="41" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -688,44 +632,25 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="32" column="52" lean-forward="false" selection-start-line="32" selection-start-column="52" selection-end-line="32" selection-end-column="52" />
-          <folding>
-            <element signature="e#44#70#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Service/Business/UserBusiness.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1134">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/User/Authentication/RegistrationController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="30" column="12" lean-forward="false" selection-start-line="30" selection-start-column="12" selection-end-line="32" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/Admin/User/EditionController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="18" column="9" lean-forward="true" selection-start-line="18" selection-start-column="9" selection-end-line="21" selection-end-column="0" />
+        <state relative-caret-position="315">
+          <caret line="18" column="9" lean-forward="false" selection-start-line="18" selection-start-column="9" selection-end-line="21" selection-end-column="0" />
           <folding>
-            <element signature="e#51#77#0#PHP" expanded="true" />
+            <element signature="e#51#77#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/Admin/User/CreationController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+        <state relative-caret-position="672">
+          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding>
-            <element signature="e#51#77#0#PHP" expanded="true" />
+            <element signature="e#51#77#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -741,16 +666,251 @@
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/Admin/User/ShowController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state relative-caret-position="357">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Service/Business/UserBusiness.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/services/util.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/services/security.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="31" lean-forward="false" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/security.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="44" column="91" lean-forward="false" selection-start-line="44" selection-start-column="26" selection-end-line="44" selection-end-column="91" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="33" lean-forward="false" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml.dist">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Page/User/Authentication/Login/login.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="25" column="62" lean-forward="false" selection-start-line="25" selection-start-column="62" selection-end-line="25" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Service/Security/User/Authentication/Login/LoginChecker.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="23" column="69" lean-forward="false" selection-start-line="23" selection-start-column="69" selection-end-line="23" selection-end-column="69" />
+          <folding>
+            <element signature="e#72#98#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/User/Authentication/LoginController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="27" column="18" lean-forward="false" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/routing/prod/user/authentication/forgot_password.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keymaps/Default copy.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Page/User/Authentication/Enabling/enable.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="73" lean-forward="false" selection-start-line="5" selection-start-column="73" selection-end-line="5" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/User/Authentication/EnablingController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="36" lean-forward="false" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
+          <folding>
+            <element signature="e#61#87#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/routing/prod/user/authentication/login.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/User/Authentication/RegistrationController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="20" column="27" lean-forward="false" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/services/all.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="25" lean-forward="false" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/services/mailer.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="26" lean-forward="false" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="26" lean-forward="false" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/settings.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="42" lean-forward="false" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Service/Mailer/User/RegistrationMailer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="15" column="20" lean-forward="false" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+          <folding>
+            <element signature="e#49#75#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Service/Mailer/AbstractMailer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="93" column="66" lean-forward="false" selection-start-line="93" selection-start-column="66" selection-end-line="93" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/routing/prod/user/authentication/all.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="13" column="84" lean-forward="false" selection-start-line="13" selection-start-column="84" selection-end-line="13" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/routing/prod/user/authentication/enabling.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="39" lean-forward="false" selection-start-line="0" selection-start-column="39" selection-end-line="0" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Mail/User/Registration/register.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="179" column="154" lean-forward="false" selection-start-line="179" selection-start-column="154" selection-end-line="179" selection-end-column="154" />
+          <folding>
+            <element signature="e#7701#7723#0#HTML" expanded="true" />
+            <element signature="e#7738#7759#0#HTML" expanded="true" />
+            <marker date="1520081654296" expanded="true" signature="1624:1782" ph="..." />
+            <marker date="1520081654296" expanded="true" signature="1625:1782" ph="..." />
+            <marker date="1520081654296" expanded="true" signature="1659:1771" ph="..." />
+            <marker date="1520081654296" expanded="true" signature="1847:1935" ph="..." />
+            <marker date="1520081654296" expanded="true" signature="1876:1923" ph="{...}" />
+            <marker date="1520081654296" expanded="true" signature="2246:2393" ph="..." />
+            <marker date="1520081654296" expanded="true" signature="2289:2386" ph="{...}" />
+            <marker date="1520081654296" expanded="true" signature="2322:2376" ph="{...}" />
+            <marker date="1520081654296" expanded="true" signature="2463:2481" ph="..." />
+            <marker date="1520081654296" expanded="true" signature="2482:2819" ph="..." />
+            <marker date="1520081654296" expanded="true" signature="2539:2563" ph="..." />
+            <marker date="1520081654296" expanded="true" signature="2564:2819" ph="..." />
+            <marker date="1520081654296" expanded="true" signature="2684:2819" ph="..." />
+            <marker date="1520081654296" expanded="false" signature="2703:2715" ph="..." />
+            <marker date="1520081654296" expanded="true" signature="2716:2819" ph="..." />
+            <marker date="1520081654296" expanded="true" signature="2729:2819" ph="..." />
+            <marker date="1520081654296" expanded="false" signature="2754:2813" ph="..." />
+            <marker date="1520081654296" expanded="true" signature="2814:2819" ph="..." />
+            <marker date="1520081654296" expanded="true" signature="3293:3416" ph="..." />
+            <marker date="1520081654296" expanded="true" signature="3293:3417" ph="..." />
+            <marker date="1520081654296" expanded="true" signature="3322:3416" ph="..." />
+            <marker date="1520081654296" expanded="false" signature="3363:3394" ph="..." />
+            <marker date="1520081654296" expanded="true" signature="3395:3416" ph="..." />
+            <marker date="1520081654296" expanded="true" signature="5557:5692" ph="..." />
+            <marker date="1520081654296" expanded="false" signature="5576:5588" ph="..." />
+            <marker date="1520081654296" expanded="true" signature="5589:5692" ph="..." />
+            <marker date="1520081654296" expanded="true" signature="5602:5692" ph="..." />
+            <marker date="1520081654296" expanded="false" signature="5627:5686" ph="..." />
+            <marker date="1520081654296" expanded="true" signature="5687:5692" ph="..." />
+            <marker date="1520081654296" expanded="true" signature="6201:6327" ph="..." />
+            <marker date="1520081654296" expanded="true" signature="6201:6328" ph="..." />
+            <marker date="1520081654296" expanded="true" signature="6230:6327" ph="..." />
+            <marker date="1520081654296" expanded="false" signature="6271:6305" ph="..." />
+            <marker date="1520081654296" expanded="true" signature="6306:6327" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

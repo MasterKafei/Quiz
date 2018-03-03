@@ -1,6 +1,6 @@
 <?php
 
-namespace AppBundle\Security\User\Authentication\Login;
+namespace AppBundle\Service\Security\User\Authentication\Login;
 
 use AppBundle\Entity\User;
 use Symfony\Component\Security\Core\Exception\AccountExpiredException;
@@ -21,7 +21,7 @@ class LoginChecker implements UserCheckerInterface
         }
 
         if (!$user->isEnabled()) {
-            throw new AccountExpiredException('...');
+            throw new AccountExpiredException('Account not enable yet');
         }
     }
 }
