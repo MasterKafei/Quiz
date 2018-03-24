@@ -1,7 +1,9 @@
-{% extends '@Layout/Default/base.html.twig' %}
+{% extends '@Layout/Page/Default/base.html.twig' %}
+
+{% block title %}Registration{% endblock %}
 
 {% block stylesheets %}
-    {% include '@Layout/Default/stylesheets.html.twig' %}
+    {% include '@Layout/Page/Default/stylesheets.html.twig' %}
 {% endblock %}
 
 {% block body_html %}
@@ -9,7 +11,7 @@
     {% block body %}
         <div class="register-box">
             <div class="register-logo">
-                <a href="{{ path('app_home_home_index') }}">MasterKoop</a>
+                <a href="{{ path('app_home_home_index') }}">Quiz</a>
             </div>
 
             <div class="register-box-body">

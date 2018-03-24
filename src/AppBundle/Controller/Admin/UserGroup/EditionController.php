@@ -3,7 +3,7 @@
 namespace AppBundle\Controller\Admin\UserGroup;
 
 use AppBundle\Entity\UserGroup;
-use AppBundle\Form\Type\UserGroup\UserGroupCreation;
+use AppBundle\Form\Type\UserGroup\UserGroupCreationType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -11,7 +11,7 @@ class EditionController extends Controller
 {
     public function editAction(Request $request, UserGroup $group)
     {
-        $form = $this->createForm(UserGroupCreation::class,  $group);
+        $form = $this->createForm(UserGroupCreationType::class,  $group);
 
         $form->handleRequest($request);
 
@@ -21,7 +21,7 @@ class EditionController extends Controller
             $em->persist($group);
             $em->flush();
 
-            return $this->redirectToRoute('app_admin_user_group_listing_list');
+            return $this->redirectToRoute('app_admin_group_listing_list');
         }
 
         return $this->render('@Page/Admin/UserGroup/Edition/edit.html.twig', array(

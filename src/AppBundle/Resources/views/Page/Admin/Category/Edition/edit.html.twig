@@ -1,4 +1,26 @@
-{% extends '@Layout/Full/base.html.twig' %}
+{% extends '@Layout/Page/Full/base.html.twig' %}
+{% import '@Layout/Component/Breadcrumb/breadcrumb.html.twig' as breadcrumb %}
+
+{% block header %}
+    <h1>
+        Category edition
+        <small>Edit all existing category with information</small>
+    </h1>
+    {{ breadcrumb.full(
+    [
+    'Administration',
+    'Category',
+    'Edition'
+    ],
+    [
+    '#',
+    path('app_admin_category_listing_list'),
+    path('app_admin_category_edition_edit', {'id': category.id})
+    ],
+    'fa fa-folder-open'
+    )
+    }}
+{% endblock %}
 
 {% block body %}
     <div class="box box-info">

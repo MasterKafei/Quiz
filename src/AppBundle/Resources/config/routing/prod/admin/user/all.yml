@@ -13,3 +13,7 @@ app_admin_user_removing:
 app_admin_user_showing:
     resource: "@AppBundle/Resources/config/routing/prod/admin/user/showing.yml"
     prefix:   /showing/
+
+app_admin_user_creation:
+    resource: "@AppBundle/Resources/config/routing/prod/admin/user/creation.yml"
+    prefix:   /creation/

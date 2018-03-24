@@ -115,7 +115,7 @@ class Quiz
     /**
      * Set questions
      *
-     * @param array $questions
+     * @param Question[] $questions
      *
      * @return Quiz
      */
@@ -129,7 +129,7 @@ class Quiz
     /**
      * Get questions
      *
-     * @return array
+     * @return Question[]
      */
     public function getQuestions()
     {

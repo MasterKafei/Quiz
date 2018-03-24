@@ -46,7 +46,7 @@
                 <i class="fa fa-user"></i>
             </div>
             <div class="pull-left info">
-                <p>Anonymous</p>
+                {{ app.user.username }}
             </div>
         </div>
         <ul class="sidebar-menu" data-widget="tree">
@@ -116,17 +116,34 @@
                 ]
                 ) }}
                 {{ sidebar.itemWithSubs(
-                'app_admin_user_group',
-                'Group',
-                'fa fa-users',
+                'app_admin_user',
+                'User',
+                'fa fa-user',
                 [
                 {
-                    'route': 'app_admin_user_group_creation_create',
+                    'route': 'app_admin_user_creation_create',
                     'text': 'New',
                     'icon': 'fa fa-plus',
                 },
                 {
-                    'route': 'app_admin_user_group_listing_list',
+                    'route': 'app_admin_user_listing_list',
+                    'text': 'List',
+                    'icon': 'fa fa-list-alt',
+                }
+                ]
+                ) }}
+                {{ sidebar.itemWithSubs(
+                'app_admin_group',
+                'Group',
+                'fa fa-users',
+                [
+                {
+                    'route': 'app_admin_group_creation_create',
+                    'text': 'New',
+                    'icon': 'fa fa-plus',
+                },
+                {
+                    'route': 'app_admin_group_listing_list',
                     'text': 'List',
                     'icon': 'fa fa-list-alt',
                 }

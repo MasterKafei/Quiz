@@ -14,6 +14,6 @@ app_admin_category:
     resource: "@AppBundle/Resources/config/routing/prod/admin/category/all.yml"
     prefix:   /category/
 
-app_admin_user_group:
-    resource: "@AppBundle/Resources/config/routing/prod/admin/user_group/all.yml"
-    prefix:   /user_group/
+app_admin_group:
+    resource: "@AppBundle/Resources/config/routing/prod/admin/group/all.yml"
+    prefix:   /group/

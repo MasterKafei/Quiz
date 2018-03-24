@@ -74,6 +74,11 @@ class User implements UserInterface, \Serializable
      */
     private $groups;
 
+    /**
+     * @var Answer[]
+     */
+    private $answers;
+
     public function __construct()
     {
         $this->salt = $this->salt = base_convert(sha1(uniqid(mt_rand(), true)), 16, 36);
@@ -352,6 +357,28 @@ class User implements UserInterface, \Serializable
     public function setGroups($groups)
     {
         $this->groups = $groups;
+        return $this;
+    }
+
+    /**
+     * Get answers
+     *
+     * @return Answer[]
+     */
+    public function getAnswers()
+    {
+        return $this->answers;
+    }
+
+    /**
+     * Set answers
+     *
+     * @param Answer[] $answers
+     * @return User
+     */
+    public function setAnswers($answers)
+    {
+        $this->answers = $answers;
         return $this;
     }
 

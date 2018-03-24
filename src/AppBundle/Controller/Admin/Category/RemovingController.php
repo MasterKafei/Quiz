@@ -21,6 +21,6 @@ class RemovingController extends Controller
         $em->remove($category);
         $em->flush();
 
-        return $this->redirectToRoute('app_admin_category_list_listing');
+        return $this->redirectToRoute('app_admin_category_listing_list');
     }
 }

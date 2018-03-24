@@ -38,6 +38,12 @@ class Question
     private $quiz;
 
     /**
+     * @var Answer[]
+     */
+    private $answers;
+
+
+    /**
      * Get id
      *
      * @return int
@@ -162,6 +168,29 @@ class Question
     public function setQuiz($quiz)
     {
         $this->quiz = $quiz;
+        return $this;
+    }
+
+    /**
+     * Get answers
+     *
+     * @return Answer[]
+     */
+    public function getAnswers()
+    {
+        return $this->answers;
+    }
+
+
+    /**
+     * Set answers
+     *
+     * @param Answer[] $answers
+     * @return Question
+     */
+    public function setAnswers($answers)
+    {
+        $this->answers = $answers;
         return $this;
     }
 }

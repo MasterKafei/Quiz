@@ -18,7 +18,7 @@ class CreationController extends Controller
 {
     public function createAction(Request $request)
     {
-        return $this->render('@Page/Admin/Question/Create/create.html.twig');
+        return $this->render('@Page/Admin/Question/Creation/create.html.twig');
     }
 
     public function addAction(Request $request, Quiz $quiz)

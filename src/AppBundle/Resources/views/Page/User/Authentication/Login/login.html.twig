@@ -1,15 +1,16 @@
-{% extends '@Layout/Default/base.html.twig' %}
+{% extends '@Layout/Page/Default/base.html.twig' %}
 
-{% block head %}
-    <title>{% block title %}Login{% endblock %}</title>
-    {% include '@Layout/Default/stylesheets.html.twig' %}
-{% endblock %}
+    {% block title %}Login{% endblock %}
+
+    {% block stylesheets %}
+        {% include '@Layout/Page/Default/stylesheets.html.twig' %}
+    {% endblock %}
 
 {% block body_html %}
     <body class="hold-transition login-page">
     <div class="login-box">
         <div class="login-logo">
-            <a href={{ asset('app_home_home_index') }}><b>Master</b>Koop</a>
+            <a href={{ asset('app_home_home_index') }}><b>Qui</b>z</a>
         </div>
         <div class="login-box-body">
             <p class="login-box-msg">Sign in to start your session</p>
@@ -69,7 +70,7 @@
 
 
     {% block javascripts %}
-        {% include '@Layout/Default/javascripts.html.twig' %}
+        {% include '@Layout/Page/Default/javascripts.html.twig' %}
     {% endblock %}
 
     </body>

@@ -34,7 +34,7 @@ class EditionController extends Controller
             $em->persist($question);
             $em->flush();
 
-            return $this->redirectToRoute('app_admin_quiz_show_showing', array('id' => $question->getQuiz()->getId()));
+            return $this->redirectToRoute('app_admin_quiz_showing_show', array('id' => $question->getQuiz()->getId()));
         }
 
         return $this->render('@Page/Admin/Question/Edition/edit.html.twig', array(

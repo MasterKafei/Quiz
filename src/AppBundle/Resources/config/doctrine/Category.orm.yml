@@ -20,4 +20,9 @@ AppBundle\Entity\Category:
             targetEntity: AppBundle\Entity\Quiz
             mappedBy: category
             cascade: [ persist, remove ]
+    manyToMany:
+        groups:
+            targetEntity: AppBundle\Entity\UserGroup
+            mappedBy: categories
+            cascade: [ persist ]
     lifecycleCallbacks: {  }

@@ -28,11 +28,12 @@ class EditionController extends Controller
             $em->persist($category);
             $em->flush();
 
-            return $this->redirectToRoute('app_admin_category_list_listing');
+            return $this->redirectToRoute('app_admin_category_listing_list');
         }
 
         return $this->render('@Page/Admin/Category/Edition/edit.html.twig', array(
             'form' => $form->createView(),
+            'category' => $category,
         ));
     }
 }

@@ -2,6 +2,8 @@
 
 namespace AppBundle\Repository;
 
+use AppBundle\Entity\Answer;
+use AppBundle\Entity\Quiz;
 use AppBundle\Entity\User;
 use Doctrine\ORM\EntityRepository;
 
@@ -16,33 +18,76 @@ class QuizRepository extends EntityRepository
     public function getNewQuizzes(User $user)
     {
         $qb = $this->_em->createQuery('
-            SELECT q
-            FROM AppBundle:Answer answer
-            JOIN answer.question q
+            SELECT DISTINCT  a
+            FROM AppBundle:Answer a
         ');
 
-        //$qb->setParameter('user', $user);
+        $answers = $qb->getResult();
 
-        return $qb->getResult();
+        $quizzes = array();
+        $quizzesAnswers = array();
+
+        /** @var Answer $answer */
+        foreach($answers as $answer)
+        {
+            $quiz = $answer->getQuestion()->getQuiz();
+            if($answer->getUser()->getId() == $user->getId() && !in_array($quiz->getId(), $quizzesAnswers))
+            {
+                array_push($quizzesAnswers, $quiz->getId());
+            }
+        }
+
+        /** @var Answer $answer */
+        foreach($answers as $answer)
+        {
+            $quiz = $answer->getQuestion()->getQuiz();
+            if(!in_array($quiz->getId(), $quizzesAnswers) && !in_array($quiz, $quizzes))
+            {
+                array_push($quizzes, $quiz);
+            }
+        }
+
+        return $quizzes;
     }
 
     public function getInProgressQuizzes(User $user)
     {
-        $qb = $this->_em->createQuery('
-            SELECT answer.question.quiz FROM AppBundle:Answer
-            WHERE 
-              (SELECT COUNT(question) FROM AppBundle:Question
-                WHERE question = answer.question
-                AND answer.user = :user) < COUNT(answer.question.quiz.questions)
-            ')
+        $quizzes = $this->getUserQuizzes($user);
 
-            ->setParameter('user', $user);
 
-        return $qb->getResult();
+
+        return $quizzes;
     }
 
     public function getCompletedQuizzes(User $user)
     {
 
+    }
+
+    public function getUserQuizzes(User $user)
+    {
+        $qb = $this->_em->createQuery('
+            SELECT DISTINCT question.quiz FROM AppBundle:Question question
+            WHERE question.answer.user = :user
+        ')
+            ->setParameter('user', $user);
+
+        return $qb->getResult();
+    }
+
+    public function test(User $user)
+    {
+        $qb = $this->createQueryBuilder('quiz')
+            ->select('q')
+            ->from('AppBundle:Quiz', 'q')
+            ->where('answer.user != :user')
+            ->leftJoin('quiz.questions', 'question')
+            ->leftJoin('question.answers', 'answer')
+
+
+
+            ;
+
+        return $qb->getQuery()->execute();
     }
 }
