@@ -1,9 +1,9 @@
-{% extends '@Layout/Default/base.html.twig' %}
+{% extends '@Layout/Page/Default/base.html.twig' %}
 {% block head_html %}
 <head>
     {% block head %}
-        <title>{% block title %}Quizz{% endblock %}</title>
-        {% include '@Layout/Default/stylesheets.html.twig' %}
+        <title>{% block title %}Quiz{% endblock %}</title>
+        {% include '@Layout/Page/Default/stylesheets.html.twig' %}
     {% endblock %}
     {% block stylesheets %}{% endblock %}
 </head>
@@ -11,8 +11,10 @@
 {% block body_html %}
     <body class="hold-transition skin-blue sidebar-mini">
         <div class="wrapper">
-            {% include '@Layout/Full/topbar.html.twig' %}
-            {% include '@Layout/Full/sidebar.html.twig' %}
+            {% include '@Layout/Page/Full/topbar.html.twig' %}
+            {% if app.user is defined and app.user is not null %}
+                {% include '@Layout/Page/Full/sidebar.html.twig' %}
+            {% endif %}
             <div class="content-wrapper">
                 <section class="content-header">
                     {% block header %}{% endblock %}
@@ -21,8 +23,8 @@
                     {% block body %}{% endblock %}
                 </section>
             </div>
-            {% include '@Layout/Full/footer.html.twig' %}
-            {% include '@Layout/Default/javascripts.html.twig' %}
+            {% include '@Layout/Page/Full/footer.html.twig' %}
+            {% include '@Layout/Page/Default/javascripts.html.twig' %}
             {% block javascripts %}{% endblock javascripts %}
         </div>
     </body>

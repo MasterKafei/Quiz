@@ -1,0 +1,13 @@
+{% macro input(proposition, isCorrect) %}
+    <label class="col-sm-10 col-sm-offset-2">
+        <div class="input-group">
+            {% if isCorrect is defined and isCorrect %}
+                    <div class="bg-success">
+                        {{ proposition }}
+                    </div>
+            {% else %}
+                {{ proposition }}
+            {% endif %}
+        </div>
+    </label>
+{% endmacro %}

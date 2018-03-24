@@ -22,7 +22,7 @@ class CreationController extends Controller
             $em->persist($quiz);
             $em->flush();
 
-            return $this->redirectToRoute('app_admin_question_create_add', array('id' => $quiz->getId()));
+            return $this->redirectToRoute('app_admin_question_creation_add', array('id' => $quiz->getId()));
         }
 
         return $this->render('@Page/Admin/Quiz/Creation/create.html.twig', array(

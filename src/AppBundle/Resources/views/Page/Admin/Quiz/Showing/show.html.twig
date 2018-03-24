@@ -1,4 +1,4 @@
-{% extends '@Layout/Full/base.html.twig' %}
+{% extends '@Layout/Page/Full/base.html.twig' %}
 
 {% block body %}
     <div class="box box-primary">
@@ -37,8 +37,8 @@
             </div>
             <div class="box-footer with-border">
                 <div class="pull-right">
-                    <a href="{{ path('app_admin_question_edit_edition', {'id': question.id}) }}" class="btn btn-info">Edit <i class="fa fa-edit"></i></a>
-                    <a href="{{ path('app_admin_question_remove_removable', {'id': question.id}) }}" class="btn btn-info">Remove <i class="fa fa-trash"></i></a>
+                    <a href="{{ path('app_admin_question_edition_edit', {'id': question.id}) }}" class="btn btn-info">Edit <i class="fa fa-edit"></i></a>
+                    <a href="{{ path('app_admin_question_removing_remove', {'id': question.id}) }}" class="btn btn-info">Remove <i class="fa fa-trash"></i></a>
                 </div>
             </div>
         </div>

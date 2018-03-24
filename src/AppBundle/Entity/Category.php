@@ -29,6 +29,11 @@ class Category
 
 
     /**
+     * @var UserGroup[]
+     */
+    private $groups;
+
+    /**
      * Get id
      *
      * @return int
@@ -108,6 +113,28 @@ class Category
     public function getQuizzes()
     {
         return $this->quizzes;
+    }
+
+    /**
+     * Set groups
+     *
+     * @param UserGroup[] $groups
+     * @return Category
+     */
+    public function setGroups($groups)
+    {
+        $this->groups = $groups;
+        return $this;
+    }
+
+    /**
+     * Get groups
+     *
+     * @return UserGroup[]
+     */
+    public function getGroups()
+    {
+        return $this->groups;
     }
 }
 

@@ -39,6 +39,10 @@ AppBundle\Entity\User:
 
     manyToMany:
         groups:
-            targetEntity: UserGroup
+            targetEntity: AppBundle\Entity\UserGroup
             inversedBy: users
+    oneToMany:
+        answers:
+            targetEntity: AppBundle\Entity\Answer
+            mappedBy: user
     lifecycleCallbacks: {  }

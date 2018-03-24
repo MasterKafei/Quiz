@@ -20,6 +20,6 @@ class RemovingController extends Controller
         $em->remove($question);
         $em->flush();
 
-        return $this->redirectToRoute('app_admin_quiz_show_showing', array('id' => $quiz->getId()));
+        return $this->redirectToRoute('app_admin_quiz_showing_show', array('id' => $quiz->getId()));
     }
 }

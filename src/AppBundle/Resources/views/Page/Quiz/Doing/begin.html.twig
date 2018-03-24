@@ -1,13 +1,15 @@
-{% extends '@Layout/Full/base.html.twig' %}
+{% extends '@Layout/Page/Full/base.html.twig' %}
 
 {% block body %}
     <div class="box box-info">
         <div class="box-header with-border">
             <h3>{{ quiz.title }}</h3>
         </div>
+        {% if quiz.description is defined and quiz.description is not null %}
         <div class="box-body">
             <p>{{ quiz.description }}</p>
         </div>
+        {% endif %}
         <div class="box-footer">
             {% if quiz.questions|length > 0 %}
                 {% if quiz.resettable and answers|length > 0 %}

@@ -1,36 +1,27 @@
-{% extends '@Layout/Full/base.html.twig' %}
+{% extends '@Layout/Page/Full/base.html.twig' %}
+{% import '@Layout/Component/Category/category_box.html.twig' as category_box %}
+{% import '@Layout/Component/Breadcrumb/breadcrumb.html.twig' as breadcrumb %}
+
+{% block header %}
+    <h1>
+        New quizzes
+        <small>Every quizzes you didn't answered yet</small>
+    </h1>
+    {{ breadcrumb.full(
+        [
+        'Quiz',
+        'New'
+        ],
+        [
+        '#',
+        path('app_quiz_list_new'),
+        ],
+        'fa fa-list-ol'
+    ) }}
+{% endblock %}
 
 {% block body %}
     {% for category in categories %}
-        <div class="box box-info">
-            <div class="box-header with-border">
-                <h3>{{ category.title }}</h3>
-                <p>{{ category.description }}</p>
-            </div>
-            <div class="box-body">
-                {% for quiz in category.quizzes %}
-                    <a href="{{ path('app_quiz_do_begin', {'id': quiz.id}) }}">
-                        <div class="callout
-                            {% if quiz.startingDate is null or quiz.startingDate < date('now') %}
-                                {% if quiz.endingDate is null or quiz.endingDate > date('now') %}
-                                    callout-info
-                                {% else %}
-                                    callout-warning
-                                {% endif %}
-                            {% else %}
-                                callout-success
-                            {% endif %}
-                                                    ">
-                            <h4>{{ quiz.title }}</h4>
-
-                            <p>{{ quiz.description }}</p>
-                        </div>
-                    </a>
-                {% endfor %}
-            </div>
-            <div class="box-footer">
-
-            </div>
-        </div>
+        {{ category_box.short(category) }}
     {% endfor %}
 {% endblock %}

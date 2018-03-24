@@ -19,6 +19,6 @@ class RemovingController extends Controller
         $em->remove($quiz);
         $em->flush();
 
-        return $this->redirectToRoute('app_admin_quiz_list_listing');
+        return $this->redirectToRoute('app_admin_quiz_listing_list');
     }
 }

@@ -3,7 +3,7 @@
 namespace AppBundle\Controller\Admin\UserGroup;
 
 use AppBundle\Entity\UserGroup;
-use AppBundle\Form\Type\UserGroup\UserGroupCreation;
+use AppBundle\Form\Type\UserGroup\UserGroupCreationType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -18,7 +18,7 @@ class CreationController extends Controller
     public function createAction(Request $request)
     {
         $group = new UserGroup();
-        $form = $this->createForm(UserGroupCreation::class, $group);
+        $form = $this->createForm(UserGroupCreationType::class, $group);
 
         $form->handleRequest($request);
 
@@ -28,7 +28,7 @@ class CreationController extends Controller
             $em->persist($group);
             $em->flush();
 
-            return $this->redirectToRoute('app_admin_user_group_listing_list');
+            return $this->redirectToRoute('app_admin_group_listing_list');
         }
 
         return $this->render('@Page/Admin/UserGroup/Creation/create.html.twig', array(

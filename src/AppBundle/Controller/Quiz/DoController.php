@@ -59,7 +59,7 @@ class DoController extends Controller
 
         if(!$allowed)
         {
-            return $this->redirectToRoute('app_quiz_list_listing');
+            return $this->redirectToRoute('app_quiz_list_new');
         }
 
         for($i = 0; $i < count($questions) - 1; ++$i)

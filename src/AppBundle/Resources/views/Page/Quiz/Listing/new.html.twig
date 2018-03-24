@@ -1,0 +1,22 @@
+{% extends '@Layout/Page/Full/base.html.twig' %}
+{% import '@Layout/Component/Category/category_box.html.twig' as category_box %}
+
+{% block body %}
+    <div class="box box-info">
+        <div class="box-header">
+
+        </div>
+
+        <div class="box-body">
+            {% for category in categories %}
+                {% if category.quizzes|length != 0 %}
+                    {{ category_box.short(category) }}
+                {% endif %}
+            {% endfor %}
+        </div>
+
+        <div class="box-footer">
+
+        </div>
+    </div>
+{% endblock %}

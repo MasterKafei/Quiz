@@ -1,0 +1,71 @@
+{% extends '@Layout/Page/Full/base.html.twig' %}
+
+{% block body %}
+    <div class="box box-info">
+        <div class="box-header with-border">
+            <h3 class="box-title">Creation User</h3>
+        </div>
+        {{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }}
+            <div class="box-body">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">{{ form_label(form.username) }}</label>
+                    <div class="col-sm-10">
+                        {{ form_widget(form.username, {'attr': {'class': 'form-control'}} ) }}
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">{{ form_label(form.firstName) }}</label>
+                    <div class="col-sm-10">
+                        {{ form_widget(form.firstName, {'attr': {'class': 'form-control'}} ) }}
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">{{ form_label(form.lastName) }}</label>
+                    <div class="col-sm-10">
+                        {{ form_widget(form.lastName, {'attr': {'class': 'form-control'}} ) }}
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">{{ form_label(form.email) }}</label>
+                    <div class="col-sm-10">
+                        {{ form_widget(form.email, {'attr': {'class': 'form-control'}} ) }}
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">{{ form_label(form.plainPassword.first) }}</label>
+                    <div class="col-sm-10">
+                        {{ form_widget(form.plainPassword.first, {'attr': {'class': 'form-control', 'id': 'date-time-picker-ending-date'}} ) }}
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">{{ form_label(form.plainPassword.second) }}</label>
+                    <div class="col-sm-10">
+                        {{ form_widget(form.plainPassword.second, {'attr': {'class': 'form-control', 'id': 'date-time-picker-ending-date'}} ) }}
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">{{ form_label(form.enabled) }}</label>
+                    <div class="checkbox">
+                        <div class="col-sm-10">
+                            {{ form_widget(form.enabled) }}
+                        </div>
+                    </div>
+                </div>
+                {% for choice in form.roles %}
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">{{ form_label(choice) }}</label>
+                        <div class="checkbox">
+                            <div class="col-sm-10">
+                                {{ form_widget(choice) }}
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="box-footer">
+                {{ form_row(form.save, {'attr': {'class': 'btn btn-info btn-flat pull-right'}}) }}
+            </div>
+            {{ form_rest(form) }}
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends '@Layout/Page/Full/base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('assets/vendor/datatables.net-bs/css/dataTables.bootstrap.min.css') }}">
+{% endblock %}
+
+{% block body %}
+    <div class="box">
+        <div class="box-header with-border">
+            <h3 class="box-title">Users</h3>
+        </div>
+
+        <div class="box-body">
+            <div class="col-sm-12">
+                <table id="quiz-table-listing" class="table table-bordered table-striped dataTable" role="grid"
+                       aria-describedby="quiz-table-listing_info">
+                    <thead>
+                    <tr role="row">
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Full name</th>
+                        <th>Action</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for user in users %}
+                        <tr role="row" class="odd">
+                            <td class="sorting_1">{{ user.username }}</td>
+                            <td>{{ user.email }}</td>
+                            <td>{{ user.firstName }} {{ user.lastName }}</td>
+                            <td>
+                                <div class="btn-group">
+                                    <a href="{{ path('app_admin_user_showing_show', {'id': user.id}) }}" class="btn btn-info">Show <i class="fa fa-eye"></i></a>
+                                    <a href="{{ path('app_admin_user_edition_edit', {'id': user.id}) }}" class="btn btn-info">Edit <i class="fa fa-edit"></i></a>
+                                    <a href="{{ path('app_admin_user_removing_remove', {'id': user.id}) }}" class="btn btn-info">Remove <i class="fa fa-trash"></i></a>
+                                </div>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('assets/vendor/datatables.net/js/jquery.dataTables.js') }}"></script>
+    <script src="{{ asset('assets/vendor/datatables.net-bs/js/dataTables.bootstrap.min.js') }}"></script>
+    <script>
+        $(function () {
+            $('#user-table-listing').DataTable({});
+        });
+    </script>
+{% endblock %}

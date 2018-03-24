@@ -1,4 +1,24 @@
-{% extends '@Layout/Full/base.html.twig' %}
+{% extends '@Layout/Page/Full/base.html.twig' %}
+{% import '@Layout/Component/Breadcrumb/breadcrumb.html.twig' as breadcrumb %}
+{% block header %}
+    <h1>
+        Question creation
+        <small>Create a new question to an existing quiz</small>
+    </h1>
+    {{ breadcrumb.full(
+        [
+            'Administration',
+            'Quiz',
+            'Creation',
+        ],
+        [
+            '#',
+            path('app_admin_quiz_listing_list'),
+            path('app_admin_question_creation_add', {'id': quiz.id}),
+        ],
+        'fa fa-list-ol'
+    ) }}
+{% endblock %}
 
 {% block body %}
     <div class="box box-info">
@@ -57,7 +77,7 @@
         </div>
     <div class="box-footer">
         <label class="pull-left">
-            <a href="{{ path('app_admin_quiz_show_showing', {'id': quiz.id}) }}" class="btn btn-warning">Quit without saving current question</a>
+            <a href="{{ path('app_admin_quiz_showing_show', {'id': quiz.id}) }}" class="btn btn-warning">Quit without saving current question</a>
         </label>
         <label class="pull-right">
             <a id="save-quit-link" href="#" class="btn btn-success">Save and quit</a>

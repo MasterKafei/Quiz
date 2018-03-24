@@ -2,7 +2,9 @@
 <html>
 {% block head_html %}
     <head>
-        {% block head %}{% endblock %}
+        {% block head %}
+        <title>{% block title %}{% endblock %}</title>
+        {% endblock %}
         {% block stylesheets %}{% endblock %}
     </head>
 {% endblock %}

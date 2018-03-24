@@ -1,4 +1,26 @@
-{% extends '@Layout/Full/base.html.twig' %}
+{% extends '@Layout/Page/Full/base.html.twig' %}
+{% import '@Layout/Component/Breadcrumb/breadcrumb.html.twig' as breadcrumb %}
+
+{% block header %}
+    <h1>
+        Category listing
+        <small>List all existing category with information</small>
+    </h1>
+    {{ breadcrumb.full(
+    [
+    'Administration',
+    'Category',
+    'Listing'
+    ],
+    [
+    '#',
+    path('app_admin_category_listing_list'),
+    path('app_admin_category_listing_list')
+    ],
+    'fa fa-folder-open'
+    )
+    }}
+{% endblock %}
 
 {% block stylesheets %}
     <link rel="stylesheet" href="{{ asset('assets/vendor/datatables.net-bs/css/dataTables.bootstrap.min.css') }}">

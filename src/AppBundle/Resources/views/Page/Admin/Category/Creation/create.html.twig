@@ -1,4 +1,26 @@
-{% extends '@Layout/Full/base.html.twig' %}
+{% extends '@Layout/Page/Full/base.html.twig' %}
+{% import '@Layout/Component/Breadcrumb/breadcrumb.html.twig' as breadcrumb %}
+
+{% block header %}
+    <h1>
+        Category creation
+        <small>Create brand new category for your quizzes</small>
+    </h1>
+    {{ breadcrumb.full(
+        [
+            'Administration',
+            'Category',
+            'Creation'
+        ],
+        [
+            '#',
+            path('app_admin_category_listing_list'),
+            path('app_admin_category_creation_create')
+        ],
+        'fa fa-folder-open'
+    )
+    }}
+{% endblock %}
 
 {% block body %}
     <div class="box box-info">

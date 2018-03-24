@@ -1,1 +1,61 @@
-{% extends '@Layout/Full/base.html.twig' %}
+{% extends '@Layout/Page/Full/base.html.twig' %}
+{% import '@Layout/Component/Breadcrumb/breadcrumb.html.twig' as breadcrumb %}
+
+{% block header %}
+    <h1>
+        Category showing
+        <small>Show category with all information</small>
+    </h1>
+    {{ breadcrumb.full(
+    [
+    'Administration',
+    'Category',
+    'Showing'
+    ],
+    [
+    '#',
+    path('app_admin_category_listing_list'),
+    path('app_admin_category_showing_show', {'id': category.id})
+    ],
+    'fa fa-folder-open'
+    )
+    }}
+{% endblock %}
+
+{% block body %}
+    <div class="box box-info">
+        <div class="box-header">
+            <h2>
+                {{ category.title }}
+                <small>{{ category.description }}</small>
+            </h2>
+        </div>
+        <div class="box-body">
+            {% for quiz in category.quizzes %}
+                <div class="box box-info">
+                    <div class="box-header">
+                        <h3>
+                            {{ quiz.title }}
+                            <small>{{ quiz.description }}</small>
+                        </h3>
+                    </div>
+
+                    <div class="box-body">
+
+                    </div>
+
+                    <div class="box-footer">
+                        <div class="btn-group pull-right">
+                            <a href="{{ path('app_admin_quiz_showing_show', {'id': quiz.id}) }}" class="btn btn-flat btn-info">Show <i class="fa fa-eye"></i></a>
+                            <a href="{{ path('app_admin_quiz_edition_edit', {'id': quiz.id}) }}" class="btn btn-flat btn-info">Edit <i class="fa fa-edit"></i></a>
+                            <a href="{{ path('app_admin_quiz_removing_remove', {'id': quiz.id }) }}" class="btn btn-flat btn-info">Remove <i class="fa fa-trash"></i></a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="box-footer">
+
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends '@Layout/Page/Full/base.html.twig' %}
+{% import '@Layout/Component/Box/box.html.twig' as box %}
+
+{% block body %}
+
+    {% set header %}
+        {{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }}
+        <h3>{{ group.name }}</h3>
+    {% endset %}
+    {% set body %}
+        <div class="form-group">
+            <label class="col-sm-2 control-label">{{ form_label(form.users) }}</label>
+            <div class="col-sm-10">
+                {{ form_widget(form.users, {'attr': {'class': 'form-control'}}) }}
+            </div>
+        </div>
+    {% endset %}
+    {% set footer %}
+        {{ form_row(form.save, {'attr': {'class': 'btn btn-info pull-right'}}) }}
+        {{ form_end(form) }}
+    {% endset %}
+
+    {{ box.box_primary(header, body, footer) }}
+{% endblock %}

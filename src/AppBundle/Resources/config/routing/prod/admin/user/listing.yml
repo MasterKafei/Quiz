@@ -1,0 +1,3 @@
+app_admin_user_listing_list:
+    path: /
+    defaults: { _controller: 'AppBundle:Admin/User/Listing:list' }

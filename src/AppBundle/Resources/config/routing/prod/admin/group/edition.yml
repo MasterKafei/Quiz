@@ -1,4 +1,4 @@
-app_admin_user_group_edition_edit:
+app_admin_group_edition_edit:
     path: /{id}
     defaults: { _controller: 'AppBundle:Admin/UserGroup/Edition:edit' }
     requirements:

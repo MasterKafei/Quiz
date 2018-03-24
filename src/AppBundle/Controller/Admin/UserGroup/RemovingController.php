@@ -13,6 +13,6 @@ class RemovingController extends Controller
         $em->remove($group);
         $em->flush();
 
-        return $this->redirectToRoute('app_admin_user_group_listing_list');
+        return $this->redirectToRoute('app_admin_group_listing_list');
     }
 }
