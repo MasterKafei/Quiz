@@ -22,5 +22,6 @@ AppBundle\Entity\UserGroup:
             cascade: ["persist", "merge"]
         categories:
             targetEntity: Category
+            inversedBy: groups
             cascade: ["persist", "merge"]
     lifecycleCallbacks: {  }
