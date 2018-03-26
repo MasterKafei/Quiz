@@ -19,7 +19,6 @@ class DataCategoryFixtures extends AbstractFixture implements OrderedFixtureInte
             ->setDescription('ITIL Foundations');
 
         $manager->persist($category);
-        $manager->flush();
 
         $category = new Category();
 
@@ -28,8 +27,6 @@ class DataCategoryFixtures extends AbstractFixture implements OrderedFixtureInte
             ->setDescription('IT Management 3 - Economics and IT Business Strategy');
 
         $manager->persist($category);
-        $manager->flush();
-
         $category = new Category();
 
         $category
