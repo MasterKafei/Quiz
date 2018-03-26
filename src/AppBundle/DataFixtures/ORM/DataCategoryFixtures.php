@@ -18,6 +18,7 @@ class DataCategoryFixtures extends AbstractFixture implements OrderedFixtureInte
             ->setTitle('3MET')
             ->setDescription('ITIL Foundations');
 
+        $this->setReference('category 3met', $category);
         $manager->persist($category);
 
         $category = new Category();
@@ -26,6 +27,7 @@ class DataCategoryFixtures extends AbstractFixture implements OrderedFixtureInte
             ->setTitle('3MGT')
             ->setDescription('IT Management 3 - Economics and IT Business Strategy');
 
+        $this->setReference('category 3mgt', $category);
         $manager->persist($category);
         $category = new Category();
 
@@ -33,6 +35,7 @@ class DataCategoryFixtures extends AbstractFixture implements OrderedFixtureInte
             ->setTitle('3AIT')
             ->setDescription('Artificial Intelligence - Programmation Fonctionnelle');
 
+        $this->setReference('category 3ait', $category);
         $manager->persist($category);
         $manager->flush();
     }

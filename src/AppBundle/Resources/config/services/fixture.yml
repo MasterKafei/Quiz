@@ -4,3 +4,6 @@ services:
 
     AppBundle\DataFixtures\ORM\DataCategoryFixtures:
         tags: [doctrine.fixture.orm]
+
+    AppBundle\DataFixtures\ORM\DataQuizFixtures:
+        tags: [doctrine.fixture.orm]
