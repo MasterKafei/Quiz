@@ -28,7 +28,7 @@ class Question
     private $responses;
 
     /**
-     * @var int
+     * @var array
      */
     private $solution;
 
@@ -128,7 +128,7 @@ class Question
     /**
      * Set solution
      *
-     * @param integer $solution
+     * @param array $solution
      *
      * @return Question
      */
@@ -142,7 +142,7 @@ class Question
     /**
      * Get solution
      *
-     * @return int
+     * @return array
      */
     public function getSolution()
     {
