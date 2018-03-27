@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fb00df18-b1bd-4684-9f6d-f804e385988b" name="Default" comment="Remove useless data">
+    <list default="true" id="fb00df18-b1bd-4684-9f6d-f804e385988b" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/DataFixtures/ORM/DataGroupFixtures.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Repository/QuizRepository.php" afterPath="$PROJECT_DIR$/src/AppBundle/Repository/QuizRepository.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/DataFixtures/ORM/DataUserFixtures.php" afterPath="$PROJECT_DIR$/src/AppBundle/DataFixtures/ORM/DataUserFixtures.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/config/services/fixture.yml" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/config/services/fixture.yml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,7 +29,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>plainPassowrd</find>
       <find>lastname</find>
       <find>getRoles</find>
       <find>app.user</find>
@@ -57,6 +58,7 @@
       <find>Answer</find>
       <find>answers</find>
       <find>answer</find>
+      <find>[]</find>
     </findStrings>
     <replaceStrings>
       <replace>plainPassword</replace>
@@ -65,6 +67,7 @@
       <replace>category-table-listing</replace>
       <replace>quiz</replace>
       <replace>user</replace>
+      <replace>array()</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -74,8 +77,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/config/config.yml" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Controller/Admin/Category/CreationController.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/Setting/ISetting.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/Setting/AbstractSetting.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/Page/Home/index.html.twig" />
@@ -114,7 +115,6 @@
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/Admin/Category/EditionController.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/Page/Admin/Category/Showing/show.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/Question.php" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Resources/config/services/fixture.yml" />
         <option value="$PROJECT_DIR$/src/AppBundle/DataFixtures/ORM/DataCategoryFixtures.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/Admin/Question/CreationController.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/Admin/Quiz/ShowingController.php" />
@@ -125,6 +125,9 @@
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/Admin/User/ShowingController.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/Quiz/ListingController.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Repository/QuizRepository.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Resources/config/services/fixture.yml" />
+        <option value="$PROJECT_DIR$/src/AppBundle/DataFixtures/ORM/DataUserFixtures.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/DataFixtures/ORM/DataGroupFixtures.php" />
       </list>
     </option>
   </component>
@@ -252,6 +255,13 @@
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="AppBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
+            <path>
+              <item name="Quiz" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Quiz" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="AppBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -330,7 +340,7 @@
       <workItem from="1521464529220" duration="32359000" />
       <workItem from="1521704061681" duration="33000" />
       <workItem from="1521841327931" duration="15735000" />
-      <workItem from="1522086686363" duration="10758000" />
+      <workItem from="1522086686363" duration="13483000" />
     </task>
     <task id="LOCAL-00001" summary="Feature: Added Confirmation Email for registration">
       <created>1520081779579</created>
@@ -367,11 +377,18 @@
       <option name="project" value="LOCAL" />
       <updated>1522092636969</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Fix User Quiz query">
+      <created>1522155607589</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1522155607589</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="314265000" />
+    <option name="totallyTimeSpent" value="316990000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1046" extended-state="6" />
@@ -457,7 +474,8 @@
     <MESSAGE value="Add Quiz Fixture&#10;Update Category Fixture by adding object in reference&#10;Fix Quiz Documentation" />
     <MESSAGE value="Fix Answer and UserGroup entity by adding inversedBy keyword" />
     <MESSAGE value="Remove useless data" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove useless data" />
+    <MESSAGE value="Fix User Quiz query" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix User Quiz query" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -473,13 +491,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/routing/prod/admin/group/edition.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="4" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/routing/prod/admin/group/adding.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="63">
@@ -670,17 +681,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/DataFixtures/ORM/DataUserFixtures.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="35" column="31" lean-forward="false" selection-start-line="35" selection-start-column="31" selection-end-line="35" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/DataFixtures/ORM/DataCategoryFixtures.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="30" column="37" lean-forward="false" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -688,6 +693,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="542">
           <caret line="102" column="37" lean-forward="true" selection-start-line="102" selection-start-column="37" selection-end-line="102" selection-end-column="37" />
+          <folding>
+            <element signature="e#47#77#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -703,13 +711,6 @@
         <state relative-caret-position="170">
           <caret line="16" column="5" lean-forward="false" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/services/fixture.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="36" lean-forward="false" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -848,6 +849,32 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/DataFixtures/ORM/DataGroupFixtures.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1122">
+          <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding>
+            <element signature="e#47#73#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/DataFixtures/ORM/DataUserFixtures.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="120" column="31" lean-forward="false" selection-start-line="120" selection-start-column="31" selection-end-line="120" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/services/fixture.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="28" lean-forward="false" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
           <folding />
         </state>
       </provider>

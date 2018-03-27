@@ -7,3 +7,6 @@ services:
 
     AppBundle\DataFixtures\ORM\DataQuizFixtures:
         tags: [doctrine.fixture.orm]
+
+    AppBundle\DataFixtures\ORM\DataGroupFixtures:
+        tags: [doctrine.fixture.orm]

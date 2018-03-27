@@ -38,6 +38,7 @@ class DataUserFixtures extends AbstractFixture implements OrderedFixtureInterfac
         $this->userBusiness->hashPassword($user);
         $this->userBusiness->generateToken($user, false);
 
+        $this->addReference('user masterkafei', $user);
         $manager->persist($user);
 
         $user = new User();
@@ -54,6 +55,7 @@ class DataUserFixtures extends AbstractFixture implements OrderedFixtureInterfac
         $this->userBusiness->hashPassword($user);
         $this->userBusiness->generateToken($user, false);
 
+        $this->addReference('user nunutte', $user);
         $manager->persist($user);
 
         $user = new User();
@@ -70,6 +72,7 @@ class DataUserFixtures extends AbstractFixture implements OrderedFixtureInterfac
         $this->userBusiness->hashPassword($user);
         $this->userBusiness->generateToken($user, false);
 
+        $this->addReference('user craaftx', $user);
         $manager->persist($user);
 
         $user = new User();
@@ -86,6 +89,7 @@ class DataUserFixtures extends AbstractFixture implements OrderedFixtureInterfac
         $this->userBusiness->hashPassword($user);
         $this->userBusiness->generateToken($user, false);
 
+        $this->addReference('user hundil', $user);
         $manager->persist($user);
 
         $user = new User();
@@ -102,6 +106,7 @@ class DataUserFixtures extends AbstractFixture implements OrderedFixtureInterfac
         $this->userBusiness->hashPassword($user);
         $this->userBusiness->generateToken($user, false);
 
+        $this->addReference('user nerva', $user);
         $manager->persist($user);
 
         $user = new User();
@@ -118,6 +123,7 @@ class DataUserFixtures extends AbstractFixture implements OrderedFixtureInterfac
         $this->userBusiness->hashPassword($user);
         $this->userBusiness->generateToken($user, false);
 
+        $this->addReference('user masterluiges', $user);
         $manager->persist($user);
         $manager->flush();
     }
