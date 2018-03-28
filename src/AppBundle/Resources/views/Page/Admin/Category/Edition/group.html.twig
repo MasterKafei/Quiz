@@ -1,0 +1,50 @@
+{% extends '@Layout/Page/Full/base.html.twig' %}
+{% import '@Layout/Component/Box/box.html.twig' as box %}
+{% import '@Layout/Component/Breadcrumb/breadcrumb.html.twig' as breadcrumb %}
+
+{% block header %}
+    <h1>
+        Category groups
+        <small>Select the category groups</small>
+    </h1>
+    {{ breadcrumb.full(
+    [
+    'Administration',
+    'Category',
+    'Group',
+    ],
+    [
+    '#',
+    path('app_admin_category_listing_list'),
+    '#',
+    ],
+    'fa fa-group'
+    ) }}
+{% endblock %}
+
+{% block body %}
+    {% set header %}
+        <h3 class="box-title">Management of category groups</h3>
+    {% endset %}
+
+    {% set body %}
+        {{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }}
+        {% for group in form.groups %}
+            <div class="form-group">
+                <div class="col-sm-2 control-label">
+                    {{ form_label(group) }}
+                </div>
+                <label class="col-sm-10">
+                    {{ form_widget(group) }}
+                </label>
+            </div>
+        {% endfor %}
+    {% endset %}
+
+    {% set footer %}
+        {{ form_row(form.save, {'attr': {'class': 'btn btn-primary btn-flat pull-right'}}) }}
+        {{ form_end(form) }}
+    {% endset %}
+
+    {{ box.box_primary(header, body, footer) }}
+{% endblock %}

@@ -20,6 +20,9 @@
                             User number
                         </th>
                         <th>
+                            Category number
+                        </th>
+                        <th>
                             Action
                         </th>
                     </tr>
@@ -30,6 +33,7 @@
                             <td class="sorting_1">{{ group.name }}</td>
                             <td>{{ group.description }}</td>
                             <td>{{ group.users|length }}</td>
+                            <td>{{ group.categories|length }}</td>
                             <td>
                                 <div class="btn-group">
                                     <a href="{{ path('app_admin_group_showing_show', {'id': group.id}) }}" class="btn btn-info">Show <i class="fa fa-eye"></i></a>

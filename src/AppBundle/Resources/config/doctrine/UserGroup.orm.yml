@@ -19,8 +19,7 @@ AppBundle\Entity\UserGroup:
         users:
             targetEntity: User
             mappedBy: groups
-            cascade: ["persist", "merge"]
         categories:
             targetEntity: Category
-            cascade: ["persist", "merge"]
+            mappedBy: groups
     lifecycleCallbacks: {  }
