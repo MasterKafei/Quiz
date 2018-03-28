@@ -2,52 +2,51 @@
 
 {% block body %}
 
-    <div class="box box-info">
-        <div class="box-header">
+    {% embed '@Layout/Component/Box/box_primary.html.twig' %}
 
-        </div>
-        <div class="box-body">
+        {% block body %}
             <table id="category-table-listing" class="table table-bordered table-striped dataTable" role="grid">
                 <thead>
-                    <tr role="row">
-                        <th>
-                            Name
-                        </th>
-                        <th>
-                            Description
-                        </th>
-                        <th>
-                            User number
-                        </th>
-                        <th>
-                            Category number
-                        </th>
-                        <th>
-                            Action
-                        </th>
-                    </tr>
+                <tr role="row">
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        Description
+                    </th>
+                    <th>
+                        User number
+                    </th>
+                    <th>
+                        Category number
+                    </th>
+                    <th>
+                        Action
+                    </th>
+                </tr>
                 </thead>
                 <tbody>
-                    {% for group in groups %}
-                        <tr role="row" class="odd">
-                            <td class="sorting_1">{{ group.name }}</td>
-                            <td>{{ group.description }}</td>
-                            <td>{{ group.users|length }}</td>
-                            <td>{{ group.categories|length }}</td>
-                            <td>
-                                <div class="btn-group">
-                                    <a href="{{ path('app_admin_group_showing_show', {'id': group.id}) }}" class="btn btn-info">Show <i class="fa fa-eye"></i></a>
-                                    <a href="{{ path('app_admin_group_edition_edit', {'id': group.id}) }}" class="btn btn-info">Edit <i class="fa fa-edit"></i></a>
-                                    <a href="{{ path('app_admin_group_removing_remove', {'id': group.id}) }}" class="btn btn-info">Remove <i class="fa fa-trash"></i></a>
-                                </div>
-                            </td>
-                        </tr>
-                    {% endfor %}
+                {% for group in groups %}
+                    <tr role="row" class="odd">
+                        <td class="sorting_1">{{ group.name }}</td>
+                        <td>{{ group.description }}</td>
+                        <td>{{ group.users|length }}</td>
+                        <td>{{ group.categories|length }}</td>
+                        <td>
+                            <div class="btn-group">
+                                <a href="{{ path('app_admin_group_showing_show', {'id': group.id}) }}"
+                                   class="btn btn-info">Show <i class="fa fa-eye"></i></a>
+                                <a href="{{ path('app_admin_group_edition_edit', {'id': group.id}) }}"
+                                   class="btn btn-info">Edit <i class="fa fa-edit"></i></a>
+                                <a href="{{ path('app_admin_group_removing_remove', {'id': group.id}) }}"
+                                   class="btn btn-info">Remove <i class="fa fa-trash"></i></a>
+                            </div>
+                        </td>
+                    </tr>
+                {% endfor %}
                 </tbody>
             </table>
-        </div>
-        <div class="box-footer">
+        {% endblock %}
 
-        </div>
-    </div>
+    {% endembed %}
 {% endblock %}

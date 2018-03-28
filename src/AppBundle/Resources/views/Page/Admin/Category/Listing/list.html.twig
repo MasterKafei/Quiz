@@ -1,25 +1,27 @@
 {% extends '@Layout/Page/Full/base.html.twig' %}
-{% import '@Layout/Component/Breadcrumb/breadcrumb.html.twig' as breadcrumb %}
 
 {% block header %}
     <h1>
         Category listing
         <small>List all existing category with information</small>
     </h1>
-    {{ breadcrumb.full(
-    [
-    'Administration',
-    'Category',
-    'Listing'
-    ],
-    [
-    '#',
-    path('app_admin_category_listing_list'),
-    path('app_admin_category_listing_list')
-    ],
-    'fa fa-folder-open'
-    )
-    }}
+    {% embed '@Layout/Component/Breadcrumb/breadcrumb_full.html.twig' %}
+        {% set contents =
+        [
+            'Administration',
+            'Category',
+            'Listing',
+        ] %}
+
+        {% set links =
+        [
+            '#',
+            '#',
+            path('app_admin_category_listing_list'),
+        ] %}
+
+        {% set icon = 'fa fa-folder-open' %}
+    {% endembed %}
 {% endblock %}
 
 {% block stylesheets %}
@@ -38,18 +40,14 @@
                 <table id="category-table-listing" class="table table-bordered table-striped dataTable" role="grid"
                        aria-describedby="category-table-listing_info">
                     <thead>
-                    <tr role="row">
-                        <th class="sorting_asc" tabindex="0" aria-controls="category-table-listing" rowspan="1" colspan="1"
-                            aria-sort="ascending" aria-label="Title(s): activate to sort column descending"
-                            style="width: 217px;">
+                    <tr>
+                        <th>
                             Title
                         </th>
-                        <th class="sorting" tabindex="0" aria-controls="category-table-listing" rowspan="1" colspan="1"
-                            aria-label="Description(s): activate to sort column ascending" style="width: 266.6px;">
+                        <th>
                             Description
                         </th>
-                        <th class="sorting" tabindex="0" aria-controls="category-table-listing" rowspan="1" colspan="1"
-                            aria-label="Quiz(zes) number: activate to sort column ascending" style="width: 237.8px;">
+                        <th>
                             Quizzes number
                         </th>
                         <th>

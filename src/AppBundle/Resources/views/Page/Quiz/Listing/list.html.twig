@@ -1,23 +1,26 @@
 {% extends '@Layout/Page/Full/base.html.twig' %}
 {% import '@Layout/Component/Category/category_box.html.twig' as category_box %}
-{% import '@Layout/Component/Breadcrumb/breadcrumb.html.twig' as breadcrumb %}
 
 {% block header %}
     <h1>
         New quizzes
         <small>Every quizzes you didn't answered yet</small>
     </h1>
-    {{ breadcrumb.full(
-        [
+    {% embed '@Layout/Component/Breadcrumb/breadcrumb_full.html.twig' %}
+
+        {% set contents = [
         'Quiz',
         'New'
-        ],
+        ] %}
+
+        {% set links =
         [
         '#',
         path('app_quiz_list_new'),
-        ],
-        'fa fa-list-ol'
-    ) }}
+        ] %}
+
+        {% set icon = 'fa fa-list-ol' %}
+    {% endembed %}
 {% endblock %}
 
 {% block body %}
