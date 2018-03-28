@@ -41,6 +41,18 @@ AppBundle\Entity\User:
         groups:
             targetEntity: AppBundle\Entity\UserGroup
             inversedBy: users
+            joinTable:
+                name: users_groups
+                joinColumns:
+                    user_id:
+                        referencedColumnName: id
+                        nullable: false
+                        unique: false
+                inverseJoinColumns:
+                    group_id:
+                        referenceColumnName: id
+            cascade:
+                - all
     oneToMany:
         answers:
             targetEntity: AppBundle\Entity\Answer

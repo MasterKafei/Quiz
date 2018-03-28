@@ -1,5 +1,0 @@
-app_admin_group_adding_add:
-    path: /{id}
-    defaults: { _controller: 'AppBundle:Admin/UserGroup/AddUser:add' }
-    requirements:
-        id: \d+

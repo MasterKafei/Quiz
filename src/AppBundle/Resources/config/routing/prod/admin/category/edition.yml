@@ -3,3 +3,9 @@ app_admin_category_edition_edit:
     defaults: { _controller: 'AppBundle:Admin/Category/Edition:edit' }
     requirements:
         id: \d+
+
+app_admin_category_edition_group:
+    path: /{id}/group
+    defaults: { _controller: 'AppBundle:Admin/Category/Edition:group' }
+    requirements:
+        id: \d+
