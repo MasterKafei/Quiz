@@ -1,0 +1,6 @@
+{% set line %}
+    <i class="{{ icon }}"></i>{{ contents[0] }}
+{% endset %}
+{% set contents = [line]|merge(contents|slice(1)) %}
+
+{% embed '@Layout/Component/Breadcrumb/breadcrumb_withLinks.html.twig' %}{% endembed %}

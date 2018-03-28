@@ -1,19 +1,18 @@
 {% extends '@Layout/Page/Full/base.html.twig' %}
 
 {% block body %}
-    <div class="box box-info">
-        <div class="box-header">
+    {% embed '@Layout/Component/Box/box_primary.html.twig' %}
+
+        {% block header %}
             <h3>{{ group.name }}</h3>
             <p>{{ group.description }}</p>
-        </div>
+        {% endblock %}
 
-        <div class="box-body">
+        {% block body %}
             {% for user in group.users %}
                     {{ user.username }}
             {% endfor %}
-        </div>
+        {% endblock %}
 
-        <div class="box-footer">
-        </div>
-    </div>
+    {% endembed %}
 {% endblock %}

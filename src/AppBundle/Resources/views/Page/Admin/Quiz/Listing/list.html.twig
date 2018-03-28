@@ -1,5 +1,4 @@
 {% extends '@Layout/Page/Full/base.html.twig' %}
-{% import '@Layout/Component/Breadcrumb/breadcrumb.html.twig' as breadcrumd %}
 
 {% block stylesheets %}
     <link rel="stylesheet" href="{{ asset('assets/vendor/datatables.net-bs/css/dataTables.bootstrap.min.css') }}">
@@ -10,68 +9,78 @@
         Quiz listing
         <small>List every quiz with informations</small>
     </h1>
-    {{ breadcrumd.full(
-        [
-        'Administration',
-        'Quiz',
-        'Listing'
-        ],
-        [
-        '#',
-        path('app_admin_quiz_listing_list'),
-        path('app_admin_quiz_listing_list'),
-        ],
-        'fa fa-list-ol'
-    ) }}
+    {% embed '@Layout/Component/Breadcrumb/breadcrumb_full.html.twig' %}
+        {% set contents =
+            [
+                'Administration',
+                'Quiz',
+                'Listing'
+            ]
+        %}
+
+        {% set links =
+            [
+                '#',
+                path('app_admin_quiz_listing_list'),
+                path('app_admin_quiz_listing_list'),
+            ]
+        %}
+
+        {% set icon = 'fa fa-list-ol' %}
+    {% endembed %}
 {% endblock %}
 
 {% block body %}
-    <div class="box">
-        <div class="box-header with-border">
-            <h3 class="box-title">Quizzes</h3>
-        </div>
+    {% embed '@Layout/Component/Box/box_primary.html.twig' %}
 
-        <div class="box-body">
+        {% block header %}
+            <h3 class="box-title">Quizzes</h3>
+        {% endblock %}
+
+        {% block body %}
             <div class="col-sm-12">
-                <table id="quiz-table-listing" class="table table-bordered table-striped dataTable"">
+                <table id="quiz-table-listing" class="table table-bordered table-striped dataTable">
                     <thead>
-                        <tr role="row">
-                            <th>Title</th>
-                            <th>Description</th>
-                            <th>Status</th>
-                            <th>Action</th>
-                        </tr>
+                    <tr role="row">
+                        <th>Title</th>
+                        <th>Description</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
                     </thead>
                     <tbody>
-                        {% for quiz in quizzes %}
-                            <tr role="row" class="odd">
-                                <td class="sorting_1">{{ quiz.title }}</td>
-                                <td>{{ quiz.description }}</td>
-                                <td>
-                                    {% if quiz.startingDate is null or quiz.startingDate < date('now') %}
-                                        {% if quiz.endingDate is null or quiz.endingDate > date('now') %}
-                                            In progress
-                                        {% else %}
-                                            Closed
-                                        {% endif %}
+                    {% for quiz in quizzes %}
+                        <tr role="row" class="odd">
+                            <td class="sorting_1">{{ quiz.title }}</td>
+                            <td>{{ quiz.description }}</td>
+                            <td>
+                                {% if quiz.startingDate is null or quiz.startingDate < date('now') %}
+                                    {% if quiz.endingDate is null or quiz.endingDate > date('now') %}
+                                        In progress
                                     {% else %}
-                                        Planned
+                                        Closed
                                     {% endif %}
-                                </td>
-                                <td>
-                                    <div class="btn-group">
-                                        <a href="{{ path('app_admin_quiz_showing_show', {'id': quiz.id}) }}" class="btn btn-info">List <i class="fa fa-list"></i></a>
-                                        <a href="{{ path('app_admin_quiz_edition_edit', {'id': quiz.id}) }}" class="btn btn-info">Edit <i class="fa fa-edit"></i></a>
-                                        <a href="{{ path('app_admin_quiz_removing_remove', {'id': quiz.id}) }}" class="btn btn-info">Remove <i class="fa fa-trash"></i></a>
-                                    </div>
-                                </td>
-                            </tr>
-                        {% endfor %}
+                                {% else %}
+                                    Planned
+                                {% endif %}
+                            </td>
+                            <td>
+                                <div class="btn-group">
+                                    <a href="{{ path('app_admin_quiz_showing_show', {'id': quiz.id}) }}"
+                                       class="btn btn-info">List <i class="fa fa-list"></i></a>
+                                    <a href="{{ path('app_admin_quiz_edition_edit', {'id': quiz.id}) }}"
+                                       class="btn btn-info">Edit <i class="fa fa-edit"></i></a>
+                                    <a href="{{ path('app_admin_quiz_removing_remove', {'id': quiz.id}) }}"
+                                       class="btn btn-info">Remove <i class="fa fa-trash"></i></a>
+                                </div>
+                            </td>
+                        </tr>
+                    {% endfor %}
                     </tbody>
                 </table>
             </div>
-        </div>
-    </div>
+        {% endblock %}
+    {% endembed %}
 {% endblock %}
 
 {% block javascripts %}

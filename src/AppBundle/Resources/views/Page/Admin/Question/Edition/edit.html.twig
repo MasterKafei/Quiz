@@ -1,48 +1,66 @@
 {% extends '@Layout/Page/Full/base.html.twig' %}
 
 {% block body %}
-    <div class="box box-info">
-        <div class="box-header with-border">
-            <h3 class="box-title">Edit question</h3>
-        </div>
-        {{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }}
-        <div class="box-body">
+
+    {% set lastKey = 0 %}
+    {% for key,response in form.responses %}
+        {% set lastKey = key %}
+    {% endfor %}
+    {% embed '@Layout/Component/Box/box_primary.html.twig' %}
+
+        {% block head %}
+            {{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }}
+        {% endblock %}
+
+        {% block header %}<h3 class="box-title">Edit question</h3>{% endblock %}
+
+        {% block body %}
+
             <div class="form-group">
                 <label class="col-sm-2 control-label">{{ form_label(form.title) }}</label>
                 <div class="col-sm-10">
                     {{ form_widget(form.title, {'attr': {'class': 'form-control'}} ) }}
                 </div>
             </div>
-            <div class="form-group" id="responses-fields-list" data-prototype="{{ form_widget(form.responses.vars.prototype)|e }}" data-widget-tags="
+
+            <div class="form-group" id="responses-fields-list"
+                 data-prototype="{{ form_widget(form.responses.vars.prototype)|e }}" data-widget-tags="
                 {{ '<div class="form-group"></div>'|e }}"></div>
+
             <div class="form-group">
                 <label class="col-sm-2 control-label">{{ form_label(form.text) }}</label>
                 <div class="col-sm-10">
                     {{ form_widget(form.text, {'attr': {'class': 'form-control'}} ) }}
                 </div>
             </div>
-            {% set lastKey = 0 %}
+
             {% for key,response in form.responses %}
                 {% set lastKey = key %}
                 <div class="form-group" id="form-controller-{{ key }}">
+
                     <label class="col-sm-2 control-label">
                         {% if key != 0 %}
-                            <a href="#" id="button-remove-{{ key }}" class="btn btn-danger remove-input-button" data="#form-controller-{{ key }}">
+                            <a href="#" id="button-remove-{{ key }}" class="btn btn-danger remove-input-button"
+                               data="#form-controller-{{ key }}">
                                 <i class="fa fa-minus" data="#form-controller-{{ key }}"></i>
                             </a>
                         {% else %}
-                            <a href="#" class="add-another-collection-widget pul-right btn btn-info" data-placement="top" data-list="#responses-fields-list" data-toggle="tooltip" title="Add proposition">
+                            <a href="#" class="add-another-collection-widget pul-right btn btn-info"
+                               data-placement="top" data-list="#responses-fields-list" data-toggle="tooltip"
+                               title="Add proposition">
                                 <i class="fa fa-plus"></i>
                             </a>
                         {% endif %}
                     </label>
+
                     <label class="col-sm-10 control-label">
                         <div class="input-group">
                             <span class="input-group-addon">
                                 {% if form.solution[key] is defined %}
                                     {{ form_widget(form.solution[key]) }}
                                 {% else %}
-                                    <input type="checkbox" id="question_creation_solution_{{ key }}" name="question_creation[solution][{{ key }}]" value="1"/>
+                                    <input type="checkbox" id="question_creation_solution_{{ key }}"
+                                           name="question_creation[solution][{{ key }}]" value="1"/>
                                 {% endif %}
                             </span>
                             {{ form_widget(response) }}
@@ -50,12 +68,15 @@
                     </label>
                 </div>
             {% endfor %}
-        </div>
-        <div class="box-footer">
+
+        {% endblock %}
+
+        {% block footer %}
             {{ form_row(form.save, {'attr': {'class': 'btn btn-info pull-right'}}) }}
-        </div>
-        {{ form_end(form) }}
-    </div>
+        {% endblock %}
+
+        {% block foot %}{{ form_end(form) }}{% endblock %}
+    {% endembed %}
     <script>
         LAST_ELEMENT = {{ lastKey }};
     </script>
