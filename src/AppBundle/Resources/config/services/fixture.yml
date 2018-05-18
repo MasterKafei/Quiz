@@ -10,3 +10,6 @@ services:
 
     AppBundle\DataFixtures\ORM\DataGroupFixtures:
         tags: [doctrine.fixture.orm]
+
+    AppBundle\DataFixtures\ORM\DataAnswerFixtures:
+        tags: [doctrine.fixture.orm]

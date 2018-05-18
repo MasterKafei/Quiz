@@ -24,6 +24,7 @@ class DataUserFixtures extends AbstractFixture implements OrderedFixtureInterfac
 
     public function load(ObjectManager $manager)
     {
+        $users = array();
         $user = new User();
 
         $user
@@ -39,6 +40,7 @@ class DataUserFixtures extends AbstractFixture implements OrderedFixtureInterfac
         $this->userBusiness->generateToken($user, false);
 
         $this->addReference('user masterkafei', $user);
+        array_push($users, $user);
         $manager->persist($user);
 
         $user = new User();
@@ -56,6 +58,7 @@ class DataUserFixtures extends AbstractFixture implements OrderedFixtureInterfac
         $this->userBusiness->generateToken($user, false);
 
         $this->addReference('user nunutte', $user);
+        array_push($users, $user);
         $manager->persist($user);
 
         $user = new User();
@@ -73,6 +76,7 @@ class DataUserFixtures extends AbstractFixture implements OrderedFixtureInterfac
         $this->userBusiness->generateToken($user, false);
 
         $this->addReference('user craaftx', $user);
+        array_push($users, $user);
         $manager->persist($user);
 
         $user = new User();
@@ -90,6 +94,7 @@ class DataUserFixtures extends AbstractFixture implements OrderedFixtureInterfac
         $this->userBusiness->generateToken($user, false);
 
         $this->addReference('user hundil', $user);
+        array_push($users, $user);
         $manager->persist($user);
 
         $user = new User();
@@ -107,6 +112,7 @@ class DataUserFixtures extends AbstractFixture implements OrderedFixtureInterfac
         $this->userBusiness->generateToken($user, false);
 
         $this->addReference('user nerva', $user);
+        array_push($users, $user);
         $manager->persist($user);
 
         $user = new User();
@@ -125,6 +131,8 @@ class DataUserFixtures extends AbstractFixture implements OrderedFixtureInterfac
 
         $this->addReference('user masterluiges', $user);
         $manager->persist($user);
+        array_push($users, $user);
+
         $manager->flush();
     }
 

@@ -111,6 +111,7 @@ class DataQuizFixtures extends AbstractFixture implements OrderedFixtureInterfac
             ->setMarks(array())
             ->setResettable(true);
 
+        $this->addReference('quiz ITIL', $quiz);
         $manager->persist($quiz);
 
         $manager->flush();
