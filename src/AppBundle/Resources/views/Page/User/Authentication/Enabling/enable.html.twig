@@ -1,15 +1,12 @@
 {% extends '@Layout/Page/Full/base.html.twig' %}
 
 {% block body %}
-    <div class="box box-info">
-        <div class="box-header">
+    {% embed '@Layout/Component/Box/box.html.twig' %}
+        {% block header %}
             <h3>Thanks {{ user.username }} for enabling your account</h3>
-        </div>
-        <div class="box-body">
+        {% endblock %}
+        {% block body %}
             You can now <a href="{{ path('app_user_authentication_login_login') }}">Login in</a> :)
-        </div>
-        <div class="box-footer">
-
-        </div>
-    </div>
+        {% endblock %}
+    {% endembed %}
 {% endblock %}

@@ -17,7 +17,3 @@ app_admin_group_removable:
 app_admin_group_showable:
     resource: "@AppBundle/Resources/config/routing/prod/admin/group/showing.yml"
     prefix:   /showable/
-
-app_admin_group_adding:
-    resource: "@AppBundle/Resources/config/routing/prod/admin/group/adding.yml"
-    prefix:   /adding/

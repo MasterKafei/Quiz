@@ -1,7 +1,6 @@
 # To get started with security, check out the documentation:
 # https://symfony.com/doc/current/security.html
 security:
-
     encoders:
         AppBundle\Entity\User: bcrypt
 
@@ -11,7 +10,6 @@ security:
         ROLE_ADMIN: ROLE_USER_SUBSCRIBER
         ROLE_SUPER_ADMIN: ROLE_ADMIN
 
-    # https://symfony.com/doc/current/security.html#b-configuring-how-users-are-loaded
     providers:
         user_provider:
             entity:
@@ -21,7 +19,6 @@ security:
             memory: ~
 
     firewalls:
-        # disables authentication for assets and the profiler, adapt it according to your needs
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
@@ -41,7 +38,7 @@ security:
             http_basic: ~
             remember_me:
                 secret:   '%kernel.secret%'
-                lifetime: 604800 # 1 week in seconds
+                lifetime: 604800
                 path:     /
             user_checker: AppBundle\Service\Security\User\Authentication\Login\LoginChecker
 
