@@ -1,0 +1,23 @@
+AppBundle\Entity\Course:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\CourseRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        title:
+            type: string
+            length: 255
+            nullable: true
+
+    oneToMany:
+        chapters:
+            targetEntity: AppBundle\Entity\Chapter
+            mappedBy: course
+            cascade: [ persist, remove ]
+
+    lifecycleCallbacks: {  }

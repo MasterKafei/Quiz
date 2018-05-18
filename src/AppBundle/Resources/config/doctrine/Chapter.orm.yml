@@ -1,0 +1,29 @@
+AppBundle\Entity\Chapter:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\ChapterRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        title:
+            type: string
+            length: 255
+        text:
+            type: string
+            length: 255
+
+    manyToOne:
+        course:
+            targetEntity: AppBundle\Entity\Course
+            inversedBy: chapters
+            cascade: [ persist ]
+            joinColumn:
+                name: course_id
+                referencedColumnName: id
+                nullable: false
+
+    lifecycleCallbacks: {  }
