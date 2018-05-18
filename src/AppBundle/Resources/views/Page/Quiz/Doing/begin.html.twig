@@ -1,16 +1,18 @@
 {% extends '@Layout/Page/Full/base.html.twig' %}
 
 {% block body %}
-    <div class="box box-info">
-        <div class="box-header with-border">
+    {% embed '@Layout/Component/Box/box_primary.html.twig' %}
+        {% block header %}
             <h3>{{ quiz.title }}</h3>
-        </div>
-        {% if quiz.description is defined and quiz.description is not null %}
-        <div class="box-body">
-            <p>{{ quiz.description }}</p>
-        </div>
-        {% endif %}
-        <div class="box-footer">
+        {% endblock %}
+
+        {% block body %}
+            {% if quiz.description is defined and quiz.description is not null %}
+                    <p>{{ quiz.description }}</p>
+            {% endif %}
+        {% endblock %}
+
+        {% block footer %}
             {% if quiz.questions|length > 0 %}
                 {% if quiz.resettable and answers|length > 0 %}
                     <a href="{{ path('app_quiz_reset_resetting', {'id': quiz.id}) }}" class="btn btn-danger pull-left">Reset quiz</a>
@@ -30,6 +32,6 @@
             {% else %}
                 No question yet
             {% endif %}
-        </div>
-    </div>
+        {% endblock %}
+    {% endembed %}
 {% endblock %}

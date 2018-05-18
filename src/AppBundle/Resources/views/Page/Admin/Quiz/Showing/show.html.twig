@@ -1,23 +1,33 @@
 {% extends '@Layout/Page/Full/base.html.twig' %}
 
 {% block body %}
-    <div class="box box-primary">
-        <div class="box-header with-border">
-            <h3 class="box-title">{{ quiz.title|default('Untitled') }}</h3>
-        </div>
-        <div class="box-body">
-            <p>{{ quiz.description }}</p>
-        </div>
-    </div>
+    {% embed '@Layout/Component/Box/box_primary.html.twig' %}
+
+        {% block header %}
+            <div class="box-header with-border">
+                <h3 class="box-title">{{ quiz.title|default('Untitled') }}</h3>
+            </div>
+        {% endblock %}
+
+        {% block body %}
+            <div class="box-body">
+                <p>{{ quiz.description }}</p>
+            </div>
+        {% endblock %}
+
+    {% endembed %}
+
     {% for question in quiz.questions %}
-        <div class="box box-primary">
-            <div class="box-header with-border">
-                <h3 class="box-title">{{ question.title }}</h3>
-            </div>
-            <div class="box-header with-border">
-                {{ question.text }}
-            </div>
-            <div class="box-body with-border">
+        {% embed '@Layout/Component/Box/box_primary.html.twig' %}
+
+            {% block header %}
+                <h3 class="box-title">
+                    {{ question.title }}
+                    <small>{{ question.text }}</small>
+                </h3>
+            {% endblock %}
+
+            {% block body %}
                 {% for key,response in question.responses %}
                     <label class="col-sm-2 control-label">
 
@@ -34,13 +44,15 @@
                         </div>
                     </label>
                 {% endfor %}
-            </div>
-            <div class="box-footer with-border">
+            {% endblock %}
+
+            {% block footer %}
                 <div class="pull-right">
                     <a href="{{ path('app_admin_question_edition_edit', {'id': question.id}) }}" class="btn btn-info">Edit <i class="fa fa-edit"></i></a>
                     <a href="{{ path('app_admin_question_removing_remove', {'id': question.id}) }}" class="btn btn-info">Remove <i class="fa fa-trash"></i></a>
                 </div>
-            </div>
-        </div>
+            {% endblock %}
+
+        {% endembed %}
     {% endfor %}
 {% endblock %}

@@ -1,0 +1,9 @@
+{% set lines = [] %}
+{% for content in contents %}
+    {% set line %}
+        <li{% if loop.last %} class="active"{% endif %}>{{ content }}</li>
+    {% endset %}
+    {% set lines = lines|merge([line]) %}
+{% endfor %}
+
+{% embed '@Layout/Component/Breadcrumb/breadcrumb_raw.html.twig' %}{% endembed %}

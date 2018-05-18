@@ -23,6 +23,17 @@ AppBundle\Entity\Category:
     manyToMany:
         groups:
             targetEntity: AppBundle\Entity\UserGroup
-            mappedBy: categories
-            cascade: [ persist ]
+            inversedBy: categories
+            joinTable:
+                name: categories_groups
+                joinColumns:
+                    category_id:
+                        referencedColumnName: id
+                        nullable: false
+                        unique: false
+                inverseJoinColumns:
+                    group_id:
+                        referenceColumnName: id
+            cascade:
+                - all
     lifecycleCallbacks: {  }

@@ -2,21 +2,13 @@
 {% import '@Layout/Component/Category/category_box.html.twig' as category_box %}
 
 {% block body %}
-    <div class="box box-info">
-        <div class="box-header">
-
-        </div>
-
-        <div class="box-body">
+    {% embed '@Layout/Component/Box/box_primary.html.twig' %}
+        {% block body %}
             {% for category in categories %}
                 {% if category.quizzes|length != 0 %}
                     {{ category_box.short(category) }}
                 {% endif %}
             {% endfor %}
-        </div>
-
-        <div class="box-footer">
-
-        </div>
-    </div>
+        {% endblock %}
+    {% endembed %}
 {% endblock %}

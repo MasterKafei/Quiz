@@ -66,13 +66,15 @@ class QuizRepository extends EntityRepository
 
     public function getUserQuizzes(User $user)
     {
-        $qb = $this->_em->createQuery('
-            SELECT DISTINCT question.quiz FROM AppBundle:Question question
-            WHERE question.answer.user = :user
-        ')
+        $qb = $this->_em->createQueryBuilder()
+            ->select('DISTINCT IDENTITY(qst.quiz)')
+            ->from('AppBundle:Answer', 'asw')
+
+            ->innerJoin('asw.question', 'qst')
+            ->where('asw.user = :user')
             ->setParameter('user', $user);
 
-        return $qb->getResult();
+        return $qb->getQuery()->getResult();
     }
 
     public function test(User $user)
@@ -83,9 +85,6 @@ class QuizRepository extends EntityRepository
             ->where('answer.user != :user')
             ->leftJoin('quiz.questions', 'question')
             ->leftJoin('question.answers', 'answer')
-
-
-
             ;
 
         return $qb->getQuery()->execute();

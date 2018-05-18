@@ -1,18 +1,18 @@
-{% macro box(class, header, body, footer) %}
-    <div class="box {{ class }}">
-        <div class="box-header">
-            {{ header|raw }}
-        </div>
-        <div class="box-body">
-            {{ body|raw }}
-        </div>
-        <div class="box-footer">
-            {{ footer|raw }}
-        </div>
-    </div>
-{% endmacro %}
+<div class="box {% block class %}{% endblock %}">
+    {% block head %}{% endblock %}
 
-{% macro box_primary(header, body, footer) %}
-    {% import _self as self %}
-    {{ self.box('box-primary', header, body, footer) }}
-{% endmacro %}
+    <div class="box-header">
+        {% block header %}{% endblock %}
+    </div>
+
+    <div class="box-body">
+        {% block body %}{% endblock %}
+    </div>
+
+
+    <div class="box-footer">
+        {% block footer %}{% endblock %}
+    </div>
+
+    {% block foot %}{% endblock %}
+</div>

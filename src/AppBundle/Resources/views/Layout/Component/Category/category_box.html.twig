@@ -1,32 +1,29 @@
 {% macro short(category) %}
-    {% set header %}
-        <h3>{{ category.title }}</h3>
-        <p>{{ category.description }}</p>
-    {% endset %}
+    {% embed '@Layout/Component/Box/box.html.twig' %}
+        {% block header %}
+            <h3>{{ category.title }}</h3>
+            <p>{{ category.description }}</p>
+        {% endblock %}
 
-    {% set body = '' %}
-    {% for quiz in category.quizzes %}
-        {% set body %}
-            {{ body }}
-            <a href="{{ path('app_quiz_do_begin', {'id': quiz.id}) }}">
-                <div class="callout
-                    {% if quiz.startingDate is null or quiz.startingDate < date('now') %}
-                        {% if quiz.endingDate is null or quiz.endingDate > date('now') %}
-                            callout-info
+        {% block body %}
+            {% for quiz in category.quizzes %}
+                <a href="{{ path('app_quiz_do_begin', {'id': quiz.id}) }}">
+                    <div class="callout
+                        {% if quiz.startingDate is null or quiz.startingDate < date('now') %}
+                            {% if quiz.endingDate is null or quiz.endingDate > date('now') %}
+                                callout-info
+                            {% else %}
+                                callout-warning
+                            {% endif %}
                         {% else %}
-                            callout-warning
+                             callout-success
                         {% endif %}
-                    {% else %}
-                         callout-success
-                    {% endif %}
-                        ">
-                    <h4>{{ quiz.title }}</h4>
-                    <p>{{ quiz.description }}</p>
-                </div>
-            </a>
-        {% endset %}
-    {% endfor %}
-
-    {% import '@Layout/Component/Box/box.html.twig' as box %}
-    {{ box.box_primary(header, body) }}
+                            ">
+                        <h4>{{ quiz.title }}</h4>
+                        <p>{{ quiz.description }}</p>
+                    </div>
+                </a>
+            {% endfor %}
+        {% endblock %}
+    {% endembed %}
 {% endmacro %}
