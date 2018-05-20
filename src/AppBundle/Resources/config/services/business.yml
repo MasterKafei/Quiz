@@ -4,6 +4,11 @@ services:
         parent: app.util.abstract_container_aware
         public: true
 
+    app.business.request:
+        class: AppBundle\Service\Business\RequestBusiness
+        parent: app.util.abstract_container_aware
+        public: true
+
     app.business.quiz:
         class: AppBundle\Service\Business\QuizBusiness
         parent: app.util.abstract_container_aware

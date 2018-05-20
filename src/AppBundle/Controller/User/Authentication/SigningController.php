@@ -14,6 +14,9 @@ class SigningController extends Controller
 {
     public function loginAction()
     {
+        if ($this->get('app.business.request')->isMasterRequest()) {
+            return $this->redirectToRoute('app_user_authentication_signing_sign');
+        }
         $form = $this->createForm(AuthenticateType::class);
 
         return $this->render('@Page/User/Authentication/Login/login.html.twig', array(
@@ -23,6 +26,10 @@ class SigningController extends Controller
 
     public function registerAction(Request $request)
     {
+        if ($this->get('app.business.request')->isMasterRequest()) {
+            return $this->redirectToRoute('app_user_authentication_signing_sign');
+        }
+
         $user = new User();
 
         $form = $this->createForm(RegisterType::class, $user);
