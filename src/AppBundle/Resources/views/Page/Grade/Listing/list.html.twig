@@ -1,0 +1,28 @@
+{% extends '@Layout/Page/Full/base.html.twig' %}
+
+{% block sub_title %}Grades{% endblock sub_title %}
+
+{% block content %}
+    <div class="content">
+        <div class="container">
+            <div class="row pt-5">
+                <div class="col-md-12">
+                    <h1 class="text-center pb-5 big-title">Please choose your level</h1>
+                </div>
+            </div>
+        </div>
+        <div class="level-wrapper">
+            {% for grade in grades %}
+                <a href="#">
+                    <div class="level-item" style="background-image: url('{{ vich_uploader_asset(grade, 'image') }}');">
+                        <div class="row align-items-center h-100">
+                            <div class="col-12 text-center mx-auto">
+                                <span>{{ grade.name }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock content %}

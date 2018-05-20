@@ -8,9 +8,26 @@ use AppBundle\Entity\Quiz;
 use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
+use Symfony\Component\DependencyInjection\ContainerAwareInterface;
+use Symfony\Component\DependencyInjection\ContainerInterface;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Vich\UploaderBundle\Entity\File;
 
-class DataQuizFixtures extends AbstractFixture implements OrderedFixtureInterface
+class DataQuizFixtures extends AbstractFixture implements OrderedFixtureInterface, ContainerAwareInterface
 {
+
+    /**
+     * @var ContainerInterface
+     */
+    private $container;
+
+    /**
+     * @param ContainerInterface|null $container
+     */
+    public function setContainer(ContainerInterface $container = null)
+    {
+        $this->container = $container;
+    }
 
     public function load(ObjectManager $manager)
     {
@@ -103,13 +120,25 @@ class DataQuizFixtures extends AbstractFixture implements OrderedFixtureInterfac
         $manager->persist($question);
         $questions[] = $question;
 
+        $name = FixturesTools::saveFileFromLink(
+            'http://www.hlpdeveloppement.fr/wp-content/uploads/2016/05/itil.jpg',
+            'jpg',
+            $this->container->getParameter('vich_upload_images_folder'
+            )
+        );
+
         $quiz
             ->setTitle('Certification ITIL - année 2015')
             ->setDescription('Questionnaire révision')
             ->setCategory($category)
             ->setQuestions($questions)
             ->setMarks(array())
-            ->setResettable(true);
+            ->setValidationDate(new \DateTime())
+            ->setValidate(true)
+            ->setSubmitted(true)
+            ->setResettable(true)
+            ->setImagePath($name)
+        ;
 
         $this->addReference('quiz ITIL', $quiz);
         $manager->persist($quiz);

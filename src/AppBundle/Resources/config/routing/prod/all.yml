@@ -13,3 +13,15 @@ app_quiz:
 app_home:
     resource: "@AppBundle/Resources/config/routing/prod/home/all.yml"
     prefix:   /
+
+app_contact_message:
+    resource: "@AppBundle/Resources/config/routing/prod/contact_message/all.yml"
+    prefix:   /contact_message/
+
+app_feature:
+    resource: "@AppBundle/Resources/config/routing/prod/feature/all.yml"
+    prefix:   /feature/
+
+app_grade:
+    resource: "@AppBundle/Resources/config/routing/prod/grade/all.yml"
+    prefix:   /grade/

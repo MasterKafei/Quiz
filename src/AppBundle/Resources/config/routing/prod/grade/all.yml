@@ -1,0 +1,3 @@
+app_grade_listing:
+    prefix:   /listing/
+    resource: "@AppBundle/Resources/config/routing/prod/grade/listing.yml"

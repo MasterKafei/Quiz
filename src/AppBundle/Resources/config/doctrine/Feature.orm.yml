@@ -1,0 +1,21 @@
+AppBundle\Entity\Feature:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\FeatureRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        title:
+            type: string
+            length: 255
+        description:
+            type: string
+            length: 255
+        icon:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

@@ -9,20 +9,14 @@ AppBundle\Entity\User:
             generator:
                 strategy: AUTO
     fields:
-        username:
-            type: string
+        idBooster:
+            type: integer
             length: 255
             unique: true
         email:
             type: string
             length: 255
             unique: true
-        firstName:
-            type: string
-            length: 255
-        lastName:
-            type: string
-            length: 255
         roles:
             type: array
         password:

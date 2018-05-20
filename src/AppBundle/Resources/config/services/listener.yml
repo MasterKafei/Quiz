@@ -1,0 +1,6 @@
+services:
+    app.listener.affiliation:
+        class: AppBundle\Service\Listener\QuizListener
+        parent: app.util.abstract_container_aware
+        tags:
+            - { name: doctrine.orm.entity_listener, entity: AppBundle\Entity\Quiz, event: prePersist }

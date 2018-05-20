@@ -20,24 +20,14 @@ class User implements UserInterface, \Serializable
     private $id;
 
     /**
-     * @var string
+     * @var int
      */
-    private $username;
+    private $idBooster;
 
     /**
      * @var string
      */
     private $email;
-
-    /**
-     * @var string
-     */
-    private $firstName;
-
-    /**
-     * @var string
-     */
-    private $lastName;
 
     /**
      * @var array
@@ -97,27 +87,31 @@ class User implements UserInterface, \Serializable
     }
 
     /**
-     * Set username
+     * Get idBooster
      *
-     * @param string $username
-     *
-     * @return User
+     * @return int
      */
-    public function setUsername($username)
+    public function getIdBooster()
     {
-        $this->username = $username;
+        return $this->idBooster;
+    }
+
+    /**
+     * Set idBooster
+     *
+     * @param $idBooster
+     * @return $this
+     */
+    public function setIdBooster($idBooster)
+    {
+        $this->idBooster = $idBooster;
 
         return $this;
     }
 
-    /**
-     * Get username
-     *
-     * @return string
-     */
     public function getUsername()
     {
-        return $this->username;
+        return $this->getEmail();
     }
 
     /**
@@ -142,54 +136,6 @@ class User implements UserInterface, \Serializable
     public function getEmail()
     {
         return $this->email;
-    }
-
-    /**
-     * Set firstName
-     *
-     * @param string $firstName
-     *
-     * @return User
-     */
-    public function setFirstName($firstName)
-    {
-        $this->firstName = $firstName;
-
-        return $this;
-    }
-
-    /**
-     * Get firstName
-     *
-     * @return string
-     */
-    public function getFirstName()
-    {
-        return $this->firstName;
-    }
-
-    /**
-     * Set lastName
-     *
-     * @param string $lastName
-     *
-     * @return User
-     */
-    public function setLastName($lastName)
-    {
-        $this->lastName = $lastName;
-
-        return $this;
-    }
-
-    /**
-     * Get lastName
-     *
-     * @return string
-     */
-    public function getLastName()
-    {
-        return $this->lastName;
     }
 
     /**
@@ -327,7 +273,7 @@ class User implements UserInterface, \Serializable
     /**
      * Set token
      *
-     * @param strign $token
+     * @param string $token
      *
      * @return User
      */
@@ -387,11 +333,8 @@ class User implements UserInterface, \Serializable
     {
         return serialize(array(
             $this->id,
-            $this->username,
             $this->password,
             $this->salt,
-            $this->lastName,
-            $this->firstName,
             $this->email,
             $this->enabled,
         ));
@@ -405,11 +348,8 @@ class User implements UserInterface, \Serializable
     {
         list (
             $this->id,
-            $this->username,
             $this->password,
             $this->salt,
-            $this->lastName,
-            $this->firstName,
             $this->email,
             $this->enabled,
             ) = unserialize($serialized);

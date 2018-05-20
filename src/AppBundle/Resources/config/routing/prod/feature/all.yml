@@ -1,0 +1,3 @@
+app_feature_listing:
+    resource: "@AppBundle/Resources/config/routing/prod/feature/listing.yml"
+    prefix:   /listing/

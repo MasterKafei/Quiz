@@ -14,7 +14,7 @@ security:
         user_provider:
             entity:
                 class: AppBundle:User
-                property: username
+                property: idBooster
         in_memory:
             memory: ~
 
@@ -29,12 +29,12 @@ security:
             pattern:    ^/
             form_login:
                 provider: user_provider
-                login_path: app_user_authentication_login_login
-                check_path: app_user_authentication_login_login
+                login_path: app_user_authentication_signing_sign
+                check_path: app_user_authentication_signing_check
                 default_target_path: app_home_home_index
             logout:
-                path:   app_user_authentication_logout_logout
-                target: app_user_authentication_login_login
+                path:   app_user_authentication_signing_logout
+                target: app_home_home_index
             http_basic: ~
             remember_me:
                 secret:   '%kernel.secret%'
@@ -45,5 +45,6 @@ security:
     access_control:
       - { path: ^/user/authentication/, roles: IS_AUTHENTICATED_ANONYMOUSLY }
       - { path: ^/quiz/, roles: ROLE_USER }
+      - { path: ^/grade/, roles: ROLE_USER }
       - { path: ^/admin/, roles: ROLE_ADMIN }
       - { path: ^/, roles: IS_AUTHENTICATED_ANONYMOUSLY }

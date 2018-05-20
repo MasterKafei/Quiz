@@ -1,0 +1,30 @@
+{% extends '@Layout/Page/Full/base.html.twig' %}
+
+{% block sub_title %}Features{% endblock sub_title %}
+
+{% block content %}
+    <div class="content">
+        <div class="container-fluid pt-5">
+            <section class="p-1 d-flex justify-content-center" id="title">
+                <div class="text-center">
+                    <h2>Take control over your learning methods with our service. And enter in a <br> new world of knowledge. </h2>
+                </div>
+            </section>
+        </div>
+        <div class="container p-0">
+            <section class="p-3" id="characteristics">
+                <div class="row text-center">
+                    {% for feature in features %}
+                        <div class="col-lg-4 col-md-6 text-center">
+                            <div class="service-box mt-5 mx-auto">
+                                <i class="{{ feature.icon }} fa-3x text-primary mb-3 sr-icons"></i>
+                                <h4 class="mb-3">{{ feature.title }}</h4>
+                                <p class="text-muted mb-0">{{ feature.description }}</p>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </section>
+        </div>
+    </div>
+{% endblock content %}

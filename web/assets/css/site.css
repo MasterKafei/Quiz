@@ -1,0 +1,407 @@
+@font-face {
+  font-family: 'Comfortaa';
+  src:  url('../fonts/Comfortaa-Regular.ttf');
+}
+
+html, body {
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+  font-family: 'Comfortaa';
+  color: #333;
+  height: 100%;
+}
+
+.home-content {
+  position: relative;
+  min-height: 100%;
+  padding: 10vh 0px 60px 0px;
+}
+.content {
+  position: relative;
+  min-height: 100%;
+  margin: 60px 0px 60px 0px;
+}
+
+/* Colors */
+.bg-dark {
+  background-color: #333333 !important;
+}
+
+.bg-transparent {
+  background-color: transparent !important;
+}
+
+.text-primary {
+  color: #988b8e !important;
+}
+
+.text-secondary {
+  color: #f5deb3 !important;
+}
+
+.todo {
+  color: grey;
+}
+
+.completed {
+  color: rgb(34, 139, 34);
+}
+
+.inprogress {
+  color: rgb(171, 56, 56);
+}
+
+/* Link */
+a:link { text-decoration: none;  color : #333 ; border: 0px; -moz-outline-style: none;}
+a:active { text-decoration: underline; color : #333 ; border: 0px; -moz-outline-style: none;}
+a:visited { text-decoration: none;  color : #333 ; border: 0px; -moz-outline-style: none;}
+a:hover { text-decoration: underline;  color : #988b8e ; border: 0px; -moz-outline-style: none;} 
+a:focus { outline: none;-moz-outline-style: none;}
+
+/* Titles */
+.big-title {
+  font-size: 4rem;
+  font-weight: 200;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+/* Custom Navbar */
+.navbar .nav-logo {
+  width: 110px;
+}
+
+.navbar .nav-link {
+  font-family: 'Comfortaa';
+  font-size: 1.5rem;
+  font-weight: lighter;
+  color: rgb(228, 228, 228) !important;
+  padding-right: 20px !important;
+  padding-left: 20px !important;
+  border-bottom: 2px solid transparent;
+}
+
+.navbar .nav-link:hover {
+  border-bottom: 2px solid white;
+}
+
+.navbar .no-hover {
+  border-bottom: 2px solid transparent;
+}
+
+.navbar .no-hover:hover {
+  border-bottom: 2px solid transparent;
+}
+
+.navbar-svg {
+  position: absolute;
+  width: 100%;
+  max-height: 380px;
+}
+
+/* Forms Styles */
+.custom-form-big .form-control {
+  display: block;
+  width: 100%;
+  padding: 0.6rem 1rem;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 2px solid rgba(51, 51, 51, 0.9);
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.custom-form-big .form-control:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #323232;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(68, 68, 68, 0.251);
+}
+
+.custom-form-normal .form-control {
+  display: block;
+  width: 100%;
+  padding: 0.4rem 0.8rem;
+  font-size: 1rem;
+  line-height: 1.3;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 2px solid rgba(51, 51, 51, 0.9);
+  border-radius: 0.15rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.custom-form-normal .form-control:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #323232;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(68, 68, 68, 0.251);
+}
+
+/* Button Style */
+.custom-full-btn {
+  width: 100%;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Comfortaa';
+  font-size: 1.4rem;
+  padding: 20px 20px 20px 20px;
+  background-color: #333;
+  border-radius: 0px;
+}
+
+.custom-full-btn:hover {
+  color: #f5deb3;
+  background-color: #333;
+}
+
+.custom-full-btn:focus, .custom-full-btn.focus {
+  box-shadow: 0 0 0 0.2rem #333;
+}
+
+/* Profile Page */
+.profile-image {
+  margin-left: -170px;
+  height: 450px;
+  width: 450px;
+  border-radius: 50%;
+  border: 2px solid #323232;
+  background-color: #333333;
+  overflow: hidden;
+}
+
+.profile-image img {
+  height: 450px;
+}
+
+.profile-text {
+  font-family: 'Comfortaa';
+  font-size: 1.4rem;
+  color: #333;
+}
+
+
+/* Tests Page */
+.tests-item {
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.tests-image {
+  height: 250px;
+  border: 2px solid #323232;
+  background-color: #333333;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.tests-image img {
+  filter: grayscale(0.5);
+}
+
+.tests-image img:hover {
+  transform: scale(1.1);
+  transition: all .4s ease-in-out;
+}
+
+.tests-item span {
+  font-family: 'Comfortaa';
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+
+/* Quiz Page */
+.quiz-header {
+  width: 100%;
+  height: 500px;
+  margin-top: -10vw;
+  overflow: hidden;
+  background-position: center;
+}
+
+.quiz-content {
+  margin-top: 10vh;
+  margin-bottom: 20vh;
+}
+
+.btn-quiz {
+  color: #fff;
+  font-family: 'Comfortaa';
+  font-size: 1.4rem;
+  padding: 5px 20px 5px 20px;
+  background-color: #333333;
+  border-color: #323232;
+}
+
+.btn-quiz:hover {
+  color: whitesmoke;
+  background-color: #444444;
+  border-color: #333333;
+}
+
+.btn-quiz:focus, .btn-quiz.focus {
+  box-shadow: 0 0 0 0.2rem rgba(51, 51, 51, 0.204);
+}
+
+/* Footer */
+footer {
+  background-color: #333333;
+  padding: 50px;
+  color: white;
+}
+
+/* Level List */
+.level-wrapper {
+  overflow: hidden;
+  border-top: 5px solid #333333;
+}
+
+.level-wrapper a:hover {
+  text-decoration: none;
+}
+
+.level-item {
+  border-bottom: 5px solid #333333;
+  height: 300px;
+  background-position: center;
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+}
+
+.level-item:hover {
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+  transform: scale(1.03);
+  transition: all .2s ease-in-out;
+  z-index: 100;
+}
+
+.level-item span {
+  color: rgb(221, 221, 221);
+  font-size: 6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* Loader */
+.doctrina-loader {
+  position : fixed;
+  z-index: 9999;
+  background-color: whitesmoke;
+  top : 0px;
+  left : 0px;
+  height : 100%;
+  width : 100%;
+}
+
+.doctrina-loader img {
+  width: 250px;
+}
+
+.doctrina-loader span {
+  color: #000000;
+  font-family: 'Comfortaa';
+  font-size: 2.1rem;
+}
+
+/* Signing Page */
+.sign-page {
+  position : fixed;
+  z-index: 9999;
+  background: linear-gradient(45deg, #a6aaab, #dfe0e2);
+  top : 0px;
+  left : 0px;
+  height : 100%;
+  width : 100%;
+  padding-top: 7vh;
+}
+
+.sign-form {
+  padding: 20px;
+  animation: fadeEffect 2s;
+  min-height: 320px;
+}
+
+.sign-wrapper {
+  background-color: #f6f6f8;
+  max-width: 400px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.sign-wrapper img {
+  padding-top: 20px;
+  width: 150px;
+}
+
+.sign-tabs button {
+  background-color: #ffffff;
+  color: #b9b9b9;
+  text-transform: uppercase;
+  float: left;
+  border: none;
+  border-bottom: 5px solid #333;
+  outline: none;
+  cursor: pointer;
+  padding: 19px 16px 14px 16px;
+  font-size: 17px;
+  width: 50%;
+}
+
+.sign-tabs button:hover {
+  background-color: #f5f5f5;
+}
+
+.sign-tabs button.active {
+  background-color: #333;
+  color: #ffffff;
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.tabcontent {
+  display: none;
+  height: 100%;
+}
+
+/* Ourteam Style */
+.ourteam-profile  {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 2px solid #323232;
+  background-color: #333333;
+  overflow: hidden;
+}
+
+.ourteam-profile img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 150px;
+}

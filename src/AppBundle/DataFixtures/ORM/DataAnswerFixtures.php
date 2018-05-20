@@ -1,12 +1,7 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: belot
- * Date: 03/04/2018
- * Time: 10:16
- */
 
 namespace AppBundle\DataFixtures\ORM;
+
 use AppBundle\Entity\Answer;
 use AppBundle\Entity\Quiz;
 use AppBundle\Entity\User;

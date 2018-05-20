@@ -1,0 +1,24 @@
+{% extends '@Layout/Page/Default/base.html.twig' %}
+
+{% block sub_title %}Sign in{% endblock %}
+
+{% block body %}
+    <div class="sign-page">
+        <div class="container align-items-center h-100">
+            <div class="sign-wrapper mx-auto">
+                <div class="sign-tabs">
+                    <button class="tablink active" onclick="openTab(event, 'Login')" id="defaultOpen">login</button>
+                    <button class="tablink" onclick="openTab(event, 'Register')">register</button>
+                </div>
+
+                {{ render(controller('AppBundle:User/Authentication/Signing:login')) }}
+                {{ render(controller('AppBundle:User/Authentication/Signing:register')) }}
+
+            </div>
+        </div>
+    </div>
+{% endblock body %}
+
+{% block javascripts %}
+    <script src="{{ asset('assets/js/tabs.js') }}"></script>
+{% endblock javascripts %}

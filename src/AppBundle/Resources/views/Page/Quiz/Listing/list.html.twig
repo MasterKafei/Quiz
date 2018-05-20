@@ -1,30 +1,35 @@
 {% extends '@Layout/Page/Full/base.html.twig' %}
-{% import '@Layout/Component/Category/category_box.html.twig' as category_box %}
 
-{% block header %}
-    <h1>
-        New quizzes
-        <small>Every quizzes you didn't answered yet</small>
-    </h1>
-    {% embed '@Layout/Component/Breadcrumb/breadcrumb_full.html.twig' %}
+{% block sub_title %}Tests{% endblock sub_title %}
 
-        {% set contents = [
-        'Quiz',
-        'New'
-        ] %}
+{% block content %}
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="text-center p-5 big-title">Our awesome tests</h1>
+                </div>
+            </div>
+        </div>
 
-        {% set links =
-        [
-        '#',
-        path('app_quiz_list_new'),
-        ] %}
-
-        {% set icon = 'fa fa-list-ol' %}
-    {% endembed %}
-{% endblock %}
-
-{% block body %}
-    {% for category in categories %}
-        {{ category_box.short(category) }}
-    {% endfor %}
-{% endblock %}
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 mb-5">
+                    <form class="custom-form-big">
+                        <input class="form-control" placeholder="Search ..." name="search">
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                {% for quiz in quizzes %}
+                <div class="col-lg-6 text-center tests-item">
+                    <div class="tests-image">
+                        <img class="img-fluid" src="{{ vich_uploader_asset(quiz, 'image') }}">
+                    </div>
+                    <span>{{ quiz.title }}</span>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock content %}

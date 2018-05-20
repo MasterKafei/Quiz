@@ -20,6 +20,9 @@ class AppKernel extends Kernel
 
             //Knp Snappy Bundle Html to PDF
             new Knp\Bundle\SnappyBundle\KnpSnappyBundle(),
+
+            //Vich Bundle
+            new Vich\UploaderBundle\VichUploaderBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

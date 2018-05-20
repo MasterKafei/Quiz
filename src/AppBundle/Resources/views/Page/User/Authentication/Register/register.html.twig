@@ -1,64 +1,21 @@
-{% extends '@Layout/Page/Default/base.html.twig' %}
-
-{% block title %}Registration{% endblock %}
-
-{% block stylesheets %}
-    {% include '@Layout/Page/Default/stylesheets.html.twig' %}
-{% endblock %}
-
-{% block body_html %}
-    <body class="hold-transition register-page">
-    {% block body %}
-        <div class="register-box">
-            <div class="register-logo">
-                <a href="{{ path('app_home_home_index') }}">Quiz</a>
+<div id="Register" class="tabcontent">
+    <img class="mx-auto d-block" src="{{ asset('assets/svg/logo.svg') }}">
+    {{ form_start(form, {'action': path('app_user_authentication_signing_register')}) }}
+        <div class="sign-form">
+            <div class="form-group">
+                <label for="inputBooster">{{ form_label(form.idBooster) }}</label>
+                {{ form_widget(form.idBooster, {'attr': {'class': 'form-control', 'placeholder': 'Enter your ID BOOSTER'}}) }}
+                <small id="inputBoosterHelp" class="form-text text-muted">ID Boosters are given by Supinfo.</small>
             </div>
-
-            <div class="register-box-body">
-                <p class="login-box-msg">Register a new member</p>
-
-                {{ form_start(form) }}
-                    <div class="form-group has-feedback">
-                        {{ form_widget(form.username, {'attr': {'class': 'form-control', 'placeholder': 'Username'}}) }}
-                        <span class="glyphicon glyphicon-user form-control-feedback"></span>
-                    </div>
-                    <div class="form-group has-feedback">
-                        {{ form_widget(form.firstName, {'attr': {'class': 'form-control', 'placeholder': 'First name' }}) }}
-                        <i class="fa fa-address-card form-control-feedback"></i>
-                    </div>
-                    <div class="form-group has-feedback">
-                        {{ form_widget(form.lastName, {'attr': {'class': 'form-control', 'placeholder': 'Last name' }}) }}
-                        <i class="fa fa-address-card form-control-feedback"></i>
-                    </div>
-                    <div class="form-group has-feedback">
-                        {{ form_widget(form.email, {'attr': {'class': 'form-control', 'placeholder': 'Email'}}) }}
-                        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-                    </div>
-                    <div class="form-group has-feedback">
-                        {{ form_widget(form.plainPassword.first, {'attr': {'class': 'form-control', 'placeholder': 'Password'}}) }}
-                        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-                    </div>
-                    <div class="form-group has-feedback">
-                        {{ form_widget(form.plainPassword.second, {'attr': {'class': 'form-control', 'placeholder': 'Repeat password' }}) }}
-                        <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-8">
-
-                        </div>
-                        <div class="col-xs-4">
-                            {{ form_widget(form.save, {'attr': {'class': 'btn btn-primary btn-block btn-flat'}, 'label': 'Register'}) }}
-                        </div>
-                    </div>
-                    {{ form_rest(form) }}
-                {{ form_end(form) }}
+            <div class="form-group">
+                <label for="inputPassword1">{{ form_label(form.plainPassword.first) }}</label>
+                {{ form_widget(form.plainPassword.first, {'attr': {'class': 'form-control', 'placeholder': 'Password'}}) }}
             </div>
-            <!-- /.form-box -->
+            <div class="form-group">
+                <label for="inputPassword2">{{ form_label(form.plainPassword.second) }}</label>
+                {{ form_widget(form.plainPassword.second, {'attr': {'class': 'form-control', 'placeholder': 'Password'}}) }}
+            </div>
         </div>
-    {% endblock %}
-    </body>
-{% endblock %}
-
-{% block javascripts %}
-    {% include '@Layout/Default/javascripts.html.twig' %}
-{% endblock %}
+        {{ form_widget(form.submit, {'attr': {'class': 'btn custom-full-btn'}}) }}
+    {{ form_end(form) }}
+</div>

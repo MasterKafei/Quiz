@@ -72,3 +72,11 @@ swiftmailer:
     auth_mode: '%mailer_auth_mode%'
     port: '%mailer_port%'
     spool: { type: memory }
+
+vich_uploader:
+    db_driver: orm
+    mappings:
+        image:
+            uri_prefix:         '%images_folder%'
+            upload_destination: '%vich_upload_images_folder%'
+            namer: vich_uploader.namer_uniqid

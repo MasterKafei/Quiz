@@ -1,31 +1,18 @@
 {% extends '@Layout/Page/Default/base.html.twig' %}
+
 {% block head_html %}
-<head>
-    {% block head %}
-        <title>{% block title %}Quiz{% endblock %}</title>
-        {% include '@Layout/Page/Default/stylesheets.html.twig' %}
-    {% endblock %}
-    {% block stylesheets %}{% endblock %}
-</head>
+    <head>
+        {% block head %}
+            <title>{% block title %}{{ parent() }}{% endblock %}</title>
+            {% include '@Layout/Page/Full/stylesheets.html.twig' %}
+        {% block stylesheets %}{% endblock %}
+        {% endblock %}
+    </head>
 {% endblock %}
-{% block body_html %}
-    <body class="hold-transition skin-blue sidebar-mini">
-        <div class="wrapper">
-            {% include '@Layout/Page/Full/topbar.html.twig' %}
-            {% if app.user is defined and app.user is not null %}
-                {% include '@Layout/Page/Full/sidebar.html.twig' %}
-            {% endif %}
-            <div class="content-wrapper">
-                <section class="content-header">
-                    {% block header %}{% endblock %}
-                </section>
-                <section class="content">
-                    {% block body %}{% endblock %}
-                </section>
-            </div>
-            {% include '@Layout/Page/Full/footer.html.twig' %}
-            {% include '@Layout/Page/Default/javascripts.html.twig' %}
-            {% block javascripts %}{% endblock javascripts %}
-        </div>
-    </body>
-{% endblock body_html %}
+{% block body %}
+    {% include '@Layout/Page/Full/topbar.html.twig' %}
+    {% block content %}{% endblock content %}
+    {% include '@Layout/Page/Full/footer.html.twig' %}
+    {% include '@Layout/Page/Default/javascripts.html.twig' %}
+    {% block javascripts %}{% endblock javascripts %}
+{% endblock body %}

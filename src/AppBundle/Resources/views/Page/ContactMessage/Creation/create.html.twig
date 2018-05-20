@@ -1,0 +1,45 @@
+{% extends '@Layout/Page/Full/base.html.twig' %}
+
+{% block sub_title %}Contact{% endblock sub_title %}
+
+{% block content %}
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 p-5">
+                    <h1 class="text-center">Contact Us</h1>
+                    <h5 class="text-center">How can we help you ?</h5>
+                </div>
+            </div>
+            {{ form_start(form, {'attr': {'class': 'custom-form-big'}}) }}
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="form-row">
+                            <div class="col">
+                                {{ form_widget(form.firstName, {'attr': {'class': 'form-control', 'placeholder': 'First name'}}) }}
+                            </div>
+                        </div>
+                        <div class="form-row mt-4">
+                            <div class="col">
+                                {{ form_widget(form.lastName, {'attr': {'class': 'form-control', 'placeholder': 'Last name'}}) }}
+                            </div>
+                        </div>
+                        <div class="form-row mt-4">
+                            <div class="col">
+                                {{ form_widget(form.email, {'attr': {'class': 'form-control', 'placeholder': 'Email'}}) }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        {{ form_widget(form.message, {'attr': {'class': 'form-control', 'placeholder': 'Your message', 'style': 'height: 100%;'}}) }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 text-right mt-4">
+                        {{ form_widget(form.submit, {'attr': {'class': 'btn btn-quiz'}}) }}
+                    </div>
+                </div>
+            {{ form_end(form) }}
+        </div>
+    </div>
+{% endblock %}

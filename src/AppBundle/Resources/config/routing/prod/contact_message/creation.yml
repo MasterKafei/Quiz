@@ -1,0 +1,3 @@
+app_contact_message_creation_create:
+    path: /create
+    defaults: { _controller: 'AppBundle:ContactMessage\Creation:createContactMessage' }

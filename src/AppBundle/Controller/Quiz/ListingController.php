@@ -6,13 +6,15 @@ namespace AppBundle\Controller\Quiz;
 use AppBundle\Entity\Category;
 use AppBundle\Entity\Question;
 use AppBundle\Entity\Quiz;
+use Doctrine\ORM\Tools\Pagination\Paginator;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\BrowserKit\Response;
+use Symfony\Component\HttpFoundation\Request;
 
 class ListingController extends Controller
 {
 
-    public function newAction()
+    /*public function newAction()
     {
         /*$quizzes = $this->getDoctrine()->getRepository(Quiz::class)->getNewQuizzes($this->getUser());
 
@@ -34,7 +36,7 @@ class ListingController extends Controller
             $tempQuizzes = $category->getQuizzes();
             $tempQuizzes[] = $quiz;
             $category->setQuizzes($tempQuizzes);
-        }*/
+        }
 
         $categories = $this->getDoctrine()->getRepository(Category::class)->findAll();
 
@@ -58,6 +60,22 @@ class ListingController extends Controller
 
         return $this->render('@Page/Quiz/Listing/completed.html.twig', array(
             'categories' => $categories,
+        ));
+    }*/
+
+    public function listQuizAction(Request $request)
+    {
+        $pageNumber = $request->query->get('pageNumber');
+        $search = $request->query->get('search');
+
+        /** @var Paginator $paginator */
+        $paginator = $this->getDoctrine()->getRepository(Quiz::class)->findAllRecent($pageNumber, $search);
+        $quizzes = $paginator->getIterator()->getArrayCopy();
+        $total = $paginator->count();
+
+        return $this->render('@Page/Quiz/Listing/list.html.twig', array(
+            'quizzes' => $quizzes,
+            'total' => $total,
         ));
     }
 }

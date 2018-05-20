@@ -6,6 +6,7 @@ use AppBundle\Entity\Answer;
 use AppBundle\Entity\Quiz;
 use AppBundle\Entity\User;
 use Doctrine\ORM\EntityRepository;
+use Doctrine\ORM\Tools\Pagination\Paginator;
 
 /**
  * QuizRepository
@@ -88,5 +89,21 @@ class QuizRepository extends EntityRepository
             ;
 
         return $qb->getQuery()->execute();
+    }
+
+    public function findAllRecent($pageNumber, $search, $maxResults = 8)
+    {
+        $qb = $this->createQueryBuilder('quiz')
+            ->select('quiz')
+            ->orderBy('quiz.validationDate', 'ASC')
+            ->setFirstResult($pageNumber * $maxResults)
+            ->setMaxResults($maxResults);
+
+        if (null !== $search && "" != $search) {
+            $qb->where('quiz.title LIKE :search')
+                ->setParameter('search', '%' . $search . '%');
+        }
+
+        return new Paginator($qb);
     }
 }

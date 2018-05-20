@@ -1,0 +1,3 @@
+app_contact_message_creation:
+    resource: "@AppBundle/Resources/config/routing/prod/contact_message/creation.yml"
+    prefix:   /creation/

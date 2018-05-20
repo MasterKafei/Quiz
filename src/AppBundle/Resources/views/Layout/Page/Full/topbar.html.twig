@@ -1,52 +1,34 @@
-<header class="main-header">
-
-    <a href="{{ path('app_home_home_index') }}" class="logo">
-        <span class="logo-mini"><b>QZ</b></span>
-        <span class="logo-lg"><b>Quiz</b></span>
-    </a>
-
-    <nav class="navbar navbar-static-top">
-        <!-- Sidebar toggle button-->
-        <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
-            <span class="sr-only">Toggle navigation</span>
-        </a>
-        <!-- Navbar Right Menu -->
-        <div class="navbar-custom-menu">
-            <ul class="nav navbar-nav">
+<img class="navbar-svg" src="{{ asset('assets/svg/header.svg') }}">
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark main-nav">
+    <div class="container">
+        <ul class="nav navbar-nav w-100 justify-content-end">
+            <li class="nav-item">
+                <a class="nav-link" href="{{ path('app_quiz_listing_list') }}">Tests</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ path('app_grade_listing_list') }}">Courses</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contribution</a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav justify-content-center">
+            <li class="nav-item"><a class="nav-link no-hover" href="{{ path('app_home_home_index') }}"><img class="nav-logo" src="{{ asset('assets/image/logo_white.png') }}"></a></li>
+        </ul>
+        <ul class="nav navbar-nav w-100">
+            <li class="nav-item">
+                <a class="nav-link" href="{{ path('app_feature_listing_list') }}">Features</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ path('app_contact_message_creation_create') }}">Contact</a>
+            </li>
+            <li class="nav-item">
                 {% if app.user is defined and app.user is not null %}
-                    <li class="dropdown user user-menu">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <span class="hidden-xs">
-                                    {{ app.user.username }}
-                            </span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li class="user-header">
-
-                                <p>
-                                    {{ app.user.username }}
-                                </p>
-                            </li>
-                            <li class="user-footer">
-                                <div class="pull-left">
-                                    <a href="#" class="btn btn-default btn-flat">Profile</a>
-                                </div>
-                                <div class="pull-right">
-                                    <a href="{{ path('app_user_authentication_logout_logout') }}" class="btn btn-default btn-flat">Login out</a>
-                                </div>
-                            </li>
-                        </ul>
-                    </li>
+                    <a class="nav-link" href="{{ path('app_user_authentication_signing_logout') }}">Logout</a>
                 {% else %}
-                    <li>
-                        <a href="{{ path('app_user_authentication_login_login') }}">Login</a>
-                    </li>
-                    <li>
-                        <a href="{{ path('app_user_authentication_registration_register') }}">Register</a>
-                    </li>
+                    <a class="nav-link" href="{{ path('app_user_authentication_signing_sign') }}">Sign</a>
                 {% endif %}
-            </ul>
-        </div>
-
-    </nav>
-</header>
+            </li>
+        </ul>
+    </div>
+</nav>

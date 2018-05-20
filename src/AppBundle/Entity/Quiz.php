@@ -2,9 +2,11 @@
 
 namespace AppBundle\Entity;
 use Symfony\Component\Validator\Constraints\Date;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
  * Quiz
+ * @Vich\Uploadable
  */
 class Quiz
 {
@@ -33,6 +35,16 @@ class Quiz
      */
     private $marks;
 
+    /**
+     * @var string
+     * @Vich\UploadableField(mapping="image", fileNameProperty="imagePath")
+     */
+    private $image;
+
+    /**
+     * @var string
+     */
+    private $imagePath;
 
     /**
      * @var Category
@@ -42,7 +54,17 @@ class Quiz
     /**
      * @var bool
      */
-    private $resettable;
+    private $resettable = true;
+
+    /**
+     * @var bool
+     */
+    private $validate;
+
+    /**
+     * @var bool
+     */
+    private $submitted;
 
     /**
      * @var Date
@@ -53,6 +75,16 @@ class Quiz
      * @var Date
      */
     private $endingDate;
+
+    /**
+     * @var Date
+     */
+    private $validationDate;
+
+    /**
+     * @var Date
+     */
+    private $lastUpdate;
 
     /**
      * Get id
@@ -205,6 +237,94 @@ class Quiz
     }
 
     /**
+     * Set validate
+     *
+     * @param $validate
+     * @return $this
+     */
+    public function setValidate($validate)
+    {
+        $this->validate = $validate;
+        return $this;
+    }
+
+    /**
+     * Get validate
+     *
+     * @return bool
+     */
+    public function isValidate()
+    {
+        return $this->validate;
+    }
+
+    /**
+     * Set submitted
+     *
+     * @param $submitted
+     * @return $this
+     */
+    public function setSubmitted($submitted)
+    {
+        $this->submitted = $submitted;
+        return $this;
+    }
+
+    /**
+     * Get submitted
+     *
+     * @return bool
+     */
+    public function getSubmitted()
+    {
+        return $this->submitted;
+    }
+
+    /**
+     * Set image
+     *
+     * @param $image
+     * @return $this
+     */
+    public function setImage($image)
+    {
+        $this->image = $image;
+
+        if ($image) {
+           $this->lastUpdate = new \DateTime();
+        }
+
+        return $this;
+    }
+
+    /**
+     * Get image
+     *
+     * @return string
+     */
+    public function getImage()
+    {
+        return $this->image;
+    }
+
+    /**
+     * @param $imagePath
+     * @return $this
+     */
+    public function setImagePath($imagePath)
+    {
+        $this->imagePath = $imagePath;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getImagePath()
+    {
+        return $this->imagePath;
+    }
+    /**
      * Set startingDate
      *
      * @param $startingDate
@@ -248,4 +368,35 @@ class Quiz
     {
         return $this->endingDate;
     }
+
+    /**
+     * @param $validationDate
+     * @return $this
+     */
+    public function setValidationDate($validationDate)
+    {
+        $this->validationDate = $validationDate;
+        return $this;
+    }
+
+    /**
+     * @return Date
+     */
+    public function getValidationDate()
+    {
+        return $this->validationDate;
+    }
+
+    public function setLastUpdate($lastUpdate)
+    {
+        $this->lastUpdate = $lastUpdate;
+        return $this;
+    }
+
+    public function getLastUpdate()
+    {
+        return $this->lastUpdate;
+    }
 }
+
+

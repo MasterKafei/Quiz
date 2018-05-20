@@ -28,12 +28,10 @@ class DataUserFixtures extends AbstractFixture implements OrderedFixtureInterfac
         $user = new User();
 
         $user
-            ->setUsername('MasterKafei')
-            ->setFirstName('Jean')
-            ->setLastName('Marius')
+            ->setIdBooster(227073)
             ->setPlainPassword('toto')
             ->setRoles(array('ROLE_ADMIN'))
-            ->setEmail('masterkafei@doctrina.com')
+            ->setEmail('227073@supinfo.com')
             ->setEnabled(true);
 
         $this->userBusiness->hashPassword($user);
@@ -46,12 +44,10 @@ class DataUserFixtures extends AbstractFixture implements OrderedFixtureInterfac
         $user = new User();
 
         $user
-            ->setUsername('Nunutte')
-            ->setFirstName('Olivier')
-            ->setLastName('Argentieri')
+            ->setIdBooster(281679)
             ->setPlainPassword('toto')
             ->setRoles(array('ROLE_ADMIN'))
-            ->setEmail('nunutte@doctrina.com')
+            ->setEmail('281679@supinfo.com')
             ->setEnabled(true);
 
         $this->userBusiness->hashPassword($user);
@@ -64,12 +60,10 @@ class DataUserFixtures extends AbstractFixture implements OrderedFixtureInterfac
         $user = new User();
 
         $user
-            ->setUsername('Craaftx')
-            ->setFirstName('Dorian')
-            ->setLastName('Guilmain')
+            ->setIdBooster(285500)
             ->setPlainPassword('toto')
             ->setRoles(array('ROLE_ADMIN'))
-            ->setEmail('craaftx@doctrina.com')
+            ->setEmail('285500@supinfo.com')
             ->setEnabled(true);
 
         $this->userBusiness->hashPassword($user);
@@ -82,12 +76,10 @@ class DataUserFixtures extends AbstractFixture implements OrderedFixtureInterfac
         $user = new User();
 
         $user
-            ->setUsername('Hundil')
-            ->setFirstName('Romain')
-            ->setLastName('Belot')
+            ->setIdBooster(219508)
             ->setPlainPassword('toto')
             ->setRoles(array('ROLE_ADMIN'))
-            ->setEmail('hundil@doctrina.com')
+            ->setEmail('219508@supinfo.com')
             ->setEnabled(true);
 
         $this->userBusiness->hashPassword($user);
@@ -100,12 +92,10 @@ class DataUserFixtures extends AbstractFixture implements OrderedFixtureInterfac
         $user = new User();
 
         $user
-            ->setUsername('Nerva')
-            ->setFirstName('Oulian')
-            ->setLastName('Semille')
+            ->setIdBooster(281008)
             ->setPlainPassword('toto')
             ->setRoles(array('ROLE_ADMIN'))
-            ->setEmail('nerva@doctrina.com')
+            ->setEmail('281008@supinfo.com')
             ->setEnabled(true);
 
         $this->userBusiness->hashPassword($user);
@@ -118,12 +108,10 @@ class DataUserFixtures extends AbstractFixture implements OrderedFixtureInterfac
         $user = new User();
 
         $user
-            ->setUsername('MasterLuiges')
-            ->setFirstName('Paul')
-            ->setLastName('Marius')
+            ->setIdBooster(285541)
             ->setPlainPassword('toto')
             ->setRoles(array('ROLE_USER'))
-            ->setEmail('masterluiges@doctrina.com')
+            ->setEmail('285541@supinfo.com')
             ->setEnabled(true);
 
         $this->userBusiness->hashPassword($user);

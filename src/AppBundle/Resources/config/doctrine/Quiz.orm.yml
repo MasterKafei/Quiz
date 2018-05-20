@@ -20,12 +20,24 @@ AppBundle\Entity\Quiz:
             type: array
         resettable:
             type: boolean
+        validate:
+            type: boolean
+        submitted:
+            type: boolean
+        imagePath:
+            type: string
+            length: 255
         startingDate:
             type: datetime
             nullable: true
         endingDate:
             type: datetime
             nullable: true
+        validationDate:
+            type: datetime
+            nullable: true
+        lastUpdate:
+            type: datetime
     oneToMany:
         questions:
             targetEntity: AppBundle\Entity\Question

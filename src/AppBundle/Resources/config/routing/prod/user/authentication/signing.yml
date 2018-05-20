@@ -1,0 +1,19 @@
+app_user_authentication_signing_sign:
+    path: /sign
+    defaults: { _controller: 'AppBundle:User/Authentication/Signing:sign' }
+
+app_user_authentication_signing_login:
+    path: /login
+    defaults: { _controller: 'AppBundle:User/Authentication/Signing:login' }
+
+app_user_authentication_signing_register:
+    path: /register
+    defaults: { _controller: 'AppBundle:User/Authentication/Signing:register' }
+
+app_user_authentication_signing_check:
+    path: /check
+    defaults: { _controller: 'AppBundle:User/Authentication/Signing:check' }
+
+app_user_authentication_signing_logout:
+    path: /logout
+    defaults: { _controller: 'AppBundle:User/Authentication/Signing:logout' }

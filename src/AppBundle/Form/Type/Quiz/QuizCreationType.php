@@ -14,6 +14,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Vich\UploaderBundle\Form\Type\VichFileType;
 
 class QuizCreationType extends AbstractType
 {
@@ -24,9 +25,6 @@ class QuizCreationType extends AbstractType
             ->add('description', TextareaType::class, array(
                 'required' => false,
             ))
-            ->add('resettable', CheckboxType::class, array(
-                'required' => false,
-            ))
             ->add('category', EntityType::class, array(
                 'class' => Category::class,
                 'query_builder' => function (EntityRepository $er) {
@@ -35,11 +33,8 @@ class QuizCreationType extends AbstractType
                 },
                 'choice_label' => 'title',
             ))
-            ->add('startingDate', DateType::class, array(
-                'required' => false,
-            ))
-            ->add('endingDate', DateType::class, array(
-                'required' => false,
+            ->add('image', VichFileType::class, array(
+                'label' => 'Image'
             ))
             ->add('save', SubmitType::class, array(
                 'label' => 'Add question',

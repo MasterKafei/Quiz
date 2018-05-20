@@ -1,35 +1,28 @@
 {% extends '@Layout/Page/Full/base.html.twig' %}
 
-{% block header %}
-    <h1>
-        Dashboard
-        <small>Version 1.0</small>
-    </h1>
-    {% embed '@Layout/Component/Breadcrumb/breadcrumb_full.html.twig' %}
-        {% set icon = 'fa fa-dashboard' %}
-        {% set contents = ['Home'] %}
-        {% set links = [path('app_home_home_index')] %}
-    {% endembed %}
-{% endblock %}
+{% block sub_title %}Home{% endblock sub_title %}
 
-{% block body %}
-    {% embed '@Layout/Component/Box/box_primary.html.twig' %}
-        {% block header %}
-            <h3 class="box-title">Title</h3>
-        {% endblock %}
-        {% block body %}
-            <p>Itaque tum Scaevola cum in eam ipsam mentionem incidisset, exposuit nobis sermonem Laeli de amicitia habitum ab illo secum et cum altero genero, C. Fannio Marci filio, paucis diebus post mortem Africani. Eius disputationis sententias memoriae mandavi, quas hoc libro exposui arbitratu meo; quasi enim ipsos induxi loquentes, ne 'inquam' et 'inquit' saepius interponeretur, atque ut tamquam a praesentibus coram haberi sermo videretur.</p>
-
-            <p>Harum trium sententiarum nulli prorsus assentior. Nec enim illa prima vera est, ut, quem ad modum in se quisque sit, sic in amicum sit animatus. Quam multa enim, quae nostra causa numquam faceremus, facimus causa amicorum! precari ab indigno, supplicare, tum acerbius in aliquem invehi insectarique vehementius, quae in nostris rebus non satis honeste, in amicorum fiunt honestissime; multaeque res sunt in quibus de suis commodis viri boni multa detrahunt detrahique patiuntur, ut iis amici potius quam ipsi fruantur.</p>
-
-            <p>Nemo quaeso miretur, si post exsudatos labores itinerum longos congestosque adfatim commeatus fiducia vestri ductante barbaricos pagos adventans velut mutato repente consilio ad placidiora deverti.</p>
-
-            <p>Ultima Syriarum est Palaestina per intervalla magna protenta, cultis abundans terris et nitidis et civitates habens quasdam egregias, nullam nulli cedentem sed sibi vicissim velut ad perpendiculum aemulas: Caesaream, quam ad honorem Octaviani principis exaedificavit Herodes, et Eleutheropolim et Neapolim itidemque Ascalonem Gazam aevo superiore exstructas.</p>
-
-            <p>Circa hos dies Lollianus primae lanuginis adulescens, Lampadi filius ex praefecto, exploratius causam Maximino spectante, convictus codicem noxiarum artium nondum per aetatem firmato consilio descripsisse, exulque mittendus, ut sperabatur, patris inpulsu provocavit ad principem, et iussus ad eius comitatum duci, de fumo, ut aiunt, in flammam traditus Phalangio Baeticae consulari cecidit funesti carnificis manu.</p>
-        {% endblock %}
-        {% block footer %}
-            Coeptantem acueret genere hocque est.
-        {% endblock %}
-    {% endembed %}
+{% block content %}
+    <div class="home-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 pt-5">
+                    <h1 class="text-center big-title">Learn is <span style="color: brown;">power</span></h1>
+                    <h3 class="text-center">Be powerfull with Doctrina</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="text-justify p-5">
+                        Doctrina est une plateforme de partage de connaissance utilisable par tous les étudiants de Supinfo afin de pouvoir aider chacun à apprendre plus facilement.
+                        Cette plateforme est par essence 100% collaborative en effet chaque personne peut contribuer pour apporter sa pierre à l’édifice : création de tests, d’exercices,
+                        ou de résumés de cours.
+                        A chaque fois qu’une personne contribue, son travail s’ajoute à Doctrina (après vérification du contenu par un membre de l’équipe de validation),
+                        cela permet donc à Doctrina d’être une plateforme autonome qui réunie tout ce dont ils ont besoin pour leurs révisions.
+                        Une contribution peut aussi être lié à la matière KWS, en effet une contribution est un partage de connaissance à part entière !
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
