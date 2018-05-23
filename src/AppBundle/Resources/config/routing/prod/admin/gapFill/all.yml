@@ -1,0 +1,19 @@
+app_admin_question_listing:
+    resource: "@AppBundle/Resources/config/routing/prod/admin/gapFill/listing.yml"
+    prefix:   /listing/
+
+app_admin_question_edition:
+    resource: "@AppBundle/Resources/config/routing/prod/admin/gapFill/edition.yml"
+    prefix:   /edition/
+
+app_admin_question_creation:
+    resource: "@AppBundle/Resources/config/routing/prod/admin/gapFill/creation.yml"
+    prefix:   /creation/
+
+app_admin_question_removing:
+    resource: "@AppBundle/Resources/config/routing/prod/admin/gapFill/removing.yml"
+    prefix:   /removing/
+
+app_admin_question_showing:
+    resource: "@AppBundle/Resources/config/routing/prod/admin/gapFill/showing.yml"
+    prefix:   /showing/
