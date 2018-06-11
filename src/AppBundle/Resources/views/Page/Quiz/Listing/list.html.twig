@@ -34,6 +34,9 @@
                 <div class="d-block mx-auto">
                     <div class="doctrina-pagination">
                         {% set pageMax = total/result_by_page %}
+                        {% if pageMax < 1 %}
+                            {% set pageMax = 1 %}
+                        {% endif %}
                         {% for i in 1..pageMax if i <= 3 %}
                             <a href="#"{% if current_page == i %} class="active"{% endif %}>{{ i }}</a>
                         {% endfor %}
