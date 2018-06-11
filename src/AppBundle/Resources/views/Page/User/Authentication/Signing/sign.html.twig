@@ -7,8 +7,8 @@
         <div class="container align-items-center h-100">
             <div class="sign-wrapper mx-auto">
                 <div class="sign-tabs">
-                    <button class="tablink active" onclick="openTab(event, 'Login')" id="defaultOpen">login</button>
-                    <button class="tablink" onclick="openTab(event, 'Register')">register</button>
+                    <button class="tablink" onclick="openTab(event, 'Login')"{% if focus is not defined or (focus is defined and focus == 'login') %} id="defaultOpen"{% endif %}>{{ 'login'|trans({}, 'action') }}</button>
+                    <button class="tablink" onclick="openTab(event, 'Register')"{% if focus is defined and focus == 'register' %} id="defaultOpen"{% endif %}>{{ 'registration'|trans({}, 'action') }}</button>
                 </div>
 
                 {{ render(controller('AppBundle:User/Authentication/Signing:login')) }}

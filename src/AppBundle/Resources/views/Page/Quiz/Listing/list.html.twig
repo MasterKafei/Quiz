@@ -7,7 +7,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h1 class="text-center p-5 big-title">Our awesome tests</h1>
+                    <h1 class="text-center p-5 big-title">{{ 'quiz.title'|trans({}, 'messages') }}</h1>
                 </div>
             </div>
         </div>
@@ -16,7 +16,7 @@
             <div class="row">
                 <div class="col-md-12 mb-5">
                     <form class="custom-form-big">
-                        <input class="form-control" placeholder="Search ..." name="search">
+                        <input class="form-control" placeholder="{{ 'quiz.listing.search'|trans({}, 'placeholder') }}" name="search">
                     </form>
                 </div>
             </div>
@@ -29,6 +29,25 @@
                     <span>{{ quiz.title }}</span>
                 </div>
                 {% endfor %}
+            </div>
+            <div class="row mt-4">
+                <div class="d-block mx-auto">
+                    <div class="doctrina-pagination">
+                        {% set pageMax = total/result_by_page %}
+                        {% for i in 1..pageMax if i <= 3 %}
+                            <a href="#"{% if current_page == i %} class="active"{% endif %}>{{ i }}</a>
+                        {% endfor %}
+
+                            {% if pageMax > 6 %}
+                                <a href="#">...</a>
+                            {% endif %}
+
+                        {% set firstEndingPage = pageMax - 3 %}
+                        {% for i in firstEndingPage..pageMax if i >= 5 %}
+                            <a href="#"{% if current_page == i %} class="active"{% endif %}>{{ i }}</a>
+                        {% endfor %}
+                    </div>
+                </div>
             </div>
         </div>
     </div>

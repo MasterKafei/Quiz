@@ -1,0 +1,40 @@
+AppBundle\Entity\Contributor:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\ContributorRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        firstName:
+            type: string
+            length: 255
+        lastName:
+            type: string
+            length: 255
+        role:
+            type: string
+            length: 255
+        githubLink:
+            type: string
+            length: 255
+            nullable: true
+        linkedinLink:
+            type: string
+            length: 255
+            nullable: true
+        behanceLink:
+            type: string
+            length: 255
+            nullable: true
+        email:
+            type: string
+            length: 255
+            nullable: true
+        photoPath:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

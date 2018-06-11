@@ -19,3 +19,6 @@ services:
 
     AppBundle\DataFixtures\ORM\DataGradeFixtures:
         tags: [doctrine.fixture.orm]
+
+    AppBundle\DataFixtures\ORM\DataContributorFixtures:
+        tags: [doctrine.fixture.orm]

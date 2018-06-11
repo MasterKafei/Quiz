@@ -177,7 +177,7 @@
                                         <p style="line-height:1.38;margin-top:0;margin-bottom:0"><span
                                                     style="font-size:14.666666666666666px;font-family:Arial;color:#000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre-wrap"><span
                                                         style="color:#00b1eb">To finish you registration please click <a
-                                                            href="{{ absolute_url(path('app_user_authentication_enabling_enable', {'token': user.token })) }}">here</a></span></span></p>
+                                                            href="{{ absolute_url(path('app_user_authentication_enabling_enable', {'id': user.id, 'token': user.token })) }}">here</a></span></span></p>
                                         <p></p></div>
                                 </td>
                             </tr>

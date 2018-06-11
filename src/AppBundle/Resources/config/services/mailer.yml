@@ -1,6 +1,7 @@
 services:
     app.mailer.abstract_mailer:
         abstract: true
+        parent: app.util.abstract_container_aware
         calls:
             - [setTwig, ["@twig"]]
             - [setMailer, ["@swiftmailer.mailer"]]
@@ -9,4 +10,8 @@ services:
 
     app.mailer.user.registration:
         class: AppBundle\Service\Mailer\User\RegistrationMailer
+        parent: app.mailer.abstract_mailer
+
+    app.mailer.contact_message.summary:
+        class: AppBundle\Service\Mailer\ContactMessage\SummaryMailer
         parent: app.mailer.abstract_mailer

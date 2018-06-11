@@ -1,0 +1,17 @@
+{% set messages = app_util_console.messages() %}
+
+{% for message in messages %}
+    <div class="doctrina-alert doctrina-alert-{{ message.type }}">
+        <div class="row align-items-center h-100">
+            <div class="col-4 mx-auto text-center">
+                <i class="{{ message.icon }} fa-4x"></i>
+            </div>
+            <div class="col-8 alert-text mx-auto">
+                <p>
+                    {{ message.text }}
+                </p>
+                <button class="float-right btn alert-button" onclick="document.getElementsByClassName('doctrina-alert')[0].style.opacity='0'">{{ 'alert.close'|trans({}, 'layout') }}</button>
+            </div>
+        </div>
+    </div>
+{% endfor %}

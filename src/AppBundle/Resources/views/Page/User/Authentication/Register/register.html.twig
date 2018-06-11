@@ -4,16 +4,16 @@
         <div class="sign-form">
             <div class="form-group">
                 <label for="inputBooster">{{ form_label(form.idBooster) }}</label>
-                {{ form_widget(form.idBooster, {'attr': {'class': 'form-control', 'placeholder': 'Enter your ID BOOSTER'}}) }}
-                <small id="inputBoosterHelp" class="form-text text-muted">ID Boosters are given by Supinfo.</small>
+                {{ form_widget(form.idBooster, {'attr': {'class': 'form-control', 'placeholder': 'user.authentication.register.id_booster'|trans({}, 'placeholder')}}) }}
+                <small id="inputBoosterHelp" class="form-text text-muted">{{ 'user.authentication.login.forget_password'|trans({}, 'label') }}</small>
             </div>
             <div class="form-group">
                 <label for="inputPassword1">{{ form_label(form.plainPassword.first) }}</label>
-                {{ form_widget(form.plainPassword.first, {'attr': {'class': 'form-control', 'placeholder': 'Password'}}) }}
+                {{ form_widget(form.plainPassword.first, {'attr': {'class': 'form-control', 'placeholder': 'user.authentication.register.password'|trans({}, 'placeholder')}}) }}
             </div>
             <div class="form-group">
                 <label for="inputPassword2">{{ form_label(form.plainPassword.second) }}</label>
-                {{ form_widget(form.plainPassword.second, {'attr': {'class': 'form-control', 'placeholder': 'Password'}}) }}
+                {{ form_widget(form.plainPassword.second, {'attr': {'class': 'form-control', 'placeholder': 'user.authentication.register.confirm_password'|trans({}, 'placeholder')}}) }}
             </div>
         </div>
         {{ form_widget(form.submit, {'attr': {'class': 'btn custom-full-btn'}}) }}

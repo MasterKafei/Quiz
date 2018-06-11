@@ -32,19 +32,19 @@ class AuthenticateType extends AbstractType
             '_username',
             TextType::class,
             array(
-                'label' => 'Your ID booster',
+                'label' => 'user.authentication.login.id_booster',
             )
         )->add(
             '_password',
             PasswordType::class,
             array(
-                'label' => 'Password',
+                'label' => 'user.authentication.login.password',
             )
         )->add(
             '_remember_me',
             CheckboxType::class,
             array(
-                'label' => 'Remember me',
+                'label' => 'user.authentication.login.remember_me',
                 'required' => false,
             )
         )->add(
@@ -58,7 +58,7 @@ class AuthenticateType extends AbstractType
             SubmitType::class,
             array(
                 'label' => 'login',
-                'translation_domain' => 'action',
+                'translation_domain' => 'action'
             )
         );
     }

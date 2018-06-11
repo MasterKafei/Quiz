@@ -2,13 +2,14 @@
 
 namespace AppBundle\Service\Mailer;
 
+use AppBundle\Service\Util\AbstractContainerAware;
 use Symfony\Bundle\FrameworkBundle\Routing\Router;
 
 /**
  * Class AbstractMailer
  * @package AppBundle\Service\Mailer
  */
-abstract class AbstractMailer
+abstract class AbstractMailer extends AbstractContainerAware
 {
     /**
      * @var \Swift_Mailer
