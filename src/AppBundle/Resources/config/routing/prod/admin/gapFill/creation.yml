@@ -1,0 +1,9 @@
+app_admin_gafill_creation_create:
+    path: /
+    defaults: { _controller: 'AppBundle:Admin/GapFill/Creation:create' }
+
+app_admin_gapfill_creation_add:
+    path: /{id}
+    defaults: { _controller: 'AppBundle:Admin/GapFill/Creation:add' }
+    requirements:
+        id: \d+
