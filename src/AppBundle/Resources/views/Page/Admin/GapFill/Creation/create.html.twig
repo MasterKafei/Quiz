@@ -1,32 +1,38 @@
 {% extends '@Layout/Page/Full/base.html.twig' %}
 {% block content %}
 
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-
 {{ form_start(form) }}
-    {{ form_row(form.solution) }}
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
-
-    <ul>
-        {% for solutionField in form.solution %}
+    <ul id="email-fields-list" data-prototype="{{ form_widget(form.solution.vars.prototype)|e }}"
+        data-widget-tags="{{ '<li></li>'|e }}">
+        {% for emailField in form.solution %}
             <li>
-                {{ form_errors(solutionField) }}
-                {{ form_widget(solutionField) }}
+                {{ form_widget(emailField) }}
             </li>
         {% endfor %}
     </ul>
 
-        <a href="#" class="add-another-collection-widget"> <span class="fa fa-plus-circle"></span>     Add     </a>
+    <a href="#"
+       class="add-another-collection-widget"
+       data-list="#email-fields-list">Add another email</a>
 
     {{ form_end(form) }}
 
@@ -36,7 +42,7 @@
                 src="https://code.jquery.com/jquery-3.3.1.js"
                 integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
                 crossorigin="anonymous"></script>
-        {{ parent() }}
+
         <script>
             jQuery(document).ready(function () {
                 jQuery('.add-another-collection-widget').click(function (e) {
@@ -44,6 +50,7 @@
                     var list = jQuery(jQuery(this).attr('data-list'));
                     // Try to find the counter of the list
                     var counter = list.data('widget-counter') | list.children().length;
+                    console.log(counter);
                     // If the counter does not exist, use the length of the list
                     if (!counter) { counter = list.children().length; }
 

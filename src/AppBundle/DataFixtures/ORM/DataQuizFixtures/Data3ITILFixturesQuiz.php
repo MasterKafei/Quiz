@@ -1,8 +1,9 @@
 <?php
 
-namespace AppBundle\DataFixtures\ORM;
+namespace AppBundle\DataFixtures\ORM\DataQuizFixtures;
 
 
+use AppBundle\DataFixtures\ORM\FixturesTools;
 use AppBundle\Entity\Question;
 use AppBundle\Entity\Quiz;
 use Doctrine\Common\DataFixtures\AbstractFixture;
@@ -13,7 +14,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Vich\UploaderBundle\Entity\File;
 
-class DataQuizFixtures extends AbstractFixture implements OrderedFixtureInterface, ContainerAwareInterface
+class Data3ITILFixturesQuiz extends AbstractFixture implements OrderedFixtureInterface, ContainerAwareInterface
 {
 
     /**

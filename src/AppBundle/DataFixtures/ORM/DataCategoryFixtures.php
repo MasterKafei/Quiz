@@ -37,6 +37,9 @@ class DataCategoryFixtures extends AbstractFixture implements OrderedFixtureInte
 
         $this->setReference('category 3ait', $category);
         $manager->persist($category);
+
+        $category = new Category();
+
         $manager->flush();
     }
 
