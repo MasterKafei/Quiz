@@ -39,6 +39,14 @@ class DataCategoryFixtures extends AbstractFixture implements OrderedFixtureInte
         $manager->persist($category);
 
         $category = new Category();
+        $category
+            ->setTitle('3MSA')
+            ->setDescription('3MSA - Windows Server Active Directory Domain Services');
+
+        $this->setReference('category 3msa', $category);
+        $manager->persist($category);
+
+
 
         $manager->flush();
     }

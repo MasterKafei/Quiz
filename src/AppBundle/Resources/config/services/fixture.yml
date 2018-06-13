@@ -6,6 +6,9 @@ services:
 
     AppBundle\DataFixtures\ORM\DataQuizFixtures\Data3ITILFixturesQuiz:
         tags: [doctrine.fixture.orm]
+
+    AppBundle\DataFixtures\ORM\DataQuizFixtures\Data3MSAFixturesQuiz:
+        tags: [doctrine.fixture.orm]
     #EndRegion Quiz
 
     AppBundle\DataFixtures\ORM\DataUserFixtures:

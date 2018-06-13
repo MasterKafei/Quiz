@@ -119,7 +119,7 @@ class Data3AITFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
         $questions[] = $question;
 
         $name = FixturesTools::saveFileFromLink(
-            'http://www.hlpdeveloppement.fr/wp-content/uploads/2016/05/itil.jpg',
+            'http://www.gettingsmart.com/wp-content/uploads/2017/09/artificial-intelligence-education.jpg',
             'jpg',
             $this->container->getParameter('vich_upload_images_folder'
             )
