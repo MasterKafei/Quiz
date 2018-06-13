@@ -16,22 +16,22 @@
                     <div class="col-lg-6">
                         <div class="form-row">
                             <div class="col">
-                                {{ form_widget(form.firstName, {'attr': {'class': 'form-control', 'placeholder': ''|trans({})}}) }}
+                                {{ form_widget(form.firstName, {'attr': {'class': 'form-control', 'placeholder': 'contact_message.creation.first_name'|trans({}, 'placeholder')}}) }}
                             </div>
                         </div>
                         <div class="form-row mt-4">
                             <div class="col">
-                                {{ form_widget(form.lastName, {'attr': {'class': 'form-control', 'placeholder': 'Last name'}}) }}
+                                {{ form_widget(form.lastName, {'attr': {'class': 'form-control', 'placeholder': 'contact_message.creation.last_name'|trans({}, 'placeholder')}}) }}
                             </div>
                         </div>
                         <div class="form-row mt-4">
                             <div class="col">
-                                {{ form_widget(form.email, {'attr': {'class': 'form-control', 'placeholder': 'Email'}}) }}
+                                {{ form_widget(form.email, {'attr': {'class': 'form-control', 'placeholder': 'contact_message.creation.email'|trans({}, 'placeholder')}}) }}
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        {{ form_widget(form.message, {'attr': {'class': 'form-control', 'placeholder': 'Your message', 'style': 'height: 100%;'}}) }}
+                        {{ form_widget(form.message, {'attr': {'class': 'form-control', 'placeholder': 'contact_message.creation.message'|trans({}, 'placeholder'), 'style': 'height: 100%;'}}) }}
                     </div>
                 </div>
                 <div class="row">

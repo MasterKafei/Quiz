@@ -40,7 +40,7 @@ class Question
     /**
      * @var Answer[]
      */
-    private $answers;
+    private $answers = array();
 
 
     /**

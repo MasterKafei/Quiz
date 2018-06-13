@@ -1,5 +1,5 @@
 app_admin_category_removing_remove:
-    path: /{id}
+    path: /remove/{id}
     defaults: { _controller: 'AppBundle:Admin/Category/Removing:remove' }
     requirements:
         id: \d+

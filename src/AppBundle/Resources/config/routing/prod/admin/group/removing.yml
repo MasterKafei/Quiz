@@ -1,5 +1,5 @@
 app_admin_group_removing_remove:
-    path: /{id}
+    path: /remove/{id}
     defaults: { _controller: 'AppBundle:Admin/UserGroup/Removing:remove' }
     requirements:
         id: \d+

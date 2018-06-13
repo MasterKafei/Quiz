@@ -1,0 +1,5 @@
+app_admin_course_creation_create:
+    path: /create
+    defaults: { _controller: 'AppBundle:Admin/Course/Creation:create' }
+    requirements:
+        id: \d+

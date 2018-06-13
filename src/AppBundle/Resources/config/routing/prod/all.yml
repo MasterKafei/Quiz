@@ -33,3 +33,7 @@ app_contributor:
 app_question:
     resource: "@AppBundle/Resources/config/routing/prod/question/all.yml"
     prefix:   /question/
+
+app_quiz_session:
+    resource: "@AppBundle/Resources/config/routing/prod/quiz_session/all.yml"
+    prefix:   /quiz_session/

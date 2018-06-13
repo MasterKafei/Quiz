@@ -3,7 +3,7 @@
 namespace AppBundle\Entity;
 
 /**
- * Chapter
+ * chapter
  */
 class Chapter
 {

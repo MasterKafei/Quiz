@@ -1,5 +1,5 @@
 app_admin_question_removing_remove:
-    path: /{id}
+    path: /remove/{id}
     defaults: { _controller: 'AppBundle:Admin/Question/Removing:remove' }
     requirements:
         id: \d+

@@ -1,0 +1,3 @@
+app_quiz_session_creation_create:
+    path:   /create/{id}
+    defaults: { _controller: 'AppBundle:QuizSession\Creation:createQuizSession' }
