@@ -1,0 +1,44 @@
+{% extends '@Layout/Page/Full/base.html.twig' %}
+
+{% block header %}
+    <h1>
+        Chapter edition
+        <small>Edit all existing course with information</small>
+    </h1>
+    {% embed '@Layout/Component/Breadcrumb/breadcrumb_full.html.twig' %}
+        {% set contents = ['Administration', 'Chapter', 'Edition'] %}
+        {% set links = ['#', path('app_admin_chapter_listing_list'), path('app_admin_chapter_edition_edit', {'id': course.id})] %}
+        {% set icon = 'fa fa-folder-open' %}
+    {% endembed %}
+{% endblock %}
+
+{% block body %}
+    <div class="box box-info">
+        {{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }}
+        <div class="box-header with-border">
+            <h3 class="box-title">Edit Chapter</h3>
+        </div>
+        <div class="box-body">
+            <div class="form-group">
+                <label class="col-sm-2 control-label">
+                    <label for="chapter_creation_text" class="required">{{ form_label(form.title) }}</label>
+                </label>
+                <label class="col-sm-10">
+                    {{ form_widget(form.title, {'attr': {'class': 'form-control'}}) }}
+                </label>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">
+                    <label for="chapter_creation_text" class="required">{{ form_label(form.text) }}</label>
+                </label>
+                <label class="col-sm-10">
+                    {{ form_widget(form.text, {'attr': {'class': 'form-control'}}) }}
+                </label>
+            </div>
+        </div>
+        <div class="box-footer">
+            {{ form_widget(form.save, {'label': 'Save'}) }}
+        </div>
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

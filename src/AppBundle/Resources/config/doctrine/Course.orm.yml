@@ -12,6 +12,10 @@ AppBundle\Entity\Course:
         title:
             type: string
             length: 255
+
+        description:
+            type: string
+            length: 255
             nullable: true
 
     oneToMany:

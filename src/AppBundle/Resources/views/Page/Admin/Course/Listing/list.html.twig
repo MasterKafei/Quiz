@@ -1,0 +1,92 @@
+{% extends '@Layout/Page/Full/base.html.twig' %}
+
+{% block header %}
+    <h1>
+        Course listing
+        <small>List all existing courses with information</small>
+    </h1>
+    {% embed '@Layout/Component/Breadcrumb/breadcrumb_full.html.twig' %}
+        {% set contents =
+        [
+        'Administration',
+        'Course',
+        'Listing',
+        ] %}
+
+        {% set links =
+        [
+        '#',
+        '#',
+        path('app_admin_course_listing_list'),
+        ] %}
+
+        {% set icon = 'fa fa-folder-open' %}
+    {% endembed %}
+{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('assets/vendor/datatables.net-bs/css/dataTables.bootstrap.min.css') }}">
+{% endblock %}
+
+
+{% block body %}
+    <div class="box box-info">
+        <div class="box-header with-border">
+            <h3 class="box-title">List all Courses</h3>
+        </div>
+
+        <div class="box-body">
+            <div class="col-sm-12">
+                <table id="course-table-listing" class="table table-bordered table-striped dataTable" role="grid"
+                       aria-describedby="course-table-listing_info">
+                    <thead>
+                    <tr>
+                        <th>
+                            Title
+                        </th>
+                        <th>
+                            Description
+                        </th>
+                        <th>
+                            Chapters number
+                        </th>
+                        <th>
+                            Action
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for course in courses %}
+                        <tr role="row" class="odd">
+                            <td class="sorting_1">{{ course.title }}</td>
+                            <td>{{ course.description }}</td>
+                            <td>{{ course.chapters|length }}</td>
+                            <td>
+                                <div class="btn-group">
+                                    <a href="{{ path('app_admin_course_showing_show', {'id': course.id}) }}" class="btn btn-info">Show <i class="fa fa-eye"></i></a>
+                                    <a href="{{ path('app_admin_course_edition_edit', {'id': course.id}) }}" class="btn btn-info">Edit <i class="fa fa-edit"></i></a>
+                                    <a href="{{ path('app_admin_course_removing_remove', {'id': course.id}) }}" class="btn btn-info">Remove <i class="fa fa-trash"></i></a>
+                                </div>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="box-footer">
+
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('assets/vendor/datatables.net/js/jquery.dataTables.js') }}"></script>
+    <script src="{{ asset('assets/vendor/datatables.net-bs/js/dataTables.bootstrap.min.js') }}"></script>
+    <script>
+        $(function () {
+            $('#course-table-listing').DataTable({});
+        });
+    </script>
+{% endblock %}

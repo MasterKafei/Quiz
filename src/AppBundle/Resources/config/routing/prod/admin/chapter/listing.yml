@@ -1,0 +1,3 @@
+app_admin_chapter_listing_list:
+    path: /list
+    defaults: { _controller: 'AppBundle:Admin/Chapter/Listing:list' }

@@ -1,11 +1,11 @@
 app_admin_user_edition_edit:
-    path: /{id}
+    path: /edit/{id}
     defaults: { _controller: 'AppBundle:Admin/User/Edition:edit' }
     requirements:
         id: \d+
 
 app_admin_user_edition_group:
-    path: /{id}/group
+    path: /group/{id}
     defaults: { _controller: 'AppBundle:Admin/User/Edition:group' }
     requirements:
         id: \d+

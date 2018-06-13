@@ -18,10 +18,15 @@ class Course
     private $chapters;
 
     /**
-     * @var string|null
+     * @var string
      */
     private $title;
 
+    /**
+     * @var description
+     *
+     */
+    private $description;
 
     /**
      * Get id.
@@ -34,6 +39,31 @@ class Course
     }
 
     /**
+     * Set description.
+     *
+     * @param string|null $description
+     *
+     * @return Course
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description.
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+
+    /**
      * Set chapters.
      *
      * @param string
@@ -42,7 +72,7 @@ class Course
      */
     public function setChapters($chapters)
     {
-        $this->title = $chapters;
+        $this->chapters = $chapters;
 
         return $this;
     }
@@ -54,7 +84,7 @@ class Course
      */
     public function getChapters()
     {
-        return $this->title;
+        return $this->chapters;
     }
 
     /**

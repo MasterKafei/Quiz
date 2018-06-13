@@ -1,0 +1,44 @@
+{% extends '@Layout/Page/Full/base.html.twig' %}
+
+{% block body %}
+
+            <div class="box-header with-border">
+                <h3 class="box-title">{{ chapter.title|default('Untitled') }}</h3>
+            </div>
+
+            <div class="box-body">
+                <p>{{ chapter.text }}</p>
+            </div>
+
+    {% for id in chapter.id %}
+
+        <h3 class="box-title">
+            {{ chapter.title }}
+            <small>{{ chapter.text }}</small>
+        </h3>
+
+        {% for key,response in chapter.responses %}
+            <label class="col-sm-2 control-label">
+
+            </label>
+            <label class="col-sm-10 control-label">
+                <div class="input-group">
+                    {% if chapter.solution[key] is defined %}
+                        <div class="bg-success">
+                            {{ response }}
+                        </div>
+                    {% else %}
+                        {{ response }}
+                    {% endif %}
+                </div>
+            </label>
+        {% endfor %}
+
+        <div class="pull-right">
+            <a href="{{ path('app_admin_chapter_showing_show', {'id': course.id}) }}" class="btn btn-info">Show <i class="fa fa-eye"></i></a>
+            <a href="{{ path('app_admin_question_edition_edit', {'id': question.id}) }}" class="btn btn-info">Edit <i class="fa fa-edit"></i></a>
+            <a href="{{ path('app_admin_question_removing_remove', {'id': question.id}) }}" class="btn btn-info">Remove <i class="fa fa-trash"></i></a>
+        </div>
+
+    {% endfor %}
+{% endblock %}
