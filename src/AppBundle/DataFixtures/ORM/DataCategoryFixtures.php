@@ -55,6 +55,13 @@ class DataCategoryFixtures extends AbstractFixture implements OrderedFixtureInte
         $this->setReference('category 3web', $category);
         $manager->persist($category);
 
+        $category = new Category();
+        $category
+            ->setTitle('3APL')
+            ->setDescription('3APL - Swift and Cocoa development');
+
+        $this->setReference('category 3apl', $category);
+        $manager->persist($category);
 
         $manager->flush();
     }
