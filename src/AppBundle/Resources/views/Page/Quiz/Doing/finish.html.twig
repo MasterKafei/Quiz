@@ -9,7 +9,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <h3 class="text-center mb-4">You completed the quiz : <span
-                                class="text-muted"> {{ quiz.title }}</span></h3>
+                                class="text-muted">{{ quiz.title }}</span></h3>
                     {% if percentage < 40 %}
                         <h1 class="text-center big-title wrong">Not Very Impressive..</h1>
                     {% elseif percentage < 75 %}
@@ -24,7 +24,8 @@
             <div class="row mt-1 p-3 pb-5 result-progress">
                 <div class="col-12">
                     <div class="progress">
-                        <div class="progress-bar progress-{% if percentage < 40 %}wrong{% elseif percentage < 75 %}intermediate{% else %}check{% endif %}" role="progressbar" style="width: {{ percentage }}%"
+                        <div class="progress-bar progress-{% if percentage < 40 %}wrong{% elseif percentage < 75 %}intermediate{% else %}check{% endif %}"
+                             role="progressbar" style="width: {{ percentage }}%"
                              aria-valuenow="{{ rightAnswers|length }}" aria-valuemin="0"
                              aria-valuemax="{{ quiz.questions|length }}">{{ rightAnswers|length }}
                             /{{ quiz.questions|length }}</div>
@@ -41,7 +42,7 @@
                                 <span class="result-item-response"><i class="fas fa-caret-right"></i>
                                     {% for keyResponse,response in rightAnswer.question.responses %}
                                         {% if keyResponse == keyValue %}
-                                            {{ keyResponse }}:{{ response }}
+                                            {{ response }}
                                         {% endif %}
                                     {% endfor %}
                             </span>
