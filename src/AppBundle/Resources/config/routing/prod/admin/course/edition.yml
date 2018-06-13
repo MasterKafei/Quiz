@@ -1,0 +1,3 @@
+app_admin_course_edition_edit:
+    path: /edit/{id}
+    defaults: { _controller: 'AppBundle:Admin/Course/Edition:edit' }

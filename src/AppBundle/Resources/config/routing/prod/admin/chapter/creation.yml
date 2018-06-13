@@ -1,0 +1,5 @@
+app_admin_chapter_creation_create:
+    path: /create/{id}
+    defaults: { _controller: 'AppBundle:Admin/Chapter/Creation:create' }
+    requirements:
+        id: \d+

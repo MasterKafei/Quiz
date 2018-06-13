@@ -1,0 +1,19 @@
+app_admin_course_listing:
+    resource: "@AppBundle/Resources/config/routing/prod/admin/course/listing.yml"
+    prefix:   /listing/
+
+app_admin_course_edition:
+    resource: "@AppBundle/Resources/config/routing/prod/admin/course/edition.yml"
+    prefix:   /edition/
+
+app_admin_course_creation:
+    resource: "@AppBundle/Resources/config/routing/prod/admin/course/creation.yml"
+    prefix:   /creation/
+
+app_admin_course_removing:
+    resource: "@AppBundle/Resources/config/routing/prod/admin/course/removing.yml"
+    prefix:   /removing/
+
+app_admin_course_showing:
+    resource: "@AppBundle/Resources/config/routing/prod/admin/course/showing.yml"
+    prefix:   /showing/

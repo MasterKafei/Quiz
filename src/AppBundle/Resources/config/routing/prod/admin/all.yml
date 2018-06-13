@@ -21,3 +21,11 @@ app_admin_category:
 app_admin_group:
     resource: "@AppBundle/Resources/config/routing/prod/admin/group/all.yml"
     prefix:   /group/
+
+app_admin_chapter:
+    resource: "@AppBundle/Resources/config/routing/prod/admin/chapter/all.yml"
+    prefix: /chapter/
+
+app_admin_course:
+    resource: "@AppBundle/Resources/config/routing/prod/admin/course/all.yml"
+    prefix: /course/
