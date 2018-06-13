@@ -1,0 +1,55 @@
+{% extends '@Layout/Page/Full/base.html.twig' %}
+
+{% block sub_title %}Team{% endblock sub_title %}
+
+{% block content %}
+    <div class="content">
+        <div class="container-fluid pt-5">
+            <section class="p-1 d-flex justify-content-center" id="title">
+                <div class="text-center">
+                    <h2>{{ 'contributor.listing.title'|trans({}, 'messages') }}</h2>
+                </div>
+            </section>
+        </div>
+        <div class="container p-0">
+            <section class="p-3" id="team">
+                <div class="row text-center">
+                    {% for contributor in contributors %}
+                        <div class="col-lg-4 col-md-6 text-center">
+                            <div class="service-box mt-5 mx-auto">
+                                <div class="ourteam-profile mx-auto d-block">
+                                    <img src="{{ vich_uploader_asset(contributor, 'photo') }}">
+                                </div>
+                                <h4 class="mt-3">{{ contributor.firstName }} {{ contributor.lastName }}</h4>
+                                <p class="text-primary">{{ contributor.role }}</p>
+                                {% if contributor.githubLink is not null %}
+                                    <a href="{{ contributor.githubLink }}" target="_blank">
+                                        <i class="fab fa-github-square fa-2x"></i>
+                                    </a>
+                                    &nbsp
+                                {% endif %}
+                                {% if contributor.behanceLink is not null %}
+                                    <a href="{{ contributor.behanceLink }}" target="_blank">
+                                        <i class="fab fa-behance-square fa-2x"></i>
+                                    </a>
+                                    &nbsp
+                                {% endif %}
+                                {% if contributor.linkedinLink is not null %}
+                                    <a href="{{ contributor.linkedinLink }}" target="_blank">
+                                        <i class="fab fa-linkedin fa-2x"></i>
+                                    </a>
+                                    &nbsp
+                                {% endif %}
+                                {% if contributor.email %}
+                                    <a href="mailto:{{ contributor.email }}" target="_blank">
+                                        <i class="fas fa-envelope-square fa-2x"></i>
+                                    </a>
+                                {% endif %}
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </section>
+        </div>
+    </div>
+{% endblock content %}

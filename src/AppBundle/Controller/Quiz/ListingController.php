@@ -68,6 +68,10 @@ class ListingController extends Controller
         $pageNumber = $request->query->get('pageNumber');
         $search = $request->query->get('search');
 
+        if ('' == $pageNumber || $pageNumber < 0) {
+           $pageNumber = 0;
+        }
+
         /** @var Paginator $paginator */
         $paginator = $this->getDoctrine()->getRepository(Quiz::class)->findAllRecent($pageNumber, $search);
         $quizzes = $paginator->getIterator()->getArrayCopy();
@@ -76,6 +80,8 @@ class ListingController extends Controller
         return $this->render('@Page/Quiz/Listing/list.html.twig', array(
             'quizzes' => $quizzes,
             'total' => $total,
+            'current_page' => $pageNumber + 1,
+            'result_by_page' => 8,
         ));
     }
 }

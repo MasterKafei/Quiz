@@ -405,3 +405,106 @@ footer {
   right: 0;
   width: 150px;
 }
+
+/* Doctrina Alert Box */
+.doctrina-alert {
+  width: 500px;
+  background-color: #f6f6f8;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-left: 8px solid #333;
+  padding: 20px;
+  margin-bottom: 20px;
+  position: fixed;
+  bottom: 0;
+  right: -500px;
+  z-index: 10000;
+  animation: slide 1s forwards;
+  animation-delay: 2s;
+  transition: 1s;
+}
+
+@media(max-width:576px){
+  .doctrina-alert {
+    margin-bottom: 0px;
+    border: none;
+    border-top: 8px solid #333;
+    width: 100%;
+  }
+}
+
+.doctrina-alert .alert-text {
+  border-left: 2px solid #333;
+}
+
+.doctrina-alert .alert-button {
+  color: #fff;
+  padding: 5px 5px 5px 5px;
+  background-color: #333333;
+  border-color: #323232;
+}
+
+.doctrina-alert .alert-button:hover {
+  color: whitesmoke;
+  background-color: #444444;
+  border-color: #333333;
+}
+
+.doctrina-alert .alert-button:focus, .doctrina-alert .alert-button.focus {
+  box-shadow: 0 0 0 0.2rem rgba(51, 51, 51, 0.204);
+}
+
+.doctrina-alert-success {
+  border-color: #28a745;
+}
+
+.doctrina-alert-danger {
+  border-color: #dc3545;
+}
+
+.doctrina-alert-secondary {
+  border-color: #545b62;
+}
+
+.doctrina-alert-primary {
+  border-color: #007bff;
+}
+
+.doctrina-alert-warning {
+  border-color: #d39e00;
+}
+
+.doctrina-alert-info {
+  border-color: #117a8b;
+}
+
+@keyframes slide {
+  100% { right: 0; }
+}
+
+.brown-text {
+  color: brown;
+}
+
+/* Pagination Style */
+.doctrina-pagination {
+  display: inline-block;
+  border: 2px solid #333333;
+  border-radius: 4px;
+}
+
+.doctrina-pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  margin: 0px 5px;
+  text-decoration: none;
+}
+
+.doctrina-pagination a.active {
+  background-color: #333333;
+  color: white;
+}
+
+.doctrina-pagination a:hover:not(.active) {
+  background-color: #eee;
+}

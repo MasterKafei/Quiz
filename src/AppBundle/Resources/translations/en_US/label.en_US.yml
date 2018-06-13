@@ -1,0 +1,21 @@
+user:
+    authentication:
+        login:
+            id_booster: Your ID booster
+            password: Password
+            remember_me: Remember me
+            submit: Login
+            forget_password: Forget password ?
+        register:
+            id_booster: Your ID booster
+            id_booster_info: ID Boosters are given by Supinfo.
+            password: Password
+            repeat_password: Confirm password
+            submit: Register
+
+topbar:
+    tests: Tests
+    courses: Courses
+    contribution: Contribution
+    features: Features
+    contact: Contact

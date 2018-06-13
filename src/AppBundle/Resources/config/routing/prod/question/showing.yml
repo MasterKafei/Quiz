@@ -1,0 +1,5 @@
+app_question_showing_show:
+    path: /show/{id}
+    defaults: { _controller: "AppBundle:Question/Showing:showQuestion" }
+    requirements:
+        id: \d+

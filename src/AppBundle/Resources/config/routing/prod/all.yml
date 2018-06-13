@@ -25,3 +25,11 @@ app_feature:
 app_grade:
     resource: "@AppBundle/Resources/config/routing/prod/grade/all.yml"
     prefix:   /grade/
+
+app_contributor:
+    resource: "@AppBundle/Resources/config/routing/prod/contributor/all.yml"
+    prefix:   /contributor/
+
+app_question:
+    resource: "@AppBundle/Resources/config/routing/prod/question/all.yml"
+    prefix:   /question/

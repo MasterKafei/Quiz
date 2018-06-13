@@ -1,0 +1,23 @@
+home:
+    title: Learn is <span class="brown-text">power</span>
+    sub_title: Be powerful with doctrina
+    description: |
+        Doctrina is a knowledge sharing platform that can be used by all Supinfo students
+        to help everyone learn more easily. This platform is in essence 100% collaborative,
+        in fact each person can contribute with creation of tests, exercises, or course summaries.
+        Whenever a person contributes, his work is added to Doctrina (after verification of the
+        content by a member of the validation team), this allows Doctrina to be an autonomous
+        platform that brings together everything they have need for their revisions. A contribution
+        can also be linked to the KWS subject matter, indeed a contribution is a knowledge sharing
+        in its own right!
+
+quiz:
+    title: Our awesome tests
+
+contact:
+    title: Contact Us
+    sub_title: How can we help you ?
+
+contributor:
+    listing:
+        title: Discover our team

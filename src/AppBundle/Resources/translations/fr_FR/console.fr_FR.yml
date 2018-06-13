@@ -1,0 +1,8 @@
+user:
+    registration:
+        mail_sended: Un mail de confirmation vous a été envoyé à l'adresse %mail_address%
+        success: Votre addresse email à bien été confirmé, vous pouvez désormais vous connecter
+
+contact_message:
+    creation:
+        confirmation: Votre message à bien été reçu par notre équipe

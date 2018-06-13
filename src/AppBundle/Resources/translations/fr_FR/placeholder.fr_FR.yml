@@ -1,0 +1,20 @@
+user:
+    authentication:
+        login:
+            id_booster: ID Booster
+            password: Mot de passe
+        register:
+            id_booster: Entrez votre ID booster
+            password: Mot de passe
+            confirm_password: Mot de passe
+
+quiz:
+    listing:
+        search: Rechercher...
+
+contact_message:
+    creation:
+        first_name: Prénom
+        last_name: Nom
+        email: Email
+        message: Votre message

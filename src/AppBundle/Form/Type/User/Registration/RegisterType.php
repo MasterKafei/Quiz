@@ -17,14 +17,17 @@ class RegisterType extends AbstractType
     {
         $builder
             ->add('idBooster', NumberType::class, array(
-                'label' => 'Your ID booster',
+                'label' => 'user.authentication.register.id_booster',
             ))
             ->add('plainPassword', RepeatedType::class, array(
                 'type' => PasswordType::class,
-                'first_options' => array('label' => 'Password'),
-                'second_options' => array('label' => 'Confirm password'),
+                'first_options' => array('label' => 'user.authentication.register.password'),
+                'second_options' => array('label' => 'user.authentication.register.repeat_password'),
             ))
-            ->add('submit', SubmitType::class, array())
+            ->add('submit', SubmitType::class, array(
+                'label' => 'register',
+                'translation_domain' => 'action'
+            ))
         ;
     }
 
@@ -33,6 +36,7 @@ class RegisterType extends AbstractType
         $resolver->setDefaults(array(
             'data_class' => User::class,
             'validation_groups' => ['registration'],
+            'translation_domain' => 'label',
         ));
     }
 }

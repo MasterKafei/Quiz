@@ -4,6 +4,7 @@ namespace AppBundle\Service\Mailer\User;
 
 use AppBundle\Entity\User;
 use AppBundle\Service\Mailer\AbstractMailer;
+use AppBundle\Service\Util\Console\Model\Message;
 
 class RegistrationMailer extends AbstractMailer
 {
@@ -20,5 +21,6 @@ class RegistrationMailer extends AbstractMailer
             );
 
         $this->sendMail($template, $context, $user->getEmail());
+        $this->container->get('app.util.console')->add('user.registration.mail_sended', Message::TYPE_INFO, 'far fa-envelope',array('%mail_address%' => $user->getEmail()));
     }
 }

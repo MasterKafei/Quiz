@@ -3,13 +3,13 @@
     <div class="container">
         <ul class="nav navbar-nav w-100 justify-content-end">
             <li class="nav-item">
-                <a class="nav-link" href="{{ path('app_quiz_listing_list') }}">Tests</a>
+                <a class="nav-link" href="{{ path('app_quiz_listing_list') }}">{{ 'topbar.tests'|trans({}, 'label') }}</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ path('app_grade_listing_list') }}">Courses</a>
+                <a class="nav-link" href="{{ path('app_grade_listing_list') }}">{{ 'topbar.courses'|trans({}, 'label') }}</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Contribution</a>
+                <a class="nav-link" href="#">{{ 'topbar.contribution'|trans({}, 'label') }}</a>
             </li>
         </ul>
         <ul class="nav navbar-nav justify-content-center">
@@ -17,16 +17,16 @@
         </ul>
         <ul class="nav navbar-nav w-100">
             <li class="nav-item">
-                <a class="nav-link" href="{{ path('app_feature_listing_list') }}">Features</a>
+                <a class="nav-link" href="{{ path('app_feature_listing_list') }}">{{ 'topbar.features'|trans({}, 'label') }}</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ path('app_contact_message_creation_create') }}">Contact</a>
+                <a class="nav-link" href="{{ path('app_contact_message_creation_create') }}">{{ 'topbar.contact'|trans({}, 'label') }}</a>
             </li>
             <li class="nav-item">
                 {% if app.user is defined and app.user is not null %}
-                    <a class="nav-link" href="{{ path('app_user_authentication_signing_logout') }}">Logout</a>
+                    <a class="nav-link" href="{{ path('app_user_authentication_signing_logout') }}">{{ 'logout'|trans({}, 'action') }}</a>
                 {% else %}
-                    <a class="nav-link" href="{{ path('app_user_authentication_signing_sign') }}">Sign</a>
+                    <a class="nav-link" href="{{ path('app_user_authentication_signing_sign') }}">{{ 'login'|trans({}, 'action') }}</a>
                 {% endif %}
             </li>
         </ul>

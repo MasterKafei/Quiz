@@ -1,117 +1,24 @@
 {% extends '@Layout/Page/Full/base.html.twig' %}
+{% block content %}
 
-{% block header %}
-    <h1>
-        Question creation
-        <small>Create a new question to an existing quiz</small>
-    </h1>
-    {% embed '@Layout/Component/Breadcrumb/breadcrumb_full.html.twig' %}
-        {% set contents =
-        [
-        'Administration',
-        'Quiz',
-        'Creation',
-        ] %}
+    <br>
+    <br>
 
-        {% set links =
-        [
-        '#',
-        path('app_admin_quiz_listing_list'),
-        path('app_admin_question_creation_add', {'id': quiz.id}),
-        ] %}
+    <br>
+    <br>
+    <br>
+    <br><br>
+    <br><br>
+    <br>
+    <br>
+    <br><br>
+    <br><br>
+    <br><br>
+    <br>
 
-        {% set icon = 'fa fa-list-ol' %}
-    {% endembed %}
-{% endblock %}
 
-{% block body %}
-    {% embed '@Layout/Component/Box/box_primary.html.twig' %}
 
-        {% block head %}
-            {{ form_start(form, {'attr': {'class': 'form-horizontal', 'id': 'form-question-create'}}) }}
-        {% endblock %}
 
-        {% block header %}
-            <h3 class="box-title">Add question to "{{ quiz.title }}"</h3>
-        {% endblock %}
+    {{ form(form) }}
 
-        {% block body %}
-
-            <div class="form-group">
-                <label class="col-sm-2 control-label">{{ form_label(form.title) }}</label>
-                <div class="col-sm-10">
-                    {{ form_widget(form.title, {'attr': {'class': 'form-control'}} ) }}
-                </div>
-            </div>
-            <div class="form-group" id="responses-fields-list"
-                 data-prototype="{{ form_widget(form.responses.vars.prototype)|e }}" data-widget-tags="
-                {{ '<div class="form-group"></div>'|e }}"></div>
-            <div class="form-group">
-                <label class="col-sm-2 control-label">{{ form_label(form.text) }}</label>
-                <div class="col-sm-10">
-                    {{ form_widget(form.text, {'attr': {'class': 'form-control'}} ) }}
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="col-sm-2 control-label">
-                    <a href="#" class="add-another-collection-widget pul-right btn btn-info" data-placement="top"
-                       data-list="#responses-fields-list" data-toggle="tooltip" title="Add proposition">
-                        <i class="fa fa-plus"></i>
-                    </a>
-                </label>
-                <label class="col-sm-10 control-label">
-                    <div class="input-group">
-                        <span class="input-group-addon">
-                            <input type="checkbox" id="question_creation_solution_0"
-                                   name="question_creation[solution][0]" value="1">
-                        </span>
-                        <input type="text" id="question_creation_responses_0" name="question_creation[responses][0]"
-                               required="required" class="form-control">
-                    </div>
-                    <label id="question_creation_responses_0-error" class="error pull-left"
-                           for="question_creation_responses_0"></label>
-                </label>
-            </div>
-            {% for key,response in form.responses %}
-                <div class="form-group">
-                    <label class="col-sm-2 control-label">
-                        <a href="#" class="add-another-collection-widget pul-right btn btn-info" data-placement="top"
-                           data-list="#responses-fields-list" data-toggle="tooltip" title="Add proposition">
-                            <i class="fa fa-plus"></i>
-                        </a>
-                    </label>
-                    <label class="col-sm-10 control-label">
-                        <div class="input-group">
-                            <span class="input-group-addon">
-                                {{ form_widget(form.solution[key]) }}
-                            </span>
-                            {{ form_widget(response) }}
-                        </div>
-                    </label>
-                </div>
-            {% endfor %}
-
-        {% endblock %}
-
-        {% block footer %}
-            <label class="pull-left">
-                <a href="{{ path('app_admin_quiz_showing_show', {'id': quiz.id}) }}" class="btn btn-warning">Quit
-                    without saving current question</a>
-            </label>
-            <label class="pull-right">
-                <a id="save-quit-link" href="#" class="btn btn-success">Save and quit</a>
-                <input id="continue-hidden-input" type="hidden" name="continue" value="1">
-                {{ form_widget(form.save, {'attr': {'class': 'btn btn-info'}, 'label': 'Save and continue'}) }}
-            </label>
-        {% endblock %}
-
-        {% block foot %}
-            {{ form_end(form) }}
-        {% endblock %}
-
-    {% endembed %}
-{% endblock %}
-
-{% block javascripts %}
-    <script src="{{ asset('assets/javascript/Page/Question/Creation/add.js') }}"></script>
 {% endblock %}

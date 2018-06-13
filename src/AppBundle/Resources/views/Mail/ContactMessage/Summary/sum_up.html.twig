@@ -1,0 +1,30 @@
+<!doctype html>
+{% block subject %}
+    Contact message summary
+{% endblock %}
+
+{% block html %}
+    <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml"
+          xmlns:o="urn:schemas-microsoft-com:office:office">
+    {% block head_html %}
+        <head>
+            <title></title>
+            <!--[if !mso]>
+                <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <!--<![endif]-->
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <meta name="viewport" content="width=device-width,initial-scale=1">
+        </head>
+    {% endblock head_html %}
+    {% block body_html %}
+        <body>
+        {% block body_text %}
+            Hello {{ contact_message.firstName }} {{ contact_message.lastName }} !
+            You send a message to our team containing the following message:
+            <p>{{ contact_message.message }}</p>
+            We will answer you as soon as possible !
+        {% endblock body_text %}
+        </body>
+    {% endblock body_html %}
+    </html>
+{% endblock html %}

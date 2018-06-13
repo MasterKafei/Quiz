@@ -1,0 +1,39 @@
+{% extends '@Layout/Page/Full/base.html.twig' %}
+
+{% block content %}
+    <div id="quiz-header" class="quiz-header"
+         style="background-image: url('{{ vich_uploader_asset(quiz, 'image') }}');"></div>
+    <div class="container quiz-content">
+        <div class="row">
+            <div class="col-md-12 mb-3">
+                <h1 class="text-center">{{ question.title }}</h1>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-12 mt-3">
+
+
+                <div class="d-flex">
+                    {{ form_start(form, {'attr': {'class': 'mx-auto justify-content-center'}}) }}
+                    <h3>{{ question.text }}</h3>
+                    {% for key,response in question.responses %}
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="answer_creation_value_{{ key }}"
+                                   name="answer_creation[value][{{ key }}]" value="1">
+                            <label class="custom-control-label"
+                                   for="answer_creation_value_{{ key }}">{{ response }}</label>
+                        </div>
+                    {% endfor %}
+                        <div class="row">
+                            <div class="col-md-12 text-right mt-5 mr-5">
+                                {{ form_widget(form.submit, {'attr': {'class': 'btn btn-quiz'}}) }}
+                            </div>
+                        </div>
+                    {{ form_end(form) }}
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}

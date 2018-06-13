@@ -10,6 +10,10 @@ app_admin_question:
     resource: "@AppBundle/Resources/config/routing/prod/admin/question/all.yml"
     prefix:   /question/
 
+app_admin_gapfill:
+    resource: "@AppBundle/Resources/config/routing/prod/admin/gapFill/all.yml"
+    prefix:   /gapfill/
+
 app_admin_category:
     resource: "@AppBundle/Resources/config/routing/prod/admin/category/all.yml"
     prefix:   /category/

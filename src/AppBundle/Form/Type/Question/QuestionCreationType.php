@@ -29,7 +29,6 @@ class QuestionCreationType extends AbstractType
             ))
             ->add('text', TextareaType::class, array())
             ->add('responses', CollectionType::class, array(
-                'label' => false,
                 'entry_type' => TextType::class,
                 'allow_add' => true,
                 'allow_delete' => true,
@@ -37,7 +36,6 @@ class QuestionCreationType extends AbstractType
                     'attr' => array('class' => 'form-control'),
             )))
             ->add('solution', CollectionType::class, array(
-                'label' => false,
                 'entry_type' => CheckboxType::class,
                 'allow_add' => true,
                 'allow_delete' => true,

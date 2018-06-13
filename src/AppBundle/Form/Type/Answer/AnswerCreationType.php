@@ -19,8 +19,9 @@ class AnswerCreationType extends AbstractType
                 'allow_delete' => true,
                 'label' => false,
             ))
-            ->add('save', SubmitType::class, array(
-
+            ->add('submit', SubmitType::class, array(
+                'label' => 'submit',
+                'translation_domain' => 'action',
             ))
         ;
     }

@@ -18,7 +18,9 @@ class CreationController extends Controller
 {
     public function createAction(Request $request)
     {
-        return $this->render('@Page/Admin/Question/Creation/create.html.twig');
+        $form = $this->createForm(QuestionCreationType::class, new Question());
+        return $this->render('@Page/Admin/GapFill/Creation/create.html.twig', array(
+            'form' => $form->createView()));
     }
 
     public function addAction(Request $request, Quiz $quiz)

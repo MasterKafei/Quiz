@@ -24,6 +24,7 @@ class CreationController extends Controller
             $em->flush();
 
             $form = $this->createForm(ContactMessageCreationType::class, new ContactMessage());
+            $this->get('app.mailer.contact_message.summary')->sendSummaryMail($contactMessage);
         }
 
         return $this->render('@Page/ContactMessage/Creation/create.html.twig', array(

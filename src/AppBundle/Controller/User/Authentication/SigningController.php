@@ -15,7 +15,7 @@ class SigningController extends Controller
     public function loginAction()
     {
         if ($this->get('app.business.request')->isMasterRequest()) {
-            return $this->redirectToRoute('app_user_authentication_signing_sign');
+            return $this->forward('AppBundle:User\Authentication\Signing:sign', array('focus' => 'login'));
         }
         $form = $this->createForm(AuthenticateType::class);
 
@@ -26,10 +26,6 @@ class SigningController extends Controller
 
     public function registerAction(Request $request)
     {
-        if ($this->get('app.business.request')->isMasterRequest()) {
-            return $this->redirectToRoute('app_user_authentication_signing_sign');
-        }
-
         $user = new User();
 
         $form = $this->createForm(RegisterType::class, $user);
@@ -42,6 +38,11 @@ class SigningController extends Controller
             $user->setRoles(array(USER::ROLE_USER));
             $this->get('app.business.user')->generateToken($user);
             $this->get('app.mailer.user.registration')->sendRegisterMail($user);
+            return $this->forward('AppBundle:User\Authentication\Signing:sign', array('focus' => 'register'));
+        }
+
+        if ($this->get('app.business.request')->isMasterRequest()) {
+            return $this->forward('AppBundle:User\Authentication\Signing:sign', array('focus' => 'register'));
         }
 
         return $this->render('@Page/User/Authentication/Register/register.html.twig', array(
@@ -49,9 +50,13 @@ class SigningController extends Controller
         ));
     }
 
-    public function signAction()
+    public function signAction($focus = 'login')
     {
-        return $this->render('@Page/User/Authentication/Signing/sign.html.twig');
+        return $this->render('@Page/User/Authentication/Signing/sign.html.twig',
+            array(
+                'focus' => $focus,
+            )
+        );
     }
 
     public function checkAction()
