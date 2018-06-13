@@ -1,0 +1,3 @@
+app_quiz_session_showing_show:
+    path:   /show
+    defaults: { _controller: 'AppBundle:QuizSession\Showing:showQuizSession' }

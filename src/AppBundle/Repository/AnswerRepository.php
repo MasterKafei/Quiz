@@ -2,6 +2,8 @@
 
 namespace AppBundle\Repository;
 
+use AppBundle\Entity\Answer;
+use AppBundle\Entity\Quiz;
 use AppBundle\Entity\User;
 use Doctrine\ORM\EntityRepository;
 
@@ -13,6 +15,13 @@ use Doctrine\ORM\EntityRepository;
  */
 class AnswerRepository extends EntityRepository
 {
+    /**
+     * Get user answers.
+     *
+     * @param Question $questions
+     * @param User $user
+     * @return Answer[]
+     */
     public function getUserAnswers($questions, User $user)
     {
         $query = $this->_em->createQuery('
@@ -22,6 +31,28 @@ class AnswerRepository extends EntityRepository
             AND answer.user = :user
         ')
             ->setParameter('questions', $questions)
+            ->setParameter('user', $user);
+
+        $result = $query->getResult();
+        return $result;
+    }
+
+    /**
+     * Get quiz answers.
+     *
+     * @param Quiz $quiz
+     * @param User $user
+     * @return Answer[]
+     */
+    public function getQuizAnswers($quiz, User $user)
+    {
+        $query = $this->_em->createQuery('
+            SELECT answer
+            FROM AppBundle:Answer answer
+            WHERE answer.question in (:quiz.questions)
+            AND answer.user = :user
+        ')
+            ->setParameter('quiz', $quiz)
             ->setParameter('user', $user);
 
         $result = $query->getResult();

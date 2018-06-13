@@ -22,12 +22,12 @@
             </div>
             <div class="row">
                 {% for quiz in quizzes %}
-                <div class="col-lg-6 text-center tests-item">
+                <a href="{{ path('app_quiz_session_creation_create', {'id': quiz.id}) }}" class="col-lg-6 text-center tests-item">
                     <div class="tests-image">
                         <img class="img-fluid" src="{{ vich_uploader_asset(quiz, 'image') }}">
                     </div>
                     <span>{{ quiz.title }}</span>
-                </div>
+                </a>
                 {% endfor %}
             </div>
             <div class="row mt-4">
