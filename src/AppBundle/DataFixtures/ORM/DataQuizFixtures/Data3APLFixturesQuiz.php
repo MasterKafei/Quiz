@@ -211,7 +211,7 @@ class Data3APLFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
 
 
         $name = FixturesTools::saveFileFromLink(
-            'http://wpuploads.appadvice.com/wp-content/uploads/2015/12/Screen-Shot-2015-12-07-at-19.19.35.png',
+            'http://images.frandroid.com/wp-content/uploads/2017/08/swift-logo.jpg',
             'jpg',
             $this->container->getParameter('vich_upload_images_folder'
             )
