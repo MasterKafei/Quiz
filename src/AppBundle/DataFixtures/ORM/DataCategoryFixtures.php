@@ -79,6 +79,14 @@ class DataCategoryFixtures extends AbstractFixture implements OrderedFixtureInte
         $this->setReference('category 3jva', $category);
         $manager->persist($category);
 
+        $category = new Category();
+        $category
+            ->setTitle('3ORC')
+            ->setDescription('3ORC - Oracle Database Administration');
+
+        $this->setReference('category 3orc', $category);
+        $manager->persist($category);
+
         $manager->flush();
     }
 
