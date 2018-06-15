@@ -38,7 +38,7 @@ class Data3APLFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
 
 
         $question = (new Question())
-            ->setTitle('Extension fichier Swift 3apl')
+            ->setTitle('Extension fichier Swift')
             ->setText('Qu\'elle est l\'extension d\'un fichier Swift ?')
             ->setResponses(array(
                 '.sft',
@@ -55,7 +55,7 @@ class Data3APLFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
         $questions[] = $question;
 
         $question = (new Question())
-            ->setTitle('Fichier d\'entrer d\'un programme en Swift 3APL ')
+            ->setTitle('Fichier d\'entrer d\'un programme en Swift')
             ->setText('Qu\'elle est le fichier d\'entrer d\'un programme en Swift')
             ->setResponses(array(
                 'start.swift',
@@ -72,7 +72,7 @@ class Data3APLFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
         $questions[] = $question;
 
         $question = (new Question())
-            ->setTitle('swift typé 3APL')
+            ->setTitle('Swift typé')
             ->setText('Le Swift est-il typé ?')
             ->setResponses(array(
                 'Oui',
@@ -87,7 +87,7 @@ class Data3APLFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
         $questions[] = $question;
 
         $question = (new Question())
-            ->setTitle('constante 3web')
+            ->setTitle('constante')
             ->setText('Comment déclare-t-on  une constante ?')
             ->setResponses(array(
                 'const',
@@ -104,7 +104,7 @@ class Data3APLFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
         $questions[] = $question;
 
         $question = (new Question())
-            ->setTitle('Playground 3apl')
+            ->setTitle('Playground')
             ->setText('Qu\'est ce aue le Playground ?')
             ->setResponses(array(
                 'Le fichier de configuration principal d\'un projet Swift.',
@@ -121,7 +121,7 @@ class Data3APLFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
         $questions[] = $question;
 
         $question = (new Question())
-            ->setTitle('Térnaire 3apl')
+            ->setTitle('Térnaire')
             ->setText('Qu\'est-ce qu\'une opération térnaire ?')
             ->setResponses(array(
                 'Un algorythme de récupération d\'information.',
@@ -139,7 +139,7 @@ class Data3APLFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
 
 
         $question = (new Question())
-            ->setTitle('Compound type 3apl')
+            ->setTitle('Compound type')
             ->setText('Qu\'est-ce Qu\'un Compound type ?')
             ->setResponses(array(
                 'Un type de donnée utilisé pour le persist en BDD.',
@@ -157,7 +157,7 @@ class Data3APLFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
 
 
         $question = (new Question())
-            ->setTitle('Signification ? 3apl')
+            ->setTitle('Signification ?')
             ->setText('Que signifie le ? dérriére une variable :')
             ->setResponses(array(
                 'Pour pour réaliser une opération ternaire',
@@ -176,7 +176,7 @@ class Data3APLFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
 
 
         $question = (new Question())
-            ->setTitle('Signification ! 3apl')
+            ->setTitle('Signification !')
             ->setText('Que signifie ! dérriére une variable :')
             ->setResponses(array(
                 'Le ! indique que la variable contient nil si elle n\'est pas initialisé mais lorsqu\'elle est utilisé on lui applique automatiquement une valeur.',
@@ -193,7 +193,7 @@ class Data3APLFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
         $questions[] = $question;
 
         $question = (new Question())
-            ->setTitle('Selector 3web')
+            ->setTitle('Selector')
             ->setText('Est-il possible de définir une valeur par défaut pour un paramètre de fonction ?')
             ->setResponses(array(
                 'Oui.',

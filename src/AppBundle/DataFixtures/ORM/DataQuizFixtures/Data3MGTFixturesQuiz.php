@@ -37,7 +37,7 @@ class Data3MGTFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
         $questions = array();
 
         $question = (new Question())
-            ->setTitle(' CIO 3MGT ')
+            ->setTitle('CIO')
             ->setText('Qu\'est ce que signifie CIO ?')
             ->setResponses(array(
                 'Chief Information Officer',
@@ -54,7 +54,7 @@ class Data3MGTFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
         $questions[] = $question;
 
         $question = (new Question())
-            ->setTitle(' Service IT 3MGT ')
+            ->setTitle(' Service IT')
             ->setText('Le service IT Operation et infrastructure est responsable de la maintenance du parc informatique, l\'application développement et support garde les applications à jour.')
             ->setResponses(array(
                 'Vrai',
@@ -69,7 +69,7 @@ class Data3MGTFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
         $questions[] = $question;
 
         $question = (new Question())
-            ->setTitle('Champs services IT 3MGT')
+            ->setTitle('Champs services IT')
             ->setText('Quels sont les champs d’applications du service IT  ?')
             ->setResponses(array(
                 'La sécurité',
@@ -93,7 +93,7 @@ class Data3MGTFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
         $questions[] = $question;
 
         $question = (new Question())
-            ->setTitle('Operations et gestion de projets 3mgt')
+            ->setTitle('Operations et gestion de projets')
             ->setText('Quelle est la différence entre la gestion d\'opérations et la gestion de projet ?')
             ->setResponses(array(
                 ' Les projet sont unique, possèdent une date de début et de fin  alors que les opérations sont des actions répétitives qui peuvent être industrialisée. ',
@@ -108,7 +108,7 @@ class Data3MGTFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
         $questions[] = $question;
 
         $question = (new Question())
-            ->setTitle('Definition projet 3mgt')
+            ->setTitle('Definition projet')
             ->setText('Un projet est la réalisation d’un contenu de maniére répétitive sans définition des moyens et des ressources nécessaire à sa réalisation.')
             ->setResponses(array(
                 'Vrai',
@@ -124,7 +124,7 @@ class Data3MGTFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
 
 
         $question = (new Question())
-            ->setTitle('but d\'un projet 3mgt')
+            ->setTitle('but d\'un projet')
             ->setText('Quelle est le but d’un projet ?')
             ->setResponses(array(
                 'Un projet doit être obligatoirement réaliser au sein de l\'entreprise.',
@@ -141,7 +141,7 @@ class Data3MGTFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
         $questions[] = $question;
 
         $question = (new Question())
-            ->setTitle('Signification PMI 3mgt')
+            ->setTitle('Signification PMI')
             ->setText('Que signifie le PMI ?')
             ->setResponses(array(
                 'Project Management Institute.',
@@ -159,7 +159,7 @@ class Data3MGTFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
 
 
         $question = (new Question())
-            ->setTitle('Liste des faits 3mgt')
+            ->setTitle('Liste des faits')
             ->setText('Le PMI c\'est l\'application des connaissances, des techniques outils pour la réalisations d’activités.')
             ->setResponses(array(
                 'Vrai',
@@ -174,7 +174,7 @@ class Data3MGTFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
         $questions[] = $question;
 
         $question = (new Question())
-            ->setTitle('PMI 3mgt')
+            ->setTitle('PMI')
             ->setText('Les 5 phases du PMI sont constitué de :.')
             ->setResponses(array(
                 'Conception et initialisation du projet',

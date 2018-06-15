@@ -33,11 +33,11 @@ class Data3AITFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
     public function load(ObjectManager $manager)
     {
         $quiz = new Quiz();
-        $category = $this->getReference('category 3met');
+        $category = $this->getReference('category 3ait');
         $questions = array();
 
         $question = (new Question())
-            ->setTitle(' Types de programmation utilisé dans le domaine de l\'Intelligence Artificielle ')
+            ->setTitle('Types de programmation utilisé dans le domaine de l\'Intelligence Artificielle ')
             ->setText('Parmis ces affirmation les qu\'elles sont correct ?')
             ->setResponses(array(
                 'La programmation par action est utilisé dans la plupart des programmes,',
@@ -88,7 +88,7 @@ class Data3AITFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
         $questions[] = $question;
 
         $question = (new Question())
-            ->setTitle('Fonction premier 3AIT')
+            ->setTitle('Fonction premier')
             ->setText('La fonction "premier" permet de : ')
             ->setResponses(array(
                 'Retourner le premier élément d\'une scéquence',
@@ -104,7 +104,7 @@ class Data3AITFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
         $questions[] = $question;
 
         $question = (new Question())
-            ->setTitle('Fonction Debut 3AIT')
+            ->setTitle('Fonction Debut')
             ->setText('La fonction Début permet de :')
             ->setResponses(array(
                 'récupérer seulement le premier élémente de la séquence ',
@@ -120,7 +120,7 @@ class Data3AITFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
 
 
         $question = (new Question())
-            ->setTitle('Analyse par cas 3AIT')
+            ->setTitle('Analyse par cas')
             ->setText(' Qu\'est-ce aue l\'analyse par cas  :')
             ->setResponses(array(
                 'L’analyse par cas est une soustraction du problème en sous problème plus simple à résoudre',
@@ -135,7 +135,7 @@ class Data3AITFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
         $questions[] = $question;
 
         $question = (new Question())
-            ->setTitle('Modéles d\'écriture 3AIT')
+            ->setTitle('Modéles d\'écriture')
             ->setText(' Quel sont les 2 modéles d\'écritures possible visant à faciliter l\'apprentissage du programme ? ')
             ->setResponses(array(
                 'Ecriture au sens de constructeur et  écriture au sens de selecteur',
@@ -151,7 +151,7 @@ class Data3AITFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
         $questions[] = $question;
 
         $question = (new Question())
-            ->setTitle('Garbage collector 3AIT')
+            ->setTitle('Garbage collector')
             ->setText(' Le langage Lisp posséde t\'il un garbage collector ? ')
             ->setResponses(array(
                 'Oui',
@@ -167,7 +167,7 @@ class Data3AITFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
 
 
         $question = (new Question())
-            ->setTitle('Systéme expert 3AIT')
+            ->setTitle('Systéme expert')
             ->setText(' Qu\'est-ce qu\'un systéme expert ? ')
             ->setResponses(array(
                 'Le système expert est le coeur du programme, il se compose des régles "metier" permettant le bon fonctionnement du programme',
@@ -185,7 +185,7 @@ class Data3AITFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
 
 
         $question = (new Question())
-            ->setTitle('Liste des faits 3AIT')
+            ->setTitle('Liste des faits')
             ->setText(' Qu\'est-ce que la liste des faits ? ')
             ->setResponses(array(
                 'La liste de toute les possiblité du programme',
@@ -203,7 +203,7 @@ class Data3AITFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
 
 
         $question = (new Question())
-            ->setTitle('Liste des faits 3AIT')
+            ->setTitle('Liste des faits')
             ->setText(' Qu\'est ce que le moteur d’inférence ?')
             ->setResponses(array(
                 'Un raisonnement se basant sur des réponses antérieur pour en déduire un résultat ',
@@ -220,7 +220,7 @@ class Data3AITFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
 
 
         $question = (new Question())
-            ->setTitle('Liste des régles 3AIT')
+            ->setTitle('Liste des régles')
             ->setText(' Qu\'est ce que la liste des régles ?')
             ->setResponses(array(
                 'Une liste de contrainte, permettant de construire notre programme ',
@@ -238,7 +238,7 @@ class Data3AITFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
 
 
         $question = (new Question())
-            ->setTitle('Chainage avant 3AIT')
+            ->setTitle('Chainage avant')
             ->setText(' Qu\'est ce que le chainage avant ?')
             ->setResponses(array(
                 'Le chaînage avant correspond à un raisonnement qui part de fait pour en déduire une règle grâce à une conclusion',
@@ -254,7 +254,7 @@ class Data3AITFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
         $questions[] = $question;
 
         $question = (new Question())
-            ->setTitle('Chainage arrière 3AIT')
+            ->setTitle('Chainage arrière')
             ->setText(' Qu\'est ce que le chainage avant ?')
             ->setResponses(array(
                 'Le chaînage arrière correspond à un raisonnement qui part de la conclusion pour en déduire une règle grâce à un fait inconnu',

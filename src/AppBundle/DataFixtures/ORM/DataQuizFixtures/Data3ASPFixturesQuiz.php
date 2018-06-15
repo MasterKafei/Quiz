@@ -38,7 +38,7 @@ class Data3ASPFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
 
 
         $question = (new Question())
-            ->setTitle('Signification ASP 3asp')
+            ->setTitle('Signification ASP')
             ->setText('Que signifie ASP ?')
             ->setResponses(array(
                 'Application Server Page',
@@ -56,7 +56,7 @@ class Data3ASPFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
 
 
         $question = (new Question())
-            ->setTitle('Fichier ASPX 3asp ')
+            ->setTitle('Fichier ASPX ')
             ->setText('Qu\'est ce qu\'un fichier ASPX ? ?')
             ->setResponses(array(
                 'Un fichier de configuration d\'une page ASP',
@@ -73,7 +73,7 @@ class Data3ASPFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
         $questions[] = $question;
 
         $question = (new Question())
-            ->setTitle('Différence entre ASPX et ASPX.cs 3asp')
+            ->setTitle('Différence entre ASPX et ASPX.cs')
             ->setText(' En WebForms quel est la différence entre un fichier .ASPX et un fichier .ASPX.CS ?')
             ->setResponses(array(
                 'Un fichier ASPX permet de définir la namespace de la vue, tandis qu\'un fichier ASPX.cs permer de créé la vue grace à du XAML',
@@ -90,7 +90,7 @@ class Data3ASPFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
         $questions[] = $question;
 
         $question = (new Question())
-            ->setTitle('runat="server" 3ASP')
+            ->setTitle('runat="server"')
             ->setText('A quoi sert le runat=”server” ')
             ->setResponses(array(
                 'Permet de dire á la page d\'exécuter la balise coté serveur (codeBehind).',
@@ -107,7 +107,7 @@ class Data3ASPFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
         $questions[] = $question;
 
         $question = (new Question())
-            ->setTitle('Cycle d\'événnement 3ASP')
+            ->setTitle('Cycle d\'événnement')
             ->setText('Quels sont les différents cycle d\'événement ?')
             ->setResponses(array(
                 'doInBackground et onPostExecute',
@@ -125,7 +125,7 @@ class Data3ASPFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
         $questions[] = $question;
 
         $question = (new Question())
-            ->setTitle('Fichier de Définitions des routes 3asp')
+            ->setTitle('Fichier de Définitions des routes')
             ->setText('Dans quel fichier définit-on les routes ?')
             ->setResponses(array(
                 'Routes.xml.',
@@ -143,7 +143,7 @@ class Data3ASPFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
 
 
         $question = (new Question())
-            ->setTitle('Entity Framework 3asp')
+            ->setTitle('Entity Framework')
             ->setText('Qu\'est ce que entity Framework :')
             ->setResponses(array(
                 'La classe mére de toute les vues ASP',
@@ -161,7 +161,7 @@ class Data3ASPFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
 
 
         $question = (new Question())
-            ->setTitle('CRUD 3asp')
+            ->setTitle('CRUD')
             ->setText('Qu\'est ce que le CRUD ?')
             ->setResponses(array(
                 'Un patron d\'architecture.',
@@ -181,7 +181,7 @@ class Data3ASPFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
 
 
         $question = (new Question())
-            ->setTitle('Vue partiel 3asp')
+            ->setTitle('Vue partiel')
             ->setText('Les vues partiels sont des vues dans des vues, la vue parents appelle les vues enfant.')
             ->setResponses(array(
                 'Vrai',
@@ -196,7 +196,7 @@ class Data3ASPFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
         $questions[] = $question;
 
         $question = (new Question())
-            ->setTitle('Les layouts 3asp')
+            ->setTitle('Les layouts')
             ->setText(' Qu\'est ce que le principe des Layouts ?')
             ->setResponses(array(
                 'C\'est le nom d\'une page asp.',

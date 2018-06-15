@@ -38,7 +38,7 @@ class Data3WEBFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
 
 
         $question = (new Question())
-            ->setTitle('Lien complet barre d\'addresse 3web')
+            ->setTitle('Lien complet barre d\'addresse')
             ->setText('Qu\'elle est le nom exact de l\'addresse compléte, pour accéder à une ressource?')
             ->setResponses(array(
                 'Uniform Resource Locator',
@@ -54,7 +54,7 @@ class Data3WEBFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
         $questions[] = $question;
 
         $question = (new Question())
-            ->setTitle('Signification REST 3web ')
+            ->setTitle('Signification REST ')
             ->setText('Que signifie REST ?')
             ->setResponses(array(
                 'Resource State Transfer',
@@ -71,7 +71,7 @@ class Data3WEBFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
         $questions[] = $question;
 
         $question = (new Question())
-            ->setTitle('Code 1xx 3web')
+            ->setTitle('Code 1xx')
             ->setText('Le code  1xx en web indique une redirection :')
             ->setResponses(array(
                 'Vrai',
@@ -86,7 +86,7 @@ class Data3WEBFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
         $questions[] = $question;
 
         $question = (new Question())
-            ->setTitle('widget 3web')
+            ->setTitle('widget')
             ->setText('Qu\'est - ce qu\'un widget ')
             ->setResponses(array(
                 'Un widget est un morceau de code permettant de modifier la page via des controls utilisateur. ',
@@ -103,7 +103,7 @@ class Data3WEBFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
         $questions[] = $question;
 
         $question = (new Question())
-            ->setTitle('Sigle ARIA 3web')
+            ->setTitle('Sigle ARIA')
             ->setText('Que signifie ARIA ? :')
             ->setResponses(array(
                 'Accessible Rich Internet Application',
@@ -121,7 +121,7 @@ class Data3WEBFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
         $questions[] = $question;
 
         $question = (new Question())
-            ->setTitle('Microdata 3web')
+            ->setTitle('Microdata')
             ->setText('A quoi servent les Microdata :')
             ->setResponses(array(
                 'Les Microdatas permettent d\'allerger la page web afficher.',
@@ -139,7 +139,7 @@ class Data3WEBFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
 
 
         $question = (new Question())
-            ->setTitle('drag & drop 3web')
+            ->setTitle('Drag & drop')
             ->setText('Le drag & drop est une fonctionnalité des sites web, permettant de modifier la position d’un élément avec son curseur. :')
             ->setResponses(array(
                 'Vrai',
@@ -155,7 +155,7 @@ class Data3WEBFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
 
 
         $question = (new Question())
-            ->setTitle('Code 3xx 3web')
+            ->setTitle('Code 3xx')
             ->setText('Le code 3xx en web indique une information :')
             ->setResponses(array(
                 'Vrai',
@@ -172,7 +172,7 @@ class Data3WEBFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
 
 
         $question = (new Question())
-            ->setTitle('Sigle API 3web')
+            ->setTitle('Sigle API')
             ->setText('Que signifie API ? :')
             ->setResponses(array(
                 'Application Programming Interface.',
@@ -189,10 +189,10 @@ class Data3WEBFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
         $questions[] = $question;
 
         $question = (new Question())
-            ->setTitle('Selector 3web')
+            ->setTitle('Selector')
             ->setText('Qu\'elle est la syntax exact d\'un selecteur ?')
             ->setResponses(array(
-                '{&=}.',
+                '{&=}',
                 '(&=)',
                 '[&=]',
                 '<&=>',
@@ -215,7 +215,7 @@ class Data3WEBFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
         );
 
         $quiz
-            ->setTitle('QCM 3MSA révision de 3éme année')
+            ->setTitle('QCM 3WEB révision de 3éme année')
             ->setDescription('Questionnaire révision')
             ->setCategory($category)
             ->setQuestions($questions)

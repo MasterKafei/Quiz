@@ -37,7 +37,7 @@ class Data3JVAFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
         $questions = array();
 
         $question = (new Question())
-            ->setTitle(' Servlet 3jva ')
+            ->setTitle('Servlet ')
             ->setText('Qu\'est ce qu\'une Servlet ?')
             ->setResponses(array(
                 'Une classe permettant de gérer dynamiquement des requêtes et leurs réponses souvent utilisé pour un serveur web',
@@ -54,7 +54,7 @@ class Data3JVAFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
         $questions[] = $question;
 
         $question = (new Question())
-            ->setTitle(' Servlet 3jva ')
+            ->setTitle('Servlet')
             ->setText('Qu\'est ce qu\'une Servlet Container ?')
             ->setResponses(array(
                 'C\'est un service implémentant les contraintes d’un composant web d’architecture JEE.',
@@ -71,7 +71,7 @@ class Data3JVAFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
         $questions[] = $question;
 
         $question = (new Question())
-            ->setTitle('JSP 3jva')
+            ->setTitle('JSP')
             ->setText('Que signifie JSP ?')
             ->setResponses(array(
                 'Java Server Program',
@@ -88,7 +88,7 @@ class Data3JVAFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
         $questions[] = $question;
 
         $question = (new Question())
-            ->setTitle('Significations EL 3jva')
+            ->setTitle('Significations EL')
             ->setText('Que signifie EL ?')
             ->setResponses(array(
                 'Expression Language',
@@ -105,7 +105,7 @@ class Data3JVAFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
         $questions[] = $question;
 
         $question = (new Question())
-            ->setTitle('JAVABean 3jva')
+            ->setTitle('JAVABean')
             ->setText('Qu\'est-ce qu\'une JavaBean ?')
             ->setResponses(array(
                 'La classe mére des classes Java.',
@@ -122,7 +122,7 @@ class Data3JVAFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
         $questions[] = $question;
 
         $question = (new Question())
-            ->setTitle('MVC 3jva')
+            ->setTitle('MVC')
             ->setText('Qu\'est ce que MVC ? ')
             ->setResponses(array(
                 'Un patron de conception',
@@ -140,7 +140,7 @@ class Data3JVAFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
 
 
         $question = (new Question())
-            ->setTitle('JPA 3jva')
+            ->setTitle('JPA')
             ->setText('Qu\'est-ce qu\'une JPA ?')
             ->setResponses(array(
                 'Java Persistence API.',
@@ -157,7 +157,7 @@ class Data3JVAFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
         $questions[] = $question;
 
         $question = (new Question())
-            ->setTitle('Signification JPQL 3jva')
+            ->setTitle('Signification JPQL')
             ->setText('Que signifie le JPQL ?')
             ->setResponses(array(
                 'Java Persistence Query List.',
@@ -175,7 +175,7 @@ class Data3JVAFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
 
 
         $question = (new Question())
-            ->setTitle('Signification JSF 3jva')
+            ->setTitle('Signification JSF')
             ->setText('Que signifie le JSF ?')
             ->setResponses(array(
                 'Java Server Files.',
