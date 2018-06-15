@@ -39,6 +39,11 @@ class Grade
     private $imagePath;
 
     /**
+     * @var Course[]
+     */
+    private $courses;
+
+    /**
      * Get id.
      *
      * @return int
@@ -132,5 +137,38 @@ class Grade
     {
         $this->imagePath = $imagePath;
         return $this;
+    }
+
+    /**
+     * Get courses.
+     *
+     * @return Course[]
+     */
+    public function getCourses()
+    {
+        return $this->courses;
+    }
+
+    /**
+     * Set courses.
+     *
+     * @param $courses
+     * @return $this
+     */
+    public function setCourses($courses)
+    {
+        $this->courses = $courses;
+
+        return $this;
+    }
+
+    /**
+     * Add course.
+     *
+     * @param $course
+     */
+    public function addCourse($course)
+    {
+        $this->courses[] = $course;
     }
 }

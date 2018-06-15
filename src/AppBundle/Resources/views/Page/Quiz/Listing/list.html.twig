@@ -42,7 +42,7 @@
                             {% endfor %}
 
                             {% if pageMax > 6 %}
-                                <a href="#">...</a>
+                                <a href="{{ path('app_quiz_listing_list', {'pageNumber': (pageMax/2)}) }}">...</a>
                             {% endif %}
 
                             {% set firstEndingPage = pageMax - 3 %}

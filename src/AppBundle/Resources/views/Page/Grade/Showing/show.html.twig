@@ -1,0 +1,19 @@
+{% extends '@Layout/Page/Full/base.html.twig' %}
+
+{% block sub_title %}{{ grade.name }}{% endblock sub_title %}
+
+{% block content %}
+    <h3>{{ grade.name }}</h3>
+    <p>{{ grade.description }}</p>
+    <div class="level-wrapper">
+        {% for course in grade.courses %}
+            <a href="{{ path('app_course_showing_show', {'id': course.id}) }}">
+                <div class="row align-items-center h-100">
+                    <div class="col-12 text-center mx-auto">
+                        <span>{{ course.title }} - {{ course.description }}</span>
+                    </div>
+                </div>
+            </a>
+        {% endfor %}
+    </div>
+{% endblock content %}

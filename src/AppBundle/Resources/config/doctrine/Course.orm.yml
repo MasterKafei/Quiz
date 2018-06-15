@@ -23,5 +23,13 @@ AppBundle\Entity\Course:
             targetEntity: AppBundle\Entity\Chapter
             mappedBy: course
             cascade: [ persist, remove ]
-
+    manyToOne:
+        grade:
+            targetEntity: AppBundle\Entity\Grade
+            inversedBy: courses
+            cascade: [ persist ]
+            joinColumn:
+                name: grade_id
+                referencedColumnName: id
+                nullable: true
     lifecycleCallbacks: {  }
