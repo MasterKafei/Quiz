@@ -194,7 +194,7 @@ class Data3JVAFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
 
 
         $question = (new Question())
-            ->setTitle('Liste des faits 3AIT')
+            ->setTitle('Liste des faits 3jva')
             ->setText('Les ressources RESTful peuvent prendre plusieurs formes : JSON/XML/HTML. ')
             ->setResponses(array(
                 'Vrai',
