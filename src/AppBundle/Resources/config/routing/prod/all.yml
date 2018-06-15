@@ -37,3 +37,7 @@ app_question:
 app_quiz_session:
     resource: "@AppBundle/Resources/config/routing/prod/quiz_session/all.yml"
     prefix:   /quiz_session/
+
+app_course:
+    resource: "@AppBundle/Resources/config/routing/prod/course/all.yml"
+    prefix:   /course/

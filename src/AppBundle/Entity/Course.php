@@ -13,7 +13,7 @@ class Course
     private $id;
 
     /**
-     * @var chapters
+     * @var Chapter
      */
     private $chapters;
 
@@ -23,10 +23,14 @@ class Course
     private $title;
 
     /**
-     * @var description
-     *
+     * @var string
      */
     private $description;
+
+    /**
+     * @var Grade
+     */
+    private $grade;
 
     /**
      * Get id.
@@ -109,5 +113,28 @@ class Course
     public function getTitle()
     {
         return $this->title;
+    }
+
+    /**
+     * Get grade.
+     *
+     * @return Grade
+     */
+    public function getGrade()
+    {
+        return $this->grade;
+    }
+
+    /**
+     * Set grade.
+     *
+     * @param $grade
+     * @return Course
+     */
+    public function setGrade($grade)
+    {
+        $this->grade = $grade;
+
+        return $this;
     }
 }

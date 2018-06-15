@@ -1,0 +1,51 @@
+{% extends '@Layout/Page/Full/base.html.twig' %}
+
+{% block sub_title %}Profile{% endblock sub_title %}
+
+{% block content %}
+    <div class="profile-wrapper">
+        <div class="profile-content">
+            <div class="container-fluid p-0">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="text-center">About me</h1>
+                        <hr>
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-4">
+                        <span class="profile-info">4</span>
+                        <span>Quizzes Created</span>
+                    </div>
+                    <div class="col-4">
+                        <span class="profile-info">11</span>
+                        <span>Courses Created</span>
+                    </div>
+                    <div class="col-4">
+                        <span class="profile-info">{{  }}</span>
+                        <span>Quizzes Completed</span>
+                    </div>
+                </div>
+                <div class="row mt-5 p-3">
+                    <div class="col-12">
+                        <h2 class="progress-title">Average Score</h2>
+                        <div class="progress">
+                            {% set average_score = 100 * rightAnswersSubmitted / questionNumber %}
+                            <div class="progress-bar" role="progressbar" style="width: {{ average_score }}%;" aria-valuenow="{{ average_score }}" aria-valuemin="0" aria-valuemax="100">{{ average_score }}%</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5 p-3">
+                    <div class="col-12">
+                        <h2 class="progress-title">Progress</h2>
+                        <div class="progress">
+                            {% set quota = 100 * questionNumberAnswer/questionNumber %}
+                            <div class="progress-bar" role="progressbar" style="width: {{ quota }}%;" aria-valuenow="{{ quota }}" aria-valuemin="0" aria-valuemax="100">{{ quota }}%</div>
+                        </div>
+                    </div>
+                </div>
+                {{ render(controller('AppBundle:User/Profile/Edition:editProfile')) }}
+            </div>
+        </div>
+    </div>
+{% endblock content %}

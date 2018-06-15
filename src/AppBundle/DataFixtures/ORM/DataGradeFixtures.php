@@ -36,6 +36,7 @@ class DataGradeFixtures extends AbstractFixture implements OrderedFixtureInterfa
             ->setName('A.Sc 1')
             ->setImagePath($name);
 
+        $this->addReference('grade a.sc1', $grade);
         $manager->persist($grade);
 
         $name = FixturesTools::saveFileFromLink('https://craaftx.github.io/doctrina/public/image/busan-night-scene.jpg', 'jpg', $directory);
@@ -45,6 +46,7 @@ class DataGradeFixtures extends AbstractFixture implements OrderedFixtureInterfa
             ->setName('A.Sc 2')
             ->setImagePath($name);
 
+        $this->addReference('grade a.sc2', $grade);
         $manager->persist($grade);
 
         $name = FixturesTools::saveFileFromLink('https://craaftx.github.io/doctrina/public/image/clock.jpg', 'jpg', $directory);
@@ -54,6 +56,7 @@ class DataGradeFixtures extends AbstractFixture implements OrderedFixtureInterfa
             ->setName('B.Sc')
             ->setImagePath($name);
 
+        $this->addReference('grade b.sc', $grade);
         $manager->persist($grade);
 
         $name = FixturesTools::saveFileFromLink('https://craaftx.github.io/doctrina/public/image/nature.jpg', 'jpg', $directory);
@@ -63,6 +66,7 @@ class DataGradeFixtures extends AbstractFixture implements OrderedFixtureInterfa
             ->setName('M.Sc 1')
             ->setImagePath($name);
 
+        $this->addReference('grade m.sc1', $grade);
         $manager->persist($grade);
 
         $name = FixturesTools::saveFileFromLink('https://craaftx.github.io/doctrina/public/image/sky.jpg', 'jpg', $directory);
@@ -72,6 +76,7 @@ class DataGradeFixtures extends AbstractFixture implements OrderedFixtureInterfa
             ->setName('M.Sc 2')
             ->setImagePath($name);
 
+        $this->addReference('grade m.sc2', $grade);
         $manager->persist($grade);
 
         $manager->flush();

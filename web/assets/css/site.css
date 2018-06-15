@@ -193,7 +193,7 @@ h3 {
 .profile-wrapper {
   margin-top: -5vh;
   min-height: 100vh;
-  background-image: url('../image/back/profile_page.jpg');
+  background-image: url('/assets/image/back/profile_page.jpg');
   background-size: cover;
   background-repeat: none;
   background-position: left center;
@@ -211,7 +211,7 @@ h3 {
   margin-top: 5vh;
 }
 
-.profile-content  {
+.profile-content hr  {
   border-color: #333333;
   border-width: 3px;
   margin: 0 30vw 5vh 30vw;
@@ -494,7 +494,7 @@ footer {
 
 /* Doctrina Alert Box */
 .doctrina-alert-box {
-  z-index: 2000;
+  z-index: 10000;
   width: 550px;
   position: fixed;
   bottom: 0;
@@ -655,4 +655,8 @@ footer {
   padding-bottom: 2vh;
   margin: 0px 20% 5vh 20%;
   border-bottom: 2px solid #555555;
+}
+
+.brown-text {
+  color: brown;
 }

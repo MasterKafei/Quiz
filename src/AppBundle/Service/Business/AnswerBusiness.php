@@ -11,11 +11,21 @@ class AnswerBusiness extends AbstractContainerAware
 {
     public function getWrongUserAnswerOfQuiz(Quiz $quiz, User $user)
     {
+        return $this->getWrongUserAnswerOfQuestions($quiz->getQuestions(), $user);
+    }
+
+    public function getRightUserAnswerOfQuiz(Quiz $quiz, User $user)
+    {
+        return $this->getRightUserAnswerOfQuestions($quiz->getQuestions(), $user);
+    }
+
+    public function getWrongUserAnswerOfQuestions($questions, User $user)
+    {
         /** @var Answer[] $answers */
         $answers = $this->container
             ->get('doctrine')
             ->getRepository(Answer::class)
-            ->getUserAnswers($quiz->getQuestions(), $user);
+            ->getUserAnswers($questions, $user);
 
         $wrongAnswers = array();
 
@@ -38,13 +48,13 @@ class AnswerBusiness extends AbstractContainerAware
         return $wrongAnswers;
     }
 
-    public function getRightUserAnswerOfQuiz(Quiz $quiz, User $user)
+    public function getRightUserAnswerOfQuestions($questions, User $user)
     {
         /** @var Answer[] $answers */
         $answers = $this->container
             ->get('doctrine')
             ->getRepository(Answer::class)
-            ->getUserAnswers($quiz->getQuestions(), $user);
+            ->getUserAnswers($questions, $user);
 
         $rightAnswers = array();
 

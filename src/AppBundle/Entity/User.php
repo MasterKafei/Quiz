@@ -27,6 +27,16 @@ class User implements UserInterface, \Serializable
     /**
      * @var string
      */
+    private $firstName;
+
+    /**
+     * @var string
+     */
+    private $lastName;
+
+    /**
+     * @var string
+     */
     private $email;
 
     /**
@@ -112,6 +122,30 @@ class User implements UserInterface, \Serializable
     public function getUsername()
     {
         return $this->getEmail();
+    }
+
+    public function getFirstName()
+    {
+        return $this->firstName;
+    }
+
+    public function setFirstName($firstName)
+    {
+        $this->firstName = $firstName;
+
+        return $this;
+    }
+
+    public function getLastName()
+    {
+        return $this->lastName;
+    }
+
+    public function setLastName($lastName)
+    {
+        $this->lastName = $lastName;
+
+        return $this;
     }
 
     /**

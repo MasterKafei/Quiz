@@ -13,7 +13,7 @@
         </div>
         <div class="level-wrapper">
             {% for grade in grades %}
-                <a href="#">
+                <a href="{{ path('app_grade_showing_show', {'id': grade.id}) }}">
                     <div class="level-item" style="background-image: url('{{ vich_uploader_asset(grade, 'image') }}');">
                         <div class="row align-items-center h-100">
                             <div class="col-12 text-center mx-auto">

@@ -27,8 +27,7 @@
                         <div class="progress-bar progress-{% if percentage < 40 %}wrong{% elseif percentage < 75 %}intermediate{% else %}check{% endif %}"
                              role="progressbar" style="width: {{ percentage }}%"
                              aria-valuenow="{{ rightAnswers|length }}" aria-valuemin="0"
-                             aria-valuemax="{{ quiz.questions|length }}">{{ rightAnswers|length }}
-                            /{{ quiz.questions|length }}</div>
+                             aria-valuemax="{{ quiz.questions|length }}">{{ rightAnswers|length }}/{{ quiz.questions|length }}</div>
                     </div>
                 </div>
             </div>

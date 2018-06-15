@@ -2,6 +2,10 @@ user:
     registration:
         mail_sended: A confirmation email has been sent to %mail_address%
         success: Your email address has been confirmed, you can now login
+    profile:
+        edition:
+            edit:
+                success: Your account was updated
 
 contact_message:
     creation:
