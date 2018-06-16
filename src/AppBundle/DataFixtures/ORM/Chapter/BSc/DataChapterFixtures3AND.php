@@ -38,8 +38,11 @@ class DataChapterFixtures3AND extends AbstractFixture implements OrderedFixtureI
             Gradle est un outils qui gére les dépendances automatiquement et est désigné pour le multiplateformes.');
 
         $manager->persist($chapter);
-        $manager->flush();
 
+
+        $chapter = new Chapter();
+
+        $course = $this->getReference("3AND_course");
         $chapter
             ->setTitle('Chapitre 2 Application Fundamentals')
             ->setCourse($course)
@@ -66,8 +69,9 @@ class DataChapterFixtures3AND extends AbstractFixture implements OrderedFixtureI
              ');
 
         $manager->persist($chapter);
-        $manager->flush();
 
+
+        $chapter = new Chapter();
         $course = $this->getReference("3AND_course");
         $chapter
             ->setTitle('Chapitre 3 Advanced Development')
@@ -98,8 +102,8 @@ class DataChapterFixtures3AND extends AbstractFixture implements OrderedFixtureI
             ');
 
         $manager->persist($chapter);
-        $manager->flush();
 
+        $chapter = new Chapter();
         $course = $this->getReference("3AND_course");
         $chapter
             ->setTitle('Chapitre 4 Ergonomics')
@@ -133,8 +137,8 @@ class DataChapterFixtures3AND extends AbstractFixture implements OrderedFixtureI
             ');
 
         $manager->persist($chapter);
-        $manager->flush();
 
+        $chapter = new Chapter();
         $course = $this->getReference("3AND_course");
         $chapter
             ->setTitle('Chapitre 5 Datas')
@@ -173,7 +177,6 @@ class DataChapterFixtures3AND extends AbstractFixture implements OrderedFixtureI
 
 
         $manager->persist($chapter);
-
         $manager->flush();
     }
 
