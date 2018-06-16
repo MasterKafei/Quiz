@@ -14,7 +14,7 @@ AppBundle\Entity\Chapter:
             length: 255
         text:
             type: string
-            length: 255
+            length: 80000
 
     manyToOne:
         course:

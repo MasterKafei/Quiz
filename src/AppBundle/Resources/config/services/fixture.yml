@@ -65,3 +65,8 @@ services:
 
     AppBundle\DataFixtures\ORM\Courses\DataMSc2Fixtures:
         tags: [doctrine.fixture.orm]
+
+    #Region Chapter
+    AppBundle\DataFixtures\ORM\Chapter\BSc\DataChapterFixtures3AND:
+        tags: [doctrine.fixture.orm]
+

@@ -27,6 +27,7 @@ class DataBScFixtures extends AbstractFixture implements OrderedFixtureInterface
             ->setTitle('3AND')
             ->setDescription('Android Application Development')
             ->setGrade($grade);
+        $this->setReference("3AND_course", $course);
 
         $manager->persist($course);
 
