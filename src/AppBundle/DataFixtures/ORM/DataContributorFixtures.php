@@ -25,7 +25,7 @@ class DataContributorFixtures extends AbstractFixture implements OrderedFixtureI
     public function load(ObjectManager $manager)
     {
 
-        $name = FixturesTools::saveFileFromLink('https://cdn.discordapp.com/attachments/242414823604879360/448222939658059817/unknown.png', 'jpg', $this->container->getParameter('vich_upload_images_folder'));
+        $name = FixturesTools::saveFileFromLink('https://avatars1.githubusercontent.com/u/18745183?s=460&v=4', 'jpg', $this->container->getParameter('vich_upload_images_folder'));
 
         $contributor = new Contributor();
         $contributor
