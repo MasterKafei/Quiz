@@ -2,6 +2,7 @@
 
 namespace AppBundle\Repository;
 
+use AppBundle\Entity\User;
 use Doctrine\ORM\EntityRepository;
 
 /**
@@ -12,5 +13,31 @@ use Doctrine\ORM\EntityRepository;
  */
 class QuestionRepository extends EntityRepository
 {
+    public function getUserAnsweredQuestion(User $user)
+    {
+        $query = $this->_em->createQuery('
+            SELECT IDENTITY(a.question)
+            FROM AppBundle:Answer a
+            WHERE a.user = :user
+        ')
+        ->setParameter('user', $user);
 
+        $result = $query->getResult();
+
+        return $result;
+    }
+
+    public function getPublicQuestion()
+    {
+        $query = $this->_em->createQuery('
+            SELECT DISTINCT q
+            FROM AppBundle:Question q
+            JOIN q.quiz qz
+            WHERE qz.validate = 1
+        ');
+
+        $result = $query->getResult();
+
+        return $result;
+    }
 }

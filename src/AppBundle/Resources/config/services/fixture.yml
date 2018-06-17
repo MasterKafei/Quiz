@@ -1,11 +1,38 @@
 services:
+
+    #Region Quiz
+    AppBundle\DataFixtures\ORM\DataQuizFixtures\Data3AITFixturesQuiz:
+        tags: [doctrine.fixture.orm]
+
+    AppBundle\DataFixtures\ORM\DataQuizFixtures\Data3ITILFixturesQuiz:
+        tags: [doctrine.fixture.orm]
+
+    AppBundle\DataFixtures\ORM\DataQuizFixtures\Data3MSAFixturesQuiz:
+        tags: [doctrine.fixture.orm]
+
+    AppBundle\DataFixtures\ORM\DataQuizFixtures\Data3WEBFixturesQuiz:
+        tags: [doctrine.fixture.orm]
+
+    AppBundle\DataFixtures\ORM\DataQuizFixtures\Data3ASPFixturesQuiz:
+        tags: [doctrine.fixture.orm]
+
+    AppBundle\DataFixtures\ORM\DataQuizFixtures\Data3JVAFixturesQuiz:
+        tags: [doctrine.fixture.orm]
+
+    AppBundle\DataFixtures\ORM\DataQuizFixtures\Data3APLFixturesQuiz:
+        tags: [doctrine.fixture.orm]
+
+    AppBundle\DataFixtures\ORM\DataQuizFixtures\Data3MGTFixturesQuiz:
+        tags: [doctrine.fixture.orm]
+
+    AppBundle\DataFixtures\ORM\DataQuizFixtures\Data3ORCFixturesQuiz:
+        tags: [doctrine.fixture.orm]
+    #EndRegion Quiz
+
     AppBundle\DataFixtures\ORM\DataUserFixtures:
         tags: [doctrine.fixture.orm]
 
     AppBundle\DataFixtures\ORM\DataCategoryFixtures:
-        tags: [doctrine.fixture.orm]
-
-    AppBundle\DataFixtures\ORM\DataQuizFixtures:
         tags: [doctrine.fixture.orm]
 
     AppBundle\DataFixtures\ORM\DataGroupFixtures:
@@ -22,3 +49,24 @@ services:
 
     AppBundle\DataFixtures\ORM\DataContributorFixtures:
         tags: [doctrine.fixture.orm]
+
+    #Courses
+    AppBundle\DataFixtures\ORM\Courses\DataASc1Fixtures:
+        tags: [doctrine.fixture.orm]
+
+    AppBundle\DataFixtures\ORM\Courses\DataASc2Fixtures:
+        tags: [doctrine.fixture.orm]
+
+    AppBundle\DataFixtures\ORM\Courses\DataBScFixtures:
+        tags: [doctrine.fixture.orm]
+
+    AppBundle\DataFixtures\ORM\Courses\DataMSc1Fixtures:
+        tags: [doctrine.fixture.orm]
+
+    AppBundle\DataFixtures\ORM\Courses\DataMSc2Fixtures:
+        tags: [doctrine.fixture.orm]
+
+    #Region Chapter
+    AppBundle\DataFixtures\ORM\Chapter\BSc\DataChapterFixtures3AND:
+        tags: [doctrine.fixture.orm]
+

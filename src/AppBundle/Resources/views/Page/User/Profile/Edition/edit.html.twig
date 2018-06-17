@@ -1,0 +1,30 @@
+{{ form_start(form, {'attr': {'class': 'profile-form'}}) }}
+    <h2>Edit my profile :</h2>
+    <div class="row">
+        <div class="col-6">
+            {{ form_widget(form.idBooster, {'attr': {'class': 'form-control'}}) }}
+        </div>
+        <div class="col-3">
+            {{ form_widget(form.firstName, {'attr': {'class': 'form-control', 'placeholder': 'First name'}}) }}
+        </div>
+        <div class="col-3">
+            {{ form_widget(form.lastName, {'attr': {'class': 'form-control', 'placeholder': 'Last name'}}) }}
+        </div>
+    </div>
+    <div class="row mt-2">
+        <div class="col-6">
+            {{ form_widget(form.email, {'attr': {'class': 'form-control', 'placeholder': 'Email'}}) }}
+        </div>
+        <div class="col-3">
+            {{ form_widget(form.plainPassword.first, {'attr': {'class': 'form-control', 'placeholder': 'New password'}}) }}
+        </div>
+        <div class="col-3">
+            {{ form_widget(form.plainPassword.second, {'attr': {'class': 'form-control', 'placeholder': 'Confirm password'}}) }}
+        </div>
+    </div>
+    <div class="row mt-2">
+        <div class="col text-right">
+            {{ form_widget(form.submit, {'attr': {'class': 'btn'}}) }}
+        </div>
+    </div>
+{{ form_end(form) }}

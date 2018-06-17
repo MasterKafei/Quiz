@@ -37,6 +37,56 @@ class DataCategoryFixtures extends AbstractFixture implements OrderedFixtureInte
 
         $this->setReference('category 3ait', $category);
         $manager->persist($category);
+
+        $category = new Category();
+        $category
+            ->setTitle('3MSA')
+            ->setDescription('3MSA - Windows Server Active Directory Domain Services');
+
+        $this->setReference('category 3msa', $category);
+        $manager->persist($category);
+
+
+        $category = new Category();
+        $category
+            ->setTitle('3WEB')
+            ->setDescription('3WEB - Advanced Web Programming');
+
+        $this->setReference('category 3web', $category);
+        $manager->persist($category);
+
+        $category = new Category();
+        $category
+            ->setTitle('3APL')
+            ->setDescription('3APL - Swift and Cocoa development');
+
+        $this->setReference('category 3apl', $category);
+        $manager->persist($category);
+
+        $category = new Category();
+        $category
+            ->setTitle('3ASP')
+            ->setDescription('3ASP - ASP.NET development');
+
+        $this->setReference('category 3asp', $category);
+        $manager->persist($category);
+
+        $category = new Category();
+        $category
+            ->setTitle('3JVA')
+            ->setDescription('3JVA - Enterprise Application Development');
+
+        $this->setReference('category 3jva', $category);
+        $manager->persist($category);
+
+        $category = new Category();
+        $category
+            ->setTitle('3ORC')
+            ->setDescription('3ORC - Oracle Database Administration');
+
+        $this->setReference('category 3orc', $category);
+        $manager->persist($category);
+
         $manager->flush();
     }
 
