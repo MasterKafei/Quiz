@@ -85,7 +85,7 @@ class User implements UserInterface, \Serializable
     private $answers;
 
     /**
-     * @var Contribution.
+     * @var Contribution[]
      */
     private $contributions;
 
@@ -422,8 +422,8 @@ class User implements UserInterface, \Serializable
     }
 
     /**
-     * @para Contribution[]
-     *
+     * @param Contribution $value
+     * @return User
      */
     public function addContributions($value)
     {
