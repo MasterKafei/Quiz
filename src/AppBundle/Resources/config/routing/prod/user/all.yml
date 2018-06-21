@@ -1,3 +1,7 @@
 app_user_authentication:
     resource: "@AppBundle/Resources/config/routing/prod/user/authentication/all.yml"
     prefix:   /authentication/
+
+app_user_profile:
+    resource: "@AppBundle/Resources/config/routing/prod/user/profile/all.yml"
+    prefix:   /profile/

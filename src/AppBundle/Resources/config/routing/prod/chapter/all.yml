@@ -1,0 +1,3 @@
+app_chapter_showing:
+    prefix: /showing/
+    resource: "@AppBundle/Resources/config/routing/prod/chapter/showing.yml"

@@ -1,3 +1,7 @@
 app_grade_listing:
     prefix:   /listing/
     resource: "@AppBundle/Resources/config/routing/prod/grade/listing.yml"
+
+app_grade_showing:
+    prefix:   /showing/
+    resource: "@AppBundle/Resources/config/routing/prod/grade/showing.yml"

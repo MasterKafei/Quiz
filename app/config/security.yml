@@ -34,6 +34,7 @@ security:
                 default_target_path: app_home_home_index
             logout:
                 path:   app_user_authentication_signing_logout
+                invalidate_session: false
                 target: app_home_home_index
             http_basic: ~
             remember_me:
@@ -47,4 +48,5 @@ security:
       - { path: ^/quiz/, roles: ROLE_USER }
       - { path: ^/grade/, roles: ROLE_USER }
       - { path: ^/admin/, roles: ROLE_ADMIN }
+      - { path: ^/user/profile/, roles: ROLE_USER }
       - { path: ^/, roles: IS_AUTHENTICATED_ANONYMOUSLY }

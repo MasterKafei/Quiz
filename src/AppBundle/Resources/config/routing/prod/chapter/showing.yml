@@ -1,0 +1,5 @@
+app_chapter_showing_show:
+    path: /show/{id}
+    defaults: { _controller: 'AppBundle:Chapter/Showing:showChapter'}
+    requirements:
+        id: '\d+'

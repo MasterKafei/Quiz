@@ -113,22 +113,14 @@ class DoController extends Controller
         ));
     }
 
-    public function finishAction(Request $request, Quiz $quiz)
+    public function finishAction(Quiz $quiz)
     {
-
-        $answers = $this->getDoctrine()->getRepository(Answer::class)->getUserAnswers($quiz->getQuestions(), $this->getUser());
-        $questions = $quiz->getQuestions();
-        if(count($answers) != count($questions))
-        {
-            if(count($questions) == 0)
-            {
-                return $this->redirectToRoute('app_quiz_do_begin', array('id' => $quiz->getId()));
-            }
-            return $this->redirectToRoute('app_quiz_do_doing', array('id' => $quiz->getQuestions()[0]->getId()));
-        }
+        $wrongAnswers = $this->get('app.business.answer')->getWrongUserAnswerOfQuiz($quiz, $this->getUser());
+        $rightAnswers = $this->get('app.business.answer')->getRightUserAnswerOfQuiz($quiz, $this->getUser());
 
         return $this->render('@Page/Quiz/Doing/finish.html.twig', array(
-            'answers' => $answers,
+            'wrongAnswers' => $wrongAnswers,
+            'rightAnswers' => $rightAnswers,
             'quiz' => $quiz,
         ));
     }

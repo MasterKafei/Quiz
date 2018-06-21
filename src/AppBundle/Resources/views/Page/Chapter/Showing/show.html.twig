@@ -1,0 +1,8 @@
+{% extends '@Layout/Page/Full/base.html.twig' %}
+
+{% block sub_title %}{{ chapter.title }}{% endblock sub_title %}
+
+{% block content %}
+    <h3>{{ chapter.title }}</h3>
+    <p>{{ chapter.text }}</p>
+{% endblock content %}

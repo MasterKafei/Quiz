@@ -42,6 +42,7 @@ twig:
         "%kernel.root_dir%/../src/AppBundle/Resources/views/Mail": Mail
     globals:
         app_util_console: "@app.util.console"
+        question_business: "@app.business.question"
 # Doctrine Configuration
 doctrine:
     dbal:

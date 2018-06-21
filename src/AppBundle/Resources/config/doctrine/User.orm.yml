@@ -13,6 +13,14 @@ AppBundle\Entity\User:
             type: integer
             length: 255
             unique: true
+        firstName:
+            type: string
+            length: 255
+            nullable: true
+        lastName:
+            type: string
+            length: 255
+            nullable: true
         email:
             type: string
             length: 255

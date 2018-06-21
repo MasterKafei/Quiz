@@ -1,0 +1,7 @@
+app_quiz_session_creation:
+    resource: "@AppBundle/Resources/config/routing/prod/quiz_session/creation.yml"
+    prefix:   /creation/
+
+app_quiz_session_showing:
+    resource: "@AppBundle/Resources/config/routing/prod/quiz_session/showing.yml"
+    prefix:   /showing/

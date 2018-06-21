@@ -51,20 +51,6 @@ class QuizRepository extends EntityRepository
         return $quizzes;
     }
 
-    public function getInProgressQuizzes(User $user)
-    {
-        $quizzes = $this->getUserQuizzes($user);
-
-
-
-        return $quizzes;
-    }
-
-    public function getCompletedQuizzes(User $user)
-    {
-
-    }
-
     public function getUserQuizzes(User $user)
     {
         $qb = $this->_em->createQueryBuilder()
@@ -105,5 +91,17 @@ class QuizRepository extends EntityRepository
         }
 
         return new Paginator($qb);
+    }
+
+    public function getFinishedQuiz(User $user)
+    {
+        $query = $this->_em->createQuery('
+            SELECT q
+            FROM AppBundle:Quiz
+            WHERE q.questions
+        ');
+
+        $result = $query->getResult();
+        return $result;
     }
 }

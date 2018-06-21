@@ -1,0 +1,3 @@
+app_user_profile_showing_show:
+    path: /show
+    defaults: { _controller: 'AppBundle:User\Profile\Showing:showProfile' }

@@ -13,3 +13,18 @@ services:
         class: AppBundle\Service\Business\QuizBusiness
         parent: app.util.abstract_container_aware
         public: true
+
+    app.business.question:
+        class: AppBundle\Service\Business\QuestionBusiness
+        parent: app.util.abstract_container_aware
+        public: true
+
+    app.business.quiz_session:
+        class: AppBundle\Service\Business\QuizSessionBusiness
+        parent: app.util.abstract_container_aware
+        public: true
+
+    app.business.answer:
+        class: AppBundle\Service\Business\AnswerBusiness
+        parent: app.util.abstract_container_aware
+        public: true

@@ -16,42 +16,43 @@
             <div class="row">
                 <div class="col-md-12 mb-5">
                     <form class="custom-form-big">
-                        <input class="form-control" placeholder="{{ 'quiz.listing.search'|trans({}, 'placeholder') }}" name="search">
+                        <input class="form-control" placeholder="{{ 'quiz.listing.search'|trans({}, 'placeholder') }}"
+                               name="search">
                     </form>
                 </div>
             </div>
             <div class="row">
                 {% for quiz in quizzes %}
-                <div class="col-lg-6 text-center tests-item">
-                    <div class="tests-image">
-                        <img class="img-fluid" src="{{ vich_uploader_asset(quiz, 'image') }}">
-                    </div>
-                    <span>{{ quiz.title }}</span>
-                </div>
+                    <a href="{{ path('app_quiz_session_creation_create', {'id': quiz.id}) }}"
+                       class="col-lg-6 text-center tests-item">
+                        <div class="tests-image">
+                            <img class="img-fluid" src="{{ vich_uploader_asset(quiz, 'image') }}">
+                        </div>
+                        <span>{{ quiz.title }}</span>
+                    </a>
                 {% endfor %}
             </div>
-            <div class="row mt-4">
-                <div class="d-block mx-auto">
-                    <div class="doctrina-pagination">
-                        {% set pageMax = total/result_by_page %}
-                        {% if pageMax < 1 %}
-                            {% set pageMax = 1 %}
-                        {% endif %}
-                        {% for i in 1..pageMax if i <= 3 %}
-                            <a href="#"{% if current_page == i %} class="active"{% endif %}>{{ i }}</a>
-                        {% endfor %}
+            {% set pageMax = (total/result_by_page)|round(0, 'ceil') %}
+            {% if pageMax > 1 %}
+                <div class="row mt-4">
+                    <div class="d-block mx-auto">
+                        <div class="doctrina-pagination">
+                            {% for i in 1..pageMax if i <= 3 %}
+                                <a href="{{ path('app_quiz_listing_list', {'pageNumber': i, 'search': search}) }}"{% if current_page == i %} class="active"{% endif %}>{{ i }}</a>
+                            {% endfor %}
 
                             {% if pageMax > 6 %}
-                                <a href="#">...</a>
+                                <a href="{{ path('app_quiz_listing_list', {'pageNumber': (pageMax/2)}) }}">...</a>
                             {% endif %}
 
-                        {% set firstEndingPage = pageMax - 3 %}
-                        {% for i in firstEndingPage..pageMax if i >= 5 %}
-                            <a href="#"{% if current_page == i %} class="active"{% endif %}>{{ i }}</a>
-                        {% endfor %}
+                            {% set firstEndingPage = pageMax - 3 %}
+                            {% for i in firstEndingPage..pageMax if i >= 5 %}
+                                <a href="#"{% if current_page == i %} class="active"{% endif %}>{{ i }}</a>
+                            {% endfor %}
+                        </div>
                     </div>
                 </div>
-            </div>
+            {% endif %}
         </div>
     </div>
 {% endblock content %}

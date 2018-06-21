@@ -1,0 +1,7 @@
+app_user_profile_edition:
+    prefix: /edition/
+    resource: "@AppBundle/Resources/config/routing/prod/user/profile/edition.yml"
+
+app_user_profile_show:
+    prefix: /showing/
+    resource: "@AppBundle/Resources/config/routing/prod/user/profile/showing.yml"

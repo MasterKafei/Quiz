@@ -16,6 +16,7 @@ html, body {
   min-height: 100%;
   padding: 10vh 0px 60px 0px;
 }
+
 .content {
   position: relative;
   min-height: 100%;
@@ -29,6 +30,10 @@ html, body {
 
 .bg-transparent {
   background-color: transparent !important;
+}
+
+.navbar-transparent {
+  color: #333333;
 }
 
 .text-primary {
@@ -55,7 +60,7 @@ html, body {
 a:link { text-decoration: none;  color : #333 ; border: 0px; -moz-outline-style: none;}
 a:active { text-decoration: underline; color : #333 ; border: 0px; -moz-outline-style: none;}
 a:visited { text-decoration: none;  color : #333 ; border: 0px; -moz-outline-style: none;}
-a:hover { text-decoration: underline;  color : #988b8e ; border: 0px; -moz-outline-style: none;} 
+a:hover { text-decoration: underline;  color : #988b8e ; border: 0px; -moz-outline-style: none;}
 a:focus { outline: none;-moz-outline-style: none;}
 
 /* Titles */
@@ -81,13 +86,17 @@ h3 {
 }
 
 /* Custom Navbar */
+.navbar {
+  background-color: transparent;
+}
+
 .navbar .nav-logo {
-  width: 110px;
+  width: 100px;
 }
 
 .navbar .nav-link {
   font-family: 'Comfortaa';
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: lighter;
   color: rgb(228, 228, 228) !important;
   padding-right: 20px !important;
@@ -109,8 +118,9 @@ h3 {
 
 .navbar-svg {
   position: absolute;
+  top: -100px;
   width: 100%;
-  max-height: 380px;
+  height: 500px;
 }
 
 /* Forms Styles */
@@ -180,26 +190,102 @@ h3 {
 }
 
 /* Profile Page */
-.profile-image {
-  margin-left: -170px;
-  height: 450px;
-  width: 450px;
-  border-radius: 50%;
-  border: 2px solid #323232;
+.profile-wrapper {
+  margin-top: -5vh;
+  min-height: 100vh;
+  background-image: url('/assets/image/back/profile_page.jpg');
+  background-size: cover;
+  background-repeat: none;
+  background-position: left center;
+  overflow-x: hidden;
+}
+
+.profile-content {
+  background-color: white;
+  box-shadow: 0 0 10px 0 #333;
+  margin-right: 30vw;
+  padding: 10vh 0 30px 0;
+}
+
+.profile-content h1 {
+  margin-top: 5vh;
+}
+
+.profile-content hr  {
+  border-color: #333333;
+  border-width: 3px;
+  margin: 0 30vw 5vh 30vw;
+}
+
+.profile-content .progress {
+  border-radius: 0px;
+  height: 30px;
+}
+
+.profile-content .progress-bar {
+  font-size: 0.8rem;
   background-color: #333333;
-  overflow: hidden;
 }
 
-.profile-image img {
-  height: 450px;
+.profile-content .profile-info {
+  font-size: 4rem;
 }
 
-.profile-text {
-  font-family: 'Comfortaa';
+.profile-form {
+  border-top: 5px solid #333333;
+  padding: 30px 20px 0px 20px;
+  margin-top: 5vh;
+}
+
+.profile-form h2 {
+  text-transform: uppercase;
   font-size: 1.4rem;
-  color: #333;
 }
 
+.profile-form input[type="text"],
+.profile-form input[type="password"],
+.profile-form input[type="email"],
+.profile-form select.form-control {
+  color: #D5D5D5;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #DDDDDD;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding-left: 0px;
+}
+
+.profile-form input[type="text"]:focus,
+.profile-form input[type="password"]:focus,
+.profile-form input[type="email"]:focus,
+.profile-form select.form-control:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background: transparent;
+  border-bottom: 2px solid #888888;
+}
+
+.profile-form input[type="submit"] {
+  margin-top: 10px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1rem;
+  padding: 10px 20px;
+  background-color: #333;
+  border: 2px solid #DDDDDD;
+  border-radius: 0px;
+}
+
+.profile-form input[type="submit"]:hover {
+  color: #f5deb3;
+  border-color: none;
+  background-color: #333;
+}
+
+.profile-form input[type="submit"]:focus, .profile-form input[type="submit"].focus {
+  box-shadow: none;
+}
 
 /* Tests Page */
 .tests-item {
@@ -326,7 +412,7 @@ footer {
   font-size: 2.1rem;
 }
 
-/* Signing Page */
+/* Sign Page */
 .sign-page {
   position : fixed;
   z-index: 9999;
@@ -407,21 +493,30 @@ footer {
 }
 
 /* Doctrina Alert Box */
+.doctrina-alert-box {
+  z-index: 10000;
+  width: 550px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
 .doctrina-alert {
-  width: 500px;
+  width: 550px;
   background-color: #f6f6f8;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-left: 8px solid #333;
   padding: 20px;
   margin-bottom: 20px;
-  position: fixed;
-  bottom: 0;
-  right: -500px;
-  z-index: 10000;
-  animation: slide 1s forwards;
+  margin-left: 550px;
+  animation: slide-margin 1s forwards;
   animation-delay: 2s;
   transition: 1s;
 }
+
+.doctrina-alert-box .doctrina-alert:nth-child(3) { animation-delay: 1s }
+.doctrina-alert-box .doctrina-alert:nth-child(2) { animation-delay: 2s }
+.doctrina-alert-box .doctrina-alert:nth-child(1) { animation-delay: 3s }
 
 @media(max-width:576px){
   .doctrina-alert {
@@ -477,12 +572,8 @@ footer {
   border-color: #117a8b;
 }
 
-@keyframes slide {
-  100% { right: 0; }
-}
-
-.brown-text {
-  color: brown;
+@keyframes slide-margin {
+  100% { margin-left: 0px; }
 }
 
 /* Pagination Style */
@@ -507,4 +598,65 @@ footer {
 
 .doctrina-pagination a:hover:not(.active) {
   background-color: #eee;
+}
+
+.doctrina-pagination #no-hover:hover {
+  background-color: transparent;
+}
+
+/* --- Result page --- */
+.result-progress {
+  border-bottom: 5px solid #333333;
+}
+
+.result-progress .progress {
+  height: 40px;
+  border-radius: 0px;
+}
+
+.result-progress .progress-check {
+  background-color: #228b22;
+  color: #f5f5f5;
+}
+
+.result-progress .progress-intermediate {
+  background-color: #ffcb00;
+  color: #f5f5f5;
+}
+
+.result-progress .progress-wrong{
+  background-color: #a52a2a;
+  color: #f5f5f5;
+}
+
+.result-item {
+  border-bottom: #b5b5b5;
+}
+
+.result-item-response {
+  display: block;
+  margin-left: 20px;
+  color: #444444
+}
+
+.result-wrapper .check {
+  color: #228b22;
+}
+
+.result-wrapper .intermediate {
+  color: #ffcb00;
+}
+
+.result-wrapper .wrong{
+  color: #a52a2a;
+}
+
+.result-items-title {
+  padding-bottom: 2vh;
+  margin: 0px 20% 5vh 20%;
+  border-bottom: 2px solid #555555;
+}
+
+.brown-text {
+  color: brown;
 }

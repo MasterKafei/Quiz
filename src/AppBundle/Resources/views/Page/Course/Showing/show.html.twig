@@ -1,0 +1,19 @@
+{% extends '@Layout/Page/Full/base.html.twig' %}
+
+{% block sub_title %}{{ course.title }}{% endblock sub_title %}
+
+{% block content %}
+    <h3>{{ course.title }}</h3>
+    <p>{{ course.description }}</p>
+    <div class="level-wrapper">
+        {% for chapter in course.chapters %}
+            <a href="{{ path('app_chapter_showing_show', {'id': chapter.id}) }}">
+                <div class="row align-items-center h-100">
+                    <div class="col-12 text-center mx-auto">
+                        <span>{{ chapter.title }}</span>
+                    </div>
+                </div>
+            </a>
+        {% endfor %}
+    </div>
+{% endblock content %}

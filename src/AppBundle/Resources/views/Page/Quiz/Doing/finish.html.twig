@@ -1,58 +1,72 @@
 {% extends '@Layout/Page/Full/base.html.twig' %}
 
-{% block body %}
+{% block title %}{{ parent() }}Results{% endblock %}
 
-    {% embed '@Layout/Component/Box/box_primary.html.twig' %}
-
-        {% block header %}
-            <h3>{{ quiz.title }}</h3>
-            <p>{{ quiz.description }}</p>
-        {% endblock %}
-
-        {% block body %}
-
-            {% for answer in answers %}
-
-                {% embed '@Layout/Component/Box/box_primary.html.twig' %}
-
-                    {% block header %}
-                        <h3>{{ answer.question.title }}</h3>
-                        <p>{{ answer.question.text }}</p>
-                    {% endblock %}
-
-                    {% block body %}
-
-                        {% for key,response in answer.question.responses %}
-                                <label class="col-sm-2 control-label">
-                                    <div class="pull-right">
-                                        {% if answer.value[key] is defined and answer.question.solution[key] is defined %}
-                                            <i class="fa fa-check"></i>
-                                        {% elseif answer.value[key] is defined %}
-                                            <i class="fa fa-times"></i>
-                                        {% endif %}
-                                    </div>
-                                </label>
-
-                                <label class="col-sm-10 control-label">
-                                    {% if answer.question.solution[key] is defined %}
-                                        <div class="bg-success">
+{% block content %}
+    {% set percentage = 100 * rightAnswers|length/quiz.questions|length %}
+    <div class="content result-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="text-center mb-4">You completed the quiz : <span
+                                class="text-muted">{{ quiz.title }}</span></h3>
+                    {% if percentage < 40 %}
+                        <h1 class="text-center big-title wrong">Not Very Impressive..</h1>
+                    {% elseif percentage < 75 %}
+                        <h1 class="text-center big-title intermediate">Not bad</h1>
+                    {% elseif percentage != 100 %}
+                        <h1 class="text-center big-title check">Well done !</h1>
+                    {% else %}
+                        <h1 class="text-center big-title check">Perfect !</h1>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="row mt-1 p-3 pb-5 result-progress">
+                <div class="col-12">
+                    <div class="progress">
+                        <div class="progress-bar progress-{% if percentage < 40 %}wrong{% elseif percentage < 75 %}intermediate{% else %}check{% endif %}"
+                             role="progressbar" style="width: {{ percentage }}%"
+                             aria-valuenow="{{ rightAnswers|length }}" aria-valuemin="0"
+                             aria-valuemax="{{ quiz.questions|length }}">{{ rightAnswers|length }}/{{ quiz.questions|length }}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5 p-5">
+                <div class="col-6">
+                    <h3 class="text-center result-items-title">Correct Answer</h3>
+                    {% for rightAnswer in rightAnswers %}
+                        <p class="result-item">
+                            <i class="fas fa-check check"></i> <b>{{ rightAnswer.question.title }}</b>
+                            {% for keyValue, value in rightAnswer.value %}
+                                <span class="result-item-response"><i class="fas fa-caret-right"></i>
+                                    {% for keyResponse,response in rightAnswer.question.responses %}
+                                        {% if keyResponse == keyValue %}
                                             {{ response }}
-                                        </div>
-                                    {% else %}
-                                        {{ response }}
+                                        {% endif %}
+                                    {% endfor %}
+                            </span>
+                            {% endfor %}
+                        </p>
+                    {% endfor %}
+                </div>
+                <div class="col-6">
+                    <h3 class="text-center result-items-title">Wrong Answers</h3>
+                    {% for wrongAnswer in wrongAnswers %}
+                        <p class="result-item">
+                            <i class="fas fa-times wrong"></i> <b>{{ wrongAnswer.question.title }}</b>
+                            {% for keyValue, value in wrongAnswer.value %}
+                                {% for keyResponse,response in wrongAnswer.question.responses %}
+                                    {% if keyValue == keyResponse %}
+                                        <span class="result-item-response"><i class="fas fa-caret-right"></i>
+                                            {{ response }}
+                                            </span>
                                     {% endif %}
-                                </label>
-
-                        {% endfor %}
-
-                    {% endblock %}
-
-                {% endembed %}
-
-            {% endfor %}
-
-        {% endblock %}
-
-    {% endembed %}
-
-{% endblock %}
+                                {% endfor %}
+                            {% endfor %}
+                        </p>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
