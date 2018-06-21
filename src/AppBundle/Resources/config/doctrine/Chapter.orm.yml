@@ -22,8 +22,16 @@ AppBundle\Entity\Chapter:
             inversedBy: chapters
             cascade: [ persist ]
             joinColumn:
-                name: course_id
+                name: chapter_id
                 referencedColumnName: id
                 nullable: false
+        contributions:
+            targetEntity: AppBundle\Entity\Contribution
+            inversedBy: icontribution
+            cascade: [ persist ]
+            joinColumn:
+                name: contribution_id
+                referencedColumnName: id
+                nullable: true
 
     lifecycleCallbacks: {  }

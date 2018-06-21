@@ -8,7 +8,7 @@ use Vich\UploaderBundle\Mapping\Annotation as Vich;
  * Quiz
  * @Vich\Uploadable
  */
-class Quiz
+class Quiz implements IContribution
 {
     /**
      * @var int
@@ -85,6 +85,11 @@ class Quiz
      * @var Date
      */
     private $lastUpdate;
+
+    /**
+     * @var IContribution
+     */
+    private $contributions;
 
     /**
      * Get id
@@ -396,6 +401,30 @@ class Quiz
     public function getLastUpdate()
     {
         return $this->lastUpdate;
+    }
+
+    /**
+     * Set IContribution.
+     *
+     * @param IContribution
+     *
+     * @return Course
+     */
+    public function setContributions($contributions)
+    {
+        $this->contributions = $contributions;
+
+        return $this;
+    }
+
+    /**
+     * Get IContribution.
+     *
+     * @return IContribution
+     */
+    public function getContributions()
+    {
+        return $this->contributions;
     }
 }
 

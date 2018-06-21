@@ -69,6 +69,13 @@ class User implements UserInterface, \Serializable
      */
     private $answers;
 
+    /**
+     * @var Contribution.
+     */
+    private $contributions;
+
+
+
     public function __construct()
     {
         $this->salt = $this->salt = base_convert(sha1(uniqid(mt_rand(), true)), 16, 36);
@@ -327,6 +334,41 @@ class User implements UserInterface, \Serializable
         $this->answers = $answers;
         return $this;
     }
+
+    /**
+     * Set contributions
+     *
+     * @param Contribution[]
+     *
+     * @return User
+     */
+    public function setContributions($contributions)
+    {
+        $this->contributions = $contributions;
+
+        return $this;
+    }
+
+    /**
+     * Get contributions
+     *
+     * @return Contribution[]
+     */
+    public function getContributions()
+    {
+        return $this->contributions;
+    }
+
+    /**
+     * @para Contribution[]
+     *
+     */
+    public function addContributions($value)
+    {
+        $this->contributions[] = $value;
+        return $this;
+    }
+
 
     /** @see \Serializable::serialize() */
     public function serialize()

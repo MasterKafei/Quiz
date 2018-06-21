@@ -5,7 +5,7 @@ namespace AppBundle\Entity;
 /**
  * Course
  */
-class Course
+class Course implements IContribution
 {
     /**
      * @var int
@@ -27,6 +27,11 @@ class Course
      *
      */
     private $description;
+
+    /**
+     * @var IContribution
+     */
+    private $contributions;
 
     /**
      * Get id.
@@ -109,5 +114,29 @@ class Course
     public function getTitle()
     {
         return $this->title;
+    }
+
+    /**
+     * Set IContribution.
+     *
+     * @param IContribution
+     *
+     * @return Course
+     */
+    public function setContributions($contributions)
+    {
+        $this->contributions = $contributions;
+
+        return $this;
+    }
+
+    /**
+     * Get IContribution.
+     *
+     * @return IContribution
+     */
+    public function getContributions()
+    {
+        return $this->contributions;
     }
 }

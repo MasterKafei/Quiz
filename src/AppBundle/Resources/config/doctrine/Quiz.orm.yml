@@ -52,4 +52,13 @@ AppBundle\Entity\Quiz:
                 name: category_id
                 referencedColumnName: id
                 nullable: true
+        contributions:
+            targetEntity: AppBundle\Entity\Contribution
+            inversedBy: icontributions
+            cascade: [ persist ]
+            joinColumn:
+                name: contribution_id
+                referencedColumnName: id
+                nullable: true
+
     lifecycleCallbacks: {  }
