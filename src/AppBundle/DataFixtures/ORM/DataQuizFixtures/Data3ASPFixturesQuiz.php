@@ -77,9 +77,9 @@ class Data3ASPFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
             ->setText(' En WebForms quel est la différence entre un fichier .ASPX et un fichier .ASPX.CS ?')
             ->setResponses(array(
                 'Un fichier ASPX permet de définir la namespace de la vue, tandis qu\'un fichier ASPX.cs permer de créé la vue grace à du XAML',
-                'Un fichier ASPX permet de réaliser les régles métier de la vue, tandis qu\'un fichier ASPX.cs permer de créé la vue grace à du XAML',
+                'Un fichier ASPX permet de réaliser les règles métier de la vue, tandis qu\'un fichier ASPX.cs permer de créér la vue grace à du XAML',
                 'Un fichier ASPX permet de défnir la vue, tandis qu\'un fichier ASP.cs permet de définir le code behind de la vue',
-                'Un fichier ASPX permet de défnir la vue, tandis qu\'un fichier ASP.cs permet de configurer la vue, les dépendances, vue partiel etc.',
+                'Un fichier ASPX permet de défnir la vue, tandis qu\'un fichier ASP.cs permet de configurer la vue, les dépendances, vue partielle etc.',
             ))
             ->setSolution(array(
                 2 => true,
@@ -93,9 +93,9 @@ class Data3ASPFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
             ->setTitle('runat="server"')
             ->setText('A quoi sert le runat=”server” ')
             ->setResponses(array(
-                'Permet de dire á la page d\'exécuter la balise coté serveur (codeBehind).',
-                'Permet de forcer l\'éxécution serveur.',
-                'Permet de dire á la page que tel méthode doit être éxécuter coté serveur .',
+                'Permet de dire à la page d\'exécuter la balise coté serveur (codeBehind).',
+                'Permet de forcer l\'exécution serveur.',
+                'Permet de dire à la page que tel méthode doit être exécuter coté serveur .',
                 'Permet de définir une page sur le serveur.',
             ))
             ->setSolution(array(
@@ -108,7 +108,7 @@ class Data3ASPFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
 
         $question = (new Question())
             ->setTitle('Cycle d\'événnement')
-            ->setText('Quels sont les différents cycle d\'événement ?')
+            ->setText('Quels sont les différents cycle d\'évènements ?')
             ->setResponses(array(
                 'doInBackground et onPostExecute',
                 'onCreate et onExecute',
@@ -146,7 +146,7 @@ class Data3ASPFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
             ->setTitle('Entity Framework')
             ->setText('Qu\'est ce que entity Framework :')
             ->setResponses(array(
-                'La classe mére de toute les vues ASP',
+                'La classe mère de toute les vues ASP',
                 'Le nom du serveur pour les pages asp.net',
                 'Un ORM (Onject Relational Mapping)',
                 'Un le moteur d\'asp.net',
@@ -165,9 +165,9 @@ class Data3ASPFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
             ->setText('Qu\'est ce que le CRUD ?')
             ->setResponses(array(
                 'Un patron d\'architecture.',
-                'Un ensembe de régle à respecter',
-                'ce sont les actions de base qui doivent être implémenter entre l\'application et les entitées.',
-                'ce sont les actions de base qui doivent être dans les entitées.',
+                'Un ensembe de règles à respecter',
+                'Ce sont les actions de base qui doivent être implémenter entre l\'application et les entitées.',
+                'Ce sont les actions de base qui doivent être dans les entitées.',
 
             ))
             ->setSolution(array(
@@ -181,8 +181,8 @@ class Data3ASPFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
 
 
         $question = (new Question())
-            ->setTitle('Vue partiel')
-            ->setText('Les vues partiels sont des vues dans des vues, la vue parents appelle les vues enfant.')
+            ->setTitle('Vue partielle')
+            ->setText('Les vues partielles sont des vues dans des vues, la vue parent appelle les vues enfant.')
             ->setResponses(array(
                 'Vrai',
                 'Faux',
@@ -201,7 +201,7 @@ class Data3ASPFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
             ->setResponses(array(
                 'C\'est le nom d\'une page asp.',
                 'C\'est la fabrication d\'une page à partir de vue partiel.',
-                'C\'est la relation en tre la vue et le code behind.',
+                'C\'est la relation entre la vue et le code behind.',
                 'C\'est le nom du fonctionnement de chaque page cshtml.',
             ))
             ->setSolution(array(

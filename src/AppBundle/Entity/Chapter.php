@@ -5,7 +5,7 @@ namespace AppBundle\Entity;
 /**
  * chapter
  */
-class Chapter
+class Chapter implements IContribution
 {
     /**
      * @var int
@@ -32,6 +32,10 @@ class Chapter
      */
     private $contributors;
 
+    /**
+     * @var IContribution
+     */
+    private $contributions;
 
     /**
      * Get id.
@@ -138,5 +142,29 @@ class Chapter
     public function getContributors()
     {
         return $this->contributors;
+    }
+
+    /**
+     * Set IContribution.
+     *
+     * @param IContribution
+     *
+     * @return Chapter
+     */
+    public function setContributions($contributions)
+    {
+        $this->contributions = $contributions;
+
+        return $this;
+    }
+
+    /**
+     * Get IContribution.
+     *
+     * @return IContribution
+     */
+    public function getContributions()
+    {
+        return $this->contributions;
     }
 }

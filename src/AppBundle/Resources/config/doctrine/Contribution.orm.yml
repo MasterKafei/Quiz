@@ -1,0 +1,28 @@
+AppBundle\Entity\Contribution:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\Contribution
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        isPublic:
+            type: boolean
+    oneToMany:
+        icontribution:
+           targetEntity: AppBundle\Entity\IContribution
+           mappedBy: contributions
+    manyToOne:
+        user:
+            targetEntity: AppBundle\Entity\User
+            cascade: [ persist ]
+            inversedBy: user
+            joinColumn:
+                name: user_id
+                referencedColumnName: id
+                nullable: false
+
+    lifecycleCallbacks: {  }

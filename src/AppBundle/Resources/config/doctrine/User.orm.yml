@@ -62,4 +62,8 @@ AppBundle\Entity\User:
         answers:
             targetEntity: AppBundle\Entity\Answer
             mappedBy: user
+        contributions:
+            targetEntity: AppBundle\Entity\Contribution
+            mappedBy: user
+
     lifecycleCallbacks: {  }

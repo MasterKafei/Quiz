@@ -96,8 +96,8 @@ class Data3MGTFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
             ->setTitle('Operations et gestion de projets')
             ->setText('Quelle est la différence entre la gestion d\'opérations et la gestion de projet ?')
             ->setResponses(array(
-                ' Les projet sont unique, possèdent une date de début et de fin  alors que les opérations sont des actions répétitives qui peuvent être industrialisée. ',
-                ' Les opérations sont unique, possèdent une date de début et de fin  alors que les opérations sont des actions projet qui peuvent être industrialisée. ',
+                ' Les projet sont uniques, possèdent une date de début et de fin  alors que les opérations sont des actions répétitives qui peuvent être industrialisée. ',
+                ' Les opérations sont uniques, possèdent une date de début et de fin  alors que les opérations sont des actions projet qui peuvent être industrialisée. ',
             ))
             ->setSolution(array(
                 0 => true,
@@ -175,7 +175,7 @@ class Data3MGTFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
 
         $question = (new Question())
             ->setTitle('PMI')
-            ->setText('Les 5 phases du PMI sont constitué de :.')
+            ->setText('Les 5 phases du PMI sont constitué de :')
             ->setResponses(array(
                 'Conception et initialisation du projet',
                 'Définition et planification du projet',

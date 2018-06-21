@@ -30,9 +30,9 @@ AppBundle\Entity\Question:
                 referencedColumnName: id
                 nullable: true
                 onDelete: CASCADE
-    OneToMany:
+    oneToMany:
         answers:
            targetEntity: AppBundle\Entity\Answer
            mappedBy: question
-           cascade: [ persist, remove, update ]
+           cascade: [ persist, remove ]
     lifecycleCallbacks: {  }

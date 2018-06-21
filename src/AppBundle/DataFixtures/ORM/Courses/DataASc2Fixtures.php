@@ -153,7 +153,7 @@ class DataASc2Fixtures extends AbstractFixture implements OrderedFixtureInterfac
         $course = new Course();
         $course
             ->setTitle('2PBS')
-            ->setDescription('Probabilities ans Statistics')
+            ->setDescription('Probabilities and Statistics')
             ->setGrade($grade);
 
         $manager->persist($course);
