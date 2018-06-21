@@ -40,10 +40,10 @@ class Data3AITFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
             ->setTitle('Types de programmation utilisé dans le domaine de l\'Intelligence Artificielle ')
             ->setText('Parmis ces affirmation les qu\'elles sont correct ?')
             ->setResponses(array(
-                'La programmation par action est utilisé dans la plupart des programmes,',
-                'La programmation par action n\'est pas utilisé dans la plupart des programmes ',
-                'La programmation par relations est utilisé dans les bases de données',
-                'La programmation par relations n\'est pas utilisé dans les bases de données'
+                'La programmation par action est utilisée dans la plupart des programmes,',
+                'La programmation par action n\'est pas utilisée dans la plupart des programmes ',
+                'La programmation par relations est utilisée dans les bases de données',
+                'La programmation par relations n\'est pas utilisée dans les bases de données'
             ))
             ->setSolution(array(
                 0 => true, 2 =>true,
@@ -55,7 +55,7 @@ class Data3AITFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
 
         $question = (new Question())
             ->setTitle('Les trois modèles d’expressions utilisé en programmation fonctionnelle')
-            ->setText('Quelles sont les trois modèles d’expressions utilisé en programmation fonctionnelle ?')
+            ->setText('Quelles sont les trois modèles d’expressions utilisés en programmation fonctionnelle ?')
             ->setResponses(array(
                 'L\'expression fonctionnelle',
                 'Conditionnelle ',
@@ -75,9 +75,9 @@ class Data3AITFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
             ->setText('Que signifie O et O (remplie de noir)  ?')
             ->setResponses(array(
                 'Le O signifie que l\'on ajoute un élément au début de la list qu\'il prend en paramètre, et le noir ajoute un élément à la fin de la list.b ',
-                'Le O signifie que l\'on enléve  un élément au début de la list qu\'il prend en paramètre, et le noir enléve un élément à la fin de la list.b ',
+                'Le O signifie que l\'on enlève  un élément au début de la list qu\'il prend en paramètre, et le noir enléve un élément à la fin de la list.b ',
                 'Le O signifie que l\'on ajoute un élément au début de la list qu\'il prend en paramètre, et le noir enléve un élément à la fin de la list.b ',
-                'Le O signifie que l\'on enléve un élément au début de la list qu\'il prend en paramètre, et le noir ajoute un élément à la fin de la list.b ',
+                'Le O signifie que l\'on enlève un élément au début de la list qu\'il prend en paramètre, et le noir ajoute un élément à la fin de la list.b ',
             ))
             ->setSolution(array(
                 0 => true,
@@ -91,9 +91,9 @@ class Data3AITFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
             ->setTitle('Fonction premier')
             ->setText('La fonction "premier" permet de : ')
             ->setResponses(array(
-                'Retourner le premier élément d\'une scéquence',
-                'Retourner le premier élément d\'une scéquence en l\'enlevant',
-                'Retourner la scéquence sans son dernier élément',
+                'Retourner le premier élément d\'une séquence',
+                'Retourner le premier élément d\'une séquence en l\'enlevant',
+                'Retourner la séquence sans son dernier élément',
             ))
             ->setSolution(array(
                 0 => true,
@@ -108,7 +108,7 @@ class Data3AITFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
             ->setText('La fonction Début permet de :')
             ->setResponses(array(
                 'récupérer seulement le premier élémente de la séquence ',
-                'récupérer la scéquence sans le dernier élément',
+                'récupérer la séquence sans le dernier élément',
             ))
             ->setSolution(array(
                 1 => true,
@@ -121,7 +121,7 @@ class Data3AITFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
 
         $question = (new Question())
             ->setTitle('Analyse par cas')
-            ->setText(' Qu\'est-ce aue l\'analyse par cas  :')
+            ->setText(' Qu\'est-ce que l\'analyse par cas :')
             ->setResponses(array(
                 'L’analyse par cas est une soustraction du problème en sous problème plus simple à résoudre',
                 'L’analyse par cas est une division du problème en sous problème plus simple à résoudre',
@@ -136,10 +136,10 @@ class Data3AITFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
 
         $question = (new Question())
             ->setTitle('Modéles d\'écriture')
-            ->setText(' Quel sont les 2 modéles d\'écritures possible visant à faciliter l\'apprentissage du programme ? ')
+            ->setText(' Quel sont les 2 modèles d\'écritures possible visant à faciliter l\'apprentissage du programme ? ')
             ->setResponses(array(
-                'Ecriture au sens de constructeur et  écriture au sens de selecteur',
-                'Ecriture au sens de séquence et  écriture au sens de selecteur',
+                'Ecriture au sens de constructeur et  écriture au sens de sélécteur',
+                'Ecriture au sens de séquence et  écriture au sens de sélécteur',
                 'Ecriture au sens de constructeur et  écriture au sens de séquence',
             ))
             ->setSolution(array(
@@ -167,11 +167,11 @@ class Data3AITFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
 
 
         $question = (new Question())
-            ->setTitle('Systéme expert')
-            ->setText(' Qu\'est-ce qu\'un systéme expert ? ')
+            ->setTitle('Système expert')
+            ->setText(' Qu\'est-ce qu\'un système expert ? ')
             ->setResponses(array(
-                'Le système expert est le coeur du programme, il se compose des régles "metier" permettant le bon fonctionnement du programme',
-                'Le système expert est un logiciel permettant de définir toute les possibilité d\'un programme',
+                'Le système expert est le coeur du programme, il se compose des régles "métier" permettant le bon fonctionnement du programme',
+                'Le système expert est un logiciel permettant de définir toutes les possibilités d\'un programme',
                 'Le système expert est un logiciel expert dans son domaine, il se compose de faits, de règles et du moteur d’inférence',
             ))
             ->setSolution(array(
@@ -188,7 +188,7 @@ class Data3AITFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
             ->setTitle('Liste des faits')
             ->setText(' Qu\'est-ce que la liste des faits ? ')
             ->setResponses(array(
-                'La liste de toute les possiblité du programme',
+                'La liste de toutes les possiblités du programme',
                 'Un historique de tout le fonctionnement du programme',
                 'Des Logs',
                 'La liste des situations type dont on connaît l’issue',
@@ -207,7 +207,7 @@ class Data3AITFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
             ->setText(' Qu\'est ce que le moteur d’inférence ?')
             ->setResponses(array(
                 'Un raisonnement se basant sur des réponses antérieur pour en déduire un résultat ',
-                'Un raisonnement de notre algorithme, nous exploitons notre base de connaissances en liant nos faits et nos régles',
+                'Un raisonnement de notre algorithme, nous exploitons notre base de connaissances en liant nos faits et nos règles',
                 'Un raisonnement permettant ce basant uniquement sur la déduction',
             ))
             ->setSolution(array(
@@ -220,12 +220,12 @@ class Data3AITFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
 
 
         $question = (new Question())
-            ->setTitle('Liste des régles')
-            ->setText(' Qu\'est ce que la liste des régles ?')
+            ->setTitle('Liste des règles')
+            ->setText(' Qu\'est ce que la liste des règles ?')
             ->setResponses(array(
                 'Une liste de contrainte, permettant de construire notre programme ',
-                'Une liste de régles que notre programme doit respecter pour être utilisé',
-                'Une liste de régles qui va permettre au programme de déduire un résultat',
+                'Une liste de règles que notre programme doit respecter pour être utilisé',
+                'Une liste de règles qui va permettre au programme de déduire un résultat',
                 'Une liste de règles, sont des lois à respecter par l\'algorithme pour déduire de nouveaux faits',
             ))
             ->setSolution(array(
@@ -238,8 +238,8 @@ class Data3AITFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
 
 
         $question = (new Question())
-            ->setTitle('Chainage avant')
-            ->setText(' Qu\'est ce que le chainage avant ?')
+            ->setTitle('Chaînage avant')
+            ->setText(' Qu\'est ce que le chaînage avant ?')
             ->setResponses(array(
                 'Le chaînage avant correspond à un raisonnement qui part de fait pour en déduire une règle grâce à une conclusion',
                 'Le chaînage avant correspond à un parcours des possibilités de haut en bas pour arriver à une conclusion',
@@ -254,8 +254,8 @@ class Data3AITFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
         $questions[] = $question;
 
         $question = (new Question())
-            ->setTitle('Chainage arrière')
-            ->setText(' Qu\'est ce que le chainage avant ?')
+            ->setTitle('Chaînage arrière')
+            ->setText(' Qu\'est ce que le chaînage avant ?')
             ->setResponses(array(
                 'Le chaînage arrière correspond à un raisonnement qui part de la conclusion pour en déduire une règle grâce à un fait inconnu',
                 'Le chaînage arrière correspond à un raisonnement qui part de la conclusion pour en déduire une règle grâce à un fait connu',

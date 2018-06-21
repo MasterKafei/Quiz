@@ -43,7 +43,7 @@ class Data3ITILFixturesQuiz extends AbstractFixture implements OrderedFixtureInt
                 'L’internalisation repose sur des ressources internes; l’Externalisation repose sur des ressources d’organisation(s) externes',
                 'L’internalisation repose sur des ressources d’organisation(s) externes; l’Externalisation repose sur les ressources internes',
                 'L’internalisation repose sur du co-sourcing; l’Externalisation repose sur des partenariats',
-                'L’internalisation repose sur l’externalisation du processus de connaissance; l’Externalisation repose sur l’acquisition de service d’application'
+                'L’internalisation repose sur l’externalisation du processus de connaissances; l’Externalisation repose sur l’acquisition de service d’application'
             ))
             ->setSolution(array(
                 0 => true,
@@ -59,7 +59,7 @@ class Data3ITILFixturesQuiz extends AbstractFixture implements OrderedFixtureInt
             ->setResponses(array(
                 'Stratégie de services, Conception de services, Transition de services, Exploitation de services et Amélioration continue de services',
                 'Stratégie de services, Transition de services et Exploitation des services',
-                'Exploitation des services et Amélioration continue de services',
+                'Exploitation des services et Amélioration continue des services',
                 'Amélioration continue de services',
             ))
             ->setSolution(array(
@@ -108,9 +108,9 @@ class Data3ITILFixturesQuiz extends AbstractFixture implements OrderedFixtureInt
             ->setTitle('Processus d\'Exécution')
             ->setText('Quel est le but du Processus d’Exécution des requêtes ?')
             ->setResponses(array(
-                'Se charger des demandes de service en provenance des utilisateurs',
+                'Se charger des demandes de services en provenance des utilisateurs',
                 'S’assurer que toutes les demandes au sein d’une organisation TI soient remplis',
-                'S’assurer que les demandes de changement soient accomplies',
+                'S’assurer que les demandes de changements soient accomplies',
                 'S’assurer que l’Accord sur les niveaux de service (SLA) soit tenu',
             ))
             ->setSolution(array(

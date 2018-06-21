@@ -39,7 +39,7 @@ class Data3WEBFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
 
         $question = (new Question())
             ->setTitle('Lien complet barre d\'addresse')
-            ->setText('Qu\'elle est le nom exact de l\'addresse compléte, pour accéder à une ressource?')
+            ->setText('Qu\'elle est le nom exact de l\'adresse complète, pour accéder à une ressource?')
             ->setResponses(array(
                 'Uniform Resource Locator',
                 'Uniform Resource Identifier',
@@ -72,7 +72,7 @@ class Data3WEBFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
 
         $question = (new Question())
             ->setTitle('Code 1xx')
-            ->setText('Le code  1xx en web indique une redirection :')
+            ->setText('Le code 1xx en web indique une redirection :')
             ->setResponses(array(
                 'Vrai',
                 'Faux',
@@ -89,10 +89,10 @@ class Data3WEBFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
             ->setTitle('widget')
             ->setText('Qu\'est - ce qu\'un widget ')
             ->setResponses(array(
-                'Un widget est un morceau de code permettant de modifier la page via des controls utilisateur. ',
-                'Un widget est un morceau de code apportant des controls plus complex combinant du HTML et des scripts.',
-                'Un widget est un morceau de code permettant d\'afficher plus d\'information à l\'utilisateur.',
-                'Un widget est un morceau de code permettant d\'améliorer l\'epérience utilisateur sur un site web.',
+                'Un widget est un morceau de code permettant de modifier la page via des controles utilisateurs. ',
+                'Un widget est un morceau de code apportant des controles plus complexes combinant du HTML et des scripts.',
+                'Un widget est un morceau de code permettant d\'afficher plus d\'informations à l\'utilisateur.',
+                'Un widget est un morceau de code permettant d\'améliorer l\'expérience utilisateur sur un site web.',
             ))
             ->setSolution(array(
                 1 => true,
@@ -124,10 +124,10 @@ class Data3WEBFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
             ->setTitle('Microdata')
             ->setText('A quoi servent les Microdata :')
             ->setResponses(array(
-                'Les Microdatas permettent d\'allerger la page web afficher.',
+                'Les Microdatas permettent d\'allerger la page web affiché.',
                 'Les Microdatas permettent de recupérer des données sur la navigation.',
-                'Les Microdatas sont des morceau de ocdes visant à améliorer la navigation.',
-                'Les mMcrodatas sont des morceau de code utilisé pour apporter des informations sur une page qui est interprété par les navigateurs, les moteurs de recherche, les bot etc.',
+                'Les Microdatas sont des morceau de codes visant à améliorer la navigation.',
+                'Les Microdatas sont des morceaux de codes utilisées pour apporter des informations sur une page qui est interprétée par les navigateurs, les moteurs de recherche, les bots etc.',
             ))
             ->setSolution(array(
                 3 => true,
@@ -190,7 +190,7 @@ class Data3WEBFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
 
         $question = (new Question())
             ->setTitle('Selector')
-            ->setText('Qu\'elle est la syntax exact d\'un selecteur ?')
+            ->setText('Qu\'elle est la syntaxe exacte d\'un sélecteur ?')
             ->setResponses(array(
                 '{&=}',
                 '(&=)',

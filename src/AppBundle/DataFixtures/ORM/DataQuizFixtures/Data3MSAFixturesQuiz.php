@@ -40,7 +40,7 @@ class Data3MSAFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
             ->setTitle('Signification ADCS')
             ->setText('Qu\'est-ce que signifie ADCS ?')
             ->setResponses(array(
-                'Active Directory Communication Service,',
+                'Active Directory Communication Services,',
                 'Active Directory Certificate Services',
                 'Active Directory Certificate Server',
                 'Active Directory Certifications Server'
@@ -61,7 +61,7 @@ class Data3MSAFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
                 'Faux',
             ))
             ->setSolution(array(
-                0=> true,
+                0 => true,
             ))
             ->setQuiz($quiz);
 
@@ -91,7 +91,7 @@ class Data3MSAFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
             ->setResponses(array(
                 'Il autorise l\'accès à des systèmes et des applications à des organisations externes',
                 'Il permet aux utilisateurs de Windows d\'exploiter une fonction de Single Sign-On ',
-                'Il permet de mieux sécurisé les connections Windows',
+                'Il permet de mieux sécuriser les connections Windows',
             ))
             ->setSolution(array(
                 0 => true, 1 => true,
@@ -157,9 +157,9 @@ class Data3MSAFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
             ->setTitle('Utilité de l\'AD')
             ->setText('L\'Active Directory permet de :')
             ->setResponses(array(
-                'Permets la gestion des mots de passe, de maniére à centraliser les mots de passes',
+                'Permets la gestion des mots de passe, de manières à centraliser les mots de passes',
                 'Permets de centraliser les informations utilisateurs pour éviter la redondance de stockage de données',
-                'Permets de faire un rapporte de toutes les applications installer par machine sur le réseau',
+                'Permets de faire un rapport de toutes les applications installées par machine sur le réseau',
                 'Permets le déploiements d\'applications sur les machines depuis le réseau',
             ))
             ->setSolution(array(
@@ -175,10 +175,10 @@ class Data3MSAFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
             ->setTitle('Utilité de l\'AD')
             ->setText('L\'Active Directory permet de :')
             ->setResponses(array(
-                'Permets la gestion des mots de passe, de maniére à centraliser les mots de passes',
+                'Permets la gestion des mots de passe, de manières à centraliser les mots de passes',
                 'Permets de centraliser les informations utilisateurs pour éviter la redondance de stockage de données',
-                'Permets de faire un rapporte de toutes les applications installer par machine sur le réseau',
-                'Permets le déploiements d\'applications sur les machines depuis le réseau',
+                'Permets de faire un rapporte de toutes les applications installées par machine sur le réseau',
+                'Permets le déploiement d\'applications sur les machines depuis le réseau',
             ))
             ->setSolution(array(
                 1 => true,

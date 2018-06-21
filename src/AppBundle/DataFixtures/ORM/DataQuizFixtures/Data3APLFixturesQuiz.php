@@ -39,7 +39,7 @@ class Data3APLFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
 
         $question = (new Question())
             ->setTitle('Extension fichier Swift')
-            ->setText('Qu\'elle est l\'extension d\'un fichier Swift ?')
+            ->setText('Quelle est l\'extension d\'un fichier Swift ?')
             ->setResponses(array(
                 '.sft',
                 '.swt',
@@ -56,7 +56,7 @@ class Data3APLFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
 
         $question = (new Question())
             ->setTitle('Fichier d\'entrer d\'un programme en Swift')
-            ->setText('Qu\'elle est le fichier d\'entrer d\'un programme en Swift')
+            ->setText('Quelle est le fichier d\'entrer d\'un programme en Swift')
             ->setResponses(array(
                 'start.swift',
                 'app.swift',
@@ -88,7 +88,7 @@ class Data3APLFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
 
         $question = (new Question())
             ->setTitle('constante')
-            ->setText('Comment déclare-t-on  une constante ?')
+            ->setText('Comment déclare-t-on une constante ?')
             ->setResponses(array(
                 'const',
                 'let',
@@ -105,7 +105,7 @@ class Data3APLFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
 
         $question = (new Question())
             ->setTitle('Playground')
-            ->setText('Qu\'est ce aue le Playground ?')
+            ->setText('Qu\'est ce que le Playground ?')
             ->setResponses(array(
                 'Le fichier de configuration principal d\'un projet Swift.',
                 'Le fichier des dépendance d\'un projet Swift.',
@@ -127,7 +127,7 @@ class Data3APLFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
                 'Un algorythme de récupération d\'information.',
                 'Une ligne de code qui permets de tester une condition et d\'en récupérer le résultat.',
                 'Une simple condition.',
-                'Un test en temp réél dans le Playground.',
+                'Un test en temp réel dans le Playground.',
             ))
             ->setSolution(array(
                 1 => true,
@@ -142,8 +142,8 @@ class Data3APLFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
             ->setTitle('Compound type')
             ->setText('Qu\'est-ce Qu\'un Compound type ?')
             ->setResponses(array(
-                'Un type de donnée utilisé pour le persist en BDD.',
-                'Un type permettant de créé des attributs.',
+                'Un type de données utilisé pour le persist en BDD.',
+                'Un type permettant de créér des attributs.',
                 'Un type composite qui ne possède pas de nom et est déclaré dans Swift.',
                 'Un type particulier pour l\'héritage.',
             ))
@@ -161,9 +161,9 @@ class Data3APLFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
             ->setText('Que signifie le ? dérriére une variable :')
             ->setResponses(array(
                 'Pour pour réaliser une opération ternaire',
-                'Pour indiquer qu\'une variable peut être nullable (nil).',
+                'Pour indiquer qu\'une variable peut-être nullable (nil).',
                 'Pour indiquer qu\'une variable ne peut pas êst nullable.',
-                'Pour indiquer qu\'une variable à posséde une valeur par défaut.',
+                'Pour indiquer qu\'une variable à possède une valeur par défaut.',
             ))
             ->setSolution(array(
                 1 => true,
@@ -179,10 +179,10 @@ class Data3APLFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
             ->setTitle('Signification !')
             ->setText('Que signifie ! dérriére une variable :')
             ->setResponses(array(
-                'Le ! indique que la variable contient nil si elle n\'est pas initialisé mais lorsqu\'elle est utilisé on lui applique automatiquement une valeur.',
+                'Le ! indique que la variable contient nil si elle n\'est pas initialisée mais lorsqu\'elle est utilisée on lui applique automatiquement une valeur.',
                 'Le ! indique que la variable contient déja une valeur par défaut lorsqu\'elle est utilisé on lui applique la nouvelle valeur.',
-                'Le ! indique que la variable contient nil si elle est initialisé mais lorsqu\'elle est utilisé on lui applique la nouvelle valeur.',
-                'Le ! indique que la variable contient déja une valeur lorsqu\'elle est utilisé on ne lui applique pas la nouvelle valeur.',
+                'Le ! indique que la variable contient nil si elle est initialisée mais lorsqu\'elle est utilisée on lui applique la nouvelle valeur.',
+                'Le ! indique que la variable contient déja une valeur lorsqu\'elle est utilisée on ne lui applique pas la nouvelle valeur.',
             ))
             ->setSolution(array(
                 0 => true,
@@ -213,8 +213,7 @@ class Data3APLFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
         $name = FixturesTools::saveFileFromLink(
             'http://images.frandroid.com/wp-content/uploads/2017/08/swift-logo.jpg',
             'jpg',
-            $this->container->getParameter('vich_upload_images_folder'
-            )
+            $this->container->getParameter('vich_upload_images_folder')
         );
 
         $quiz

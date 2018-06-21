@@ -40,10 +40,10 @@ class Data3JVAFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
             ->setTitle('Servlet ')
             ->setText('Qu\'est ce qu\'une Servlet ?')
             ->setResponses(array(
-                'Une classe permettant de gérer dynamiquement des requêtes et leurs réponses souvent utilisé pour un serveur web',
-                'Une methode permettant de gérer dynamiquement des requêtes et leurs réponses souvent utilisé pour un serveur web',
-                'Un attribut permettant de gérer dynamiquement des requêtes et leurs réponses souvent utilisé pour un serveur web',
-                'Une interface permettant de gérer dynamiquement des requêtes et leurs réponses souvent utilisé pour un serveur web',
+                'Une classe permettant de gérer dynamiquement des requêtes et leurs réponses souvent utilisées pour un serveur web',
+                'Une methode permettant de gérer dynamiquement des requêtes et leurs réponses souvent utilisées pour un serveur web',
+                'Un attribut permettant de gérer dynamiquement des requêtes et leurs réponses souvent utilisées pour un serveur web',
+                'Une interface permettant de gérer dynamiquement des requêtes et leurs réponses souvent utilisées pour un serveur web',
             ))
             ->setSolution(array(
                 0 => true,
@@ -127,8 +127,8 @@ class Data3JVAFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
             ->setResponses(array(
                 'Un patron de conception',
                 'Un patron d\'architecture',
-                'Modele View Controller',
-                'Modele View Conception',
+                'Model View Controller',
+                'Model View Conception',
             ))
             ->setSolution(array(
                 1 => true,  2 => true,

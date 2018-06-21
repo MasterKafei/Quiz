@@ -97,7 +97,7 @@ class Data3ORCFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
                 'Fichier de logs des modifications.',
                 'Fichier de configuration.',
                 'Fichier de mot de passe.',
-                'Fichier d\'archieve.',
+                'Fichier d\'archives.',
                 'Fichier de log des archives.',
             ))
             ->setSolution(array(
@@ -115,7 +115,7 @@ class Data3ORCFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
 
         $question = (new Question())
             ->setTitle('Composant de gestion framework Oracle Database 10g')
-            ->setText('Quelles sont les composants de gestion du framework Oracle Database 10g ?')
+            ->setText('Quels sont les composants de gestion du framework Oracle Database 10g ?')
             ->setResponses(array(
                 'La base de données',
                 'Les listeners',
@@ -135,7 +135,7 @@ class Data3ORCFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
 
         $question = (new Question())
             ->setTitle('Types de shutdown')
-            ->setText('Quelles sont les différents types de shutdown ?')
+            ->setText('Quels sont les différents types de shutdown ?')
             ->setResponses(array(
                 'Abort',
                 'Immediate',
@@ -160,10 +160,10 @@ class Data3ORCFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
             ->setTitle('TableSpace')
             ->setText('Qu’est ce qu’un tablespace ?')
             ->setResponses(array(
-                'Les tablespaces permettent de stocker logiquement les informations,',
-                'Les tablespaces permettent de stocker logiquement les tables,',
-                'Les tablespaces permettent de stocker logiquement les base de données,',
-                'Les tablespaces permettent de stocker logiquement les vue,',
+                'Les tablespaces permettent de stocker logiquement les informations',
+                'Les tablespaces permettent de stocker logiquement les tables',
+                'Les tablespaces permettent de stocker logiquement les base de données',
+                'Les tablespaces permettent de stocker logiquement les vues',
             ))
             ->setSolution(array(
                 0 => true,
@@ -176,7 +176,7 @@ class Data3ORCFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
 
         $question = (new Question())
             ->setTitle('Rôles')
-            ->setText('Un rôle est un ensemble de permission possédant un nom qu’on attribue à un utilisateur.')
+            ->setText('Un rôle est un ensemble de permissions possédant un nom qu’on attribue à un utilisateur.')
             ->setResponses(array(
                 'Vrai',
                 'Faux',
@@ -193,10 +193,10 @@ class Data3ORCFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
             ->setTitle('Vue')
             ->setText('Qu’est ce qu’une vue?')
             ->setResponses(array(
-                'C\'est une représentation d\'une table pour gérer les droits d\'accés au données.',
+                'C\'est une représentation d\'une table pour gérer les droits d\'accés aux données.',
                 'C\'est une table pour gérer les utilisateurs.',
                 'C\'est une représentation d\'une table pour gérer les utilisateurs.',
-                'C\'est une table pour gérer les droits d\'accés au données.',
+                'C\'est une table pour gérer les droits d\'accès aux données.',
             ))
             ->setSolution(array(
                 0 => true,
