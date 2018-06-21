@@ -10,7 +10,7 @@
                 <label for="inputPassword">{{ form_label(form._password) }}</label>
                 {{ form_widget(form._password, {'attr': {'class': 'form-control', 'aria-describedBy': 'inputPasswordLost', 'placeholder': 'user.authentication.login.password'|trans({}, 'placeholder')}}) }}
                 <small id="inputPasswordLost" class="form-text text-muted">
-                    <a href="">{{ 'user.authentication.login.forget_password'|trans({}, 'label') }}</a>
+                    <a href="{{ path('app_user_authentication_forgot_password_request_new_password') }}">{{ 'user.authentication.login.forget_password'|trans({}, 'label') }}</a>
                 </small>
             </div>
             <div class="custom-control custom-checkbox">

@@ -12,6 +12,12 @@ user:
             password: Password
             repeat_password: Confirm password
             submit: Register
+        forgot_password:
+            request_new_password:
+                id_booster: Your ID booster
+                submit: Request new password
+            change_password:
+                submit: Reset
 
 topbar:
     tests: Tests

@@ -7,6 +7,10 @@ user:
             id_booster: Entrez votre ID booster
             password: Mot de passe
             confirm_password: Mot de passe
+        forgot_password:
+            id_booster: ID Booster
+            password: Mot de passe
+            repeat_password: Confirmer le mot de passe
 
 quiz:
     listing:

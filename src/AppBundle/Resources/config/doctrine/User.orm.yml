@@ -38,7 +38,10 @@ AppBundle\Entity\User:
         token:
             type: string
             length: 255
-
+        forgotPasswordToken:
+            type: string
+            length: 255
+            nullable: true
     manyToMany:
         groups:
             targetEntity: AppBundle\Entity\UserGroup

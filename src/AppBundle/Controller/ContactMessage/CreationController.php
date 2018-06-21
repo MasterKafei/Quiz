@@ -18,13 +18,17 @@ class CreationController extends Controller
 
         $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($contactMessage);
-            $em->flush();
+        if ($form->isSubmitted()) {
+            if ($form->isValid()) {
+                $em = $this->getDoctrine()->getManager();
+                $em->persist($contactMessage);
+                $em->flush();
 
-            $form = $this->createForm(ContactMessageCreationType::class, new ContactMessage());
-            $this->get('app.mailer.contact_message.summary')->sendSummaryMail($contactMessage);
+                $form = $this->createForm(ContactMessageCreationType::class, new ContactMessage());
+                $this->get('app.mailer.contact_message.summary')->sendSummaryMail($contactMessage);
+            } else {
+                $this->get('app.business.form')->displayFormErrors($form);
+            }
         }
 
         return $this->render('@Page/ContactMessage/Creation/create.html.twig', array(

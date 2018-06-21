@@ -1,0 +1,29 @@
+user:
+    id_booster:
+        already_used: This id Booster already used
+        blank: The id Booster cannot be empty
+        invalid_range: This id Booster need to be a positive value
+        invalid: This id Booster is invalid
+    plain_password:
+        blank: The password is mandatory
+        short: The password must contain at least {{ limit }} characters
+        long: The password can not exceed {{ limit }} characters
+        mismatch: The two passwords are not identical
+        invalid: The password is invalid
+
+contact_message:
+    first_name:
+        blank: The first name cannot be empty
+        min_range: The first name must contain at least {{ limit }} characters
+        max_range: The first name can not exceed {{ limit }} characters
+    last_name:
+        blank: The last name cannot be empty
+        min_range: The last name must contain at least {{ limit }} characters
+        max_range: The last name can not exceed {{ limit }} characters
+    message:
+        blank: The message cannot be empty
+        min_range: The message must contain at least {{ limit }} characters
+        max_range: The message can not exceed {{ limit }} characters
+    email:
+        blank: The email cannot be empty
+        invalid: This email is no valid

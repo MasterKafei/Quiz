@@ -14,15 +14,15 @@
                 </div>
                 <div class="row text-center">
                     <div class="col-4">
-                        <span class="profile-info">4</span>
+                        <span class="profile-info">{{ quizNumberUserCreated }}</span>
                         <span>Quizzes Created</span>
                     </div>
                     <div class="col-4">
-                        <span class="profile-info">11</span>
+                        <span class="profile-info">{{ courseNumberUserCreated }}</span>
                         <span>Courses Created</span>
                     </div>
                     <div class="col-4">
-                        <span class="profile-info">{{ '' }}</span>
+                        <span class="profile-info">{{ quizNumberUserFinished }}</span>
                         <span>Quizzes Completed</span>
                     </div>
                 </div>
@@ -30,7 +30,7 @@
                     <div class="col-12">
                         <h2 class="progress-title">Average Score</h2>
                         <div class="progress">
-                            {% set average_score = 100 * rightAnswersSubmitted / questionNumber %}
+                            {% set average_score = (100 * rightAnswersSubmitted / questionNumber)|round(2) %}
                             <div class="progress-bar" role="progressbar" style="width: {{ average_score }}%;" aria-valuenow="{{ average_score }}" aria-valuemin="0" aria-valuemax="100">{{ average_score }}%</div>
                         </div>
                     </div>
@@ -39,7 +39,7 @@
                     <div class="col-12">
                         <h2 class="progress-title">Progress</h2>
                         <div class="progress">
-                            {% set quota = 100 * questionNumberAnswer/questionNumber %}
+                            {% set quota = (100 * questionNumberAnswer/questionNumber)|round(2) %}
                             <div class="progress-bar" role="progressbar" style="width: {{ quota }}%;" aria-valuenow="{{ quota }}" aria-valuemin="0" aria-valuemax="100">{{ quota }}%</div>
                         </div>
                     </div>

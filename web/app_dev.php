@@ -17,7 +17,6 @@ $ipMSO = '10.25.19.23';
 if (isset($_SERVER['HTTP_CLIENT_IP'])
     || isset($_SERVER['HTTP_X_FORWARDED_FOR'])
     || !(in_array(@$_SERVER['REMOTE_ADDR'], ['127.0.0.1', '::1', $ipMK, $ipHD, $ipMSO], true) || PHP_SAPI === 'cli-server')
-    && false
 ) {
     header('HTTP/1.0 403 Forbidden');
     exit('You are not allowed to access this file. Check '.basename(__FILE__).' for more information.');

@@ -17,3 +17,7 @@ app_user_authentication_enabling:
 app_user_authentication_signing:
     resource: "@AppBundle/Resources/config/routing/prod/user/authentication/signing.yml"
     prefix:   /signing/
+
+app_user_authentication_forgot_password:
+    resource: "@AppBundle/Resources/config/routing/prod/user/authentication/forgot_password.yml"
+    prefix:   /forgot-password/

@@ -32,7 +32,7 @@ class DataContributorFixtures extends AbstractFixture implements OrderedFixtureI
             ->setEmail('jean.marius@supinfo.com')
             ->setFirstName('Jean')
             ->setLastName('Marius')
-            ->setRole('Developer')
+            ->setRole('Developer/Integrator')
             ->setGithubLink('https://github.com/MasterKafei')
             ->setLinkedinLink('https://www.linkedin.com/in/jean-marius-732b91142/')
             ->setPhotoPath($name);
@@ -46,7 +46,7 @@ class DataContributorFixtures extends AbstractFixture implements OrderedFixtureI
             ->setEmail('dorian.guilmain@supinfo.com')
             ->setFirstName('Dorian')
             ->setLastName('Guilmain')
-            ->setRole('Integrator')
+            ->setRole('Design Developer')
             ->setGithubLink('https://github.com/Craaftx/')
             ->setLinkedinLink('https://www.linkedin.com/in/dorian-guilmain/')
             ->setPhotoPath($name);
@@ -88,7 +88,7 @@ class DataContributorFixtures extends AbstractFixture implements OrderedFixtureI
             ->setEmail('olivier.argentieri@supinfo.com')
             ->setFirstName('Olivier')
             ->setLastName('Argentieri')
-            ->setRole('Developer')
+            ->setRole('Web Content Developer')
             ->setGithubLink('https://github.com/OlivierArgentieri')
             ->setLinkedinLink('https://www.linkedin.com/in/olivier-a-707ab9151/')
             ->setPhotoPath($name);
