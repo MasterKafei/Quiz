@@ -223,14 +223,14 @@ class Data3ORCFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
 
 
         $name = FixturesTools::saveFileFromLink(
-            'http://www.goodmorningcrowdfunding.com/wp-content/uploads/2017/07/Oracle-logo.png',
-            'jpg',
+            'https://sensorstechforum.com/wp-content/uploads/2017/01/oracle-logo.png',
+            'png',
             $this->container->getParameter('vich_upload_images_folder'
             )
         );
 
         $quiz
-            ->setTitle('QCM 3WEB révision de 3éme année')
+            ->setTitle('QCM 3ORC révision de 3éme année')
             ->setDescription('Questionnaire révision')
             ->setCategory($category)
             ->setQuestions($questions)
