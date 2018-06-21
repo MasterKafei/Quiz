@@ -24,7 +24,8 @@
             </li>
             <li class="nav-item">
                 {% if app.user is defined and app.user is not null %}
-                    <a class="nav-link" href="{{ path('app_user_authentication_signing_logout') }}">{{ 'logout'|trans({}, 'action') }}</a>
+                    <a class="nav-link" href="{{ path('app_user_profile_showing_show') }}">My Profile</a>
+                    {#<a class="nav-link" href="{{ path('app_user_authentication_signing_logout') }}">{{ 'logout'|trans({}, 'action') }}</a>#}
                 {% else %}
                     <a class="nav-link" href="{{ path('app_user_authentication_signing_sign') }}">{{ 'login'|trans({}, 'action') }}</a>
                 {% endif %}

@@ -1,0 +1,29 @@
+user:
+    id_booster:
+        already_used: L'Id Booster est déjà utilisé
+        blank: L'Id Booster ne peut pas être vide
+        invalid_range: L'Id Booster ne peut pas être négatif
+        invalid: L'Id Booster est invalide
+    plain_password:
+        blank: Le mot de passe est obligatoire
+        short: Le mot de passe doit contenir au moins {{ limit }} caractères
+        long: Le mot de passe ne peut excéder {{ limit }} caractère)
+        mismatch: Les deux mots de passe ne sont pas identiques
+        invalid: Le mot de passe est invalide
+
+contact_message:
+    first_name:
+        blank: Le prénom est obligatoire
+        min_range: Le prénom doit contenir au moins {{ limit }} caractères
+        max_range: Le prénom ne peut excéder {{ limit }} caractères
+    last_name:
+        blank: Le nom est obligatoire
+        min_range: Le nom doit contenir au moins {{ limit }} caractères
+        max_range: Le nom ne peut excéder {{ limit }} caractères
+    message:
+        blank: Le message est obligatoire
+        min_range: Le message doit contenir au moins {{ limit }} caractères
+        max_range: Le message ne peut excéder {{ limit }} caractères
+    email:
+        blank: L'email est obligatoire
+        invalid: L'email est invalide ou n'existe pas

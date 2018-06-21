@@ -70,6 +70,11 @@ class User implements UserInterface, \Serializable
     private $token;
 
     /**
+     * @var string
+     */
+    private $forgotPasswordToken;
+
+    /**
      * @var UserGroup[]
      */
     private $groups;
@@ -314,6 +319,29 @@ class User implements UserInterface, \Serializable
     public function setToken($token)
     {
         $this->token = $token;
+        return $this;
+    }
+
+    /**
+     * Get forgot password token
+     *
+     * @return string
+     */
+    public function getForgotPasswordToken()
+    {
+        return $this->forgotPasswordToken;
+    }
+
+    /**
+     * Set forgot password token
+     *
+     * @param $token
+     * @return $this
+     */
+    public function setForgotPasswordToken($token)
+    {
+        $this->forgotPasswordToken = $token;
+
         return $this;
     }
 

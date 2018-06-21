@@ -15,3 +15,7 @@ services:
     app.mailer.contact_message.summary:
         class: AppBundle\Service\Mailer\ContactMessage\SummaryMailer
         parent: app.mailer.abstract_mailer
+
+    app.mailer.user.forgot_password:
+        class: AppBundle\Service\Mailer\User\ForgotPasswordMailer
+        parent: app.mailer.abstract_mailer

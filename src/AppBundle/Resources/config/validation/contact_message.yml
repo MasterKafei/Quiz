@@ -1,0 +1,37 @@
+AppBundle\Entity\ContactMessage:
+    properties:
+        firstName:
+            - NotBlank:
+                message: contact_message.first_name.blank
+                groups: [contact_message_creation]
+            - Length:
+                min: 2
+                max: 50
+                minMessage: contact_message.first_name.min_range
+                maxMessage: contact_message.first_name.max_range
+        lastName:
+            - NotBlank:
+                message: contact_message.last_name.blank
+                groups: [contact_message_creation]
+            - Length:
+                min: 2
+                max: 50
+                minMessage: contact_message.last_name.min_range
+                maxMessage: contact_message.last_name.max_range
+        message:
+            - NotBlank:
+                message: contact_message.message.blank
+                groups: [contact_message_creation]
+            - Length:
+                min: 10
+                max: 2000
+                minMessage: contact_message.message.min_range
+                maxMessage: contact_message.message.max_range
+                groups: [contact_message_creation]
+        email:
+            - NotBlank:
+                message: contact_message.email.blank
+                groups: [contact_message_creation]
+            - Email:
+                message: contact_message.email.invalid
+                checkMX: true

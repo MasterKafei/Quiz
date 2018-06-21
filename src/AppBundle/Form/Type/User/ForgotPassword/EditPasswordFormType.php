@@ -1,43 +1,41 @@
 <?php
 
-namespace AppBundle\Form\Type\User\Registration;
+namespace AppBundle\Form\Type\User\ForgotPassword;
+
 
 use AppBundle\Entity\User;
-use AppBundle\Service\Subscriber\FormSubscriber;
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class RegisterType extends AbstractType
+class EditPasswordFormType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('idBooster', NumberType::class, array(
-                'label' => 'user.authentication.register.id_booster',
-            ))
             ->add('plainPassword', RepeatedType::class, array(
                 'type' => PasswordType::class,
-                'first_options' => array('label' => 'user.authentication.register.password'),
-                'second_options' => array('label' => 'user.authentication.register.repeat_password'),
+                'first_options' => array(
+                    'label' => 'user.authentication.forgot_password.change_password.password',
+                ),
+                'second_options' => array(
+                    'label' => 'user.authentication.forgot_password.change_password.repeat_password',
+                )
             ))
             ->add('submit', SubmitType::class, array(
-                'label' => 'register',
-                'translation_domain' => 'action'
-            ))
-        ;
+                'label' => 'user.authentication.forgot_password.change_password.submit',
+            ));
     }
 
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
             'data_class' => User::class,
-            'validation_groups' => array('registration'),
             'translation_domain' => 'label',
+            'validation_groups' => ['registration']
         ));
     }
 }

@@ -1,6 +1,6 @@
 {% set messages = app_util_console.messages() %}
 
-{% if messages is not empty %}
+{% if messages is not empty or form is defined %}
     <div class="doctrina-alert-box">
         {% for key,message in messages %}
             <div id="doctrina-alert-{{ key }}" class="doctrina-alert doctrina-alert-{{ message.type }}">

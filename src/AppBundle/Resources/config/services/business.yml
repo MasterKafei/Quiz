@@ -28,3 +28,8 @@ services:
         class: AppBundle\Service\Business\AnswerBusiness
         parent: app.util.abstract_container_aware
         public: true
+
+    app.business.form:
+        class: AppBundle\Service\Business\FormBusiness
+        parent: app.util.abstract_container_aware
+        public: true

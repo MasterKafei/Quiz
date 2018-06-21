@@ -65,6 +65,7 @@ class UserBusiness extends AbstractContainerAware
         $encoder = $this->container->get('security.encoder_factory')->getEncoder($user);
         $password = $encoder->encodePassword($user->getPlainPassword(), $user->getSalt());
         $user->setPassword($password);
+        $user->setForgotPasswordToken(null);
 
         return $password;
     }
@@ -83,5 +84,17 @@ class UserBusiness extends AbstractContainerAware
         }
 
         return null;
+    }
+
+    public function requestNewPassword(User $user)
+    {
+        $token = $this->container->get('app.util.token_generator')->generateToken();
+
+        $user->setForgotPasswordToken($token);
+        $em = $this->container->get('doctrine')->getManager();
+        $em->persist($user);
+        $em->flush();
+
+        $this->container->get('app.mailer.user.forgot_password')->sendForgotPasswordMail($user);
     }
 }

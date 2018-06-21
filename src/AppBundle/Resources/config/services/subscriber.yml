@@ -1,0 +1,5 @@
+services:
+    app.subscriber.form:
+        class: AppBundle\Service\Subscriber\FormSubscriber
+        parent: app.util.abstract_container_aware
+        public: true

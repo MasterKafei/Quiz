@@ -12,7 +12,12 @@ user:
             password: Mot de passe
             repeat_password: Confirmer le mot de passe
             submit: S'inscrire
-
+        forgot_password:
+            request_new_password:
+                id_booster: Id Booster
+                submit: Envoyer
+            change_password:
+                submit: Réinitialiser
 topbar:
     tests: Tests
     courses: Cours

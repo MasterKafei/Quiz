@@ -1,8 +1,10 @@
 imports:
     - { resource: 'business.yml' }
+    - { resource: 'extension.yml' }
     - { resource: 'fixture.yml' }
     - { resource: 'form.yml' }
     - { resource: 'listener.yml' }
     - { resource: 'mailer.yml' }
     - { resource: 'security.yml' }
+    - { resource: 'subscriber.yml' }
     - { resource: 'util.yml' }

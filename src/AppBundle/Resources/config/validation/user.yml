@@ -1,0 +1,38 @@
+AppBundle\Entity\User:
+    constraints:
+        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity:
+            fields: [idBooster]
+            message: user.id_booster.already_used
+            groups: [registration]
+    properties:
+        idBooster:
+            - NotBlank:
+                message: user.id_booster.blank
+                groups: [registration]
+            - Range:
+                min: 1
+                minMessage: user.id_booster.invalid_range
+                invalidMessage: user.id_booster.invalid
+                groups: [registration]
+        plainPassword:
+            - NotBlank:
+                message: user.plain_password.blank
+                groups: [registration]
+            - Length:
+                min: 5
+                max: 50
+                minMessage: user.plain_password.short
+                maxMessage: user.plain_password.long
+                groups: [registration]
+
+AppBundle\Form\Model\ForgotPassword\RequestNewPasswordModel:
+    properties:
+        idBooster:
+            - NotBlank:
+                message: user.id_booster.blank
+                groups: [creation]
+            - Range:
+                min: 1
+                minMessage: user.id_booster.invalid_range
+                invalidMessage: user.id_booster.invalid
+                groups: [creation]

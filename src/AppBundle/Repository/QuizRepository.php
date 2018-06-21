@@ -29,21 +29,17 @@ class QuizRepository extends EntityRepository
         $quizzesAnswers = array();
 
         /** @var Answer $answer */
-        foreach($answers as $answer)
-        {
+        foreach ($answers as $answer) {
             $quiz = $answer->getQuestion()->getQuiz();
-            if($answer->getUser()->getId() == $user->getId() && !in_array($quiz->getId(), $quizzesAnswers))
-            {
+            if ($answer->getUser()->getId() == $user->getId() && !in_array($quiz->getId(), $quizzesAnswers)) {
                 array_push($quizzesAnswers, $quiz->getId());
             }
         }
 
         /** @var Answer $answer */
-        foreach($answers as $answer)
-        {
+        foreach ($answers as $answer) {
             $quiz = $answer->getQuestion()->getQuiz();
-            if(!in_array($quiz->getId(), $quizzesAnswers) && !in_array($quiz, $quizzes))
-            {
+            if (!in_array($quiz->getId(), $quizzesAnswers) && !in_array($quiz, $quizzes)) {
                 array_push($quizzes, $quiz);
             }
         }
@@ -56,7 +52,6 @@ class QuizRepository extends EntityRepository
         $qb = $this->_em->createQueryBuilder()
             ->select('DISTINCT IDENTITY(qst.quiz)')
             ->from('AppBundle:Answer', 'asw')
-
             ->innerJoin('asw.question', 'qst')
             ->where('asw.user = :user')
             ->setParameter('user', $user);
@@ -71,8 +66,7 @@ class QuizRepository extends EntityRepository
             ->from('AppBundle:Quiz', 'q')
             ->where('answer.user != :user')
             ->leftJoin('quiz.questions', 'question')
-            ->leftJoin('question.answers', 'answer')
-            ;
+            ->leftJoin('question.answers', 'answer');
 
         return $qb->getQuery()->execute();
     }
@@ -93,15 +87,13 @@ class QuizRepository extends EntityRepository
         return new Paginator($qb);
     }
 
-    public function getFinishedQuiz(User $user)
+    public function getCompletedQuizzes(User $user)
     {
-        $query = $this->_em->createQuery('
-            SELECT q
-            FROM AppBundle:Quiz
-            WHERE q.questions
-        ');
 
-        $result = $query->getResult();
-        return $result;
+        $questions = $this->_em->getRepository('AppBundle:Question')->getUserAnsweredQuestion($user);
+
+
+
+        return array();
     }
 }
