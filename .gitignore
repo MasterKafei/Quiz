@@ -16,3 +16,11 @@
 /vendor/
 /web/assets/vendor/
 /.idea
+/_windows
+/colors.scheme.xml
+/databaseSettings.xml
+/debugger.xml
+/editor.xml
+/filetypes.xml
+/ide.general.xml
+/ui.inf.xml
