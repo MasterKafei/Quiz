@@ -5,14 +5,15 @@
         {% block head %}
             <title>{% block title %}{{ parent() }}{% endblock %}</title>
             {% include '@Layout/Page/Full/stylesheets.html.twig' %}
-        {% block stylesheets %}{% endblock %}
+            {% block stylesheets %}{% endblock %}
         {% endblock %}
     </head>
 {% endblock %}
 {% block body %}
     {% include '@Layout/Page/Full/topbar.html.twig' %}
     {% block content %}{% endblock content %}
+    {% include '@Layout/Widget/Logout/logout.html.twig' %}
     {% include '@Layout/Page/Full/footer.html.twig' %}
-    {% include '@Layout/Page/Default/javascripts.html.twig' %}
+    {% include '@Layout/Page/Full/javascripts.html.twig' %}
     {% block javascripts %}{% endblock javascripts %}
 {% endblock body %}

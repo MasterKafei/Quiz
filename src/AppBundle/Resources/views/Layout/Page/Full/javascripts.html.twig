@@ -1,0 +1,9 @@
+{% include '@Layout/Page/Default/javascripts.html.twig' %}
+
+{% if app.user is not null %}
+    <script type="text/javascript">
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+{% endif %}
