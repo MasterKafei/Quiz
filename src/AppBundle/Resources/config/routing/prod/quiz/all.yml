@@ -9,3 +9,11 @@ app_quiz_doing:
 app_quiz_reset:
     resource: "@AppBundle/Resources/config/routing/prod/quiz/resetting.yml"
     prefix:   /resetting/
+
+app_quiz_create:
+    resource: "@AppBundle/Resources/config/routing/prod/quiz/creation.yml"
+    prefix:   /creation/
+
+app_quiz_edition:
+    resource: "@AppBundle/Resources/config/routing/prod/quiz/edition.yml"
+    prefix:   /edition/

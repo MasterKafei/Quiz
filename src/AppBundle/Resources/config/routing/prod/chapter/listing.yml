@@ -1,0 +1,3 @@
+app_chapter_listing_user:
+    path: /user/
+    defaults: { _controller: 'AppBundle:Chapter\Listing:listUserChapter' }

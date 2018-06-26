@@ -1,0 +1,3 @@
+app_contribution_creation_create:
+    path: /create
+    defaults: { _controller: 'AppBundle:Contribution\Creation:createContribution' }

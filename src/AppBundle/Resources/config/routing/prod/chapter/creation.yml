@@ -1,0 +1,13 @@
+app_chapter_creation_create:
+    path: /create/{id}
+    defaults: { _controller: 'AppBundle:Chapter\Creation:createChapter' }
+
+app_chapter_creation_choose_grade:
+    path: /choose_grade/
+    defaults: { _controller: 'AppBundle:Chapter\Creation:chooseGrade'}
+
+app_chapter_creation_choose_course:
+    path: /choose_course/{id}
+    defaults: { _controller: 'AppBundle:Chapter\Creation:chooseCourse' }
+    requirements:
+        id: '\d+'

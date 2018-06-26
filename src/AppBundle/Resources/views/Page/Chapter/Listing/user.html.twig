@@ -1,0 +1,58 @@
+{% extends '@Layout/Page/Admin/base.html.twig' %}
+
+{% block body %}
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Every chapter you created</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 col-md-12">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Courses
+                    </div>
+                    <!-- /.panel-heading -->
+                    <div class="panel-body">
+                        <div class="table-responsive">
+                            <table class="table table-striped table-bordered table-hover">
+                                <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Title</th>
+                                    <th>Submitted</th>
+                                    <th>Validated</th>
+                                    <th>Blocked</th>
+                                    <th>Action</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {% for contribution in contributions %}
+                                    <tr>
+                                        <td>{{ loop.index }}</td>
+                                        <td>{{ contribution.itemContribution.title }}</td>
+                                        <td>{% if contribution.itemContribution.submitted %}<i class="fas fa-check"></i>{% else %}<i class="fa fa-times"></i>{% endif %}</td>
+                                        <td>{% if contribution.itemContribution.validate %}<i class="fas fa-check"></i>{% else %}<i class="fa fa-times"></i>{% endif %}</td>
+                                        <td>{% if contribution.itemContribution.blocked %}<i class="fas fa-check"></i>{% else %}<i class="fa fa-times"></i>{% endif %}</td>
+                                        <td>
+                                            {% if not contribution.itemContribution.submitted %}
+                                                <a href="{{ path('app_chapter_edition_user', {'id': contribution.itemContribution.id }) }}" class="btn btn-primary"><i class="fas fa-edit"> Edit</i></a>
+                                                <a href="{{ path('app_item_contribution_submitting_submit', {'id': contribution.itemContribution.id }) }}" class="btn btn-success"><i class="fas fa-envelope"> Submit</i></a>
+                                            {% endif %}
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- /.table-responsive -->
+                    </div>
+                    <!-- /.panel-body -->
+                </div>
+                <!-- /.panel -->
+            </div>
+        </div>
+    </div>
+{% endblock body %}

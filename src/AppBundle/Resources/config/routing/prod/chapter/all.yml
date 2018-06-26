@@ -1,3 +1,15 @@
 app_chapter_showing:
     prefix: /showing/
     resource: "@AppBundle/Resources/config/routing/prod/chapter/showing.yml"
+
+app_chapter_creation:
+    prefix: /creation/
+    resource: "@AppBundle/Resources/config/routing/prod/chapter/creation.yml"
+
+app_chapter_listing:
+    prefix: /listing/
+    resource: "@AppBundle/Resources/config/routing/prod/chapter/listing.yml"
+
+app_chapter_edition:
+    prefix: /edition/
+    resource: "@AppBundle/Resources/config/routing/prod/chapter/edition.yml"

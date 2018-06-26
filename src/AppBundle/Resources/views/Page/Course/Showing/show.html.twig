@@ -3,17 +3,29 @@
 {% block sub_title %}{{ course.title }}{% endblock sub_title %}
 
 {% block content %}
-    <h3>{{ course.title }}</h3>
-    <p>{{ course.description }}</p>
-    <div class="level-wrapper">
-        {% for chapter in course.chapters %}
-            <a href="{{ path('app_chapter_showing_show', {'id': chapter.id}) }}">
-                <div class="row align-items-center h-100">
-                    <div class="col-12 text-center mx-auto">
-                        <span>{{ chapter.title }}</span>
-                    </div>
-                </div>
-            </a>
-        {% endfor %}
+    <div class="course-header" style="background-image: url('{{ vich_uploader_asset(course.grade, 'image') }}');">
+        <div class="row m-0 align-items-center h-100">
+            <div class="col-12 text-center mx-auto">
+                <span>{{ course.title }}</span>
+            </div>
+        </div>
     </div>
+    {% if course.chapters is not empty %}
+        <div class="course-box">
+            {% for chapter in course.chapters %}
+                <a href="{{ path('app_chapter_showing_show', {'id': chapter.id}) }}">
+                    <div class="course-item">
+                        <span class="title"><i class="fas fa-chevron-right"></i> {{ chapter.title }}</span>
+                    </div>
+                </a>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="row">
+            <div class="col-md-12 p-5">
+                <h1 class="text-center">We don't have any chapter for {{ course.title }}</h1>
+                <h5 class="text-center"><a href="{{ path('app_chapter_creation_create', {'id': course.id}) }}">Create a new chapter for this course ?</a></h5>
+            </div>
+        </div>
+    {% endif %}
 {% endblock content %}

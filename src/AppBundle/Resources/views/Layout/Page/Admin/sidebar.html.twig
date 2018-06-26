@@ -1,0 +1,119 @@
+<nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">Doctrina</a>
+    </div>
+    <!-- /.navbar-header -->
+
+    <ul class="nav navbar-top-links navbar-right">
+        <li class="dropdown">
+            Connected as : <i
+                    class="fas fa-user-circle"></i> {% if app.user.firstName is not null %}{{ app.user.firstName }} {{ app.user.lastName }}{% else %}{{ app.user.username }}{% endif %}
+        </li>
+        <!-- /.dropdown -->
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                Options <i class="fas fa-caret-down"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-user">
+                <li><a href="{{ path('app_user_profile_showing_show') }}"><i class="fas fa-user fa-fw"></i> My
+                        Profile</a>
+                </li>
+                <li><a href="{{ path('app_home_home_index') }}"><i class="fas fa-arrow-right fa-fw"></i> Back to
+                        Home</a>
+                </li>
+            </ul>
+            <!-- /.dropdown-user -->
+        </li>
+        <!-- /.dropdown -->
+    </ul>
+    <!-- /.navbar-top-links -->
+
+    <div class="navbar-default sidebar" role="navigation">
+        <div class="sidebar-nav navbar-collapse">
+            <ul class="nav in" id="side-menu">
+                <li class="separator-title">
+                    General
+                </li>
+                <li>
+                    <a href="{{ path('app_contribution_home_index') }}"><i
+                                class="fas fa-dashboard fa-fw"></i> Dashboard</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-bar-chart-o fa-fw"></i> Course<span class="fas arrow"></span></a>
+                    <ul class="nav nav-second-level collapse">
+                        <li>
+                            <a href="{{ path('app_course_creation_create') }}">Create</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('app_course_listing_user') }}">List</a>
+                        </li>
+                        <li>
+                            <a href="#">Vote</a>
+                        </li>
+                    </ul>
+                    <!-- /.nav-second-level -->
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-bar-chart-o fa-fw"></i> Quiz<span class="fas arrow"></span></a>
+                    <ul class="nav nav-second-level collapse">
+                        <li>
+                            <a href="{{ path('app_quiz_creation_create') }}">Create</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('app_quiz_listing_user') }}">List</a>
+                        </li>
+                        <li>
+                            <a href="#">Vote</a>
+                        </li>
+                    </ul>
+                    <!-- /.nav-second-level -->
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-bar-chart-o fa-fw"></i> Chapter<span class="fas arrow"></span></a>
+                    <ul class="nav nav-second-level collapse">
+                        <li>
+                            <a href="{{ path('app_chapter_creation_choose_grade') }}">Create</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('app_chapter_listing_user') }}">List</a>
+                        </li>
+                        <li>
+                            <a href="#">Vote</a>
+                        </li>
+                    </ul>
+                    <!-- /.nav-second-level -->
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-bar-chart-o fa-fw"></i> Question<span class="fas arrow"></span></a>
+                    <ul class="nav nav-second-level collapse">
+                        <li>
+                            <a href="{{ path('app_question_creation_choose_quiz') }}">Create</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('app_question_listing_choose_quiz') }}">List</a>
+                        </li>
+                        <li>
+                            <a href="#">Vote</a>
+                        </li>
+                    </ul>
+                </li>
+                {% if is_granted('ROLE_ADMIN') %}
+                    <li class="separator-title">
+                        ADMINISTRATION
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-chalkboard-teacher fa-fw"></i> KWS</a>
+                    </li>
+                {% endif %}
+            </ul>
+        </div>
+        <!-- /.sidebar-collapse -->
+    </div>
+    <!-- /.navbar-static-side -->
+</nav>

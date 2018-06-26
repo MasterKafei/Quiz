@@ -1,0 +1,5 @@
+app_course_edition_user:
+    path: /user/{id}
+    defaults: { _controller: 'AppBundle:Course/Edition:editUserCourse' }
+    requirements:
+        id: '\d+'

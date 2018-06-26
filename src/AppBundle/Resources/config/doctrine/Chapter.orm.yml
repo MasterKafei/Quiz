@@ -2,12 +2,6 @@ AppBundle\Entity\Chapter:
     type: entity
     table: null
     repositoryClass: AppBundle\Repository\ChapterRepository
-    id:
-        id:
-            type: integer
-            id: true
-            generator:
-                strategy: AUTO
     fields:
         title:
             type: string
@@ -15,7 +9,6 @@ AppBundle\Entity\Chapter:
         text:
             type: string
             length: 80000
-
     manyToOne:
         course:
             targetEntity: AppBundle\Entity\Course
@@ -25,13 +18,5 @@ AppBundle\Entity\Chapter:
                 name: chapter_id
                 referencedColumnName: id
                 nullable: false
-        contributions:
-            targetEntity: AppBundle\Entity\Contribution
-            inversedBy: icontribution
-            cascade: [ persist ]
-            joinColumn:
-                name: contribution_id
-                referencedColumnName: id
-                nullable: true
 
     lifecycleCallbacks: {  }

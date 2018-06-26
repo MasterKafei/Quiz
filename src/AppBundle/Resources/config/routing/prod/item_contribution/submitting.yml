@@ -1,0 +1,5 @@
+app_item_contribution_submitting_submit:
+    path: /submit/{id}
+    defaults: { _controller: 'AppBundle:ItemContribution\Submitting:submitItemContribution' }
+    requirements:
+        id: '\d+'

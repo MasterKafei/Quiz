@@ -4,6 +4,7 @@ namespace AppBundle\Controller\Quiz;
 
 
 use AppBundle\Entity\Category;
+use AppBundle\Entity\ItemContribution;
 use AppBundle\Entity\Question;
 use AppBundle\Entity\Quiz;
 use Doctrine\ORM\Tools\Pagination\Paginator;
@@ -33,6 +34,15 @@ class ListingController extends Controller
             'total' => $total,
             'current_page' => $pageNumber,
             'result_by_page' => 8,
+        ));
+    }
+
+    public function listUserQuizAction()
+    {
+        $quizzes = $this->getDoctrine()->getRepository(ItemContribution::class)->findUserItemContributions($this->getUser(), Quiz::class);
+
+        return $this->render('@Page/Quiz/Listing/user.html.twig', array(
+            'contributions' => $quizzes,
         ));
     }
 }

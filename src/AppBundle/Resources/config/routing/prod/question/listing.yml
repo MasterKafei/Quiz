@@ -1,0 +1,9 @@
+app_question_listing_choose_quiz:
+    path: /choose_quiz
+    defaults: { _controller: 'AppBundle:Question/Listing:chooseQuiz'}
+
+app_question_listing_user:
+    path: /user/{id}
+    defaults: { _controller: 'AppBundle:Question/Listing:listUserQuestion'}
+    requirements:
+        id: '\d+'

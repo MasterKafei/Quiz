@@ -1,0 +1,14 @@
+AppBundle\Entity\Vote:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\VoteRepository
+    fields:
+    manyToOne:
+        itemContribution:
+            targetEntity: AppBundle\Entity\ItemContribution
+            inversedBy: votes
+            cascade: [ persist ]
+            joinColumn:
+                name: vote_id
+                referencedColumnName: id
+    lifecycleCallbacks: {  }

@@ -1,0 +1,17 @@
+{% extends '@Layout/Page/Admin/base.html.twig' %}
+
+{% block sub_title %}Chapter{% endblock sub_title %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Chapter edition</h1>
+            <span class="text-muted">You can edit chapter here</span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 col-md-12">
+            {{ form(form) }}
+        </div>
+    </div>
+{% endblock body %}

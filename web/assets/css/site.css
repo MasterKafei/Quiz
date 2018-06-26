@@ -58,7 +58,7 @@ html, body {
 
 /* Link */
 a:link { text-decoration: none;  color : #333 ; border: 0px; -moz-outline-style: none;}
-a:active { text-decoration: underline; color : #333 ; border: 0px; -moz-outline-style: none;}
+a:active { text-decoration: none; color : #333 ; border: 0px; -moz-outline-style: none;}
 a:visited { text-decoration: none;  color : #333 ; border: 0px; -moz-outline-style: none;}
 a:hover { text-decoration: underline;  color : #988b8e ; border: 0px; -moz-outline-style: none;}
 a:focus { outline: none;-moz-outline-style: none;}
@@ -90,30 +90,94 @@ h3 {
   background-color: transparent;
 }
 
-.navbar .nav-logo {
-  width: 100px;
+.navbar-brand {
+  color: rgb(228, 228, 228);
+  font-weight: 100;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  -webkit-animation: fadeIn 2s ease-in ;
+  -moz-animation: fadeIn 2s ease-in ;
+  animation: fadeIn 2s ease-in ;
 }
 
-.navbar .nav-link {
+.navbar .nav-logo {
+  width: 100px;
+  -webkit-animation: fadeIn 2s ease-in ;
+  -moz-animation: fadeIn 2s ease-in ;
+  animation: fadeIn 2s ease-in ;
+}
+
+.navbar .nav-logo-min {
+  width: 50px;
+  margin-right: 10px;
+  -webkit-animation: fadeIn 2s ease-in ;
+  -moz-animation: fadeIn 2s ease-in ;
+  animation: fadeIn 2s ease-in ;
+}
+
+.navbar-dark .navbar-toggler {
+  color: whitesmoke;
+  border-color: transparent; /* Little trick to change toggler */
+  font-size: 1.7rem;
+}
+
+.navbar-dark .navbar-toggler:hover {
+  color: white;
+}
+
+.navbar-dark .navbar-toggler:focus {
+  outline: none;
+}
+
+.navbar .nav-item {
+  color: rgb(228, 228, 228);
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: rgb(228, 228, 228);
+  border-bottom: 2px solid transparent;
+}
+
+.navbar-dark .navbar-nav .nav-link {
   font-family: 'Comfortaa';
   font-size: 1.3rem;
   font-weight: lighter;
-  color: rgb(228, 228, 228) !important;
   padding-right: 20px !important;
   padding-left: 20px !important;
-  border-bottom: 2px solid transparent;
 }
 
-.navbar .nav-link:hover {
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: rgb(228, 228, 228);
   border-bottom: 2px solid white;
 }
 
-.navbar .no-hover {
-  border-bottom: 2px solid transparent;
+@media (max-width: 992px) {
+  .navbar {
+    border-bottom: 2px solid brown;
+  }
+
+  .navbar-dark .navbar-nav .nav-link {
+    border-top: 1px solid #444444;
+    margin: 15px 30px 0px 30px;
+    padding: 15px 0px 0px 30px !important;
+  }
+
+  .navbar-dark .navbar-nav .nav-link:hover {
+    border-bottom: 2px solid transparent;
+    color: brown;
+  }
+
+  .navbar-dark #navbar-right-box.navbar-nav:last-child {
+    margin-bottom: 20px;
+  }
 }
 
-.navbar .no-hover:hover {
-  border-bottom: 2px solid transparent;
+.navbar-dark .nav-item .nav-link.no-hover {
+  border-bottom: 2px solid transparent !important;
+}
+
+.navbar-dark .nav-item .nav-link.no-hover:hover {
+  border-bottom: 2px solid transparent !important;
 }
 
 .navbar-svg {
@@ -664,10 +728,12 @@ footer {
 
 /* --- Logout Sticky --- */
 .logout-sticky {
+  background-color: transparent;
   position: sticky;
-    bottom: 15px;
+  bottom: 15px;
   left: 0px;
   margin-left: 15px;
+  width: 50px;
 }
 
 .logout-sticky a:hover .fa-power-off {
@@ -676,4 +742,69 @@ footer {
 
 .logout-sticky a:hover .fa-square {
   color: #333333;
+}
+
+/* ---- Courses List --- */
+.course-header {
+  border-bottom: 5px solid #333333;
+  height: 300px;
+  background-image: url('../image/book.jpg');
+  background-position: center;
+  -webkit-filter: grayscale(0.5);
+  filter: grayscale(0.5);
+}
+
+.course-header span {
+  color: rgb(221, 221, 221);
+  font-size: 6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 20px 20px 10px 20px;
+  background-color: rgba(51, 51, 51, 0.35);
+}
+
+.course-box {
+  max-width: 100%;
+  margin: 5vh 0px 5vh 0px;
+}
+
+.course-box a:hover { text-decoration: none; color: #333333; border: 0px; -moz-outline-style: none;}
+
+.course-item {
+  width: 100%;
+  margin-bottom: 1px;
+}
+
+.course-item span.next {
+  display: inline-block;
+  width: 200px;
+  font-size: 1.8rem;
+  padding: 10px 0px 10px 30px;
+  transition: all .2s ease-in-out;
+}
+
+.course-item:hover {
+  z-index: 100;
+  background-color: #f5f5f5;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.course-item span.title {
+  font-size: 2rem;
+  padding: 10px 0px 10px 20px;
+}
+
+.course-item:hover span.title {
+  color: brown;
+}
+
+.course-view {
+  padding: 10vh 5vh;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* --- KeyFrames --- */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }

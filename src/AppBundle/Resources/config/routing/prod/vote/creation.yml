@@ -1,0 +1,7 @@
+app_vote_creation_create:
+    path: /create/{id}
+    defaults: { _controller: 'AppBundle:Vote\Creation:createVote' }
+
+app_vote_creation_preview:
+    path: /preview/
+    defaults: { _controller: 'AppBundle:Vote\Creation:previewContributions' }

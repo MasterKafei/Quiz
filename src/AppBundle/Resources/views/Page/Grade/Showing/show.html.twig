@@ -3,15 +3,19 @@
 {% block sub_title %}{{ grade.name }}{% endblock sub_title %}
 
 {% block content %}
-    <h3>{{ grade.name }}</h3>
-    <p>{{ grade.description }}</p>
-    <div class="level-wrapper">
-        {% for course in grade.courses %}
+    <div class="course-header" style="background-image: url('{{ vich_uploader_asset(grade, 'image') }}');">
+        <div class="row m-0 align-items-center h-100">
+            <div class="col-12 text-center mx-auto">
+                <span>{{ grade.name }}</span>
+            </div>
+        </div>
+    </div>
+    <div class="course-box">
+        {% for course in grade.courses if course.validate %}
             <a href="{{ path('app_course_showing_show', {'id': course.id}) }}">
-                <div class="row align-items-center h-100">
-                    <div class="col-12 text-center mx-auto">
-                        <span>{{ course.title }} - {{ course.description }}</span>
-                    </div>
+                <div class="course-item">
+                    <span class="next"><i class="fas fa-chevron-right"></i> {{ course.title }}</span>
+                    <span class="title">| {{ course.description }}</span>
                 </div>
             </a>
         {% endfor %}

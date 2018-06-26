@@ -17,14 +17,14 @@ class Contribution
     private $user;
 
     /**
-     * @var IContribution
+     * @var ItemContribution
      */
-    private $icontribution;
+    private $itemContribution;
 
     /**
      * @var bool
      */
-    private $isPublic;
+    private $isPublic = false;
 
     /**
      * @get id
@@ -41,11 +41,13 @@ class Contribution
      *
      * @param User $user
      *
-     * @return User
+     * @return Contribution
      */
     public function setUser($user)
     {
         $this->user = $user;
+
+        return $this;
     }
 
     /**
@@ -59,25 +61,25 @@ class Contribution
     }
 
     /**
-     * Set icontribution.
+     * Set itemContribution.
      *
-     * @param IContribution $icontribution
+     * @param ItemContribution $itemContribution
      *
      * @return Contribution
      */
-    public function setIContribution($icontribution)
+    public function setItemContribution(ItemContribution $itemContribution)
     {
-        $this->icontribution = $icontribution;
+        $this->itemContribution = $itemContribution;
         return $this;
     }
 
     /**
-     * @get icontribution
+     * @get itemContribution
      *
-     * @return IContribution
+     * @return ItemContribution
      */
-    public function getIContribution()
+    public function getItemContribution()
     {
-        return $this->icontribution;
+        return $this->itemContribution;
     }
 }

@@ -1,35 +1,43 @@
-<img class="navbar-svg" src="{{ asset('assets/svg/header.svg') }}">
-<nav class="navbar navbar-expand-sm navbar-transparent bg-transparent main-nav">
-    <div class="container">
+<img class="navbar-svg d-none d-lg-block" src="{{ asset('assets/svg/header.svg') }}">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand d-lg-none" href="#"><img class="nav-logo-min"
+                                                    src="{{ asset('assets/image/logo_white.png') }}"> Doctrina</a>
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle"
+            aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarToggle">
         <ul class="nav navbar-nav w-100 justify-content-end">
             <li class="nav-item">
-                <a class="nav-link" href="{{ path('app_quiz_listing_list') }}">{{ 'topbar.tests'|trans({}, 'label') }}</a>
+                <a class="nav-link" href="{{ path('app_contribution_home_index') }}">Contribute</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ path('app_grade_listing_list') }}">{{ 'topbar.courses'|trans({}, 'label') }}</a>
+                <a class="nav-link" href="{{ path('app_grade_listing_list') }}">Courses</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">{{ 'topbar.contribution'|trans({}, 'label') }}</a>
+                <a class="nav-link" href="{{ path('app_quiz_listing_list') }}">Practice</a>
             </li>
         </ul>
-        <ul class="nav navbar-nav justify-content-center">
-            <li class="nav-item"><a class="nav-link no-hover" href="{{ path('app_home_home_index') }}"><img class="nav-logo" src="{{ asset('assets/image/logo_white.png') }}"></a></li>
+        <ul class="nav navbar-nav justify-content-center d-none d-lg-block">
+            <li class="nav-item"><a class="nav-link no-hover" href="{{ path('app_home_home_index') }}"><img
+                            class="nav-logo" src="{{ asset('assets/image/logo_white.png') }}"></a></li>
         </ul>
-        <ul class="nav navbar-nav w-100">
+        <ul id="navbar-right-box" class="nav navbar-nav w-100">
             <li class="nav-item">
-                <a class="nav-link" href="{{ path('app_feature_listing_list') }}">{{ 'topbar.features'|trans({}, 'label') }}</a>
+                <a class="nav-link" href="{{ path('app_feature_listing_list') }}">Features</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ path('app_contact_message_creation_create') }}">{{ 'topbar.contact'|trans({}, 'label') }}</a>
+                <a class="nav-link" href="{{ path('app_contact_message_creation_create') }}">Contact</a>
             </li>
-            <li class="nav-item">
-                {% if app.user is defined and app.user is not null %}
+            {% if app.user is not null %}
+                <li class="nav-item">
                     <a class="nav-link" href="{{ path('app_user_profile_showing_show') }}">My Profile</a>
-                    {#<a class="nav-link" href="{{ path('app_user_authentication_signing_logout') }}">{{ 'logout'|trans({}, 'action') }}</a>#}
-                {% else %}
-                    <a class="nav-link" href="{{ path('app_user_authentication_signing_sign') }}">{{ 'login'|trans({}, 'action') }}</a>
-                {% endif %}
-            </li>
+                </li>
+            {% else %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('app_user_authentication_signing_sign') }}">Sign</a>
+                </li>
+            {% endif %}
         </ul>
     </div>
 </nav>

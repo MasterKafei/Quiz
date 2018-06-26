@@ -1,0 +1,37 @@
+AppBundle\Entity\ItemContribution:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\ItemContributionRepository
+    inheritanceType: JOINED
+    discriminatorColumn:
+        name: discr
+        type: string
+    discriminatorMap:
+        course: Course
+        chapter: Chapter
+        quiz: Quiz
+        vote: Vote
+        subject: Subject
+        question: Question
+    id:
+        id:
+            type: integer
+            generator: { strategy: AUTO }
+    fields:
+        validate:
+            type: boolean
+        submitted:
+            type: boolean
+        blocked:
+            type: boolean
+    oneToOne:
+        contribution:
+            targetEntity: AppBundle\Entity\Contribution
+            mappedBy: itemContribution
+            cascade: [ persist ]
+    oneToMany:
+        votes:
+            targetEntity: AppBundle\Entity\Vote
+            mappedBy: itemContribution
+            cascade: [ persist ]
+    lifecycleCallbacks: {  }

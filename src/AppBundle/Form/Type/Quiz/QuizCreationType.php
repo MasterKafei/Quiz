@@ -3,6 +3,7 @@
 namespace AppBundle\Form\Type\Quiz;
 
 use AppBundle\Entity\Category;
+use AppBundle\Entity\Course;
 use AppBundle\Entity\Quiz;
 use AppBundle\Form\Type\DateType;
 use Doctrine\ORM\EntityRepository;
@@ -21,23 +22,39 @@ class QuizCreationType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('title', TextType::class, array())
+            ->add('title', TextType::class, array(
+                'attr' => array(
+                    'class' => 'form-control',
+                )
+            ))
             ->add('description', TextareaType::class, array(
                 'required' => false,
+                'attr' => array(
+                    'class' => 'form-control',
+                )
             ))
-            ->add('category', EntityType::class, array(
-                'class' => Category::class,
+            ->add('course', EntityType::class, array(
+                'class' => Course::class,
                 'query_builder' => function (EntityRepository $er) {
                     return $er->createQueryBuilder('c')
                         ->orderBy('c.title', 'ASC');
                 },
                 'choice_label' => 'title',
+                'attr' => array(
+                    'class' => 'form-control',
+                )
             ))
             ->add('image', VichFileType::class, array(
-                'label' => 'Image'
+                'label' => 'Image',
+                'attr' => array(
+                    'class' => 'form-control',
+                )
             ))
             ->add('save', SubmitType::class, array(
-                'label' => 'Add question',
+                'label' => 'Save',
+                'attr' => array(
+                    'class' => 'btn btn-primary',
+                )
             ))
         ;
     }

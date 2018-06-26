@@ -1,0 +1,5 @@
+app_contribution_showing_show:
+    path: /show/{id}
+    defaults: { _controller: 'AppBundle:Contribution\Showing:showContribution' }
+    requirements:
+        id: '\d+'

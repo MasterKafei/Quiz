@@ -5,13 +5,8 @@ namespace AppBundle\Entity;
 /**
  * Question
  */
-class Question
+class Question extends ItemContribution
 {
-    /**
-     * @var int
-     */
-    private $id;
-
     /**
      * @var string
      */
@@ -42,16 +37,6 @@ class Question
      */
     private $answers = array();
 
-
-    /**
-     * Get id
-     *
-     * @return int
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
 
     /**
      * Set title
@@ -192,6 +177,11 @@ class Question
     {
         $this->answers = $answers;
         return $this;
+    }
+
+    public function getContributionName()
+    {
+        return 'Question';
     }
 }
 

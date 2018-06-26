@@ -13,3 +13,7 @@ app_quiz_list_new:
 app_quiz_listing_list:
     path: /list
     defaults: { _controller: 'AppBundle:Quiz/Listing:listQuiz' }
+
+app_quiz_listing_user:
+    path: /user
+    defaults: { _controller: 'AppBundle:Quiz\Listing:listUserQuiz' }

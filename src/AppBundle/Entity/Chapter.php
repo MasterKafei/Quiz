@@ -5,13 +5,8 @@ namespace AppBundle\Entity;
 /**
  * chapter
  */
-class Chapter implements IContribution
+class Chapter extends ItemContribution
 {
-    /**
-     * @var int
-     */
-    private $id;
-
     /**
      * @var Course
      */
@@ -26,26 +21,6 @@ class Chapter implements IContribution
      * @var string
      */
     private $text;
-
-    /**
-     * @var string
-     */
-    private $contributors;
-
-    /**
-     * @var IContribution
-     */
-    private $contributions;
-
-    /**
-     * Get id.
-     *
-     * @return int
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
 
     /**
      * Set course.
@@ -120,51 +95,8 @@ class Chapter implements IContribution
         return $this->text;
     }
 
-    /**
-     * Set contributors.
-     *
-     * @param string $contributors
-     *
-     * @return Chapter
-     */
-    public function setContributors($contributors)
+    public function getContributionName()
     {
-        $this->contributors = $contributors;
-
-        return $this;
-    }
-
-    /**
-     * Get contributors.
-     *
-     * @return string
-     */
-    public function getContributors()
-    {
-        return $this->contributors;
-    }
-
-    /**
-     * Set IContribution.
-     *
-     * @param IContribution
-     *
-     * @return Chapter
-     */
-    public function setContributions($contributions)
-    {
-        $this->contributions = $contributions;
-
-        return $this;
-    }
-
-    /**
-     * Get IContribution.
-     *
-     * @return IContribution
-     */
-    public function getContributions()
-    {
-        return $this->contributions;
+        return 'Chapter';
     }
 }

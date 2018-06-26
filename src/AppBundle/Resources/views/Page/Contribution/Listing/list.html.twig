@@ -1,0 +1,28 @@
+{% extends '@Layout/Page/Admin/base.html.twig' %}
+
+{% block body %}
+    <div class="content">
+        <table>
+            <thead>
+            <tr>
+                <td>Type</td>
+                <td>Name</td>
+                <td>Is submitted</td>
+                <td>Is validated</td>
+                <td>Is blocked</td>
+            </tr>
+            </thead>
+            <tbody>
+            {% for contribution in contributions %}
+                <tr>
+                    <td>{{ contribution.itemContribution.contributionName }}</td>
+                    <td>{{ contribution.itemContribution.title }}</td>
+                    <td><i class="fas {% if contribution.itemContribution.submitted %}fa-check{% else %}fa-times{% endif %}"></i></td>
+                    <td><i class="fas {% if contribution.itemContribution.validate %}fa-check{% else %}fa-times{% endif %}"></i></td>
+                    <td><i class="fas {% if not contribution.itemContribution.blocked %}fa-check{% else %}fa-times{% endif %}"></i></td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock body %}

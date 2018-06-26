@@ -1,7 +1,6 @@
 services:
-    app.form_type_extension:
-        class: AppBundle\Form\Extension\FormTypeExtension
-        calls:
-            - [setContainer, ['@service_container']]
+    app.extension.class:
+        class: AppBundle\Service\Extension\ClassExtension
+        public: false
         tags:
-            - { name: form.type_extension, extended_type: Symfony\Component\Form\Extension\Core\Type\FormType }
+            - { name: twig.extension }

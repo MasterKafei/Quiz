@@ -1,3 +1,11 @@
 app_question_showing:
     resource: "@AppBundle/Resources/config/routing/prod/question/showing.yml"
     prefix: /showing/
+
+app_question_creation:
+    resource: "@AppBundle/Resources/config/routing/prod/question/creation.yml"
+    prefix: /creation/
+
+app_question_listing:
+    resource: "@AppBundle/Resources/config/routing/prod/question/listing.yml"
+    prefix: /listing/

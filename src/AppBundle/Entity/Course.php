@@ -5,13 +5,8 @@ namespace AppBundle\Entity;
 /**
  * Course
  */
-class Course implements IContribution
+class Course extends ItemContribution
 {
-    /**
-     * @var int
-     */
-    private $id;
-
     /**
      * @var Chapter
      */
@@ -33,19 +28,14 @@ class Course implements IContribution
     private $grade;
 
     /**
-     * @var IContribution
+     * @var Quiz[]
      */
-    private $contributions;
+    private $quizzes;
 
     /**
-     * Get id.
-     *
-     * @return int
+     * @var Subject[]
      */
-    public function getId()
-    {
-        return $this->id;
-    }
+    private $subjects;
 
     /**
      * Set description.
@@ -143,27 +133,48 @@ class Course implements IContribution
         return $this;
     }
 
-    /**
-     * Set IContribution.
-     *
-     * @param IContribution
-     *
-     * @return Course
-     */
-    public function setContributions($contributions)
+    public function getContributionName()
     {
-        $this->contributions = $contributions;
+        return "Course";
+    }
+
+    /**
+     * Set quizzes.
+     *
+     * @param $quizzes
+     * @return $this
+     */
+    public function setQuizzes($quizzes)
+    {
+        $this->quizzes = $quizzes;
 
         return $this;
     }
 
     /**
-     * Get IContribution.
+     * Get quizzes.
      *
-     * @return IContribution
+     * @return Quiz[]
      */
-    public function getContributions()
+    public function getQuizzes()
     {
-        return $this->contributions;
+        return $this->quizzes;
+    }
+
+    public function setSubjects($subjects)
+    {
+        $this->subjects = $subjects;
+    }
+
+    public function getSubjects()
+    {
+        return $this->subjects;
+    }
+
+    public function addSubject($subject)
+    {
+        $this->subjects[] = $subject;
+
+        return $this;
     }
 }
