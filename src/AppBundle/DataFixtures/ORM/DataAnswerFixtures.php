@@ -4,8 +4,6 @@ namespace AppBundle\DataFixtures\ORM;
 
 use AppBundle\Entity\Answer;
 use AppBundle\Entity\Quiz;
-use AppBundle\Entity\User;
-use AppBundle\Entity\Question;
 use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;

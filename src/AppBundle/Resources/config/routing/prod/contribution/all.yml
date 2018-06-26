@@ -1,0 +1,15 @@
+app_contribution_creation:
+    prefix: /creation/
+    resource: "@AppBundle/Resources/config/routing/prod/contribution/creation.yml"
+
+app_contribution_home:
+    prefix: /home/
+    resource: "@AppBundle/Resources/config/routing/prod/contribution/home.yml"
+
+app_contribution_listing:
+    prefix: /listing/
+    resource: "@AppBundle/Resources/config/routing/prod/contribution/listing.yml"
+
+app_contribution_showing:
+    prefix: /showing/
+    resource: "@AppBundle/Resources/config/routing/prod/contribution/showing.yml"

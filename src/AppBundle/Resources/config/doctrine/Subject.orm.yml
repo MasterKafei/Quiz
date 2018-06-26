@@ -1,0 +1,13 @@
+AppBundle\Entity\Subject:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\SubjectRepository
+    manyToOne:
+        course:
+            targetEntity: AppBundle\Entity\Course
+            inversedBy: subjects
+            cascade: [ persist ]
+            joinColumn:
+                name: category_id
+                referencedColumnName: id
+    lifecycleCallbacks: {  }

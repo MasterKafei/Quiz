@@ -1,20 +1,13 @@
 AppBundle\Entity\Contribution:
     type: entity
     table: null
-    repositoryClass: AppBundle\Repository\Contribution
+    repositoryClass: AppBundle\Repository\ContributionRepository
     id:
         id:
             type: integer
             id: true
             generator:
                 strategy: AUTO
-    fields:
-        isPublic:
-            type: boolean
-    oneToMany:
-        icontribution:
-           targetEntity: AppBundle\Entity\IContribution
-           mappedBy: contributions
     manyToOne:
         user:
             targetEntity: AppBundle\Entity\User
@@ -24,5 +17,11 @@ AppBundle\Entity\Contribution:
                 name: user_id
                 referencedColumnName: id
                 nullable: false
-
+    oneToOne:
+        itemContribution:
+            targetEntity: AppBundle\Entity\ItemContribution
+            cascade: [ persist, remove ]
+            joinColumn:
+                name: item_contribution_id
+                referencedColumnName: id
     lifecycleCallbacks: {  }

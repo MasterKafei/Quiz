@@ -1,0 +1,3 @@
+app_vote_creation:
+    prefix: /creation/
+    resource: "@AppBundle/Resources/config/routing/prod/vote/creation.yml"

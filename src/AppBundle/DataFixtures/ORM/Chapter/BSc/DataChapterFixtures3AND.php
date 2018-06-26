@@ -3,9 +3,10 @@
 namespace AppBundle\DataFixtures\ORM\Chapter\BSc;
 
 use AppBundle\Entity\Chapter;
-use AppBundle\Entity\Course;
 use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
+use Doctrine\Common\Persistence\ObjectManager;
+
 /**
  * Created by PhpStorm.
  * User: User
@@ -20,14 +21,15 @@ class DataChapterFixtures3AND extends AbstractFixture implements OrderedFixtureI
     /**
      * Load data fixtures with the passed EntityManager
      *
-     * @param \Doctrine\Common\Persistence\ObjectManager $manager
+     * @param ObjectManager $manager
      */
-    public function load(\Doctrine\Common\Persistence\ObjectManager $manager)
+    public function load(ObjectManager $manager)
     {
         $chapter = new Chapter();
 
         $course = $this->getReference("3AND_course");
         $chapter
+            ->setValidate(true)
             ->setTitle('Chapitre 1 Android Preparation')
             ->setCourse($course)
             ->setText('Présent sur de nombreux  appareils du quotidien, Android est un systéme d\'exploitation basé sur le kernel linux.
@@ -44,6 +46,7 @@ class DataChapterFixtures3AND extends AbstractFixture implements OrderedFixtureI
 
         $course = $this->getReference("3AND_course");
         $chapter
+            ->setValidate(true)
             ->setTitle('Chapitre 2 Application Fundamentals')
             ->setCourse($course)
             ->setText('Une application Android est une collection d\'Activity, de services et d\'autres Componsants
@@ -74,6 +77,7 @@ class DataChapterFixtures3AND extends AbstractFixture implements OrderedFixtureI
         $chapter = new Chapter();
         $course = $this->getReference("3AND_course");
         $chapter
+            ->setValidate(true)
             ->setTitle('Chapitre 3 Advanced Development')
             ->setCourse($course)
             ->setText('Les Layouts sont des ViewGroup qui nous aident à positionner nos éléments graphiques.
@@ -106,6 +110,7 @@ class DataChapterFixtures3AND extends AbstractFixture implements OrderedFixtureI
         $chapter = new Chapter();
         $course = $this->getReference("3AND_course");
         $chapter
+            ->setValidate(true)
             ->setTitle('Chapitre 4 Ergonomics')
             ->setCourse($course)
             ->setText('En Android il existe 2 types de menu, les Options Menu(afficher quand le boutton menu est pressé),
@@ -141,6 +146,7 @@ class DataChapterFixtures3AND extends AbstractFixture implements OrderedFixtureI
         $chapter = new Chapter();
         $course = $this->getReference("3AND_course");
         $chapter
+            ->setValidate(true)
             ->setTitle('Chapitre 5 Datas')
             ->setCourse($course)
             ->setText('L\'instanceState va permettre de sauvegarder l\'état d\'une instance, les méthodes pour l\'utiliser sont le onSaveInstace State et le onRestoreInstanceState.

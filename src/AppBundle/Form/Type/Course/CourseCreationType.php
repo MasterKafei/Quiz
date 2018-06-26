@@ -30,7 +30,7 @@ class CourseCreationType extends AbstractType
                 'attr' => array('class' => 'form-control'),
             ))
             ->add('save', SubmitType::class, array(
-                'label' => 'Create',
+                'label' => 'Creation',
                 'attr' => array('class' => 'btn btn-info pull-right'),
             ))
         ;

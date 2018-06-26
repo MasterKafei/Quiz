@@ -10,7 +10,7 @@ use Symfony\Component\HttpFoundation\Request;
 class CreationController extends Controller
 {
     /**
-     * Create UserGroup
+     * Creation UserGroup
      * @param Request $request
      *
      * @return \Symfony\Component\HttpFoundation\Response

@@ -75,6 +75,7 @@ class QuizRepository extends EntityRepository
     {
         $qb = $this->createQueryBuilder('quiz')
             ->select('quiz')
+            ->where('quiz.validate = true')
             ->orderBy('quiz.validationDate', 'ASC')
             ->setFirstResult($pageNumber * $maxResults)
             ->setMaxResults($maxResults);

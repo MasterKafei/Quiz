@@ -8,13 +8,8 @@ use Vich\UploaderBundle\Mapping\Annotation as Vich;
  * Quiz
  * @Vich\Uploadable
  */
-class Quiz implements IContribution
+class Quiz extends ItemContribution
 {
-    /**
-     * @var int
-     */
-    private $id;
-
     /**
      * @var string
      */
@@ -57,14 +52,9 @@ class Quiz implements IContribution
     private $resettable = true;
 
     /**
-     * @var bool
+     * @var Course
      */
-    private $validate;
-
-    /**
-     * @var bool
-     */
-    private $submitted;
+    private $course;
 
     /**
      * @var Date
@@ -85,21 +75,6 @@ class Quiz implements IContribution
      * @var Date
      */
     private $lastUpdate;
-
-    /**
-     * @var IContribution
-     */
-    private $contributions;
-
-    /**
-     * Get id
-     *
-     * @return int
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
 
     /**
      * Set title
@@ -242,50 +217,6 @@ class Quiz implements IContribution
     }
 
     /**
-     * Set validate
-     *
-     * @param $validate
-     * @return $this
-     */
-    public function setValidate($validate)
-    {
-        $this->validate = $validate;
-        return $this;
-    }
-
-    /**
-     * Get validate
-     *
-     * @return bool
-     */
-    public function isValidate()
-    {
-        return $this->validate;
-    }
-
-    /**
-     * Set submitted
-     *
-     * @param $submitted
-     * @return $this
-     */
-    public function setSubmitted($submitted)
-    {
-        $this->submitted = $submitted;
-        return $this;
-    }
-
-    /**
-     * Get submitted
-     *
-     * @return bool
-     */
-    public function getSubmitted()
-    {
-        return $this->submitted;
-    }
-
-    /**
      * Set image
      *
      * @param $image
@@ -403,28 +334,32 @@ class Quiz implements IContribution
         return $this->lastUpdate;
     }
 
-    /**
-     * Set IContribution.
-     *
-     * @param IContribution
-     *
-     * @return Course
-     */
-    public function setContributions($contributions)
+    public function getContributionName()
     {
-        $this->contributions = $contributions;
-
-        return $this;
+        return "Test";
     }
 
     /**
-     * Get IContribution.
+     * Get course.
      *
-     * @return IContribution
+     * @return Course
      */
-    public function getContributions()
+    public function getCourse()
     {
-        return $this->contributions;
+        return $this->course;
+    }
+
+    /**
+     * Set course.
+     *
+     * @param $course
+     * @return $this
+     */
+    public function setCourse($course)
+    {
+        $this->course = $course;
+
+        return $this;
     }
 }
 

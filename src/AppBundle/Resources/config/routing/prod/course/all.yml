@@ -1,3 +1,15 @@
 app_course_showing:
     prefix: /showing/
     resource: "@AppBundle/Resources/config/routing/prod/course/showing.yml"
+
+app_course_creation:
+    prefix: /creation/
+    resource: "@AppBundle/Resources/config/routing/prod/course/creation.yml"
+
+app_course_listing:
+    prefix: /listing/
+    resource: "@AppBundle/Resources/config/routing/prod/course/listing.yml"
+
+app_course_edit:
+    prefix: /edition/
+    resource: "@AppBundle/Resources/config/routing/prod/course/edition.yml"

@@ -26,8 +26,15 @@ class QuestionCreationType extends AbstractType
         $builder
             ->add('title', TextType::class, array(
                 'required' => false,
+                'attr' => array(
+                    'class' => 'form-control',
+                ),
             ))
-            ->add('text', TextareaType::class, array())
+            ->add('text', TextareaType::class, array(
+                'attr' => array(
+                    'class' => 'form-control',
+                ),
+            ))
             ->add('responses', CollectionType::class, array(
                 'entry_type' => TextType::class,
                 'allow_add' => true,

@@ -1,0 +1,9 @@
+app_question_creation_choose_quiz:
+    path: /choose_quiz/
+    defaults: { _controller: 'AppBundle:Question/Creation:chooseQuiz' }
+
+app_question_creation_create:
+    path: /create/{id}
+    defaults: { _controller: 'AppBundle:Question/Creation:createQuestion' }
+    requirements:
+        id: '\d+'

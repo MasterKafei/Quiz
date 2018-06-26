@@ -1,0 +1,5 @@
+app_quiz_edition_user:
+    path: /user/{id}
+    defaults: { _controller: 'AppBundle:Quiz\Edition:editUserQuiz' }
+    requirements:
+        id: '\d+'

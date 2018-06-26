@@ -1,0 +1,7 @@
+app_item_contribution_listing:
+    prefix: /listing/
+    resource: '@AppBundle/Resources/config/routing/prod/item_contribution/listing.yml'
+
+app_item_contribution_submitting:
+    prefix: /submitting/
+    resource: '@AppBundle/Resources/config/routing/prod/item_contribution/submitting.yml'

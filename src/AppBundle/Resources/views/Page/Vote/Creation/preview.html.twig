@@ -1,0 +1,13 @@
+{% extends '@Layout/Page/Full/base.html.twig' %}
+
+{% block sub_title %}Choose contribution{% endblock sub_title %}
+
+{% block content %}
+    <div class="content">
+        {% for contribution in contributions if contribution.submitted and not contribution.validate %}
+            <div>
+                <span><a href="{{ path('app_vote_creation_create', {'id': contribution.id}) }}">{{ contribution.contributionName }}</a></span>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock content %}

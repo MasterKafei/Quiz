@@ -1,0 +1,5 @@
+app_chapter_edition_user:
+    path: /edit/{id}
+    defaults: { _controller: 'AppBundle:Chapter\Edition:editChapter'}
+    requirements:
+        id: '\d+'

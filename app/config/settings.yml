@@ -3,3 +3,5 @@ parameters:
         sender_address: "%mailer_user%"
         sender_name: 'Doctrina'
     vich_upload_images_folder: '%kernel.root_dir%/../web%images_folder%'
+    vote_number_validation: 15
+    vote_number_cancellation: 15

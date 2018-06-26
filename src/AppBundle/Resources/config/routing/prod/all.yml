@@ -45,3 +45,15 @@ app_course:
 app_chapter:
     resource: "@AppBundle/Resources/config/routing/prod/chapter/all.yml"
     prefix:   /chapter/
+
+app_contribution:
+    resource: "@AppBundle/Resources/config/routing/prod/contribution/all.yml"
+    prefix:   /contribution/
+
+app_vote:
+    resource: "@AppBundle/Resources/config/routing/prod/vote/all.yml"
+    prefix:   /vote/
+
+app_item_contribution:
+    resource: "@AppBundle/Resources/config/routing/prod/item_contribution/all.yml"
+    prefix:   /item_contribution/

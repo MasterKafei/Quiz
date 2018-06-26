@@ -5,3 +5,9 @@ services:
         arguments: ['@router']
         tags:
             - { name: form.type, alias: app_form_type_user_authentication_authenticate }
+    app.form.type.extension:
+        class: AppBundle\Form\Extension\FormTypeExtension
+        calls:
+            - [setContainer, ['@service_container']]
+        tags:
+            - { name: form.type_extension, extended_type: Symfony\Component\Form\Extension\Core\Type\FormType }

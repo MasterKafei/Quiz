@@ -1,0 +1,74 @@
+{% extends '@Layout/Page/Admin/base.html.twig' %}
+
+{% block body %}
+    <div class="box box-info">
+        <div class="box-header with-border">
+            <h3 class="box-title">Add question to "{{ quiz.title }}"</h3>
+        </div>
+        {{ form_start(form, {'attr': {'class': 'form-horizontal', 'id': 'form-question-create'}}) }}
+        <div class="box-body">
+            <div class="form-group">
+                <label class="col-sm-2 control-label">{{ form_label(form.title) }}</label>
+                <div class="col-sm-10">
+                    {{ form_widget(form.title, {'attr': {'class': 'form-control'}} ) }}
+                </div>
+            </div>
+            <div class="form-group" id="responses-fields-list" data-prototype="{{ form_widget(form.responses.vars.prototype)|e }}" data-widget-tags="
+                {{ '<div class="form-group"></div>'|e }}"></div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">{{ form_label(form.text) }}</label>
+                <div class="col-sm-10">
+                    {{ form_widget(form.text, {'attr': {'class': 'form-control'}} ) }}
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">
+                    <a href="#" class="add-another-collection-widget pul-right btn btn-info" data-placement="top" data-list="#responses-fields-list" data-toggle="tooltip" title="Add proposition">
+                        <i class="fa fa-plus"></i>
+                    </a>
+                </label>
+                <label class="col-sm-10 control-label">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <input type="checkbox" id="question_creation_solution_0" name="question_creation[solution][0]" value="1">
+                        </span>
+                        <input type="text" id="question_creation_responses_0" name="question_creation[responses][0]" required="required" class="form-control">
+                    </div>
+                    <label id="question_creation_responses_0-error" class="error pull-left" for="question_creation_responses_0"></label>
+                </label>
+            </div>
+            {% for key,response in form.responses %}
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">
+                        <a href="#" class="add-another-collection-widget pul-right btn btn-info" data-placement="top" data-list="#responses-fields-list" data-toggle="tooltip" title="Add proposition">
+                            <i class="fa fa-plus"></i>
+                        </a>
+                    </label>
+                    <label class="col-sm-10 control-label">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                {{ form_widget(form.solution[key]) }}
+                            </span>
+                            {{ form_widget(response) }}
+                        </div>
+                    </label>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="box-footer">
+            <label class="pull-left">
+                <a href="#" class="btn btn-warning">Quit without saving current question</a>
+            </label>
+            <label class="pull-right">
+                <a id="save-quit-link" href="#" class="btn btn-success">Save and quit</a>
+                <input id="continue-hidden-input" type="hidden" name="continue" value="1">
+                {{ form_widget(form.save, {'attr': {'class': 'btn btn-info'}, 'label': 'Save and continue'}) }}
+            </label>
+        </div>
+        {{ form_end(form) }}
+    </div>
+{% endblock body %}
+
+{% block javascripts %}
+        <script src="{{ asset('assets/js/Page/Question/Creation/add.js') }}"></script>
+{% endblock %}

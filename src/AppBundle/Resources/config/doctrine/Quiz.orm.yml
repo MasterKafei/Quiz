@@ -2,12 +2,6 @@ AppBundle\Entity\Quiz:
     type: entity
     table: null
     repositoryClass: AppBundle\Repository\QuizRepository
-    id:
-        id:
-            type: integer
-            id: true
-            generator:
-                strategy: AUTO
     fields:
         title:
             type: string
@@ -19,10 +13,6 @@ AppBundle\Entity\Quiz:
         marks:
             type: array
         resettable:
-            type: boolean
-        validate:
-            type: boolean
-        submitted:
             type: boolean
         imagePath:
             type: string
@@ -52,13 +42,12 @@ AppBundle\Entity\Quiz:
                 name: category_id
                 referencedColumnName: id
                 nullable: true
-        contributions:
-            targetEntity: AppBundle\Entity\Contribution
-            inversedBy: icontributions
+        course:
+            targetEntity: AppBundle\Entity\Course
+            inversedBy: quizzes
             cascade: [ persist ]
             joinColumn:
-                name: contribution_id
+                name: course_id
                 referencedColumnName: id
                 nullable: true
-
     lifecycleCallbacks: {  }

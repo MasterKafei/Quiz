@@ -33,3 +33,13 @@ services:
         class: AppBundle\Service\Business\FormBusiness
         parent: app.util.abstract_container_aware
         public: true
+
+    app.business.contribution:
+        class: AppBundle\Service\Business\ContributionBusiness
+        parent: app.util.abstract_container_aware
+        public: true
+
+    app.business.item_contribution:
+        class: AppBundle\Service\Business\ItemContributionBusiness
+        parent: app.util.abstract_container_aware
+        public: true
