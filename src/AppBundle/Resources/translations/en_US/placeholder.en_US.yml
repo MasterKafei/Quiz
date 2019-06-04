@@ -1,16 +1,16 @@
 user:
     authentication:
         login:
-            id_booster: ID Booster
+            id_booster: ID booster
             password: Password
         register:
             id_booster: Enter your ID booster
             password: Password
             confirm_password: Password
         forgot_password:
-            id_booster: ID Booster
+            id_booster: ID booster
             password: Password
-            repeat_password: Confirm Password
+            repeat_password: Confirm password
 
 quiz:
     listing:
@@ -22,3 +22,9 @@ contact_message:
         last_name: Last name
         email: Email
         message: Your message
+
+profile_edition:
+    first_name: First name
+    last_name: Last name
+    new_password: New password
+    confirm_password: Confirm password

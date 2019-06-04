@@ -21,6 +21,8 @@ class DataASc1Fixtures extends AbstractFixture implements OrderedFixtureInterfac
             ->setValidate(true)
             ->setGrade($grade);
 
+        $this->setReference("1ADS_course", $course);
+
         $manager->persist($course);
 
         $course = new Course();

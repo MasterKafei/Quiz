@@ -1,8 +1,8 @@
 home:
     title: Learn is <span class="brown-text">power</span>
-    sub_title: Be powerful with doctrina
+    sub_title: Be powerful with Doctrina
     description: |
-        Doctrina is a knowledge sharing platform that can be used by all Supinfo students
+        Doctrina is a knowledge sharing platform that can be used by all SUPINFO students
         to help everyone learn more easily. This platform is in essence 100% collaborative,
         in fact each person can contribute with creation of tests, exercises, or course summaries.
         Whenever a person contributes, his work is added to Doctrina (after verification of the
@@ -11,13 +11,81 @@ home:
         can also be linked to the KWS subject matter, indeed a contribution is a knowledge sharing
         in its own right!
 
+widget:
+    logout: Click here to <b>Logout</b>
+
+course:
+    title: Please choose your level
+
 quiz:
     title: Our awesome tests
+    results:
+        completed: "You completed the quiz:"
+        score:
+            wrong: Not very impressive...
+            intermediate: Not bad
+            well: Well done!
+            perfect: Perfect!
+
+        answers:
+            wrong: Wrong Answers
+            correct: Correct Answers
+
+features:
+    title: Take control over your learning methods with our service. And enter in a <br> new world of knowledge.
 
 contact:
-    title: Contact Us
-    sub_title: How can we help you ?
+    title: Contact us
+    sub_title: How can we help you?
 
 contributor:
     listing:
         title: Discover our team
+
+user:
+    authentication:
+        forgot_password: |
+            If you loose your account you can request a new password, enter your ID booster below.
+            Afterward, you will receive a link to get a new password.
+    profile:
+        title: About me
+        quizzes:
+            created: Quizzes created
+            completed: Quizzes completed
+        courses: Courses created
+        score: Average score
+        progress: Progress
+        edit: "Edit my profile:"
+
+footer:
+    text: 'Made with <i class="fas fa-heart" style="color: #a52a2a;)"></i> by <a href="%path%" style="color: #f5deb3;">our team</a>'
+    copyright: Copyright © Doctrina 2018 - All Right Reserved
+
+contribution:
+    course:
+        creation:
+            title: Course creation
+            sub_title: You can create courses here
+        edition:
+            title: Course edition
+            sub_title: You can edit courses here
+        listing:
+            title: Every course you created
+    quiz:
+        creation:
+            title: Quiz creation
+            sub_title: You can create quizzes here
+        edition:
+            title: Quiz edition
+            sub_title: You can edit quizzes here
+        listing:
+            title: Every quiz you created
+    chapter:
+        creation:
+            title: Chapter creation
+            sub_title: You can create chapters here
+        edition:
+            title: Chapter edition
+            sub_title: You can edit chapters here
+        listing:
+            title: Every chapter you created

@@ -208,7 +208,7 @@ class Data3MGTFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
         );
 
         $quiz
-            ->setTitle('QCM MGT révision de 3éme année')
+            ->setTitle('QCM MGT révision de 3ème année')
             ->setDescription('Questionnaire révision')
             ->setCategory($category)
             ->setQuestions($questions)

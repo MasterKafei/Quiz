@@ -1,19 +1,19 @@
 user:
     registration:
-        mail_sended: A confirmation email has been sent to %mail_address%
-        success: Your email address has been confirmed, you can now login
+        mail_sended: A confirmation email has been sent to %mail_address%.
+        success: Your email address has been confirmed, you can now login.
 
     profile:
         edition:
             edit:
-                success: Your account was updated
+                success: Your account was updated.
 
     forgot_password:
-        mail_send: A reset email has been sent to %mail_address%
-        reset_success: Your password was update with success
+        mail_send: A reset email has been sent to %mail_address%.
+        reset_success: Your password was update with success.
         id_booster:
-            not_found: The Id booster is not attached to any account
+            not_found: The ID Booster is not attached to any account.
 
 contact_message:
     creation:
-        confirmation: Your message has been received by our team
+        confirmation: Your message has been received by our team.

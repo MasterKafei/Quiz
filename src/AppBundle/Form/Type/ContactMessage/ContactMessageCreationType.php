@@ -30,7 +30,7 @@ class ContactMessageCreationType extends AbstractType
                 'label' => 'Your message',
             ))
             ->add('submit', SubmitType::class, array(
-                'label' => 'Send message',
+                'label' => 'contact_message.submit',
             ))
         ;
     }
@@ -39,7 +39,8 @@ class ContactMessageCreationType extends AbstractType
     {
         $resolver->setDefaults(
             array(
-                'data_class' => ContactMessage::class
+                'data_class' => ContactMessage::class,
+                'translation_domain' => 'action'
             )
         );
     }

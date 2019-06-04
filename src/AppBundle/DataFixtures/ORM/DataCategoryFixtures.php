@@ -15,6 +15,15 @@ class DataCategoryFixtures extends AbstractFixture implements OrderedFixtureInte
         $category = new Category();
 
         $category
+            ->setTitle('1ADS')
+            ->setDescription('ADS - Algorithm in Python');
+
+        $this->setReference('category 1ads', $category);
+        $manager->persist($category);
+
+        $category = new Category();
+
+        $category
             ->setTitle('3MET')
             ->setDescription('ITIL Foundations');
 

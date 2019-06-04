@@ -35,7 +35,7 @@ class EditProfileType extends AbstractType
                 'required' => false,
             ))
             ->add('submit', SubmitType::class, array(
-                'label' => 'Apply changes'
+                'label' => 'profile_edition.submit'
             ));
     }
 
@@ -45,6 +45,7 @@ class EditProfileType extends AbstractType
             ->setDefaults(
                 array(
                     'data_class' => User::class,
+                    'translation_domain' => 'action'
                 )
             );
     }

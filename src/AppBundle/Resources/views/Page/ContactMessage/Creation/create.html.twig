@@ -1,14 +1,14 @@
 {% extends '@Layout/Page/Full/base.html.twig' %}
 
-{% block sub_title %}Contact{% endblock sub_title %}
+{% block sub_title %}{{ 'tab_sub_title.contact'|trans({}, 'label') }}{% endblock sub_title %}
 
 {% block content %}
     <div class="content">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 p-5">
-                    <h1 class="text-center">Contact Us</h1>
-                    <h5 class="text-center">How can we help you ?</h5>
+                    <h1 class="text-center">{{ 'contact.title'|trans({}, 'messages') }}</h1>
+                    <h5 class="text-center">{{ 'contact.sub_title'|trans({}, 'messages') }}</h5>
                 </div>
             </div>
             {{ form_start(form, {'attr': {'class': 'custom-form-big'}}) }}

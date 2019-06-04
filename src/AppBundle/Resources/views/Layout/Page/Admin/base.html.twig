@@ -3,7 +3,7 @@
 {% block html_head %}
     <head>
         {% block head %}
-            <title>{% block title %}Doctrina - {% block sub_title %}{% endblock sub_title %}{% endblock title %}</title>
+            <title>{% block title %}{{ 'tab_title'|trans({}, 'label') }} - {% block sub_title %}{% endblock sub_title %}{% endblock title %}</title>
 
             <meta charset="utf-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">

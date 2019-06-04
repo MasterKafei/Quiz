@@ -1,3 +1,25 @@
+tab_title: Doctrina
+
+tab_sub_title:
+    home: Accueil
+    grades: Niveaux
+    courses: Cours
+    chapters: Chapitres
+    tests: Tests
+    quizzes: Quiz
+    questions: Questions
+    session: Session
+    results: Résultats
+    features: Fonctionnalités
+    contact: Contact
+    profile: Profil
+    sign: Connexion
+    contribution: Contribution
+    team: Équipe
+    change_password: Changement de mot de passe
+    request_new_password: Demande de nouveau mot de passe
+    choose_contribution: Choix de contribution
+
 user:
     authentication:
         login:
@@ -14,13 +36,88 @@ user:
             submit: S'inscrire
         forgot_password:
             request_new_password:
-                id_booster: Id Booster
+                id_booster: ID booster
                 submit: Envoyer
             change_password:
                 submit: Réinitialiser
+
 topbar:
     tests: Tests
+    contribute: Contribuer
     courses: Cours
-    contribution: Contribution
+    practice: S'entraîner
     features: Fonctionnalités
     contact: Contact
+    profile: Mon profil
+    sign: Connexion
+
+contribution:
+    topbar:
+        connected_as: "Connecté en tant que :"
+        options: Options
+        user_profile: Mon Profil
+        go_home: Retour à l'acceuil
+    sidebar:
+        general: Général
+        dashboard: Tableau de bord
+        course:
+            name: Cours
+            creation: Créer
+            listing: Liste
+            voting: Voter
+        quiz:
+            name: Quiz
+            creation: Créer
+            listing: Liste
+            voting: Voter
+        chapter:
+            name: Chapitre
+            creation: Créer
+            listing: Liste
+            voting: Voter
+        question:
+            name: Question
+            creation: Créer
+            listing: Liste
+            voting: Voter
+    course:
+        creation:
+            title: Titre
+            description: Description
+            submit: Créer
+        listing:
+            table: Cours
+            number: "#"
+            title: Titre
+            submitted: Entré
+            validated: Validé
+            blocked: Bloqué
+            action: Action
+    quiz:
+        creation:
+            title: Titre
+            description: Description
+            course: Cours
+            image: Image
+            submit: Créer
+        listing:
+            table: Quiz
+            number: "#"
+            title: Titre
+            submitted: Entré
+            validated: Validé
+            blocked: Bloqué
+            action: Action
+    chapter:
+        creation:
+            title: Titre
+            text: Texte
+            submit: Créer
+        listing:
+            table: Chapitres
+            number: "#"
+            title: Titre
+            submitted: Entré
+            validated: Validé
+            blocked: Bloqué
+            action: Action

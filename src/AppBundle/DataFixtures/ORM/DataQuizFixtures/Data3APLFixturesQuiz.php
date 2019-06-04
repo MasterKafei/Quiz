@@ -217,7 +217,7 @@ class Data3APLFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
         );
 
         $quiz
-            ->setTitle('QCM 3APL révision de 3éme année')
+            ->setTitle('QCM 3APL révision de 3ème année')
             ->setDescription('Questionnaire révision')
             ->setCategory($category)
             ->setQuestions($questions)

@@ -14,7 +14,7 @@
               rel="icon"
               type="image/png">
 
-        <title>{% block title %}Doctrina - {% block sub_title %}{% endblock sub_title %}{% endblock title %}</title>
+        <title>{% block title %}{{ 'tab_title'|trans({}, 'label') }} - {% block sub_title %}{% endblock sub_title %}{% endblock title %}</title>
 
         {% include '@Layout/Page/Default/stylesheets.html.twig' %}
         {% block stylesheets %}{% endblock %}

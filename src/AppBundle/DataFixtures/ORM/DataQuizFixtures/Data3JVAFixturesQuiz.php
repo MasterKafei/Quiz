@@ -218,7 +218,7 @@ class Data3JVAFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
         );
 
         $quiz
-            ->setTitle('QCM JVA révision de 3éme année')
+            ->setTitle('QCM JVA révision de 3ème année')
             ->setDescription('Questionnaire révision')
             ->setCategory($category)
             ->setQuestions($questions)

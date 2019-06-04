@@ -3,3 +3,9 @@ registration: Registration
 register: Register
 logout: Logout
 submit: Submit
+
+contact_message:
+    submit: Send message
+
+profile_edition:
+    submit: Apply changes

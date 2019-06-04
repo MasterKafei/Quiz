@@ -23,17 +23,20 @@ class QuizCreationType extends AbstractType
     {
         $builder
             ->add('title', TextType::class, array(
+                'label' => 'contribution.quiz.creation.title',
                 'attr' => array(
                     'class' => 'form-control',
                 )
             ))
             ->add('description', TextareaType::class, array(
+                'label' => 'contribution.quiz.creation.description',
                 'required' => false,
                 'attr' => array(
                     'class' => 'form-control',
                 )
             ))
             ->add('course', EntityType::class, array(
+                'label' => 'contribution.quiz.creation.course',
                 'class' => Course::class,
                 'query_builder' => function (EntityRepository $er) {
                     return $er->createQueryBuilder('c')
@@ -45,13 +48,14 @@ class QuizCreationType extends AbstractType
                 )
             ))
             ->add('image', VichFileType::class, array(
-                'label' => 'Image',
+                'label' => 'contribution.quiz.creation.image',
+                'translation_domain' => 'label',
                 'attr' => array(
                     'class' => 'form-control',
                 )
             ))
             ->add('save', SubmitType::class, array(
-                'label' => 'Save',
+                'label' => 'contribution.quiz.creation.submit',
                 'attr' => array(
                     'class' => 'btn btn-primary',
                 )
@@ -63,6 +67,7 @@ class QuizCreationType extends AbstractType
     {
         $resolver->setDefaults(array(
             'data_class' => Quiz::class,
+            'translation_domain' => 'label'
         ));
     }
 }

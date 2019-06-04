@@ -9,11 +9,13 @@
 namespace AppBundle\Form\Type\Chapter;
 
 
+use AppBundle\Entity\Chapter;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class ChapterCreationType extends AbstractType
 {
@@ -21,18 +23,28 @@ class ChapterCreationType extends AbstractType
     {
         $builder
             ->add('title', TextType::class, array(
-                'label' => 'Title',
+                'label' => 'contribution.chapter.creation.title',
                 'attr' => array('class' => 'form-control'),
             ))
             ->add('text', TextareaType::class, array(
-                'label' => 'Text',
+                'label' => 'contribution.chapter.creation.text',
                 'required' => false,
                 'attr' => array('class' => 'form-control'),
             ))
             ->add('save', SubmitType::class, array(
-                'label' => 'Creation',
+                'label' => 'contribution.chapter.creation.submit',
                 'attr' => array('class' => 'btn btn-info pull-right'),
             ))
         ;
+    }
+
+    public function configureOptions(OptionsResolver $resolver)
+    {
+        $resolver->setDefaults(
+            array(
+                'data_class' => Chapter::class,
+                'translation_domain' => 'label'
+            )
+        );
     }
 }

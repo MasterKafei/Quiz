@@ -9,13 +9,13 @@
     <div class="collapse navbar-collapse" id="navbarToggle">
         <ul class="nav navbar-nav w-100 justify-content-end">
             <li class="nav-item">
-                <a class="nav-link" href="{{ path('app_contribution_home_index') }}">Contribute</a>
+                <a class="nav-link" href="{{ path('app_contribution_home_index') }}">{{ 'topbar.contribute'|trans({}, 'label') }}</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ path('app_grade_listing_list') }}">Courses</a>
+                <a class="nav-link" href="{{ path('app_grade_listing_list') }}">{{ 'topbar.courses'|trans({}, 'label') }}</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ path('app_quiz_listing_list') }}">Practice</a>
+                <a class="nav-link" href="{{ path('app_quiz_listing_list') }}">{{ 'topbar.practice'|trans({}, 'label') }}</a>
             </li>
         </ul>
         <ul class="nav navbar-nav justify-content-center d-none d-lg-block">
@@ -24,18 +24,18 @@
         </ul>
         <ul id="navbar-right-box" class="nav navbar-nav w-100">
             <li class="nav-item">
-                <a class="nav-link" href="{{ path('app_feature_listing_list') }}">Features</a>
+                <a class="nav-link" href="{{ path('app_feature_listing_list') }}">{{ 'topbar.features'|trans({}, 'label') }}</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ path('app_contact_message_creation_create') }}">Contact</a>
+                <a class="nav-link" href="{{ path('app_contact_message_creation_create') }}">{{ 'topbar.contact'|trans({}, 'label') }}</a>
             </li>
             {% if app.user is not null %}
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ path('app_user_profile_showing_show') }}">My Profile</a>
+                    <a class="nav-link" href="{{ path('app_user_profile_showing_show') }}">{{ 'topbar.profile'|trans({}, 'label') }}</a>
                 </li>
             {% else %}
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ path('app_user_authentication_signing_sign') }}">Sign</a>
+                    <a class="nav-link" href="{{ path('app_user_authentication_signing_sign') }}">{{ 'topbar.sign'|trans({}, 'label') }}</a>
                 </li>
             {% endif %}
         </ul>

@@ -1,6 +1,9 @@
 services:
 
     #Region Quiz
+    AppBundle\DataFixtures\ORM\DataQuizFixtures\Data1ADSFixturesQuiz:
+        tags: [doctrine.fixture.orm]
+
     AppBundle\DataFixtures\ORM\DataQuizFixtures\Data3AITFixturesQuiz:
         tags: [doctrine.fixture.orm]
 
@@ -67,6 +70,9 @@ services:
         tags: [doctrine.fixture.orm]
 
     #Region Chapter
+    AppBundle\DataFixtures\ORM\Chapter\ASc1\DataChapterFixtures1ADS:
+        tags: [doctrine.fixture.orm]
+
     AppBundle\DataFixtures\ORM\Chapter\BSc\DataChapterFixtures3AND:
         tags: [doctrine.fixture.orm]
 

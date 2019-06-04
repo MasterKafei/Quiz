@@ -1,14 +1,14 @@
 user:
     authentication:
         login:
-            id_booster: ID Booster
+            id_booster: ID booster
             password: Mot de passe
         register:
             id_booster: Entrez votre ID booster
             password: Mot de passe
             confirm_password: Mot de passe
         forgot_password:
-            id_booster: ID Booster
+            id_booster: ID booster
             password: Mot de passe
             repeat_password: Confirmer le mot de passe
 
@@ -22,3 +22,9 @@ contact_message:
         last_name: Nom
         email: Email
         message: Votre message
+
+profile_edition:
+    first_name: Prénom
+    last_name: Nom
+    new_password: Nouveau mot de passe
+    confirm_password: Confirmer le mot de passe

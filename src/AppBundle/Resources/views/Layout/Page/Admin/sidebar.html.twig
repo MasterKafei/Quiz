@@ -12,20 +12,20 @@
 
     <ul class="nav navbar-top-links navbar-right">
         <li class="dropdown">
-            Connected as : <i
+            {{ 'contribution.topbar.connected_as'|trans({}, 'label') }} <i
                     class="fas fa-user-circle"></i> {% if app.user.firstName is not null %}{{ app.user.firstName }} {{ app.user.lastName }}{% else %}{{ app.user.username }}{% endif %}
         </li>
         <!-- /.dropdown -->
         <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                Options <i class="fas fa-caret-down"></i>
+                {{ 'contribution.topbar.options'|trans({}, 'label') }} <i class="fas fa-caret-down"></i>
             </a>
             <ul class="dropdown-menu dropdown-user">
-                <li><a href="{{ path('app_user_profile_showing_show') }}"><i class="fas fa-user fa-fw"></i> My
-                        Profile</a>
+                <li><a href="{{ path('app_user_profile_showing_show') }}"><i class="fas fa-user fa-fw"></i>
+                        {{ 'contribution.topbar.user_profile'|trans({}, 'label') }}</a>
                 </li>
-                <li><a href="{{ path('app_home_home_index') }}"><i class="fas fa-arrow-right fa-fw"></i> Back to
-                        Home</a>
+                <li><a href="{{ path('app_home_home_index') }}"><i class="fas fa-arrow-right fa-fw"></i>
+                        {{ 'contribution.topbar.go_home'|trans({}, 'label') }}</a>
                 </li>
             </ul>
             <!-- /.dropdown-user -->
@@ -38,68 +38,81 @@
         <div class="sidebar-nav navbar-collapse">
             <ul class="nav in" id="side-menu">
                 <li class="separator-title">
-                    General
+                    {{ 'contribution.sidebar.general'|trans({}, 'label') }}
                 </li>
                 <li>
                     <a href="{{ path('app_contribution_home_index') }}"><i
-                                class="fas fa-dashboard fa-fw"></i> Dashboard</a>
+                                class="fas fa-dashboard fa-fw"></i>
+                        {{ 'contribution.sidebar.dashboard'|trans({}, 'label') }}</a>
                 </li>
                 <li>
-                    <a href="#"><i class="fas fa-bar-chart-o fa-fw"></i> Course<span class="fas arrow"></span></a>
+                    <a href="#"><i class="fas fa-bar-chart-o fa-fw"></i>
+                        {{ 'contribution.sidebar.course.name'|trans({}, 'label') }}<span class="fas arrow"></span></a>
                     <ul class="nav nav-second-level collapse">
                         <li>
-                            <a href="{{ path('app_course_creation_create') }}">Create</a>
+                            <a href="{{ path('app_course_creation_create') }}">
+                                {{ 'contribution.sidebar.course.creation'|trans({}, 'label') }}</a>
                         </li>
                         <li>
-                            <a href="{{ path('app_course_listing_user') }}">List</a>
+                            <a href="{{ path('app_course_listing_user') }}">
+                                {{ 'contribution.sidebar.course.listing'|trans({}, 'label') }}</a>
                         </li>
                         <li>
-                            <a href="#">Vote</a>
+                            <a href="#">{{ 'contribution.sidebar.course.voting'|trans({}, 'label') }}</a>
                         </li>
                     </ul>
                     <!-- /.nav-second-level -->
                 </li>
                 <li>
-                    <a href="#"><i class="fas fa-bar-chart-o fa-fw"></i> Quiz<span class="fas arrow"></span></a>
+                    <a href="#"><i class="fas fa-bar-chart-o fa-fw"></i>
+                        {{ 'contribution.sidebar.quiz.name'|trans({}, 'label') }}<span class="fas arrow"></span></a>
                     <ul class="nav nav-second-level collapse">
                         <li>
-                            <a href="{{ path('app_quiz_creation_create') }}">Create</a>
+                            <a href="{{ path('app_quiz_creation_create') }}">
+                                {{ 'contribution.sidebar.quiz.creation'|trans({}, 'label') }}</a>
                         </li>
                         <li>
-                            <a href="{{ path('app_quiz_listing_user') }}">List</a>
+                            <a href="{{ path('app_quiz_listing_user') }}">
+                                {{ 'contribution.sidebar.quiz.listing'|trans({}, 'label') }}</a>
                         </li>
                         <li>
-                            <a href="#">Vote</a>
+                            <a href="#">{{ 'contribution.sidebar.quiz.voting'|trans({}, 'label') }}</a>
                         </li>
                     </ul>
                     <!-- /.nav-second-level -->
                 </li>
                 <li>
-                    <a href="#"><i class="fas fa-bar-chart-o fa-fw"></i> Chapter<span class="fas arrow"></span></a>
+                    <a href="#"><i class="fas fa-bar-chart-o fa-fw"></i>
+                        {{ 'contribution.sidebar.chapter.name'|trans({}, 'label') }}<span class="fas arrow"></span></a>
                     <ul class="nav nav-second-level collapse">
                         <li>
-                            <a href="{{ path('app_chapter_creation_choose_grade') }}">Create</a>
+                            <a href="{{ path('app_chapter_creation_choose_grade') }}">
+                                {{ 'contribution.sidebar.chapter.creation'|trans({}, 'label') }}</a>
                         </li>
                         <li>
-                            <a href="{{ path('app_chapter_listing_user') }}">List</a>
+                            <a href="{{ path('app_chapter_listing_user') }}">
+                                {{ 'contribution.sidebar.chapter.listing'|trans({}, 'label') }}</a>
                         </li>
                         <li>
-                            <a href="#">Vote</a>
+                            <a href="#">{{ 'contribution.sidebar.chapter.voting'|trans({}, 'label') }}</a>
                         </li>
                     </ul>
                     <!-- /.nav-second-level -->
                 </li>
                 <li>
-                    <a href="#"><i class="fas fa-bar-chart-o fa-fw"></i> Question<span class="fas arrow"></span></a>
+                    <a href="#"><i class="fas fa-bar-chart-o fa-fw"></i>
+                        {{ 'contribution.sidebar.question.name'|trans({}, 'label') }}<span class="fas arrow"></span></a>
                     <ul class="nav nav-second-level collapse">
                         <li>
-                            <a href="{{ path('app_question_creation_choose_quiz') }}">Create</a>
+                            <a href="{{ path('app_question_creation_choose_quiz') }}">
+                                {{ 'contribution.sidebar.question.creation'|trans({}, 'label') }}</a>
                         </li>
                         <li>
-                            <a href="{{ path('app_question_listing_choose_quiz') }}">List</a>
+                            <a href="{{ path('app_question_listing_choose_quiz') }}">
+                                {{ 'contribution.sidebar.question.listing'|trans({}, 'label') }}</a>
                         </li>
                         <li>
-                            <a href="#">Vote</a>
+                            <a href="#">{{ 'contribution.sidebar.question.voting'|trans({}, 'label') }}</a>
                         </li>
                     </ul>
                 </li>

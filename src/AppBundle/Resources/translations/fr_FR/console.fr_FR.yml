@@ -1,19 +1,19 @@
 user:
     registration:
-        mail_sended: Un mail de confirmation vous a été envoyé à l'adresse %mail_address%
-        success: Votre addresse email à bien été confirmé, vous pouvez désormais vous connecter
+        mail_sended: Un mail de confirmation vous a été envoyé à l'adresse %mail_address%.
+        success: Votre addresse email à bien été confirmé, vous pouvez désormais vous connecter.
 
     profile:
         edition:
             edit:
-                success: Votre compte a bien été mis à jour
+                success: Votre compte a bien été mis à jour.
 
     forgot_password:
-        mail_send: Un mail de réinitialisation vous à été envoyé a l'addresse %mail_address%
-        reset_success: Votre mot de passe à été modifié avec succès
+        mail_send: Un mail de réinitialisation vous à été envoyé a l'addresse %mail_address%.
+        reset_success: Votre mot de passe à été modifié avec succès.
         id_booster:
-            not_found: L'Id booster n'est rataché à aucun compte
+            not_found: L'Id booster n'est rataché à aucun compte.
 
 contact_message:
     creation:
-        confirmation: Votre message à bien été reçu par notre équipe
+        confirmation: Votre message à bien été reçu par notre équipe.

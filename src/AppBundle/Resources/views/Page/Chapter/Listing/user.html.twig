@@ -1,10 +1,12 @@
 {% extends '@Layout/Page/Admin/base.html.twig' %}
 
+{% block sub_title %}{{ 'tab_sub_title.chapters'|trans({}, 'label') }}{% endblock sub_title %}
+
 {% block body %}
 
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Every chapter you created</h1>
+            <h1 class="page-header">{{ 'contribution.chapter.listing.title'|trans({}, 'messages') }}</h1>
         </div>
     </div>
     <div class="row">
@@ -12,7 +14,7 @@
             <div class="col-lg-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        Courses
+                        {{ 'contribution.chapter.listing.table'|trans({}, 'label') }}
                     </div>
                     <!-- /.panel-heading -->
                     <div class="panel-body">
@@ -20,12 +22,12 @@
                             <table class="table table-striped table-bordered table-hover">
                                 <thead>
                                 <tr>
-                                    <th>#</th>
-                                    <th>Title</th>
-                                    <th>Submitted</th>
-                                    <th>Validated</th>
-                                    <th>Blocked</th>
-                                    <th>Action</th>
+                                    <th>{{ 'contribution.course.listing.number'|trans({}, 'label') }}</th>
+                                    <th>{{ 'contribution.course.listing.title'|trans({}, 'label') }}</th>
+                                    <th>{{ 'contribution.course.listing.submitted'|trans({}, 'label') }}</th>
+                                    <th>{{ 'contribution.course.listing.validated'|trans({}, 'label') }}</th>
+                                    <th>{{ 'contribution.course.listing.blocked'|trans({}, 'label') }}</th>
+                                    <th>{{ 'contribution.course.listing.action'|trans({}, 'label') }}</th>
                                 </tr>
                                 </thead>
                                 <tbody>

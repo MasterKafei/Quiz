@@ -1,9 +1,9 @@
 user:
     id_booster:
-        already_used: This id Booster already used
-        blank: The id Booster cannot be empty
-        invalid_range: This id Booster need to be a positive value
-        invalid: This id Booster is invalid
+        already_used: This ID booster already used
+        blank: The ID booster cannot be empty
+        invalid_range: This ID booster need to be a positive value
+        invalid: This ID booster is invalid
     plain_password:
         blank: The password is mandatory
         short: The password must contain at least {{ limit }} characters

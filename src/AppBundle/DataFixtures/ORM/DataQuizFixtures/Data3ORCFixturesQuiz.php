@@ -230,7 +230,7 @@ class Data3ORCFixturesQuiz extends AbstractFixture implements OrderedFixtureInte
         );
 
         $quiz
-            ->setTitle('QCM 3ORC révision de 3éme année')
+            ->setTitle('QCM 3ORC révision de 3ème année')
             ->setDescription('Questionnaire révision')
             ->setCategory($category)
             ->setQuestions($questions)

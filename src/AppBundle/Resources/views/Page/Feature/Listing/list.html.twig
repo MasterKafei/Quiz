@@ -1,13 +1,13 @@
 {% extends '@Layout/Page/Full/base.html.twig' %}
 
-{% block sub_title %}Features{% endblock sub_title %}
+{% block sub_title %}{{ 'tab_sub_title.features'|trans({}, 'label') }}{% endblock sub_title %}
 
 {% block content %}
     <div class="content">
         <div class="container-fluid pt-5">
             <section class="p-1 d-flex justify-content-center" id="title">
                 <div class="text-center">
-                    <h2>Take control over your learning methods with our service. And enter in a <br> new world of knowledge. </h2>
+                    <h2>{{ 'features.title'|trans({}, 'messages') }} </h2>
                 </div>
             </section>
         </div>

@@ -3,3 +3,9 @@ registration: Inscription
 register: S'inscrire
 logout: Déconnexion
 submit: Soumettre
+
+contact_message:
+    submit: Envoyer
+
+profile_edition:
+    submit: Appliquer

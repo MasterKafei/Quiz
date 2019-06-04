@@ -1,22 +1,90 @@
 home:
     title: Apprendre c'est le <span class="brown-text">pouvoir</span>
-    sub_title: Devenez puissant grâce à Doctrina
+    sub_title: Gagnez en puissance grâce à Doctrina
     description: |
-        Doctrina est une plateforme de partage de connaissance utilisable par tous les étudiants de Supinfo afin de pouvoir
-        aider chacun à apprendre plus facilement. Cette plateforme est par essence 100% collaborative en effet chaque personne
-        peut contribuer pour apporter sa pierre à l’édifice : création de tests, d’exercices, ou de résumés de cours. A chaque fois
-        qu’une personne contribue, son travail s’ajoute à Doctrina (après vérification du contenu par un membre de l’équipe de
-        validation), cela permet donc à Doctrina d’être une plateforme autonome qui réunie tout ce dont ils ont besoin pour leurs
-        révisions. Une contribution peut aussi être lié à la matière KWS, en effet une contribution est un partage de connaissance
-        à part entière !
+        Doctrina est une plateforme de partage de connaissances utilisable par tous les étudiants de SUPINFO afin de
+        pouvoir aider chacun à apprendre plus facilement. Cette plateforme est par essence 100% collaborative, en effet
+        chacun peut contribuer pour apporter sa pierre à l’édifice : création de tests, d’exercices, ou de résumés de
+        cours. A chaque fois qu’une personne contribue, son travail s’ajoute à Doctrina (après vérification du contenu
+        par un membre de l’équipe de validation), cela permet donc à Doctrina d’être une plateforme autonome qui réunit
+        tout ce dont ils ont besoin pour leurs révisions. Une contribution peut aussi être lié à la matière KWS, en
+        effet une contribution est un partage de connaissance à part entière !
+
+widget:
+    logout: Cliquez ici pour vous <b>déconnecter</b>
+
+course:
+    title: Choisissez votre niveau
 
 quiz:
     title: Nos super tests
+    results:
+        completed: "Vous avez terminé le quiz :"
+        score:
+            wrong: Peut mieux faire...
+            intermediate: Pas mal
+            well: Bien joué !
+            perfect: Parfait !
+
+        answers:
+            wrong: Réponses fausses
+            correct: Réponses correctes
+
+features:
+    title: Contrôlez vos méthodes de travail grâce à nos services. Et entrez dans un monde de connaissance nouveau.
 
 contact:
-    title: Contactez nous
+    title: Contactez-nous
     sub_title: Comment pouvons-nous vous aider ?
 
 contributor:
     listing:
         title: Découvrez notre équipe
+
+user:
+    authentication:
+        forgot_password: |
+            Si votre compte est perdu vous pouvez demander un nouveau mot de passe, pour cela entrez votre ID booster.
+            Vous receverez par la suite le lien pour obtenir un nouveau mot de passe.
+    profile:
+        title: À propos de moi
+        quizzes:
+            created: Quiz créés
+            completed: Quiz complétés
+        courses: Cours créés
+        score: Score moyen
+        progress: Progrès
+        edit: "Modifier mon profil :"
+
+footer:
+    text: 'Fait avec <i class="fas fa-heart" style="color: #a52a2a;)"></i> par <a href="%path%" style="color: #f5deb3;">notre équipe</a>'
+    copyright: Copyright © Doctrina 2018 - Tous droits réservés
+
+contribution:
+    course:
+        creation:
+            title: Création de cours
+            sub_title: Vous pouvez créer vos cours ici
+        edition:
+            title: Edition de cours
+            sub_title: Vous pouvez modifier vos cours ici
+        listing:
+            title: Tous les cours créés
+    quiz:
+        creation:
+            title: Création de quiz
+            sub_title: Vous pouvez créer vos quiz ici
+        edition:
+            title: Edition de quiz
+            sub_title: Vous pouvez modifier vos quiz ici
+        listing:
+            title: Tous les quiz créés
+    chapter:
+        creation:
+            title: Création de chapitres
+            sub_title: Vous pouvez créer vos chapitres ici
+        edition:
+            title: Edition de chapitres
+            sub_title: Vous pouvez modifier vos chapitres ici
+        listing:
+            title: Tous les chapitres créés

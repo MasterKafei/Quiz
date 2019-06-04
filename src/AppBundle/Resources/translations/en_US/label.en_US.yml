@@ -1,3 +1,25 @@
+tab_title: Doctrina
+
+tab_sub_title:
+    home: Home
+    grades: Grades
+    courses: Courses
+    chapters: Chapters
+    tests: Tests
+    quizzes: Quizzes
+    questions: Questions
+    session: Session
+    results: Results
+    features: Features
+    contact: Contact
+    profile: Profile
+    sign: Sign
+    contribution: Contribution
+    team: Team
+    change_password: Change password
+    request_new_password: Request new password
+    choose_contribution: Choose contribution
+
 user:
     authentication:
         login:
@@ -5,10 +27,10 @@ user:
             password: Password
             remember_me: Remember me
             submit: Login
-            forget_password: Forget password ?
+            forget_password: Forgot password?
         register:
             id_booster: Your ID booster
-            id_booster_info: ID Boosters are given by Supinfo.
+            id_booster_info: ID boosters are given by SUPINFO.
             password: Password
             repeat_password: Confirm password
             submit: Register
@@ -21,7 +43,81 @@ user:
 
 topbar:
     tests: Tests
+    contribute: Contribute
     courses: Courses
-    contribution: Contribution
+    practice: Practice
     features: Features
     contact: Contact
+    profile: My profile
+    sign: Sign
+
+contribution:
+    topbar:
+        connected_as: "Connected as:"
+        options: Options
+        user_profile: My Profile
+        go_home: Back to Home
+    sidebar:
+        general: General
+        dashboard: Dashboard
+        course:
+            name: Course
+            creation: Create
+            listing: List
+            voting: Vote
+        quiz:
+            name: Quiz
+            creation: Create
+            listing: List
+            voting: Vote
+        chapter:
+            name: Chapter
+            creation: Create
+            listing: List
+            voting: Vote
+        question:
+            name: Question
+            creation: Create
+            listing: List
+            voting: Vote
+    course:
+        creation:
+            title: Title
+            description: Description
+            submit: Create
+        listing:
+            table: Courses
+            number: "#"
+            title: Title
+            submitted: Submitted
+            validated: Validated
+            blocked: Blocked
+            action: Action
+    quiz:
+        creation:
+            title: Title
+            description: Description
+            course: Course
+            image: Image
+            submit: Create
+        listing:
+            table: Quizzes
+            number: "#"
+            title: Title
+            submitted: Submitted
+            validated: Validated
+            blocked: Blocked
+            action: Action
+    chapter:
+        creation:
+            title: Title
+            text: Text
+            submit: Create
+        listing:
+            table: Chapters
+            number: "#"
+            title: Title
+            submitted: Submitted
+            validated: Validated
+            blocked: Blocked
+            action: Action

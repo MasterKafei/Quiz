@@ -1,14 +1,14 @@
 {{ form_start(form, {'attr': {'class': 'profile-form'}}) }}
-    <h2>Edit my profile :</h2>
+    <h2>{{ 'user.profile.edit'|trans({}, 'messages') }}</h2>
     <div class="row">
         <div class="col-6">
             {{ form_widget(form.idBooster, {'attr': {'class': 'form-control'}}) }}
         </div>
         <div class="col-3">
-            {{ form_widget(form.firstName, {'attr': {'class': 'form-control', 'placeholder': 'First name'}}) }}
+            {{ form_widget(form.firstName, {'attr': {'class': 'form-control', 'placeholder': 'profile_edition.first_name'|trans({}, 'placeholder') }}) }}
         </div>
         <div class="col-3">
-            {{ form_widget(form.lastName, {'attr': {'class': 'form-control', 'placeholder': 'Last name'}}) }}
+            {{ form_widget(form.lastName, {'attr': {'class': 'form-control', 'placeholder': 'profile_edition.last_name'|trans({}, 'placeholder') }}) }}
         </div>
     </div>
     <div class="row mt-2">
@@ -16,10 +16,10 @@
             {{ form_widget(form.email, {'attr': {'class': 'form-control', 'placeholder': 'Email'}}) }}
         </div>
         <div class="col-3">
-            {{ form_widget(form.plainPassword.first, {'attr': {'class': 'form-control', 'placeholder': 'New password'}}) }}
+            {{ form_widget(form.plainPassword.first, {'attr': {'class': 'form-control', 'placeholder': 'profile_edition.new_password'|trans({}, 'placeholder') }}) }}
         </div>
         <div class="col-3">
-            {{ form_widget(form.plainPassword.second, {'attr': {'class': 'form-control', 'placeholder': 'Confirm password'}}) }}
+            {{ form_widget(form.plainPassword.second, {'attr': {'class': 'form-control', 'placeholder': 'profile_edition.confirm_password'|trans({}, 'placeholder') }}) }}
         </div>
     </div>
     <div class="row mt-2">

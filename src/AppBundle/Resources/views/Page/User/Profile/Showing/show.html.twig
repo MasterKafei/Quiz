@@ -1,6 +1,6 @@
 {% extends '@Layout/Page/Full/base.html.twig' %}
 
-{% block sub_title %}Profile{% endblock sub_title %}
+{% block sub_title %}{{ 'tab_sub_title.profile'|trans({}, 'label') }}{% endblock sub_title %}
 
 {% block content %}
     <div class="profile-wrapper">
@@ -8,27 +8,27 @@
             <div class="container-fluid p-0">
                 <div class="row">
                     <div class="col-12">
-                        <h1 class="text-center">About me</h1>
+                        <h1 class="text-center">{{ 'user.profile.title'|trans({}, 'messages') }}</h1>
                         <hr>
                     </div>
                 </div>
                 <div class="row text-center">
                     <div class="col-4">
                         <span class="profile-info">{{ quizNumberUserCreated }}</span>
-                        <span>Quizzes Created</span>
+                        <span>{{ 'user.profile.quizzes.created'|trans({}, 'messages') }}</span>
                     </div>
                     <div class="col-4">
                         <span class="profile-info">{{ courseNumberUserCreated }}</span>
-                        <span>Courses Created</span>
+                        <span>{{ 'user.profile.courses'|trans({}, 'messages') }}</span>
                     </div>
                     <div class="col-4">
                         <span class="profile-info">{{ quizNumberUserFinished }}</span>
-                        <span>Quizzes Completed</span>
+                        <span>{{ 'user.profile.quizzes.completed'|trans({}, 'messages') }}</span>
                     </div>
                 </div>
                 <div class="row mt-5 p-3">
                     <div class="col-12">
-                        <h2 class="progress-title">Average Score</h2>
+                        <h2 class="progress-title">{{ 'user.profile.score'|trans({}, 'messages') }}</h2>
                         <div class="progress">
                             {% set average_score = (100 * rightAnswersSubmitted / questionNumber)|round(2) %}
                             <div class="progress-bar" role="progressbar" style="width: {{ average_score }}%;" aria-valuenow="{{ average_score }}" aria-valuemin="0" aria-valuemax="100">{{ average_score }}%</div>
@@ -37,7 +37,7 @@
                 </div>
                 <div class="row mt-5 p-3">
                     <div class="col-12">
-                        <h2 class="progress-title">Progress</h2>
+                        <h2 class="progress-title">{{ 'user.profile.progress'|trans({}, 'messages') }}</h2>
                         <div class="progress">
                             {% set quota = (100 * questionNumberAnswer/questionNumber)|round(2) %}
                             <div class="progress-bar" role="progressbar" style="width: {{ quota }}%;" aria-valuenow="{{ quota }}" aria-valuemin="0" aria-valuemax="100">{{ quota }}%</div>

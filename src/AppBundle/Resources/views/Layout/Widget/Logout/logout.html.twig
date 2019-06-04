@@ -2,7 +2,7 @@
     <div class="logout-sticky">
         <a href="{{ path('app_user_authentication_signing_logout') }}">
         <span class="fa-stack fa-2x" data-toggle="tooltip" data-placement="Right" data-html="true"
-              title="Click here to <b>Logout</b>">
+              title="{{ 'widget.logout'|trans({}, 'messages') }}">
           <i class="fas fa-square fa-stack-2x"></i>
           <i class="fas fa-power-off fa-stack-1x fa-inverse"></i>
         </span>

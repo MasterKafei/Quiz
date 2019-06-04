@@ -1,13 +1,13 @@
 {% extends '@Layout/Page/Full/base.html.twig' %}
 
-{% block sub_title %}Grades{% endblock sub_title %}
+{% block sub_title %}{{ 'tab_sub_title.grades'|trans({}, 'label') }}{% endblock sub_title %}
 
 {% block content %}
     <div class="content">
         <div class="container">
             <div class="row pt-5">
                 <div class="col-md-12">
-                    <h1 class="text-center pb-5 big-title">Please choose your level</h1>
+                    <h1 class="text-center pb-5 big-title">{{ 'course.title'|trans({}, 'messages') }}</h1>
                 </div>
             </div>
         </div>
